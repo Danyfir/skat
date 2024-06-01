@@ -1,0 +1,131 @@
+[class*="ymaps-2"][class*="-ground-pane"] {
+  // filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale");
+  -webkit-filter: invert(1) grayscale(100%);
+  filter: invert(1) grayscale(100%);
+}
+
+.inner-hint {
+  position: absolute;
+  top: 8rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 28.8rem;
+  height: 15rem;
+  padding: 2rem;
+
+  color: var(--White, #FFF);
+  background: var(--Dark-Grey, #0E0E0E);
+  border-radius: 1.2rem;
+
+  @include breakpointMF(tablet) {
+    top: 50%;
+    left: 10.2rem;
+    transform: translate(0, -50%);
+
+    width: 28.6rem;
+    height: 15.6rem;
+  }
+
+  &__address,
+  &__title {
+    font-feature-settings: 'clig' off, 'liga' off;
+    @include font(1.3rem, 100%, 400);
+
+    @include breakpointMF(tablet) {
+      @include font(1.6rem, 130%, 400);
+    }
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    opacity: 0.5;
+  }
+
+  &__address {
+    opacity: 0.8;
+  }
+}
+
+.ya-main-placemark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, -50%);
+
+  border-radius: 100%;
+  border-style: solid;
+  border-color: rgba($color: #EBAA5B, $alpha: 0.2);
+  border-width: 2.3rem;
+
+  @include breakpoint(mobile) {
+    border-width: 1.7rem;
+  }
+
+  span {
+    position: relative;
+    z-index: 10;
+    display: block;
+    flex-shrink: 0;
+    width: 7.8rem;
+    height: 7.8rem;
+
+    background-color: var(--red-color, #EBAA5B);
+    background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2240%22%20height%3D%2212%22%20viewBox%3D%220%200%2040%2012%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_4269_1585)%22%3E%0A%20%20%20%20%3Cmask%20id%3D%22mask0_4269_1585%22%20style%3D%22mask-type%3Aluminance%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%220%22%20width%3D%2240%22%20height%3D%2216%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M40%200H0V16H40V0Z%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2Fmask%3E%0A%20%20%20%20%3Cg%20mask%3D%22url(%23mask0_4269_1585)%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M8.35854%206.87823V9.25437C8.35854%2010.4239%207.84493%2011.5242%206.16334%2011.5242H2.23223C0.814864%2011.5242%200%2010.7626%200%209.23706V2.12595C0%200.565762%200.79758%20-0.00292969%202.07173%20-0.00292969H6.23248C7.84246%20-0.00292969%208.35607%200.795713%208.35607%202.39052V4.03972H5.71887V2.39052H2.6372V9.14558H5.71887V6.87576H8.35607L8.35854%206.87823Z%22%20fill%3D%22%23050403%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M10.8203%2011.5246V0H13.4921V4.60887H13.8995L16.6108%200H19.6727L16.3787%205.54844V5.70916L19.9024%2011.5246H16.7688L13.9193%206.78968H13.4921V11.5246H10.8203Z%22%20fill%3D%22%23050403%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M27.7302%209.37846H24.614L24.1893%2011.5246H21.4805L24.0115%200H28.3673L30.8638%2011.5246H28.155L27.7302%209.37846ZM25.0733%207.14325H27.2858L26.3129%202.28465H26.0462L25.0733%207.14325Z%22%20fill%3D%22%23050403%22%2F%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M34.4039%202.35636H31.5V0H39.9993V2.35636H37.0954V11.5246H34.4039V2.35636Z%22%20fill%3D%22%23050403%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_4269_1585%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2240%22%20height%3D%2212%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 4rem 1.2rem;
+
+    border-radius: 100%;
+    pointer-events: none;
+
+    @include breakpoint(mobile) {
+        width: 6rem;
+        height: 6rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 100;
+
+      display: block;
+      width: 180%;
+      aspect-ratio: 1;
+
+      border-radius: 100%;
+      border-style: solid;
+      border-color: rgba($color: #EBAA5B, $alpha: 0.1);
+      border-width: 0.3rem;
+      transform: translate(-50%, -50%);
+      content: '';
+
+      animation: pulsAnim 1.5s ease 0s infinite forwards;
+
+      @include breakpoint(mobile) {
+        border-width: 1px;
+      }
+    }
+  }
+}
+
+@keyframes pulsAnim {
+  from {
+      width: 100%;
+      border-color: rgba($color: #EBAA5B, $alpha: 0.4);
+  }
+
+  to {
+      width: 200%;
+      border-color: rgba($color: #EBAA5B, $alpha: 0.1);
+  }
+}

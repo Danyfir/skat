@@ -1,0 +1,96 @@
+.advantage {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+
+  &__body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 0.8rem;
+
+    border-right: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+    @include breakpointMF(tablet) {
+      padding-left: unset;
+      padding-right: 1.6rem;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 2.6rem;
+    padding-right: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 4.4rem;
+    }
+  }
+
+  &__count {
+    color: var(--White, #FFF) ;
+    font-feature-settings: 'clig' off, 'liga' off;
+    opacity: 0.3;
+    @include font(1.3rem, 120%, 400);
+
+    @include breakpointMF(tablet) {
+      @include font(1.8rem, 130%, 400);
+    }
+  }
+
+  &__icon {
+    position: relative;
+    width: 13.7rem;
+    height: 16.8rem;
+    overflow: hidden;
+
+    background-color: var(--Grey, #1D1D1D);
+    border-radius: 30.5rem;
+
+    @include breakpointMF(tablet) {
+      width: 18rem;
+      height: 22rem;
+    }
+
+    .icon {
+      @include centeredAbsolute();
+
+      width: 50%;
+    }
+
+    .icon-guarantee,
+    .icon-list {
+      opacity: 0.6;
+    }
+  }
+
+  &__name {
+    max-width: 25ch;
+    margin-bottom: 1.4rem;
+
+    color: var(--Yellow, #EBAA5B);
+    @extend .text-24;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__text {
+    max-width: 30ch;
+    opacity: 0.6;
+    @extend .text-18;
+  }
+}
+
+.advantages {
+  &__swiper.swiper {
+    margin-right: -100%;
+    padding-right: 100%;
+    margin-left: -100%;
+    padding-left: 100%;
+  }
+}

@@ -1,0 +1,54 @@
+-
+  const advantages = [
+    {
+      'id': '01',
+      'icon': 'list',
+      'name': 'Сертифицированная продукция',
+      'text': 'Наша продукция имеет все виды сертификатов'
+    },
+    {
+      'id': '02',
+      'icon': 'guarantee',
+      'name': 'Гарантия качества',
+      'text': 'Строгий контроль качества и работа только с лучшими партнерами'
+    },
+    {
+      'id': '03',
+      'icon': 'truck',
+      'name': 'Прямые поставки',
+      'text': 'Индивидуальный подход и прямые поставки с завода на территорию РФ'
+    },
+    {
+      'id': '04',
+      'icon': 'factory',
+      'name': 'Собственное производство',
+      'text': 'Мы являемся производителем кабельных муфт для любых типов кабелей'
+    },
+    {
+      'id': '05',
+      'icon': 'clock',
+      'name': 'Любые объемы',
+      'text': 'Любые объемы поставок в самый короткий срок'
+    },
+  ];
+
+section.section.section--first.advantages.js-advantages-swiper-wrapper
+  .advantages__site-container
+    .advantages__heading.section__heading
+      h2.advantages__title Наши преимущества
+
+    .advantages__body
+      .advantages__swiper.swiper
+        ul.advantages__swiper-wrapper.swiper-wrapper
+          for item in advantages
+            li.advantages__swiper-slide.swiper-slide.advantage
+              .advantage__body
+                .advantage__top
+                  .advantage__icon
+                    +icon-multi(item.icon)
+
+                  span.advantage__count= item.id
+                .advantage__bottom
+                  p.advantage__name= item.name
+
+                  p.advantage__text= item.text

@@ -1,0 +1,67 @@
+.form-footer {
+  &__title {
+    margin-bottom: 2.4rem;
+    @extend .text-28-caps-med;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+
+    @include breakpointMF(tablet) {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.6rem;
+    }
+  }
+
+  &__submit {
+    margin-top: 0.8rem;
+
+    @include breakpointMF(tablet) {
+      margin-top: unset;
+    }
+
+    &.button {
+      width: 100%;
+
+      @include breakpointMF(tablet) {
+        width: auto;
+      }
+    }
+  }
+
+  &__input {
+
+    @include breakpointMF(tablet) {
+      flex: 1 1 auto ;
+    }
+  }
+
+  &__aggreement {
+    display: inline-block;
+    margin-top: 1.6rem;
+
+    color: inherit;
+    @extend .text-caption-12;
+
+    p {
+      opacity: 0.5;
+      display: inline-block;
+    }
+
+    a {
+      opacity: 0.78;
+
+      @include hoverActive() {
+        opacity: 1;
+      }
+    }
+  }
+}

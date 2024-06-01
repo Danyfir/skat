@@ -1,0 +1,32 @@
+.button {
+  display: block;
+  max-height: 4rem;
+  padding: 1.3rem 2.45rem;
+
+  color: var(--Black, #050403);
+  background-color: var(--Yellow, #EBAA5B);
+  border-radius: 2rem;
+
+  @extend .buttons-text;
+
+  @include hoverActive() {
+    background-color: var(--Yellow-2, #EF9930);
+  }
+
+  &--big {
+    max-height: 4.8rem;
+    padding: 1.6rem 5rem;
+
+    background-color: var(--white, #FFF);
+    border-radius: 2.75rem;
+
+    @include hoverActive() {
+      background-color: var(--Yellow, #EBAA5B);
+    }
+
+    @include breakpointMF(tablet) {
+      max-height: 5.5rem;
+      padding: 2.1rem 5.2rem;
+    }
+  }
+}

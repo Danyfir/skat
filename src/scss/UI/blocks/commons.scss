@@ -1,0 +1,159 @@
+.visually-hidden {
+  @include visuallyHidden();
+}
+
+[class].display-none {
+  display: none !important;
+}
+
+.no-scroll {
+  overflow-y: scroll;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+
+  body {
+      height: auto;
+      overflow: hidden;
+  }
+}
+
+
+.hide-on-mobile {
+  @include breakpoint(small-tablet) {
+      display: none !important;
+  }
+}
+
+.show-on-mobile {
+  @include breakpointMF(tablet) {
+      display: none !important;
+  }
+}
+
+._border-12 {
+  border-radius: 0.4rem;
+
+  @include breakpointMF(tablet) {
+      border-radius: 1.2rem;
+  }
+}
+
+._border-16 {
+  border-radius: 1.2rem;
+
+  @include breakpointMF(tablet) {
+      border-radius: 1.6rem;
+  }
+}
+
+._border-20 {
+  border-radius: 1.2rem;
+
+  @include breakpointMF(tablet) {
+      border-radius: 2rem;
+  }
+}
+
+._border-24 {
+  border-radius: 1.2rem;
+
+  @include breakpointMF(tablet) {
+      border-radius: 2.4rem;
+  }
+}
+
+.opacity-06 {
+  opacity: 0.6;
+}
+
+._header-padding-top {
+  padding-top: calc(var(--header-height));
+}
+
+.links-text {
+  font-feature-settings: 'clig' off, 'liga' off;
+  text-transform: uppercase;
+  @include font(1.3rem, 100%, 400);
+
+  @include breakpointMF(tablet) {
+    @include font(1.3rem, 100%, 400);
+  }
+}
+
+.buttons-text {
+  font-feature-settings: 'clig' off, 'liga' off;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  @include font(1.3rem, 100%, 500);
+
+  @include breakpointMF(tablet) {
+    @include font(1.3rem, 100%, 500);
+  }
+}
+
+.text-28-caps {
+  @include font(2.4rem, 115%, 400);
+  text-transform: uppercase;
+
+  @include breakpointMF(tablet) {
+    @include font(2.8rem, 140%, 400);
+  }
+}
+
+.text-28-caps-med {
+  @include font(1.8rem, 150%, 500);
+  font-feature-settings: 'clig' off, 'liga' off;
+  text-transform: uppercase;
+
+  @include breakpointMF(tablet) {
+    @include font(2.8rem, 140%, 500);
+  }
+}
+
+.text-24 {
+  @include font(1.9rem, 120%, 400);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  @include breakpointMF(tablet) {
+    @include font(2.4rem, 115%, 400);
+  }
+}
+
+.text-18 {
+  @include font(1.6rem, 130%, 400);
+  font-feature-settings: 'clig' off, 'liga' off;
+
+  @include breakpointMF(tablet) {
+    @include font(1.8rem, 130%, 400);
+  }
+}
+
+.text-14 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  letter-spacing: -0.02em;
+  @include font(1.4rem, 120%, 400);
+}
+
+.text-caption-12 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  @include font(1.2rem, 140%, 400);
+
+  @include breakpointMF(tablet) {
+    @include font(1.2rem, 145%, 400);
+  }
+}
+
+.text-h2 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  font-family: var(--second-ff, Arail);
+  text-transform: uppercase;
+  @include font(2rem, 120%, 500);
+
+  @include breakpointMF(tablet) {
+    @include font(3.6rem, 110%, 500);
+    ont-family: var(--second-ff, Arail);
+  }
+}

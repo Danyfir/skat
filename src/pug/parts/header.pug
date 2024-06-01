@@ -1,0 +1,30 @@
+-
+  const menus = [
+    {text: "Продукция", link: "#", class: ""},
+    {text: "Реализованные проекты", link: "#", class: ""},
+    {text: "О компании", link: "#", class: ""},
+    {text: "Контакты", link: "#", class: ""},
+  ]
+
+header.header
+  .header__site-container
+    .header__col
+      +logo(class="header__logo")
+
+      .header__menu.menu.hide-on-mobile
+        for item in menus
+          a.menu__link.js-hover-link(href= item.link, class= item.class)= item.text
+
+    .header__col
+      .header__desktop-nav.hide-on-mobile
+        .header__search
+          +btn-search(class="header__search-btn")
+
+          button.button(data-path="modal") оставить заявку
+
+        +burger-menu(class="header__burger-btn")
+
+      .header__mobile-nav.show-on-mobile
+        button.small-button.small-button--outlined(data-path="mobile-menu") заявкa
+
+        +menu-btn(class="header__mobile-menu js-mobile-menu-open")

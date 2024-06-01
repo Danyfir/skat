@@ -1,0 +1,208 @@
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin customScrollbar {
+  &::-webkit-scrollbar {
+    width: 0.2rem;
+    background-color: var(--color-grey-300);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-grey-600);
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--color-grey-300);
+  }
+}
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
+
+@mixin noHighlight() {
+  -webkit-tap-highlight-color: transparent;
+}
+
+@mixin noScrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar * {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+}
+
+@mixin maxSizeText($size) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: $size;
+  -webkit-box-orient: vertical;
+}
+
+
+@mixin breakpoint($class) {
+  @if $class == large-desktop {
+      @media only screen and (max-width: (1600px)) {
+          @content;
+      }
+  } @else if $class == desktop {
+      @media only screen and (max-width: (1400px)) {
+          @content;
+      }
+  } @else if $class == laptop {
+      @media only screen and (max-width: (1200px)) {
+          @content;
+      }
+  } @else if $class == tablet {
+      @media only screen and (max-width: (1024px)) {
+          @content;
+      }
+  } @else if $class == small-tablet {
+      @media only screen and (max-width: (769px)) {
+          @content;
+      }
+  } @else if $class == mobile {
+      @media only screen and (max-width: (640px)) {
+          @content;
+      }
+  } @else if $class == small-mobile {
+      @media only screen and (max-width: (576px)) {
+          @content;
+      }
+  } @else if $class == supersmall-mobile {
+      @media only screen and (max-width: (370px)) {
+          @content;
+      }
+  }
+}
+
+@mixin breakpointMF($class) {
+  @if $class == large-desktop {
+      @media only screen and (min-width: 1401px) {
+          @content;
+      }
+  } @else if $class == desktop {
+      @media only screen and (min-width: 1201px) {
+          @content;
+      }
+  } @else if $class == laptop {
+      @media only screen and (min-width: 1025px) {
+          @content;
+      }
+  } @else if $class == tablet {
+      @media only screen and (min-width: 769px) {
+          @content;
+      }
+  } @else if $class == small-tablet {
+      @media only screen and (min-width: 641px) {
+          @content;
+      }
+  } @else if $class == mobile {
+      @media only screen and (min-width: 577px) {
+          @content;
+      }
+  }
+}
+
+@mixin font($size: 1.6rem, $line-height: 1.375, $weight: 400) {
+  font-family: var(--main-ff, Arial);
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+  user-select: text;
+}
+
+@mixin h1 {
+  @include font(7rem, 1.15, 600, $size-32);
+}
+
+@mixin h2 {
+  @include font(5.2rem, 1.25, 600, $size-24);
+}
+
+@mixin hoverActive {
+  &:hover {
+      .no-touch & {
+          @content;
+      }
+  }
+  &:active {
+      .touch & {
+          @content;
+      }
+  }
+}
+
+@mixin aspectRatio($class) {
+  @if $class == desktop {
+      @media only screen and (max-aspect-ratio: 16/8) {
+          @content;
+      }
+  } @else if $class == portrait {
+      @media only screen and (max-aspect-ratio: 4/3) {
+          @content;
+      }
+  }
+}
+
+@mixin onlyChromiumSupport() {
+  @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
+      @content;
+  }
+}
+
+@mixin visuallyHidden() {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+@mixin centeredAbsolute {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,72 @@
+/* stylelint-disable no-invalid-position-at-import-rule */
+:root {
+  // layouts:
+  --content-padding: 1.6rem;
+  --max-container-width: 160rem;
+  --header-height: 6.5rem;
+
+  // colors:
+  --Black: #050403;
+  --Black-10: rgba(2, 2, 2, 0.1);
+  --Black-30: rgba(2, 2, 2, 0.3);
+  --Black-40: rgba(2, 2, 2, 0.4);
+  --Black-50: rgba(2, 2, 2, 0.5);
+  --Black-60: rgba(2, 2, 2, 0.6);
+
+  --White: #fff;
+  --White-10: rgba(255, 255, 255, 0.1);
+  --White-20: rgba(255, 255, 255, 0.2);
+  --White-30: rgba(255, 255, 255, 0.3);
+  --White-40: rgba(255, 255, 255, 0.4);
+  --White-50: rgba(255, 255, 255, 0.5);
+  --White-60: rgba(255, 255, 255, 0.6);
+
+  --Dark-red: #b7000b;
+  --Red: #eb1e3d;
+  --Red-05: rgba(207, 0, 12, 0.05);
+  --Red-15: rgba(207, 0, 12, 0.15);
+  --Red-20: rgba(207, 0, 12, 0.2);
+  --Red-30: rgba(207, 0, 12, 0.3);
+
+  --Light-blue: #a5d9ff;
+  --Blue: #212173;
+  --Dark-blue: #101038;
+  --Dark-blue-30: rgba(16, 16, 56, 0.3);
+
+  --Light-Grey: #f5f5f5;
+  --Dark-Grey: #0E0E0E;
+  --Pink: #fae5e7;
+  --Coral: #ff6266;
+
+  --Yellow: #EBAA5B;
+  --Yellow-2: #EF9930;
+  --Medium-Grey: #777;
+  --Grey: #1D1D1D;
+
+  // typography:
+  --main-ff: "Avenir Next", sans-serif;
+  --second-ff: "Ruda", sans-serif;
+  --third-ff: "Gilroy", sans-serif;
+
+
+  /* etc */
+  --transition: 300ms ease-out;
+}
+
+@media only screen and (min-width: (769px)) {
+  :root {
+    --content-padding: 4rem;
+  }
+}
+
+@media only screen and (min-width: (1440px)) {
+  :root {
+    --content-padding: 8rem;
+  }
+}
+
+@import "./helpers/**/*";
+@import "./vendor/**/*";
+@import "./settings/**/*";
+@import "./UI/**/*";
+@import "./pages/**/*";

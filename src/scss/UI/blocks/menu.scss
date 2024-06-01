@@ -1,0 +1,29 @@
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+
+  &__link {
+    @extend .links-text;
+    transition: opacity 0.3s ease-out;
+
+    &._low-opacity {
+      opacity: 0.4;
+    }
+
+    &--opacity {
+      opacity: 0.4;
+
+      @include hoverActive() {
+        opacity: 1;
+      }
+    }
+  }
+
+  &.menu--column {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+  }
+}

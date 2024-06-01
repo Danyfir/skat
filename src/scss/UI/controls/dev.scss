@@ -1,0 +1,35 @@
+.dev {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+
+  @include breakpointMF(tablet) {
+    align-items: flex-start;
+    gap: 2.4 rem;
+  }
+
+  span {
+    @extend .text-14;
+    flex-shrink: 0;
+    opacity: 0.3;
+
+    @include breakpointMF(tablet) {
+      padding-top: 0.46rem;
+    }
+  }
+
+  .icon {
+    flex-shrink: 0;
+    width: 8.8rem;
+    height: 2.8rem;
+    fill: var(--White, #fff);
+    fill-opacity: 0.3;
+    transition: var(--transition);
+  }
+
+  @include hoverActive() {
+    .icon {
+      fill-opacity: 1;
+    }
+  }
+}

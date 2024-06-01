@@ -1,0 +1,53 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: auto;
+  z-index: 1000;
+
+  color: var(--White, #FFF);
+  background: linear-gradient(180deg, #000 20%, rgba(0, 0, 0, 0.40) 60%, rgba(0, 0, 0, 0.00) 100%);
+
+  &__site-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+  }
+
+  &__col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:has(.header__logo) {
+      flex-grow: 1;
+    }
+  }
+
+  &__menu {
+    flex-grow: 1;
+    margin: 0 auto;
+  }
+
+  &__desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 5.8rem;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  &__mobile-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+}

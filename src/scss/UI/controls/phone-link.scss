@@ -1,0 +1,8 @@
+.phone-link {
+  @extend .text-28-caps;
+  color: inherit;
+
+  @include hoverActive() {
+    color: var(--Yellow, #EBAA5B);
+  }
+}

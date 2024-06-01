@@ -1,0 +1,14 @@
+/**/*.DS_Store
+.idea
+.vscode
+package-lock.json
+/node_modules/
+*.ai
+*.log
+*.pdf
+/**/*.psd
+/.git/
+/**/_backstage
+/**/Thumbs.db
+/build/
+gsap-bonus

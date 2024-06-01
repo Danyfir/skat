@@ -1,0 +1,16 @@
+.mail-link {
+  color: inherit;
+  opacity: 0.5;
+  @include font(2rem, 115%, 400);
+  text-transform: uppercase;
+
+  @include hoverActive() {
+    opacity: 1;
+  }
+
+  @include breakpointMF(tablet) {
+    text-transform: unset;
+    font-feature-settings: 'clig' off, 'liga' off;
+    @include font(1.8rem, 130%, 400);
+  }
+}

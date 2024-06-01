@@ -1,0 +1,23 @@
+.btn-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4rem;
+  height: 4rem;
+
+  background: var(--Black, #050403);
+  border: 1px solid var(--White-20, rgba(255, 255, 255, 0.20));
+  border-radius: 100%;
+
+  .icon {
+    flex-shrink: 0;
+    width: 1.6rem;
+    height: 1.6rem;
+    stroke:  var(--white, #FFF);
+  }
+
+  @include hoverActive() {
+    border-color: var(--White-40, rgba(255, 255, 255, 0.4));
+  }
+}

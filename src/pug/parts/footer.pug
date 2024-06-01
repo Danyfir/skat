@@ -1,0 +1,93 @@
+- const icons = ['vk', 'tg', 'yt'];
+
+-
+  const links = [
+    {text: "Продукция", link: "#", class: ""},
+    {text: "КОМАНДА", link: "#", class: ""},
+    {text: "Реализованные проекты", link: "#", class: ""},
+    {text: "О компании", link: "#", class: ""},
+    {text: "ДОКУМЕНТАЦИЯ", link: "#", class: ""},
+    {text: "Контакты", link: "#", class: ""},
+  ];
+
+footer.footer
+  script(type="text/javascript").
+    var mapData = [
+        {
+          coords: [55.788858, 49.118076],
+          address: `420111, Республика Татарстан, город Казань, ул.Баумана, д.72`,
+        }
+      ];
+
+    var mapZoom = 17;
+
+    var mapCenter = [55.788858, 49.118076];
+
+  .footer__map
+    .footer__site-container
+      .footer__map-wrapper
+        .js-footer-map#footer-map
+
+  .footer__main
+    .footer__site-container.footer__grid
+
+      .footer__contacts
+        .footer__links
+          a.phone-link(href="tel:88002505999") 8 800 250 59 99
+          a.mail-link(href="mailto:info@scat.ru") info@scat.ru
+
+        .footer__socials.socials.socials--row
+          for icon in icons
+            +social(icon)
+
+        p.footer__address.show-on-mobile
+          | 420111,&nbsp;Республика&nbsp;Татарстан, город&nbsp;Казань, ул.&nbsp;Баумана,&nbsp;д.72
+
+        +logo(class="footer__logo hide-on-mobile")
+
+      .footer__menus.hide-on-mobile
+        .footer__menu.menu.menu--column
+          for item in links
+            a.menu__link.menu__link--opacity(href= item.link, class= item.class)= item.text
+
+
+        p.footer__company © АО «СКАТ» 2024
+
+      form.footer__form.form-footer(action="" method="method" data-need-validation)
+        h6.form-footer__title
+          | Оставьте&nbsp;заявку<br>на&nbsp;бесплатную&nbsp;консультацию
+        .form-footer__row
+          .form-footer__inputs
+            .form-footer__col.form-footer__input.input
+              input(type="text", name="consult-name", id="consult-name-id", placeholder="Имя",
+                class="input__field", required, autocomplete="off", minlength="2",
+                data-parsley-reqtext, data-parsley-trigger="input", data-parsley-validate-if-empty
+              )
+              i
+            .form-footer__col.form-footer__input.input
+              input(type="tel", name="consult-phone", id="consult-phone-id", placeholder="Телефон",
+                class="input__field", required, autocomplete="off", data-parsley-phone,
+                data-parsley-trigger="input", data-parsley-validate-if-empty
+              )
+              i
+            button.form-footer__col.form-footer__submit.button.button--big(type='submit')
+              | отправить
+
+
+          .form-footer__aggreement
+            p Нажимая&nbsp;«Отправить», вы&nbsp;соглашаетесь на&nbsp;обработку
+            a(href="#", target="_blank") &nbsp;персональных&nbsp;данных
+
+      .footer__basement
+        p.footer__address.hide-on-mobile Казань, ул. Баумана, д.72
+        p.footer__company.show-on-mobile © АО «СКАТ» 2024
+        a.footer__policy(href="#" target="_blank") Политика конфиденциальности
+
+        a.footer__dev.dev(href="#")
+          span Разработка сайта
+          +icon-multi('dev')
+
+      .footer__to-top
+        button.to-top-btn(type="button")
+          span Наверх
+          +icon-multi('top-arrow')

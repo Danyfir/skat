@@ -1,0 +1,40 @@
+@font-face {
+  font-weight: 400;
+  font-family: Roboto;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Roboto"),
+    local("Roboto-Bold"),
+    local("Roboto-Bold"),
+    url("../fonts/roboto-regular.woff2") format("woff2"),
+    url("../fonts/roboto-regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 400;
+  font-family: Avenir Next;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Avenir Next"),
+    local("Avenir Next Regular"),
+    local("Avenir Next Regular"),
+    url("../fonts/AvenirNextCyr-Regular.woff2") format("woff2"),
+    url("../fonts/AvenirNextCyr-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: Avenir Next;
+  font-style: normal;
+  font-display: swap;
+  src:
+    local("Avenir Next"),
+    local("Avenir Next Medium"),
+    local("Avenir Next Medium"),
+    url("../fonts/AvenirNextCyr-Medium.woff2") format("woff2"),
+    url("../fonts/AvenirNextCyr-Medium.woff") format("woff");
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ruda:wght@400..900&display=swap');

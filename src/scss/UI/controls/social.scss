@@ -1,0 +1,28 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+
+  border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+  background-color: var(--Black, #050403);
+  border-radius: 100%;
+
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--White, #fff);
+  }
+
+  .icon-tg {
+    padding: 0.2667rem 0.1778rem 0.1777rem 0.0889rem;
+  }
+
+  @include hoverActive() {
+    background-color: var(--White-10, rgba(255, 255, 255, 0.10));
+    border-color: transparent;
+  }
+}

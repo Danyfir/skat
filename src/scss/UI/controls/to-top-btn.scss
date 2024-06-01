@@ -1,0 +1,48 @@
+.to-top-btn {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4.8rem;
+  height: 4.8rem;
+
+  border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+  background-color: var(--Black, #050403);
+  border-radius: 100%;
+
+  .icon {
+    width: 3.2rem;
+    height: 3.2rem;
+    stroke: #777;
+
+    transition: var(--transition);
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(100% + 1.6rem);
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+
+    @include breakpointMF(tablet) {
+      display: block;
+    }
+  }
+
+  @include hoverActive() {
+    span {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .icon {
+      stroke: #fff;
+    }
+  }
+}
