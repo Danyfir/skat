@@ -9,7 +9,11 @@ import config from '../config';
 
 export const scriptsBuild = () => (
   browserify(`${config.src.js}/main.js`, { debug: true })
-    .transform('babelify', { presets: ['@babel/preset-env'] })
+    .transform('babelify', {
+      presets: ['@babel/preset-env'],
+      sourceMaps: true,
+      global: true,
+     })
     .bundle()
     .on('error', function browserifyError(error) {
       console.log(error.stack);

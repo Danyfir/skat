@@ -1,0 +1,90 @@
+.loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 5000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  background-color: var(--Black, #050403);
+
+  &__inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  &__icon {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon-grey {
+    .icon {
+      width: 8.6rem;
+      height: 3.4rem;
+
+      @include breakpointMF(tablet) {
+        width: 15rem;
+        height: 6rem ;
+      }
+    }
+  }
+
+  &__icon-grey {
+    position: relative;
+    z-index: 100;
+
+    .icon {
+      fill: var(--Grey, #1D1D1D);
+    }
+  }
+
+  &__icon-yellow {
+    position: relative;
+    z-index: 100;
+
+    .icon {
+      width: 100%;
+      height: 100%;
+      fill: var(--Yellow, #EBAA5B);
+    }
+  }
+
+  &__icon-yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+  }
+
+  &.loader--closed {
+    animation: hideloader 1s ease-in 0s 1 forwards;
+  }
+}
+
+@keyframes hideloader {
+  0% {
+    transform: translate(0);
+  }
+  50% {
+    transform: translateX(-150%);
+  }
+  100% {
+    transform: translateX(-150%);
+    visibility: hidden;
+    display: none;
+  }
+}

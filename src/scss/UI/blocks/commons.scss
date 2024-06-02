@@ -21,15 +21,15 @@
 }
 
 
-.hide-on-mobile {
+.hide-on-mobile  {
   @include breakpoint(small-tablet) {
-      display: none !important;
+    display: none !important;
   }
 }
 
 .show-on-mobile {
   @include breakpointMF(tablet) {
-      display: none !important;
+    display: none !important;
   }
 }
 
@@ -154,6 +154,32 @@
 
   @include breakpointMF(tablet) {
     @include font(3.6rem, 110%, 500);
-    ont-family: var(--second-ff, Arail);
+    font-family: var(--second-ff, Arail);
+  }
+}
+
+.text-h1 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  @include font(3.2rem, 105%, 500);
+  font-family: var(--second-ff, Arail);
+
+  @include breakpointMF(tablet) {
+    @include font(7rem, 105%, 700);
+    font-family: var(--second-ff, Arail);
+    letter-spacing: unset;
+  }
+}
+
+.text-h3 {
+  font-feature-settings: 'clig' off, 'liga' off;
+  text-transform: uppercase;
+  font-family: var(--second-ff, Arail);
+
+  @include breakpointMF(tablet) {
+    @include font(1.8rem, 130%, 600);
+    font-family: var(--second-ff, Arail);
+    letter-spacing: unset;
   }
 }

@@ -33,7 +33,7 @@
   --Dark-blue: #101038;
   --Dark-blue-30: rgba(16, 16, 56, 0.3);
 
-  --Light-Grey: #f5f5f5;
+  --Light-Grey: #A0A0A0;
   --Dark-Grey: #0E0E0E;
   --Pink: #fae5e7;
   --Coral: #ff6266;
@@ -42,6 +42,7 @@
   --Yellow-2: #EF9930;
   --Medium-Grey: #777;
   --Grey: #1D1D1D;
+  --Green: #003D32;
 
   // typography:
   --main-ff: "Avenir Next", sans-serif;
@@ -51,6 +52,14 @@
 
   /* etc */
   --transition: 300ms ease-out;
+
+  --swiper-pagination-bullet-horizontal-gap: 0.5rem;
+  --swiper-pagination-bullet-width: 0.4rem;
+  --swiper-pagination-bullet-height: 0.4rem;
+  --swiper-pagination-bullet-inactive-opacity: 1;
+  --swiper-pagination-bullet-inactive-color: var(--White, #fff);
+  --swiper-pagination-color: var(--Yellow, #EBAA5B);
+  --swiper-pagination-bullet-inactive-color: var(--White, #fff);
 }
 
 @media only screen and (min-width: (769px)) {

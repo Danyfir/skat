@@ -1,0 +1,27 @@
+.quality-mark {
+  display: flex;
+  align-items: center;
+
+  @include breakpointMF(tablet) {
+    gap: 1.2rem;
+  }
+
+  .icon {
+    width: 3rem;
+    height: 3.8rem;
+
+    @include breakpointMF(tablet) {
+      width: 3.2rem;
+      height: 4.1rem;
+    }
+  }
+
+  &__text {
+    max-width: 25ch;
+    font-style: italic;
+
+    @include breakpointMF(tablet) {
+      max-width: 30ch;
+    }
+  }
+}

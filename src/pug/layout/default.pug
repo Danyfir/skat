@@ -20,8 +20,11 @@ html(lang=siteLang)
     .modal
       include ../parts/modals/modal.pug
 
+    include ../parts/mobile-menu.pug
+    include ../parts/loader.pug
+
   block scripts
     script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="https://api-maps.yandex.ru/2.1/?apikey=72c05200-f928-4e05-aed9-e60fedabd791&lang=ru_RU",  type="text/javascript")
-    script(src="assets/js/main.js?v=" + siteVersion)
+    script(type="module", src="assets/js/main.js?v=" + siteVersion)
     script(src="assets/js/backend.js?v=" + siteVersion)

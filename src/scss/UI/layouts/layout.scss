@@ -30,6 +30,10 @@ html {
     font-size: clamp(4.2px, 0.595vw, 20px);
   }
 
+  @include aspectRatio(widthDesktop) {
+    font-size: clamp(4.2px, 0.595vw, 10px);
+  }
+
   @include noHighlight();
 }
 
@@ -68,8 +72,9 @@ body {
     }
   }
 
-  &:has(.tour-gallery--fullscreen) {
-    // @extend .no-scroll;
+  &:has(.loader),
+  &.mobile-menu-open {
+    @extend .no-scroll;
   }
 
   &.modal-open {
@@ -93,18 +98,8 @@ body {
 }
 
 .section {
-  margin-bottom: 6rem;
-
-  @include breakpointMF(tablet) {
-    margin-bottom: 10rem;
-  }
-
   &--first {
     @extend ._header-padding-top;
-
-    .plans-section__site-container {
-      padding-top: 13rem;
-    }
   }
 
   &--blue {
@@ -137,38 +132,6 @@ body {
       @include breakpointMF(tablet) {
         margin-bottom: 0;
         padding: 7rem 0 12rem;
-      }
-    }
-  }
-
-  &--minus-mb {
-    margin-bottom: -1.2rem;
-
-    @include breakpointMF(tablet) {
-      margin-bottom: -2.4rem;
-    }
-
-    & + .section {
-      z-index: 100;
-    }
-
-    & + .section--round-border {
-      margin-bottom: 0;
-    }
-  }
-
-  &:last-child {
-    margin-bottom: 6rem;
-
-    @include breakpointMF(tablet) {
-      margin-bottom: 12rem;
-    }
-
-    &.section--grey {
-      margin-bottom: 0;
-
-      @include breakpointMF(tablet) {
-        margin-bottom: 0;
       }
     }
   }

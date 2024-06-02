@@ -5,4 +5,9 @@
   @include hoverActive() {
     color: var(--Yellow, #EBAA5B);
   }
+
+  &.phone-link--small {
+    @extend .text-18;
+    color: var(--White-50, rgba(255, 255, 255, 0.50));
+  }
 }

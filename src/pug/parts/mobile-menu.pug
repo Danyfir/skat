@@ -1,0 +1,63 @@
+-
+  const menuList = [
+    {
+      "text": 'продукция',
+      "href": '#',
+      "id": '',
+      "class": ''
+    },
+    {
+      "text": 'Реализованные проекты',
+      "href": '#',
+      "id": '',
+      "class": ''
+    },
+    {
+      "text": 'О компании',
+      "href": '#',
+      "id": '',
+      "class": ''
+    },
+    {
+      "text": 'КОМАНДА',
+      "href": '#',
+      "id": '',
+      "class": ''
+    },
+    {
+      "text": 'ДОКУМЕНТАЦИЯ',
+      "href": '#',
+      "id": '',
+      "class": ''
+    },
+    {
+      "text": 'контакты',
+      "href": '#',
+      "id": '',
+      "class": ''
+    },
+    {
+      "text": 'поиск',
+      "href": '#',
+      "id": '',
+      "class": 'mobile-menu__link--search'
+    }
+  ];
+
+.mobile-menu
+  .mobile-menu__inner-wrapper
+    .mobile-menu__body
+      .mobile-menu__list-wrapper
+        ul.mobile-menu__list
+          for listItem in menuList
+            li.mobile-menu__list-item
+              a.mobile-menu__link.links(href=listItem.href, id=listItem.id, class=listItem.class)= listItem.text
+
+      .mobile-menu__contacts
+        .footer__links
+          a.phone-link.phone-link--small(href="tel:88002505999") 8 800 250 59 99
+          a.mail-link.mail-link--small(href="mailto:info@scat.ru") info@scat.ru
+
+        .footer__socials.socials.socials--row
+          for icon in icons
+            +social(icon)

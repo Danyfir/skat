@@ -13,4 +13,12 @@
     font-feature-settings: 'clig' off, 'liga' off;
     @include font(1.8rem, 130%, 400);
   }
+
+  &.mail-link--small {
+    @include breakpoint(small-tablet) {
+      text-transform: unset;
+      color: var(--White-50, rgba(255, 255, 255, 0.50));
+      @include font(1.6rem, 130%, 400);
+    }
+  }
 }

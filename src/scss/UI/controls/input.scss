@@ -1,6 +1,10 @@
 .input {
   position: relative;
 
+  .parsley-errors-list {
+    @include visuallyHidden();
+  }
+
   &__field {
     width: 100%;
     max-height: 4.8rem;
@@ -24,7 +28,7 @@
       @include font(1.6rem, 130%, 400);
     }
 
-    &:focus:required:invalid {
+    &:is(.parsley-error) {
       border-color: var(--Red, #EB1E3D);
 
       & ~ i {

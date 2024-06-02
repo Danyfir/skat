@@ -4,8 +4,9 @@
   left: 0;
   right: 0;
   bottom: auto;
-  z-index: 1000;
+  z-index: 2000;
 
+  will-change: transform;
   color: var(--White, #FFF);
   background: linear-gradient(180deg, #000 20%, rgba(0, 0, 0, 0.40) 60%, rgba(0, 0, 0, 0.00) 100%);
 
@@ -14,8 +15,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 3rem;
-    padding-bottom: 10rem;
+    padding-top: 1.6rem;
+    padding-bottom: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      padding-top: 3rem;
+      padding-bottom: 10rem;
+    }
   }
 
   &__col {
@@ -49,5 +55,31 @@
     display: flex;
     align-items: center;
     gap: 0.8rem;
+  }
+
+  &.header--fixed {
+    position: fixed;
+    animation: transAnim 0.4s ease-out 1 forwards;
+  }
+}
+
+@keyframes transAnim {
+  0% {
+      transform: translateY(-100%);
+  }
+
+  100% {
+      transform: translateY(0%);
+  }
+}
+
+
+@keyframes transAnimReverse {
+  0% {
+      transform: translateY(0%);
+  }
+
+  100% {
+      transform: translateY(-100%);
   }
 }

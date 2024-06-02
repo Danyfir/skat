@@ -87,6 +87,12 @@
 }
 
 .advantages {
+  padding: 5.6rem 0 6.6rem;
+
+  @include breakpointMF(tablet) {
+    padding: 14rem 0 20rem;
+  }
+
   &__swiper.swiper {
     margin-right: -100%;
     padding-right: 100%;

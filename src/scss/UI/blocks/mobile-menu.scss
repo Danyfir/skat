@@ -1,0 +1,119 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 1000;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  color: var(--White,#FFF);
+  background-color: var(--Black, #050403);
+
+  transition: 0.4s ease-out;
+
+  transform: translateX(120%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+
+  @include breakpointMF(tablet) {
+    display: none !important;
+  }
+
+  &__inner-wrapper {
+    width: 100%;
+    @extend ._header-padding-top;
+    max-height: 100%;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+
+    height: 100%;
+    overflow: auto;
+    padding-inline: var(--content-padding);
+    padding-top: 2.4rem;
+    padding-bottom: 1.6rem;
+  }
+
+  &__list-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    padding-bottom: 5rem;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    max-height: 100%;
+    overflow: auto;
+  }
+
+  &__list-item {
+    display: flex;
+    align-items: center;
+    height: 4.8rem;
+    padding: 1.5rem 0;
+
+    border-bottom: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+    &:first-child {
+      border-top: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+    }
+  }
+
+  &__link {
+    width: 100%;
+    flex-shrink: 0;
+    @extend .links-text;
+
+    &.mobile-menu__link--search {
+      position: relative;
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+
+        width: 1.6rem;
+        height: 1.6rem;
+
+        background-image: url("data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M7.33333%2012.6667C10.2789%2012.6667%2012.6667%2010.2789%2012.6667%207.33333C12.6667%204.38781%2010.2789%202%207.33333%202C4.38781%202%202%204.38781%202%207.33333C2%2010.2789%204.38781%2012.6667%207.33333%2012.6667Z%22%20stroke%3D%22%23777777%22%20stroke-width%3D%221.33333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M13.9986%2014L11.0986%2011.1%22%20stroke%3D%22%23777777%22%20stroke-width%3D%221.33333%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center ;
+        content: "";
+      }
+    }
+  }
+
+  &__contacts {
+    .footer__links {
+      gap: 1.2rem;
+      margin-bottom: 3.4rem;
+    }
+
+    .footer__socials {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.mobile-menu-open {
+  .mobile-menu {
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+}
