@@ -15,7 +15,21 @@
     height: 100%;
   }
 
+  &__image-swiper-wrapper.swiper-wrapper {
+    will-change: transform;
+    -moz-transform-style: flat;
+    -webkit-transform-style: flat;
+    -ms-transform-style: flat;
+    transform-style: flat;
+  }
+
   &__image-swiper-slide {
+    will-change: transform;
+    -moz-transform-style: flat;
+    -webkit-transform-style: flat;
+    -ms-transform-style: flat;
+    transform-style: flat;
+
     &::before {
       position: absolute;
       top: 0;
