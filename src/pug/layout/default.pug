@@ -24,7 +24,7 @@ html(lang=siteLang)
     include ../parts/loader.pug
 
   block scripts
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-    script(src="https://api-maps.yandex.ru/2.1/?apikey=72c05200-f928-4e05-aed9-e60fedabd791&lang=ru_RU",  type="text/javascript")
+    script(defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(defer src="https://api-maps.yandex.ru/2.1/?apikey=1d46cd9a-2c9e-4500-b55b-ee2306bc1a9f&lang=ru_RU")
     script(type="module", src="assets/js/main.js?v=" + siteVersion)
     script(src="assets/js/backend.js?v=" + siteVersion)

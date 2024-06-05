@@ -10,7 +10,7 @@
     {text: "Контакты", link: "#", class: ""},
   ];
 
-footer.footer
+footer.footer.footer--simple
   script(type="text/javascript").
     var mapData = [
         {
@@ -19,7 +19,7 @@ footer.footer
         }
       ];
 
-    var mapZoom = 17;
+    var mapZoom = 18;
 
     var mapCenter = [55.788858, 49.118076];
 
@@ -30,7 +30,6 @@ footer.footer
 
   .footer__main
     .footer__site-container.footer__grid
-
       .footer__contacts
         .footer__links
           a.phone-link(href="tel:88002505999") 8 800 250 59 99
@@ -83,7 +82,7 @@ footer.footer
         p.footer__company.show-on-mobile © АО «СКАТ» 2024
         a.footer__policy(href="#" target="_blank") Политика конфиденциальности
 
-        a.footer__dev.dev(href="#")
+        a.footer__dev.dev(href="https://markweber.ru/")
           span Разработка сайта
           +icon-multi('dev')
 

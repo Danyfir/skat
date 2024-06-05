@@ -83,3 +83,11 @@
       transform: translateY(-100%);
   }
 }
+
+.header__desktop-nav,
+.header__mobile-nav,
+.header__menu {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}

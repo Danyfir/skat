@@ -15,7 +15,7 @@
     border-radius: 1.6rem;
 
     &>div {
-      width: 100%;
+      // width: 100%;
       height: 100%;
     }
 
@@ -182,6 +182,43 @@
     @include breakpointMF(tablet) {
       top: 0;
       bottom: unset;
+    }
+  }
+}
+
+.footer.footer--simple {
+  .footer__main {
+    padding: 2rem 0 3rem;
+  }
+
+  .footer__contacts {
+    .footer__links,
+    .footer__socials {
+      display: none;
+    }
+  }
+
+  .footer__logo {
+    margin: 0;
+
+    @include breakpointMF(tablet) {
+      margin-top: 4rem;
+    }
+  }
+
+  .footer__form,
+  .footer__menus {
+    @include visuallyHidden();
+  }
+
+  .footer__grid {
+    gap: 2rem;
+    min-height: unset;
+  }
+
+  .footer__basement {
+    @include breakpointMF(tablet) {
+      padding-top: 4rem;
     }
   }
 }
