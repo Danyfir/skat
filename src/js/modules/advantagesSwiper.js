@@ -34,9 +34,9 @@ export default () => {
         init: function () {
           let tl = gsap.timeline({
             scrollTrigger: {
-              start: "bottom top+=75%",
-              end: "bottom center-=90%",
-              scrub: 2.5,
+              start: "bottom center-=20%",
+              end: "bottom center-=80%",
+              scrub: 3.5,
               // markers: true,
             }
           });
@@ -44,16 +44,13 @@ export default () => {
           tl.addLabel('start')
             .from('.js-scroller-animation', {
               translateX: 0,
-              duration: 3,
-              ease: "power1.out",
-              stagger: 2,
             })
             .addLabel('scroll')
             .to('.js-scroller-animation', {
               translateX: -scrolled,
-              duration: 3,
-              ease: "power1.out",
-              stagger: 2,
+              duration: 5,
+              ease: "sine.out",
+              stagger: 1,
             })
             .addLabel('end');
         },

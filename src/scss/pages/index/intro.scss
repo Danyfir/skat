@@ -156,10 +156,13 @@
 
     &-white-text {
       color: var(--White, #FFF);
+      font-weight: 500;
     }
 
     &-grey-text {
       color: var(--Light-Gray, #A0A0A0);
+      text-transform: initial;
+      font-weight: 500;
     }
   }
 

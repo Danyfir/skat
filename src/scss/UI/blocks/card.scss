@@ -22,11 +22,13 @@
     max-width: 20ch;
     @extend .text-h3;
     color: var(--White, #FFF);
+    transition: color var(--transition);
   }
 
   &__chars {
     @extend .text-h3;
     color: var(--White-50, rgba(255, 255, 255, 0.50));
+    transition: color var(--transition);
   }
 
   &__icon {
@@ -50,6 +52,7 @@
     .icon {
       width: 1.6rem;
       height: 1.6rem;
+      stroke: var(--White, #FFF);
     }
   }
 
@@ -89,7 +92,24 @@
   &.intro__thumbs {
     &.card--hover {
       aspect-ratio: 1.728 / 1;
-      background-color: var(--Green, #003D32);
+      background-color: var(--Color-Yellow-2, #EF9930);
+
+      .card__name {
+        color: var(--Achromatic-Black, #050403);
+      }
+
+      .card__chars {
+        color: rgba(5, 4, 3, 0.50);
+      }
+
+      .card__icon {
+        border-radius: 53.688px;
+        border-color: rgba(5, 4, 3, 0.20);
+
+        .icon {
+          stroke: var(--Achromatic-Black, #050403);
+        }
+      }
 
       .card__icon {
         transform: rotate(-45deg);
