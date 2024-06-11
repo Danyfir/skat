@@ -24,7 +24,7 @@
       imgMjpg: './assets/images/intro/image-3mn.jpg',
       imgMwebp: './assets/images/intro/image-3mn.webp',
       yText: 'Арматура',
-      wText: 'СИП',
+      wText: 'для СИП',
       gText: '0,4 кВ и 6-35 кВ',
     },
   ];
@@ -48,7 +48,7 @@
     {
       id: 2,
       href: '#',
-      name: 'Арматура СИП',
+      name: 'Арматура для СИП',
       chars: '0,4 кВ и 6-35 кВ',
       image: './assets/images/cards/pic-3.png',
     },
@@ -62,8 +62,8 @@ section.intro.js-intro-swiper-box
           li.intro__image-swiper-slide.swiper-slide(data-swiper-parallax-opacity="0.1")
             .intro__picture-container
               picture
-                source(type="image/webp" srcset=slide.imgMjpg media="(max-width: 768px)" alt="")
-                source(type="image/webp" srcset=slide.imgMwebp media="(max-width: 768px)" alt="")
+                source(type="image/webp" srcset=slide.imgMjpg media="(max-width: 769px)" alt="")
+                source(type="image/webp" srcset=slide.imgMwebp media="(max-width: 769px)" alt="")
                 source(type="image/webp" srcset=slide.imgBwebp media="(min-width: 769px)" alt="")
                 img(src=slide.imgBjpg alt="")
             .intro__site-container.intro__info-container

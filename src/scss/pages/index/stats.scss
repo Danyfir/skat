@@ -1,0 +1,109 @@
+.stats {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  min-height: 100vh;
+  overflow: hidden;
+
+  @include breakpointMF(tablet) {
+    padding: 13.5rem 0 6.7rem;
+  }
+
+  &__body {
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10rem;
+
+    @include breakpointMF(tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 0;
+    }
+  }
+
+  &__headings,
+  &__scrolling-wrapper {
+    flex: 1 0 100%;
+
+    @include breakpointMF(tablet) {
+      flex: 0 0 50%;
+    }
+  }
+
+  &__headings {
+    @include breakpointMF(tablet) {
+      padding-right: 7.2rem;
+      padding-bottom: 22.5rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 4.4rem;
+    }
+  }
+
+  &__phrase {
+    color: var(--Yellow, #EBAA5B);
+    @extend .text-60;
+
+    &:last-child {
+      color: var(--White, #FFF);
+    }
+
+    &:nth-child(2) {
+      margin-left: 3ch;
+    }
+  }
+
+  &__desc {
+    max-width: 55ch;
+    margin-bottom:  4rem;
+    opacity: 0.8;
+    @extend .text-18;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__link.button {
+    @include breakpointMF(tablet) {
+      width: max-content;
+      min-width: 24rem;
+    }
+  }
+
+  &__scrolling {
+
+    @include breakpointMF(tablet) {
+      height: 63.5rem;
+      // overflow: hidden;
+    }
+
+    ul {
+
+    }
+  }
+
+  &__scrolling-item {
+    margin-bottom: 6rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 24rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

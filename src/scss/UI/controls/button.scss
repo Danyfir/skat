@@ -31,11 +31,28 @@
     }
   }
 
+  &--biggest {
+    max-height: 4.8rem;
+    padding: 1.6rem 5rem;
+
+    border-radius: 4rem;
+
+    @include hoverActive() {
+      background-color: var(--Yellow-2, #EF9930);
+    }
+
+    @include breakpointMF(tablet) {
+      max-height: 7rem;
+      padding: 2.7rem 5.2rem;
+      border-radius: 100rem;
+    }
+  }
+
   &--big {
     max-height: 4.8rem;
     padding: 1.6rem 5rem;
 
-    background-color: var(--white, #FFF);
+    background-color: var(--White, #FFF);
     border-radius: 2.75rem;
 
     @include hoverActive() {
@@ -45,6 +62,28 @@
     @include breakpointMF(tablet) {
       max-height: 5.5rem;
       padding: 2.1rem 5.2rem;
+    }
+  }
+
+  &--outlined {
+    color: var(--White, #FFF);
+    background-color: transparent;
+    border: 1px solid var(--Achromatic-White, #FFF);
+
+    @include hoverActive() {
+      color: var(--Black, #050403);
+      background-color: var(--White, #FFF);
+    }
+  }
+
+  &--outlined-low {
+    color: var(--White, #FFF);
+    background-color: transparent;
+    border: 1px solid var(--Opacity-White-20, rgba(255, 255, 255, 0.20));
+
+    @include hoverActive() {
+      background-color: transparent;
+      border-color: var(--White, #FFF);
     }
   }
 }

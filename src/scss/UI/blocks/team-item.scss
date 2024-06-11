@@ -1,0 +1,73 @@
+.team-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  cursor: pointer;
+
+  &__image {
+    position: relative;
+
+    width: 100%;
+    aspect-ratio: 0.83 / 1;
+    overflow: hidden;
+
+    background: linear-gradient(180deg, #fff 0%, #a6a6a6 90%);
+    border-radius: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      aspect-ratio: 0.8 / 1;
+    }
+
+    img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 100;
+
+      display: block;
+      width: 100%;
+      object-position: center bottom;
+
+      transition: transform 0.4s ease-out;
+    }
+  }
+
+  &__info {
+    margin-top: 1.6rem;
+  }
+
+  &__name {
+    margin-bottom: 0.2rem;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 0.8rem;
+
+      font-size: 2.4rem;
+      line-height: 110%;
+    }
+  }
+
+  &__role {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    opacity: 0.5;
+  }
+
+  @include hoverActive() {
+    .team-item__image {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}

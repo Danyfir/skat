@@ -1,0 +1,59 @@
+.stamp {
+  display: flex;
+  align-items: stretch;
+  gap: 0.2rem;
+
+  @include breakpointMF(tablet) {
+    gap: 1.8rem;
+  }
+
+  .icon {
+    width: 0.6rem;
+    aspect-ratio: 1 / 5;
+
+    @include breakpointMF(tablet) {
+      width: 1.1rem;
+      aspect-ratio: 1 / 6.36;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.6rem;
+  }
+
+  &__number {
+    display: block;
+
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+
+    @include breakpointMF(tablet) {
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 4rem;
+      line-height: 110%;
+    }
+  }
+
+  &__text {
+    display: block;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    opacity: 0.6;
+
+    @include breakpointMF(tablet) {
+      font-size: 1.8rem;
+      line-height: 130%;
+    }
+  }
+}

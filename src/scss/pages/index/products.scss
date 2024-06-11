@@ -1,0 +1,78 @@
+.products {
+  padding: 5.5rem 0;
+
+  @include breakpointMF(tablet) {
+    padding: 6.8rem 0;
+  }
+
+  &__heading {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 2.4rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__title {
+    @extend .text-accent;
+  }
+
+  &__stamp {
+    margin-left: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      margin-left: 2.4rem;
+    }
+  }
+
+  //=======================================
+
+  &__body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    gap: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(auto-fit, minmax(32rem, 1fr));
+      grid-auto-rows: 32rem;
+    }
+  }
+
+  &__item {
+    aspect-ratio: 1.312 / 1;
+
+    @include breakpointMF(tablet) {
+      aspect-ratio: unset;
+    }
+
+    &--big {
+      grid-row: span 2;
+    }
+  }
+
+
+  // ==================================
+  &__add {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    margin-top: 2.4rem;
+
+    @include breakpointMF(tablet) {
+      margin-top: 3.2rem;
+    }
+  }
+
+  &__add-btn {
+    &.button {
+      width: 100%;
+    }
+  }
+}

@@ -137,11 +137,15 @@ body {
   }
 
   &__heading {
-    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 3.2rem;
     @extend .text-h2;
 
     @include breakpointMF(tablet) {
-      margin-bottom: 6rem;
+      margin-bottom: 4rem;
     }
   }
 

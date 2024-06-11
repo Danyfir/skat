@@ -93,10 +93,19 @@
 }
 
 .advantages {
-  padding: 5.6rem 0 6.6rem;
+  padding: 7.6rem 0 5rem;
 
   @include breakpointMF(tablet) {
-    padding: 14rem 0 20rem;
+    padding: 13.5rem 0;
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+    @extend .text-h2;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 6rem;
+    }
   }
 
   &__swiper.swiper {

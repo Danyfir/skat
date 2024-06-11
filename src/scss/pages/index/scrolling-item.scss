@@ -1,0 +1,34 @@
+.scrolling-item {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  @include breakpointMF(tablet) {
+    gap: 2.4rem;
+  }
+
+  &__title {
+    @extend .numbers-big;
+    line-height: 80%;
+
+    span, i {
+      line-height: 80%;
+    }
+
+    span {
+      display: inline-block;
+      font: inherit;
+    }
+
+    i {
+      @extend .text-40;
+      text-transform: initial;
+    }
+  }
+
+  &__text {
+    @extend .text-22;
+    opacity: 0.8;
+  }
+}

@@ -4,7 +4,12 @@
   background-color: var(--Black, #050403);
 
   &__map {
+    padding-top: 1.6rem;
     margin-bottom: 4rem;
+
+    @include breakpointMF(tablet) {
+      padding-top: 7rem;
+    }
   }
 
   &__map-wrapper {

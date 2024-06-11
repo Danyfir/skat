@@ -1,0 +1,54 @@
+-
+  const teamList = [
+    {
+      id: "team-item-0",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+    {
+      id: "team-item-1",
+      imageP: "./assets/images/team/2.png",
+      imageW: "./assets/images/team/2.webp",
+      name: "Сергей Петров",
+      role: "Зам. генерального директора"
+    },
+    {
+      id: "team-item-2",
+      imageP: "./assets/images/team/3.png",
+      imageW: "./assets/images/team/3.webp",
+      name: "Василий Ильин",
+      role: "Главный проектировщик"
+    },
+    {
+      id: "team-item-3",
+      imageP: "./assets/images/team/4.png",
+      imageW: "./assets/images/team/4.webp",
+      name: "Иван Сидоров",
+      role: "Главный инженер"
+    },
+  ];
+
+section.section.team.js-team-slider
+  .team__site-container
+    .team__heading.section__heading
+      h2.section__title Наша команда
+      a.team__link.button.button--big.button--outlined-low.hide-on-mobile(href="#") вся команда
+
+    .team__body
+      .team__swiper.swiper
+        ul.team__swiper-wrapper.swiper-wrapper
+          for item in teamList
+            li.team__swiper-slide.swiper-slide
+              a.team__item.team-item(href="#", id=item.id)
+                .team-item__image
+                  picture
+                    source(type="image/webp" srcset=item.imageW alt="")
+                    img(src=item.imageP alt="")
+
+                .team-item__info
+                  p.team-item__name= item.name
+                  p.team-item__role= item.role
+
+      a.team__link.button.button--big.button--outlined.show-on-mobile(href="#") вся команда

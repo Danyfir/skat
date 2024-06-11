@@ -29,6 +29,7 @@
     @extend .text-h3;
     color: var(--White-50, rgba(255, 255, 255, 0.50));
     transition: color var(--transition);
+    text-transform: unset !important;
   }
 
   &__icon {
@@ -78,9 +79,65 @@
     }
   }
 
-  &:not(.intro__thumbs) {
+  &--big {
+    .card__image {
+      @include breakpointMF(tablet) {
+        aspect-ratio: 0.92 / 1;
+        top: 5rem;
+        right: 5rem;
+      }
+    }
+  }
+
+  &:not(.intro__thumbs, .products__card) {
     @include hoverActive() {
       aspect-ratio: 1.728 / 1;
+      background-color: var(--Green, #003D32);
+
+      .card__icon {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &.products__card {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: unset;
+
+    &.card--big {
+      .card__image {
+        @include breakpointMF(tablet) {
+          aspect-ratio: 0.92 / 1;
+          top: 5rem;
+          right: 5rem;
+        }
+      }
+    }
+
+    .card__image {
+      right: 0;
+      padding-left: 0;
+
+      img {
+        object-fit: contain;
+        object-position: right center;
+      }
+
+      @include breakpoint(small-tablet) {
+        bottom: 0;
+        right: 0;
+        height: auto;
+        padding-left: 10rem;
+      }
+    }
+
+    .card__chars,
+    .card__name {
+      @extend .text-32;
+    }
+
+    @include hoverActive() {
       background-color: var(--Green, #003D32);
 
       .card__icon {

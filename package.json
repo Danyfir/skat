@@ -89,6 +89,7 @@
 	},
 	"dependencies": {
 		"animejs": "3.2.2",
+		"body-scroll-lock": "4.0.0-beta.0",
 		"detect-it": "4.0.1",
 		"gsap": "3.12.5",
 		"gulp-sharp-responsive": "0.4.1",

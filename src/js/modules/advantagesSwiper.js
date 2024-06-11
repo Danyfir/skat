@@ -1,4 +1,5 @@
 import Swiper from 'swiper/swiper-bundle';
+
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -18,6 +19,7 @@ export default () => {
       spaceBetween: 24,
       slidesPerView: 'auto',
       allowTouchMove: false,
+      watchOverflow: true,
 
       breakpoints: {
         640: {
@@ -34,8 +36,9 @@ export default () => {
         init: function () {
           let tl = gsap.timeline({
             scrollTrigger: {
-              start: "bottom center-=20%",
-              end: "bottom center-=80%",
+              trigger: ".js-scroller-animation",
+              start: "top center+=15%",
+              end: "bottom center-=30%",
               scrub: 3.5,
               // markers: true,
             }

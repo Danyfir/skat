@@ -16,6 +16,8 @@ import introSwiper from './modules/introSwiper';
 import openMobileMenu from './modules/openMobileMenu';
 import initMap from './modules/footerMap';
 import advantagesSwiper from './modules/advantagesSwiper';
+import statsAnimations from './modules/statsAnimations';
+import teamSwiper from './modules/teamSwiper';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -35,4 +37,6 @@ documenReady(() => {
   initModal();
   initMap();
   advantagesSwiper();
+  statsAnimations();
+  teamSwiper();
 });
