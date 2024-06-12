@@ -1,4 +1,3 @@
-import { disableBodyScroll, enableBodyScroll, clearAllBodyScrollLocks } from 'body-scroll-lock';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -19,10 +18,8 @@ export default () => {
     const ulHeight = statsSection.querySelector('.stats__scrolling-list').clientHeight;
     const endHeight = ulHeight - wrapperHeight;
     const scrollHeight = ulHeight - wrapperHeight + (headingsHeight - itemHeight);
-
-    console.log(itemHeight);
-
     const tl = gsap.timeline();
+
     tl.to(".stats__scrolling-list", {y: -scrollHeight, duration: 4, stagger: 0.5})
 
     ScrollTrigger.create({

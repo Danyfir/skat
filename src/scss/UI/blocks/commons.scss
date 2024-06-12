@@ -15,8 +15,8 @@
   top: 0;
 
   body {
-      height: auto;
-      overflow: hidden;
+    height: auto;
+    overflow: hidden;
   }
 }
 
@@ -42,10 +42,10 @@
 }
 
 ._border-16 {
-  border-radius: 1.2rem;
+  border-radius: 1.6rem;
 
   @include breakpointMF(tablet) {
-      border-radius: 1.6rem;
+    border-radius: 1.6rem;
   }
 }
 

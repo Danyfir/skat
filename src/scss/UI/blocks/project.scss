@@ -1,0 +1,163 @@
+.project {
+  display: block;
+  width: 100%;
+  max-width: 75.2rem;
+  cursor: pointer;
+
+  &__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.64 / 1;
+    overflow: hidden;
+
+    @extend ._border-16;
+
+    img {
+      @include centeredAbsolute();
+      z-index: 100;
+
+      display: block;
+      width: 100%;
+      min-height: 100%;
+
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 2rem;
+    }
+  }
+
+  &__text {
+    max-width: 28ch;
+    margin-bottom: 1.2rem;
+
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+
+    @include breakpointMF(tablet) {
+      max-width: 27ch;
+      margin-bottom: unset;
+
+      font-size: 2rem;
+      line-height: 115%;
+    }
+  }
+
+  &__date {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    opacity: 0.5;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: unset;
+
+      font-size: 1.6rem;
+      line-height: 130%;
+    }
+  }
+
+  &__tag {
+    position: absolute;
+    top: 1.6rem;
+    left: 1.6rem;
+    z-index: 300;
+
+    @include breakpointMF(tablet) {
+      top: 2.4rem;
+      left: 2.4rem;
+      transition: opacity 0.3s ease-out;
+      opacity: 0;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    right: 9.8rem;
+    bottom: 6rem;
+    z-index: 400;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14rem;
+    height: 14rem;
+
+    color: var(--Black, #050403);
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+
+    background: var(--Yellow, #EBAA5B);
+    border-radius: 100%;
+
+    transition: opacity 0.3s ease-out;
+    opacity: 0;
+  }
+
+  &__icon {
+    top: unset;
+    left: unset;
+    right: 1.6rem;
+    bottom: 1.6rem;
+  }
+
+  &--big {
+    @include breakpointMF(tablet) {
+      aspect-ratio: 1.7 / 1;
+    }
+
+    .project__label {
+      right: 10.2rem;
+      bottom: 7.1rem;
+    }
+  }
+
+  &--small {
+    @include breakpointMF(tablet) {
+      aspect-ratio: 1.55 / 1;
+      max-width: 49.6rem;
+    }
+  }
+
+  @include hoverActive() {
+    .project__tag {
+      opacity: 1;
+    }
+
+    .project__label {
+      opacity: 1;
+    }
+
+    .project__icon {
+      &.card__icon {
+        border-color: var(--Yellow, #EBAA5B);
+        background-color: var(--Yellow, #EBAA5B);
+
+        .icon {
+          stroke: var(--Black, #050403);
+        }
+      }
+    }
+  }
+}

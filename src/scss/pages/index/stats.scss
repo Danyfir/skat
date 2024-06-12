@@ -4,11 +4,11 @@
   align-items: stretch;
   justify-content: flex-end;
 
-  min-height: 100vh;
   overflow: hidden;
+  padding: 5rem 0 6rem;
 
   @include breakpointMF(tablet) {
-    padding: 13.5rem 0 6.7rem;
+    padding: 13.5rem 0 8.4rem;
   }
 
   &__body {

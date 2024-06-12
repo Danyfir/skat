@@ -3,6 +3,15 @@
   height: 100vh;
   height: 100dvh;
 
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+
+  @include breakpointMF(tablet) {
+    display: block;
+  }
+
   &__image-slider {
     position: absolute;
     top: 0;
@@ -71,7 +80,6 @@
         background: linear-gradient(0deg, #050403 19.61%, rgba(5, 4, 3, 0.00) 100%);
       }
     }
-
   }
 
   &__picture-container {
@@ -95,10 +103,13 @@
       display: block;
       width: 100%;
       min-height: 100%;
-      object-fit: cover;
+      object-fit: contain;
       object-position: center;
-    }
 
+      @include breakpointMF(tablet) {
+        object-fit: cover;
+      }
+    }
   }
 
   &__info-container {
@@ -111,6 +122,12 @@
     height: 100%;
     width: 100%;
     @extend ._header-padding-top;
+
+    .intro__slide-link.button {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
   }
 
   &__slide-info {
@@ -198,22 +215,16 @@
     position: relative;
     z-index: 500;
 
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: flex-end;
-
-    height: 100%;
-    padding-bottom: 5.5rem;
-
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    padding-bottom: 2.4rem;
 
     @include breakpointMF(tablet) {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: all;
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-end;
+      height: 100%;
+      margin-top: unset;
+      padding-bottom: 5.5rem;
     }
   }
 
@@ -222,6 +233,12 @@
     align-items: stretch;
     justify-content: flex-end;
     gap: 1.6rem;
+
+    display: none;
+
+    @include breakpointMF(tablet) {
+      display: flex;
+    }
   }
 
   &__image-pagination {

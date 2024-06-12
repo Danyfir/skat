@@ -61,6 +61,28 @@
     position: fixed;
     animation: transAnim 0.4s ease-out 1 forwards;
   }
+
+  &__desktop-menu {
+    display: none;
+  }
+}
+
+.desktop-menu-is-open {
+
+  .header__col--controls {
+    position: relative;
+    z-index: 2000;
+  }
+
+  .header__search {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .header__desktop-menu {
+    display: block;
+  }
 }
 
 @keyframes transAnim {
@@ -73,7 +95,6 @@
   }
 }
 
-
 @keyframes transAnimReverse {
   0% {
       transform: translateY(0%);
@@ -82,12 +103,4 @@
   100% {
       transform: translateY(-100%);
   }
-}
-
-.header__desktop-nav,
-.header__mobile-nav,
-.header__menu {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
 }

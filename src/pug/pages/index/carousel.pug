@@ -1,0 +1,71 @@
+-
+  const certificatesAr = [
+    {
+      id: "certificates-01",
+      text: "Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013",
+      imgB: "./assets/images/certificates/1.png",
+      imgW: "./assets/images/certificates/1.webp",
+    },
+    {
+      id: "certificates-02",
+      text: `Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии "PE" и "VE"`,
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+    },
+    {
+      id: "certificates-03",
+      text: `Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013`,
+      imgB: "./assets/images/certificates/3.png",
+      imgW: "./assets/images/certificates/3.webp",
+    },
+    {
+      id: "certificates-04",
+      text: `Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии "PE" и "VE"`,
+      imgB: "./assets/images/certificates/4.png",
+      imgW: "./assets/images/certificates/4.webp",
+    },
+    {
+      id: "certificates-05",
+      text: `Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013`,
+      imgB: "./assets/images/certificates/1.png",
+      imgW: "./assets/images/certificates/1.webp",
+    },
+    {
+      id: "certificates-06",
+      text: `Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии "PE" и "VE"`,
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+    },
+  ]
+
+section.section.carousel.js-carousel-swiper
+  .carousel__site-container
+    .carousel__heading.section__heading
+      h2.carousel__title.section__title СЕРТИФИКАТЫ ПРОДУКЦИИ
+      .carousel__controls.slider-buttons.hide-on-mobile
+        button.slider-buttons__button.slider-buttons__button--prev(type="button")
+          +icon-multi('prev-ar')
+        button.slider-buttons__button.slider-buttons__button--next(type="button")
+          +icon-multi('next-ar')
+
+    .carousel__body
+      .carousel__swiper.swiper
+        .carousel__swiper-wrapper.swiper-wrapper
+          for item in certificatesAr
+            .carousel__swiper-slide.swiper-slide
+              a.certificates-card(href="#", target="_blank" download, id=item.id)
+                .certificates-card__image
+                  picture
+                    source(type="image/webp" srcset=item.imgW alt="")
+                    img(src=item.imgB alt="")
+
+                p.certificates-card__text=item.text
+
+                .certificates-card__footer
+                  .certificates-card__file
+                    +icon-multi('pdf')
+
+                    span.certificates-card__file-text pdf
+                    span.certificates-card__file-size 5mb
+
+                  +icon-multi('cert-ar')

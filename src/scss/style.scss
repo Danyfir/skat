@@ -45,6 +45,8 @@
   --Grey: #1D1D1D;
   --Green: #003D32;
 
+  --Opacity-Yellow-30: rgba(235, 170, 91, 0.30);
+
   // typography:
   --main-ff: "Avenir Next", sans-serif;
   --second-ff: "Ruda", sans-serif;
@@ -66,6 +68,7 @@
 @media only screen and (min-width: (769px)) {
   :root {
     --content-padding: 4rem;
+    --header-height: 17rem;
   }
 }
 

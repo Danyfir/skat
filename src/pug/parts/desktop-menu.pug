@@ -1,0 +1,96 @@
+-
+  const menuAr = [
+    {
+      text: "Продукция",
+      id: "radio-input-image-1",
+      img: "./assets/images/menus/1.png",
+      imgW: "./assets/images/menus/1.webp"
+    },
+    {
+      text: "Реализованные проекты",
+      id: "radio-input-image-2",
+      img: "./assets/images/menus/2.png",
+      imgW: "./assets/images/menus/2.webp"
+    },
+    {
+      text: "О компании",
+      id: "radio-input-image-3",
+      img: "./assets/images/menus/3.png",
+      imgW: "./assets/images/menus/3.webp"
+    },
+    {
+      text: "КОМАНДА",
+      id: "radio-input-image-4",
+      img: "./assets/images/menus/4.png",
+      imgW: "./assets/images/menus/4.webp"
+    },
+    {
+      text: "ДОКУМЕНТАЦИЯ",
+      id: "radio-input-image-5",
+      img: "./assets/images/menus/5.png",
+      imgW: "./assets/images/menus/5.webp"
+    },
+    {
+      text: "Контакты",
+      id: "radio-input-image-6",
+      img: "./assets/images/menus/6.png",
+      imgW: "./assets/images/menus/6.webp"
+    },
+  ];
+
+.desktop-menu
+  .desktop-menu__container
+    .desktop-menu__content
+      .desktop-menu__head
+        form.desktop-menu__search(action="", autocomplete="off")
+          .desktop-menu__input.input
+            input#search(
+              class="input__field",
+              type="text",
+              name="search",
+              required,
+              placeholder="Введите слово для поиска"
+            )
+          +btn-search(class="header__search-btn" type="submit")
+
+      .desktop-menu__body
+        .desktop-menu__row
+          .desktop-menu__menu.js-hover-opacity
+            for item in menuAr
+              a.desktop-menu__link.js-hover-link(href="#")
+                label.desktop-menu__label(for=item.id)= item.text
+
+          ul.desktop-menu__images
+            input.desktop-menu__input(type="radio", name="radio-images", hidden, id="radio-input-image-all")
+
+            for obj in menuAr
+              li
+                input.desktop-menu__input(type="radio", name="radio-images", hidden, id=obj.id)
+                .desktop-menu__image
+                  picture
+                    source(type="image/webp" srcset=obj.imgW alt="")
+                    img(src=obj.img  alt="")
+
+      .desktop-menu__footer
+        .desktop-menu__column
+          .footer__contacts.desktop-menu__contacts
+            .footer__links
+              a.phone-link(href="tel:88002505999") 8 800 250 59 99
+              a.mail-link(href="mailto:info@scat.ru") info@scat.ru
+
+            .footer__socials.socials.socials--row
+              for icon in svgs
+                +social(icon)
+
+        .desktop-menu__column
+          p.footer__address
+            | 420111,&nbsp;Республика&nbsp;Татарстан,
+            <br>
+            | город&nbsp;Казань, ул.&nbsp;Баумана,&nbsp;д.72
+
+          a.footer__policy(href="#" target="_blank")
+            | Политика конфиденциальности
+
+        .desktop-menu__column.desktop-menu__column--end
+          button.desktop-menu__button.button.button--big(type='button')
+            | оставить заявку

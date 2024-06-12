@@ -1,0 +1,72 @@
+-
+  const projects = [
+    {
+      parentClass: '',
+      class: 'project--big',
+      imgJ: './assets/images/projects/1.webp',
+      imgW: './assets/images/projects/1.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Комплексные услуги для систем кабельной арматуры',
+    },
+    {
+      parentClass: '',
+      class: 'project--big',
+      imgJ: './assets/images/projects/3.webp',
+      imgW: './assets/images/projects/3.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Надёжные решения для электроэнергетики',
+    },
+    {
+      parentClass: 'projects__cell--small',
+      class: 'project--small',
+      imgJ: './assets/images/projects/2.webp',
+      imgW: './assets/images/projects/2.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Инновации в кабельной арматуре',
+    },
+    {
+      parentClass: 'projects__cell--big',
+      class: 'project--big',
+      imgJ: './assets/images/projects/4.webp',
+      imgW: './assets/images/projects/4.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Комплексные услуги для систем кабельной арматуры',
+    },
+  ];
+
+section.section.projects
+  .projects__site-container
+    .projects__body
+      .projects__cell
+        .projects__item
+          .projects__heading
+            span.projects__heading-number 30
+            .projects__heading-plus
+              +icon-multi('proj-plus')
+            p.projects__heading-text
+              | реализованных
+              br
+              | проектов
+
+      for item in projects
+        .projects__cell(class=item.parentClass)
+          a.project(href="#" class=item.class)
+            .project__image
+              picture
+                source(type="image/webp" srcset=item.imgW alt="")
+                img(src=item.imgJ  alt="")
+
+              .project__tag.tag
+                +icon-multi('rosseti')
+
+              span.project__label.hide-on-mobile
+                | подробнее<br>о&nbsp;проекте
+
+              .card__icon.project__icon.show-on-mobile
+                +icon-multi('card-icon')
+
+            .project__info
+              p.project__text= item.text
+              p.project__date= item.date
+
+    .projects__add

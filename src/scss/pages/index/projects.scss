@@ -1,0 +1,102 @@
+.projects {
+  padding: 5.5rem 0 5rem;
+
+  @include breakpointMF(tablet) {
+    padding: 11.4rem 0 10rem;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 3.2rem;
+
+    @include breakpointMF(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+      gap: 12rem 1.6rem;
+    }
+  }
+
+  &__heading {
+    width: min-content;
+    display: grid;
+    grid-template-areas:
+      "_heading-number _heading-plus"
+      "_heading-number _heading-text";
+    row-gap: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      row-gap: 3.2rem;
+      grid-template-areas:
+        "_heading-number _heading-plus"
+        "_heading-text _heading-text";
+    }
+
+    &-number {
+      grid-area: _heading-number;
+      display: block;
+
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 15rem;
+      line-height: 110%;
+      text-transform: uppercase;
+
+      @include breakpointMF(tablet) {
+        font-size: 30rem;
+        font-weight: 500;
+        line-height: 110%;
+        transform: scaleY(1.05);
+      }
+
+    }
+
+    &-plus {
+      grid-area: _heading-plus;
+      align-self: center;
+
+      .icon {
+        width: 4.8rem;
+        height: 4.8rem;
+
+        @include breakpointMF(tablet) {
+          width: 12rem;
+          height: 12rem;
+        }
+      }
+    }
+
+    &-text {
+      grid-area: _heading-text;
+
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+
+      @include breakpointMF(tablet) {
+        font-size: 3.2rem;
+        line-height: 110%;
+      }
+    }
+  }
+
+  &__cell {
+    &--big {
+      @include breakpointMF(tablet) {
+        grid-column: span 2;
+
+        &>* {
+          margin: auto;
+        }
+      }
+    }
+
+    &--small {
+      @include breakpointMF(tablet) {
+        align-self: flex-end;
+        justify-self: flex-end;
+      }
+    }
+  }
+}

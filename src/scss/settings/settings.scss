@@ -101,6 +101,10 @@ input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
 
+input[hidden] {
+  @extend .visually-hidden;
+}
+
 button {
   position: relative;
   display: inline-flex;

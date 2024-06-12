@@ -9,6 +9,8 @@ import validation from './modules/validation';
 
 import loaderAnimation from './modules/loaderAnimation';
 import scrollToTop from './modules/scrollToTop';
+import menuOpen from './modules/menuOpen';
+import menuHoverImages from './modules/menuHoverImages';
 import setFixedHeader from './modules/setFixedHeader';
 import setHeaderPadding from './modules/setHeaderPadding';
 import menuLinksOpacity from './modules/menuLinksOpacity';
@@ -17,6 +19,7 @@ import openMobileMenu from './modules/openMobileMenu';
 import initMap from './modules/footerMap';
 import advantagesSwiper from './modules/advantagesSwiper';
 import statsAnimations from './modules/statsAnimations';
+import carouselSwiper from './modules/carouselSwiper';
 import teamSwiper from './modules/teamSwiper';
 
 documenReady(() => {
@@ -28,6 +31,8 @@ documenReady(() => {
 
   setHeaderPadding();
   loaderAnimation();
+  menuOpen();
+  menuHoverImages();
   scrollToTop();
   setFixedHeader();
   menuLinksOpacity();
@@ -38,5 +43,6 @@ documenReady(() => {
   initMap();
   advantagesSwiper();
   statsAnimations();
+  carouselSwiper();
   teamSwiper();
 });

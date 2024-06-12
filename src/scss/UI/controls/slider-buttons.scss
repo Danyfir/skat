@@ -1,0 +1,37 @@
+.slider-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.8rem;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+    width: 6rem;
+    height: 6rem;
+
+    border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+    background: var(--Black, #050403);
+    border-radius: 100%;
+
+    .icon {
+      width: 2.4rem;
+      height: 2.4rem;
+      stroke: var(--White, #fff);
+    }
+
+    @include hoverActive() {
+      border-color: var(--White-40, rgba(255, 255, 255, 0.4));
+    }
+
+    &.swiper-button-disabled {
+      pointer-events: none;
+
+      .icon {
+        stroke: var(--Grey, #1D1D1D);
+      }
+    }
+  }
+}

@@ -28,6 +28,10 @@
       @include font(1.6rem, 130%, 400);
     }
 
+    &:focus {
+      border: 1px solid var(--Opacity-White-40, rgba(255, 255, 255, 0.40));
+    }
+
     &:is(.parsley-error) {
       border-color: var(--Red, #EB1E3D);
 

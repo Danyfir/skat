@@ -1,8 +1,8 @@
 .products {
-  padding: 5.5rem 0;
+  padding: 5rem 0 5.5rem;
 
   @include breakpointMF(tablet) {
-    padding: 6.8rem 0;
+    padding: 8.3rem 0 11.4rem;
   }
 
   &__heading {

@@ -9,6 +9,7 @@
   background: var(--Black, #050403);
   border: 1px solid var(--White-20, rgba(255, 255, 255, 0.20));
   border-radius: 100%;
+  box-sizing: content-box;
 
   .icon {
     flex-shrink: 0;
