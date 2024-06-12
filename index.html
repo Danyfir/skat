@@ -26,14 +26,14 @@
                 <use xlink:href="assets/images/sprites/sprite-mono.svg#logo"></use>
               </svg>
             </a>
-            <div class="header__menu menu hide-on-mobile">
+            <div class="header__menu menu js-hover-opacity hide-on-mobile">
               <a class="menu__link js-hover-link" href="#">Продукция</a>
               <a class="menu__link js-hover-link" href="#">Реализованные проекты</a>
               <a class="menu__link js-hover-link" href="#">О компании</a>
               <a class="menu__link js-hover-link" href="#">Контакты</a>
             </div>
           </div>
-          <div class="header__col">
+          <div class="header__col header__col--controls">
             <div class="header__desktop-nav hide-on-mobile">
               <div class="header__search">
                 <button class="btn-search header__search-btn" type="button">
@@ -43,10 +43,7 @@
                 </button>
                 <button class="button" data-path="modal">оставить заявку</button>
               </div>
-              <button class="burger-menu header__burger-btn" type="button">
-                <svg class="icon icon-burger">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#burger"></use>
-                </svg>
+              <button class="burger-menu header__burger-btn js-burger-menu" type="button"><span></span>
               </button>
             </div>
             <div class="header__mobile-nav show-on-mobile">
@@ -61,11 +58,146 @@
               </button>
             </div>
           </div>
+          <div class="header__desktop-menu hide-on-mobile">
+            <div class="desktop-menu">
+              <div class="desktop-menu__container">
+                <div class="desktop-menu__content">
+                  <div class="desktop-menu__head">
+                    <form class="desktop-menu__search" action="" autocomplete="off">
+                      <div class="desktop-menu__input input">
+                        <input class="input__field" id="search" type="text" name="search" required placeholder="Введите слово для поиска">
+                      </div>
+                      <button class="btn-search header__search-btn" type="submit">
+                        <svg class="icon icon-search">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="desktop-menu__body">
+                    <div class="desktop-menu__row">
+                      <div class="desktop-menu__menu js-hover-opacity">
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-1">Продукция</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-2">Реализованные проекты</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-3">О компании</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-4">КОМАНДА</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-5">ДОКУМЕНТАЦИЯ</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-6">Контакты</label>
+                        </a>
+                      </div>
+                      <ul class="desktop-menu__images">
+                        <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-all">
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-1">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/1.webp" alt="">
+                              <img src="./assets/images/menus/1.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-2">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/2.webp" alt="">
+                              <img src="./assets/images/menus/2.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-3">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/3.webp" alt="">
+                              <img src="./assets/images/menus/3.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-4">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/4.webp" alt="">
+                              <img src="./assets/images/menus/4.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-5">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/5.webp" alt="">
+                              <img src="./assets/images/menus/5.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-6">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/6.webp" alt="">
+                              <img src="./assets/images/menus/6.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="desktop-menu__footer">
+                    <div class="desktop-menu__column">
+                      <div class="footer__contacts desktop-menu__contacts">
+                        <div class="footer__links">
+                          <a class="phone-link" href="tel:88002505999">8 800 250 59 99</a>
+                          <a class="mail-link" href="mailto:info@scat.ru">info@scat.ru</a>
+                        </div>
+                        <div class="footer__socials socials socials--row">
+                          <a class="social" href="#">
+                            <svg class="icon icon-vk">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#vk"></use>
+                            </svg>
+                          </a>
+                          <a class="social" href="#">
+                            <svg class="icon icon-tg">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#tg"></use>
+                            </svg>
+                          </a>
+                          <a class="social" href="#">
+                            <svg class="icon icon-yt">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#yt"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="desktop-menu__column">
+                      <p class="footer__address">420111,&nbsp;Республика&nbsp;Татарстан,<br>город&nbsp;Казань, ул.&nbsp;Баумана,&nbsp;д.72</p>
+                      <a class="footer__policy" href="#" target="_blank">Политика конфиденциальности</a>
+                    </div>
+                    <div class="desktop-menu__column desktop-menu__column--end">
+                      <button class="desktop-menu__button button button--big" type="button">оставить заявку</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </header>
 
       <main class="page-main main">
-        <section class="intro js-intro-swiper-box">
+        <section class="section intro js-intro-swiper-box">
           <div class="intro__image-slider">
             <div class="intro__image-swiper swiper">
               <ul class="intro__image-swiper-wrapper swiper-wrapper">
@@ -154,6 +286,7 @@
             </div>
           </div>
           <div class="intro__site-container intro__thumbs-wrapper">
+            <a class="intro__slide-link button button--bigger show-on-mobile">Подробнее</a>
             <ul class="intro__thumbs-list">
               <li class="intro__thumb-item">
                 <a class="intro__thumbs card card--hover" href="#" id="product-card-0">
@@ -415,6 +548,272 @@
             </div>
             <div class="products__add">
               <a class="products__add-btn button button--biggest button--outlined-low" href="#">Весь каталог</a>
+            </div>
+          </div>
+        </section>
+        <section class="section projects">
+          <div class="projects__site-container">
+            <div class="projects__body">
+              <div class="projects__cell">
+                <div class="projects__item">
+                  <div class="projects__heading"><span class="projects__heading-number">30</span>
+                    <div class="projects__heading-plus">
+                      <svg class="icon icon-proj-plus">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#proj-plus"></use>
+                      </svg>
+                    </div>
+                    <p class="projects__heading-text">реализованных<br>проектов</p>
+                  </div>
+                </div>
+              </div>
+              <div class="projects__cell">
+                <a class="project project--big" href="#">
+                  <div class="project__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/projects/1.jpg" alt="">
+                      <img src="./assets/images/projects/1.webp" alt="">
+                    </picture>
+                    <div class="project__tag tag">
+                      <svg class="icon icon-rosseti">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#rosseti"></use>
+                      </svg>
+                    </div><span class="project__label hide-on-mobile">подробнее<br>о&nbsp;проекте</span>
+                    <div class="card__icon project__icon show-on-mobile">
+                      <svg class="icon icon-card-icon">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <p class="project__text">Комплексные услуги для систем кабельной арматуры</p>
+                    <p class="project__date">06.2022 - 08.2022</p>
+                  </div>
+                </a>
+              </div>
+              <div class="projects__cell">
+                <a class="project project--big" href="#">
+                  <div class="project__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/projects/3.jpg" alt="">
+                      <img src="./assets/images/projects/3.webp" alt="">
+                    </picture>
+                    <div class="project__tag tag">
+                      <svg class="icon icon-rosseti">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#rosseti"></use>
+                      </svg>
+                    </div><span class="project__label hide-on-mobile">подробнее<br>о&nbsp;проекте</span>
+                    <div class="card__icon project__icon show-on-mobile">
+                      <svg class="icon icon-card-icon">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <p class="project__text">Надёжные решения для электроэнергетики</p>
+                    <p class="project__date">06.2022 - 08.2022</p>
+                  </div>
+                </a>
+              </div>
+              <div class="projects__cell projects__cell--small">
+                <a class="project project--small" href="#">
+                  <div class="project__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/projects/2.jpg" alt="">
+                      <img src="./assets/images/projects/2.webp" alt="">
+                    </picture>
+                    <div class="project__tag tag">
+                      <svg class="icon icon-rosseti">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#rosseti"></use>
+                      </svg>
+                    </div><span class="project__label hide-on-mobile">подробнее<br>о&nbsp;проекте</span>
+                    <div class="card__icon project__icon show-on-mobile">
+                      <svg class="icon icon-card-icon">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <p class="project__text">Инновации в кабельной арматуре</p>
+                    <p class="project__date">06.2022 - 08.2022</p>
+                  </div>
+                </a>
+              </div>
+              <div class="projects__cell projects__cell--big">
+                <a class="project project--big" href="#">
+                  <div class="project__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/projects/4.jpg" alt="">
+                      <img src="./assets/images/projects/4.webp" alt="">
+                    </picture>
+                    <div class="project__tag tag">
+                      <svg class="icon icon-rosseti">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#rosseti"></use>
+                      </svg>
+                    </div><span class="project__label hide-on-mobile">подробнее<br>о&nbsp;проекте</span>
+                    <div class="card__icon project__icon show-on-mobile">
+                      <svg class="icon icon-card-icon">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <p class="project__text">Комплексные услуги для систем кабельной арматуры</p>
+                    <p class="project__date">06.2022 - 08.2022</p>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="projects__add"></div>
+          </div>
+        </section>
+        <section class="section carousel js-carousel-swiper">
+          <div class="carousel__site-container">
+            <div class="carousel__heading section__heading">
+              <h2 class="carousel__title section__title">СЕРТИФИКАТЫ ПРОДУКЦИИ</h2>
+              <div class="carousel__controls slider-buttons hide-on-mobile">
+                <button class="slider-buttons__button slider-buttons__button--prev" type="button">
+                  <svg class="icon icon-prev-ar">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#prev-ar"></use>
+                  </svg>
+                </button>
+                <button class="slider-buttons__button slider-buttons__button--next" type="button">
+                  <svg class="icon icon-next-ar">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#next-ar"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="carousel__body">
+              <div class="carousel__swiper swiper">
+                <div class="carousel__swiper-wrapper swiper-wrapper">
+                  <div class="carousel__swiper-slide swiper-slide">
+                    <a class="certificates-card" href="#" target="_blank" download id="certificates-01">
+                      <div class="certificates-card__image">
+                        <picture>
+                          <source type="image/webp" srcset="./assets/images/certificates/1.webp" alt="">
+                          <img src="./assets/images/certificates/1.png" alt="">
+                        </picture>
+                      </div>
+                      <p class="certificates-card__text">Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013</p>
+                      <div class="certificates-card__footer">
+                        <div class="certificates-card__file">
+                          <svg class="icon icon-pdf">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                          </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                        </div>
+                        <svg class="icon icon-cert-ar">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel__swiper-slide swiper-slide">
+                    <a class="certificates-card" href="#" target="_blank" download id="certificates-02">
+                      <div class="certificates-card__image">
+                        <picture>
+                          <source type="image/webp" srcset="./assets/images/certificates/2.webp" alt="">
+                          <img src="./assets/images/certificates/2.png" alt="">
+                        </picture>
+                      </div>
+                      <p class="certificates-card__text">Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии &quot;PE&quot; и &quot;VE&quot;</p>
+                      <div class="certificates-card__footer">
+                        <div class="certificates-card__file">
+                          <svg class="icon icon-pdf">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                          </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                        </div>
+                        <svg class="icon icon-cert-ar">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel__swiper-slide swiper-slide">
+                    <a class="certificates-card" href="#" target="_blank" download id="certificates-03">
+                      <div class="certificates-card__image">
+                        <picture>
+                          <source type="image/webp" srcset="./assets/images/certificates/3.webp" alt="">
+                          <img src="./assets/images/certificates/3.png" alt="">
+                        </picture>
+                      </div>
+                      <p class="certificates-card__text">Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013</p>
+                      <div class="certificates-card__footer">
+                        <div class="certificates-card__file">
+                          <svg class="icon icon-pdf">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                          </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                        </div>
+                        <svg class="icon icon-cert-ar">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel__swiper-slide swiper-slide">
+                    <a class="certificates-card" href="#" target="_blank" download id="certificates-04">
+                      <div class="certificates-card__image">
+                        <picture>
+                          <source type="image/webp" srcset="./assets/images/certificates/4.webp" alt="">
+                          <img src="./assets/images/certificates/4.png" alt="">
+                        </picture>
+                      </div>
+                      <p class="certificates-card__text">Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии &quot;PE&quot; и &quot;VE&quot;</p>
+                      <div class="certificates-card__footer">
+                        <div class="certificates-card__file">
+                          <svg class="icon icon-pdf">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                          </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                        </div>
+                        <svg class="icon icon-cert-ar">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel__swiper-slide swiper-slide">
+                    <a class="certificates-card" href="#" target="_blank" download id="certificates-05">
+                      <div class="certificates-card__image">
+                        <picture>
+                          <source type="image/webp" srcset="./assets/images/certificates/1.webp" alt="">
+                          <img src="./assets/images/certificates/1.png" alt="">
+                        </picture>
+                      </div>
+                      <p class="certificates-card__text">Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013</p>
+                      <div class="certificates-card__footer">
+                        <div class="certificates-card__file">
+                          <svg class="icon icon-pdf">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                          </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                        </div>
+                        <svg class="icon icon-cert-ar">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="carousel__swiper-slide swiper-slide">
+                    <a class="certificates-card" href="#" target="_blank" download id="certificates-06">
+                      <div class="certificates-card__image">
+                        <picture>
+                          <source type="image/webp" srcset="./assets/images/certificates/2.webp" alt="">
+                          <img src="./assets/images/certificates/2.png" alt="">
+                        </picture>
+                      </div>
+                      <p class="certificates-card__text">Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии &quot;PE&quot; и &quot;VE&quot;</p>
+                      <div class="certificates-card__footer">
+                        <div class="certificates-card__file">
+                          <svg class="icon icon-pdf">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                          </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                        </div>
+                        <svg class="icon icon-cert-ar">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
