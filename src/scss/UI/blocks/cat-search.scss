@@ -1,0 +1,41 @@
+.cat-search {
+  display: flex;
+  align-items: stretch;
+  gap: 0.8rem;
+  height: 4.4rem;
+
+  input[type="search"] {
+    width: auto;
+    flex-grow: 1;
+    padding: 1.5rem 2rem;
+    color: var(--Achromatic-White, var(--white, #FFF));
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+
+    border-radius: 0.8rem;
+    border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 16rem;
+
+    color: var(--Black, #050403);
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height:  4.4rem;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    background: var(--Achromatic-White, #FFF);
+    border-width: 0;
+    border-radius: 0.8rem;
+  }
+}

@@ -8,6 +8,7 @@
   // colors:
   --Black: #050403;
   --Black-10: rgba(2, 2, 2, 0.1);
+  --Black-20: rgba(2, 2, 2, 0.2);
   --Black-30: rgba(2, 2, 2, 0.3);
   --Black-40: rgba(2, 2, 2, 0.4);
   --Black-50: rgba(2, 2, 2, 0.5);
@@ -44,14 +45,15 @@
   --Medium-Grey: #777;
   --Grey: #1D1D1D;
   --Green: #003D32;
+  --Light-Gray-0: #E2E2E2;
 
   --Opacity-Yellow-30: rgba(235, 170, 91, 0.30);
+  --Opacity-Yellow-20: rgba(235, 170, 91, 0.20);
 
   // typography:
   --main-ff: "Avenir Next", sans-serif;
   --second-ff: "Ruda", sans-serif;
   --third-ff: "Gilroy", sans-serif;
-
 
   /* etc */
   --transition: 300ms ease-out;

@@ -19,6 +19,7 @@
     flex-direction: column;
     align-items: stretch;
 
+    margin-bottom: 2.8rem;
     padding-bottom: 3.2rem;
 
     border-bottom: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
@@ -28,6 +29,7 @@
       align-items: flex-start;
       justify-content: space-between;
 
+      margin-bottom: 8rem;
       padding-right: 8.5rem;
       padding-bottom: 4rem;
     }
@@ -49,6 +51,109 @@
 
     @include breakpointMF(tablet) {
       max-width: 48ch;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 100%;
+
+    @include breakpointMF(tablet) {
+      grid-template-columns: 34.2rem 1fr;
+      gap: 17rem;
+    }
+  }
+
+  &__nav-item {
+    margin-bottom: 3.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__reset {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    width: max-content;
+    margin-top: 3.2rem;
+
+    input {
+      padding: 0.6rem 2rem 0.6rem 0;
+
+      color: var(--white, #FFF);
+      font-feature-settings: 'clig' off, 'liga' off;
+      font-size: 1.6rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+
+      transition: var(--transition);
+      opacity: 0.5;
+      cursor: pointer;
+
+      @include hoverActive() {
+        opacity: 1;
+
+        & ~ .icon {
+          opacity: 1;
+        }
+      }
+    }
+
+    .icon {
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 1.6rem;
+      height: 1.6rem;
+      transform: translateY(-50%);
+      stroke: var(--White, #fff);
+
+      opacity: 0.5;
+      transition: var(--transition);
+      pointer-events: none;
+    }
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__control-panel {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    column-gap: 0.8rem;
+    margin-bottom: 2.8rem;
+
+    @include breakpointMF(tablet) {
+      column-gap: 1.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__filters-open {
+    &.filters-open {
+      width: auto;
+      flex: 1 1 auto;
+    }
+  }
+
+  &__search {
+    flex: 1 1 auto;
+  }
+
+  &__view-switcher {
+    flex: 0 1 auto;
+
+    @include breakpointMF(tablet) {
+      flex: 1 0 auto;
     }
   }
 }

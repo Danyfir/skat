@@ -73,13 +73,6 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-input[type="search"] {
-  /* 1 */
-  outline-offset: -2px;
-
-  /* 2 */
-  -webkit-appearance: textfield;
-}
 
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;

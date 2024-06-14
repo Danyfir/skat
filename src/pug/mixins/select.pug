@@ -1,0 +1,17 @@
+mixin select(name='name-1', inputs=[{text: 'text', id: 'id', checked: false}])
+  .select&attributes(attributes)
+    button.select__current(type="button") Популярные
+
+    .select__dropdown
+      ul.select__list
+        for i in inputs
+          li.select__item
+            label.select__label(for=i.id)
+              input(type="radio", hidden,
+                checked=i.checked,
+                name=name,
+                id=i.id
+              )
+              span.select__text #{i.text}
+
+              span.select__icon
