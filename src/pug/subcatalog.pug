@@ -1,0 +1,24 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch"
+  - const pageTitle = "Каталог / Подкатегории"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+      {
+        text: 'Продукция',
+        href: './catalog.html'
+      },
+      {
+        text: 'Арматура СИП 0,4 кВ и 6-35 кВ',
+        href: '#'
+      },
+    ];
+
+block content
+  include pages/subcatalog/main.pug

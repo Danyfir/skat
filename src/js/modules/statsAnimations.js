@@ -10,26 +10,43 @@ export default () => {
 
   statsSections.forEach((statsSection) => {
     statsSection.classList.add('js-stats-scroll-animation')
-
-    const scrollItems = statsSection.querySelectorAll('.stats__scrolling-item');
+    const scrollItems = statsSection.querySelectorAll('.js-scrolling-item');
     const itemHeight = scrollItems[scrollItems.length - 1].clientHeight;
     const headingsHeight = statsSection.querySelector('.stats__headings').offsetHeight;
     const wrapperHeight = statsSection.querySelector('.stats__scrolling').clientHeight;
     const ulHeight = statsSection.querySelector('.stats__scrolling-list').clientHeight;
-    const endHeight = ulHeight - wrapperHeight;
     const scrollHeight = ulHeight - wrapperHeight + (headingsHeight - itemHeight);
-    const tl = gsap.timeline();
 
-    tl.to(".stats__scrolling-list", {y: -scrollHeight, duration: 4, stagger: 0.5})
+    const tl = gsap.timeline();
+    tl.to(".stats__scrolling-list", {y: -scrollHeight, duration: 1.5})
 
     ScrollTrigger.create({
       animation: tl,
       trigger: '.js-stats-scroll-animation',
       start: 'top top',
-      end: `bottom +=${endHeight}`,
-      scrub: 2,
-      pin: ".page-wrapper",
-      anticipatePin: 0.1
+      end: `bottom +=0`,
+      scrub: 1.5,
+      pin: statsSection,
+      anticipatePin: 0.5,
+      pinSpacing: true,
     });
+
+    scrollItems.forEach((scrollItem) => {
+      gsap.set(scrollItem, { scale: 0.8, opacity: 0.2 });
+
+      gsap.to(scrollItem, {
+        scale: 1,
+        opacity: 1,
+        duration: 1.5,
+        ease: "power1.out",
+        scrollTrigger: {
+          trigger: scrollItem,
+          start: "top center+=20%",
+          end: "bottom center-=20%",
+          scrub: 1.5,
+          // markers: true
+        }
+      });
+    })
   })
 }

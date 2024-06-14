@@ -16,7 +16,7 @@ export default () => {
         header.classList.add('header--fixed');
       },
       onLeaveBack: () => {
-          header.classList.remove('header--fixed');
+        header.classList.remove('header--fixed');
       },
       // markers: true,
   });

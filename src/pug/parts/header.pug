@@ -1,6 +1,6 @@
 -
   const menus = [
-    {text: "Продукция", link: "#", class: ""},
+    {text: "Продукция", link: "./catalog.html", class: ""},
     {text: "Реализованные проекты", link: "#", class: ""},
     {text: "О компании", link: "#", class: ""},
     {text: "Контакты", link: "#", class: ""},
@@ -8,7 +8,9 @@
 
 - const svgs = ['vk', 'tg', 'yt'];
 
-header.header
+- const breadcrubmsClass = 'header__breadcrumbs';
+
+header.header.header-is-animated
   .header__site-container
     .header__col
       +logo(class="header__logo")
@@ -33,3 +35,5 @@ header.header
 
     .header__desktop-menu.hide-on-mobile
       include desktop-menu.pug
+
+  include breadcrumbs.pug

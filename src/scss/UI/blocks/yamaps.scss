@@ -4,6 +4,11 @@
   filter: invert(1) grayscale(100%);
 }
 
+[class*='ymaps-2'][class*='-copyrights-pane'] {
+  display: none;
+}
+
+
 .inner-hint {
   position: absolute;
   top: 8rem;

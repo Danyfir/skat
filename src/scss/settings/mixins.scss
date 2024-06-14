@@ -19,11 +19,11 @@
 @mixin customScrollbar {
   &::-webkit-scrollbar {
     width: 0.2rem;
-    background-color: var(--color-grey-300);
+    background-color: var(--Light-Grey, #A0A0A0);
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--color-grey-600);
+    background: var(--Yellow, #EBAA5B);
   }
 
   &::-webkit-scrollbar-button {
@@ -31,7 +31,7 @@
   }
 
   &::-webkit-scrollbar-track {
-    background-color: var(--color-grey-300);
+    background-color: var(--Light-Grey, #A0A0A0);
   }
 }
 

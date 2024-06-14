@@ -21,6 +21,7 @@ import advantagesSwiper from './modules/advantagesSwiper';
 import statsAnimations from './modules/statsAnimations';
 import carouselSwiper from './modules/carouselSwiper';
 import teamSwiper from './modules/teamSwiper';
+import categoryMobileHover from './modules/categoryMobileHover';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -45,4 +46,5 @@ documenReady(() => {
   statsAnimations();
   carouselSwiper();
   teamSwiper();
+  categoryMobileHover();
 });

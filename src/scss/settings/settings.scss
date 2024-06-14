@@ -7,17 +7,6 @@
   -webkit-tap-highlight-color: transparent;
 }
 
-html {
-  font-size: 10px;
-  line-height: 1.2;
-}
-
-body {
-  color: var(--color-dark);
-  font: var(--font-body);
-  background-color: var(--color-bg);
-}
-
 ul,
 ol {
   list-style: none;
@@ -144,46 +133,6 @@ img {
   user-select: none;
 }
 
-.list-rest {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  clip: rect(0 0 0 0);
-}
-
-.site-container {
-  width: 100%;
-  max-width: 1470px;
-  margin: 0 auto;
-  padding: 0 15px;
-}
-
-.page-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  overflow: hidden;
-}
-
-.page-main {
-  flex-grow: 1;
-}
-
-.disable-scroll {
-  overflow: hidden;
-  height: 100vh;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-}
 
 button:focus {
   outline: none;

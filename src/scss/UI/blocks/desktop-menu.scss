@@ -37,6 +37,8 @@
 
     color: var(--White, #FFF);
     background: var(--Black, #050403);
+
+    @include noScrollbar();
   }
 
   &__search {

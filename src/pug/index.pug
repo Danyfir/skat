@@ -1,9 +1,16 @@
 extends layout/default.pug
 
 block variables
-	- const bodyClass = "page-home no-touch"
-	- const pageTitle = "Главная"
-	- const siteLang = "ru"
+  - const bodyClass = "page-home no-touch animation-trigger"
+  - const pageTitle = "Главная"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      }
+    ]
 
 block content
-	include pages/index/main.pug
+  include pages/index/main.pug

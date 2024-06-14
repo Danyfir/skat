@@ -1,0 +1,20 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch"
+  - const pageTitle = "Каталог / Категории"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+      {
+        text: 'Продукция',
+        href: '#'
+      },
+    ];
+
+block content
+  include pages/catalog/main.pug

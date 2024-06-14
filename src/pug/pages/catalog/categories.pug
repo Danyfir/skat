@@ -1,0 +1,67 @@
+-
+  const categories = [
+    {
+      id: "category-id-01",
+      href: "./subcatalog.html",
+      class: "category--big-name",
+      text: `Арматура для самонесущих изолированных проводов (СИП) — это набор
+        приспособлений, которые используются для монтажа, соединения и защиты
+        проводов в электрических сетях.`,
+      img: "./assets/images/category/1.png",
+      nameW: "Высоковольтная кабельная арматура",
+      nameG: "110 - 500 кВ",
+    },
+    {
+      id: "category-id-02",
+      href: "./subcatalog.html",
+      class: "",
+      text: `Арматура для самонесущих изолированных проводов (СИП) — это набор
+        приспособлений, которые используются для монтажа, соединения и защиты
+        проводов в электрических сетях.`,
+      img: "./assets/images/category/2.png",
+      nameW: "Кабельная арматура",
+      nameG: "1-35 кВ",
+    },
+    {
+      id: "category-id-03",
+      href: "./subcatalog.html",
+      class: "",
+      text: `Арматура для самонесущих изолированных проводов (СИП) — это набор
+        приспособлений, которые используются для монтажа, соединения и защиты
+        проводов в электрических сетях.`,
+      img: "./assets/images/category/3.png",
+      nameW: "Арматура для СИП",
+      nameG: "0,4 кВ и 6-35 кВ",
+    },
+  ];
+
+section.section.categories.js-categories-scroll
+  .categories__site-container
+    .categories__heading.products__heading
+      h2.products__title Продукция
+
+      .products__stamp.stamp
+        +icon-multi('stamp-bracket-1')
+        .stamp__body
+          span.stamp__number 2 000+
+          span.stamp__text наименований
+
+        +icon-multi('stamp-bracket-2')
+
+    .categories__body
+      for item in categories
+        a.categories__item.category.js-category(href=item.href, id=item.id, class=item.class)
+          .category__image
+            img(src=item.img alt="")
+          .category__info
+            .category__heading
+              p.category__name
+                span.category__name-white=item.nameW
+                br
+                span.category__name-grey=item.nameG
+
+              span.category__arrow.show-on-mobile
+
+            .category__desc
+              p.category__text=item.text
+              span.category__link.button.button--outlined.hide-on-mobile Подробнее

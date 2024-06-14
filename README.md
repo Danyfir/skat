@@ -1,5 +1,6 @@
 # GULP сборка
 
+<details>
 ## Основные возможности и используемые технологии
 
 * Система сборки [Gulp](https://gulpjs.com/)
@@ -60,3 +61,10 @@ npm run build:prod
 1. [Кроссбраузерность](readme/crossbrowser.md)
 1. [Работа с GIT](readme/git.md)
 
+</details>
+
+# Ссылки на верстку
+
+## Страница - [Главная](https://eduardoalparov.github.io/ckat/).
+## Страница - [Каталог / Категории](https://eduardoalparov.github.io/ckat/catalog.html).
+## Страница - [Каталог / Подкатегории](https://eduardoalparov.github.io/ckat/subcatalog.html).

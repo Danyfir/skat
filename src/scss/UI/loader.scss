@@ -27,6 +27,7 @@
     justify-content: center;
   }
 
+  &__icon-yellow,
   &__icon-grey {
     .icon {
       width: 8.6rem;
@@ -49,30 +50,33 @@
   }
 
   &__icon-yellow {
-    position: relative;
-    z-index: 100;
-
-    .icon {
-      width: 100%;
-      height: 100%;
-      fill: var(--Yellow, #EBAA5B);
-    }
-  }
-
-  &__icon-yellow {
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-
-    width: 100%;
-    height: 100%;
     z-index: 200;
+
+    will-change: width;
+    width: 0%;
+    height: 100%;
+    overflow: hidden;
+
+    .icon {
+      fill: var(--Yellow, #EBAA5B);
+    }
   }
+
 
   &.loader--closed {
     animation: hideloader 1s ease-in 0s 1 forwards;
   }
+}
+
+.flying-icon {
+  position: fixed;
+  z-index: 5001;
+  transition: 1.2s ease-out;
+  fill: var(--Yellow, #EBAA5B);
 }
 
 @keyframes hideloader {

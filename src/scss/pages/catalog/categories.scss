@@ -1,0 +1,40 @@
+.categories {
+  margin-bottom: 5.4rem;
+  @extend ._header-padding-top;
+
+  @include breakpointMF(tablet) {
+    margin-bottom: 7rem;
+  }
+
+  &__site-container {
+    padding-top: 6rem;
+
+    @include breakpointMF(tablet) {
+      padding-top: 10rem;
+    }
+  }
+
+  &__heading {
+    &.products__heading {
+      margin-bottom: 3.2rem;
+
+      @include breakpointMF(tablet) {
+        margin-bottom: 6rem;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    margin-bottom: 3.2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

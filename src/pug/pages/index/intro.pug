@@ -68,10 +68,13 @@ section.section.intro.js-intro-swiper-box
                 img(src=slide.imgBjpg alt="")
             .intro__site-container.intro__info-container
               .intro__slide-info
-                .intro__title(data-swiper-parallax="-10%")
-                  .intro__title-yellow-text= slide.yText
-                  .intro__title-white-text= slide.wText
-                  .intro__title-grey-text= slide.gText
+                .intro__title
+                  .intro__title-yellow-text
+                    span= slide.yText
+                  .intro__title-white-text
+                    span= slide.wText
+                  .intro__title-grey-text
+                    span= slide.gText
 
                 .intro__quality-mark.quality-mark.hide-on-mobile
                   +icon-multi('mark')

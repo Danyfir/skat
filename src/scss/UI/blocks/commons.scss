@@ -2,6 +2,21 @@
   @include visuallyHidden();
 }
 
+.list-rest {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.disable-scroll {
+  overflow: hidden;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+
 [class].display-none {
   display: none !important;
 }
@@ -19,7 +34,6 @@
     overflow: hidden;
   }
 }
-
 
 .hide-on-mobile {
   @include breakpoint(small-tablet) {
@@ -202,6 +216,20 @@
 
   @include breakpointMF(tablet) {
     @include font(6rem, 100%, 600);
+    font-family: var(--second-ff, Arail);
+    letter-spacing: unset;
+  }
+}
+
+.text-80 {
+  @include font(3.2rem, 105%, 500);
+  font-family: var(--second-ff, Arail);
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+
+  @include breakpointMF(tablet) {
+    @include font(8rem, 100%, 400);
+    font-feature-settings: 'clig' off, 'liga' off;
     font-family: var(--second-ff, Arail);
     letter-spacing: unset;
   }

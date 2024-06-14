@@ -99,4 +99,20 @@
       }
     }
   }
+
+  &__add {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+
+    @include breakpointMF(tablet) {
+      margin-top: 8rem;
+    }
+
+    .products__add-btn.button {
+      @include breakpointMF(tablet) {
+        width: 24rem;
+      }
+    }
+  }
 }

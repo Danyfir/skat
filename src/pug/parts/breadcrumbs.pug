@@ -1,0 +1,6 @@
+.breadcrumbs(class=breadcrubmsClass)
+  .breadcrumbs__site-container
+    ul.breadcrumbs__list
+      for item in breadcrumbsList
+        li
+          a.breadcrumbs__link(href=item.href)= item.text

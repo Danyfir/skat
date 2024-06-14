@@ -12,6 +12,7 @@
 
   &__site-container {
     position: relative;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,6 +33,10 @@
     &:has(.header__logo) {
       flex-grow: 1;
     }
+  }
+
+  &__logo {
+    flex-shrink: 0;
   }
 
   &__menu {
@@ -60,12 +65,17 @@
   &.header--fixed {
     position: fixed;
     animation: transAnim 0.4s ease-out 1 forwards;
+
+    .header__breadcrumbs {
+      display: none;
+    }
   }
 
   &__desktop-menu {
     display: none;
   }
 }
+
 
 .desktop-menu-is-open {
 

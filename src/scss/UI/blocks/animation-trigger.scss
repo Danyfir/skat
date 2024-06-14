@@ -1,0 +1,137 @@
+.intro__image-swiper-slide {
+  &:first-child {
+    .intro__title-white-text,
+    .intro__title-grey-text,
+    .intro__title-yellow-text {
+
+      @include breakpointMF(desktop) {
+        overflow: hidden;
+      }
+
+      span {
+        @include breakpointMF(desktop) {
+          display: block;
+          transition-property: transform, opacity;
+          transition-duration: 0.4s;
+          transition-timing-function: ease-out;
+        }
+      }
+    }
+
+
+    .intro__title-yellow-text {
+      span {
+        @include breakpointMF(desktop) {
+          transition-delay: 1.2s;
+        }
+      }
+    }
+
+    .intro__title-white-text {
+      span {
+        @include breakpointMF(desktop) {
+          transition-delay: 1.6s;
+        }
+      }
+    }
+
+    .intro__title-grey-text {
+      span {
+        @include breakpointMF(desktop) {
+          transition-delay: 2s;
+        }
+      }
+    }
+  }
+}
+
+.animation-trigger {
+  .intro__image-swiper-slide {
+    &:first-child {
+      .intro__title-yellow-text,
+      .intro__title-white-text,
+      .intro__title-grey-text {
+        span {
+          @include breakpointMF(desktop) {
+            opacity: 0;
+            transform: translateY(100%);
+          }
+        }
+      }
+    }
+  }
+}
+
+.header:is(.header-is-animated) {
+  .menu__link {
+    transition: unset;
+  }
+}
+
+.header-is-animated {
+  .header__logo {
+    opacity: 0;
+  }
+
+  .header__menu {
+    .menu__link {
+      @include breakpointMF(desktop) {
+        transition-property: opacity;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+      }
+
+      &:nth-child(1) {
+        @include breakpointMF(desktop) {
+          transition-delay: 0s;
+        }
+      }
+
+      &:nth-child(2) {
+        @include breakpointMF(desktop) {
+          transition-delay: 0.2s;
+        }
+      }
+
+      &:nth-child(3) {
+        @include breakpointMF(desktop) {
+          transition-delay: 0.4s;
+        }
+      }
+
+      &:nth-child(4) {
+        @include breakpointMF(desktop) {
+          transition-delay: 0.6s;
+        }
+      }
+    }
+  }
+
+  .header__desktop-nav {
+    @include breakpointMF(desktop) {
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-in;
+      transition-delay: 0.8s;
+    }
+  }
+}
+
+.animation-trigger {
+  .header-is-animated {
+
+    .header__menu {
+      .menu__link {
+        @include breakpointMF(desktop) {
+          opacity: 0;
+        }
+      }
+    }
+
+    .header__desktop-nav {
+      @include breakpointMF(desktop) {
+        opacity: 0;
+      }
+    }
+  }
+}
