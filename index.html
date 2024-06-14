@@ -15,19 +15,19 @@
     <title>Главная | Название сайта</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
-  <body class="page-home no-touch">
+  <body class="page-home no-touch animation-trigger">
     <div class="page-wrapper">
 
-      <header class="header">
+      <header class="header header-is-animated">
         <div class="header__site-container">
           <div class="header__col">
             <a class="logo header__logo" href="/">
               <svg class="icon icon-logo">
-                <use xlink:href="assets/images/sprites/sprite-mono.svg#logo"></use>
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
               </svg>
             </a>
             <div class="header__menu menu js-hover-opacity hide-on-mobile">
-              <a class="menu__link js-hover-link" href="#">Продукция</a>
+              <a class="menu__link js-hover-link" href="./catalog.html">Продукция</a>
               <a class="menu__link js-hover-link" href="#">Реализованные проекты</a>
               <a class="menu__link js-hover-link" href="#">О компании</a>
               <a class="menu__link js-hover-link" href="#">Контакты</a>
@@ -194,6 +194,15 @@
             </div>
           </div>
         </div>
+        <div class="breadcrumbs header__breadcrumbs">
+          <div class="breadcrumbs__site-container">
+            <ul class="breadcrumbs__list">
+              <li>
+                <a class="breadcrumbs__link" href="/">Главная</a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </header>
 
       <main class="page-main main">
@@ -212,10 +221,13 @@
                   </div>
                   <div class="intro__site-container intro__info-container">
                     <div class="intro__slide-info">
-                      <div class="intro__title" data-swiper-parallax="-10%">
-                        <div class="intro__title-yellow-text">Высоковольтная</div>
-                        <div class="intro__title-white-text">кабельная арматура</div>
-                        <div class="intro__title-grey-text">110-500 кВ</div>
+                      <div class="intro__title">
+                        <div class="intro__title-yellow-text"><span>Высоковольтная</span>
+                        </div>
+                        <div class="intro__title-white-text"><span>кабельная арматура</span>
+                        </div>
+                        <div class="intro__title-grey-text"><span>110-500 кВ</span>
+                        </div>
                       </div>
                       <div class="intro__quality-mark quality-mark hide-on-mobile">
                         <svg class="icon icon-mark">
@@ -238,10 +250,13 @@
                   </div>
                   <div class="intro__site-container intro__info-container">
                     <div class="intro__slide-info">
-                      <div class="intro__title" data-swiper-parallax="-10%">
-                        <div class="intro__title-yellow-text">кабельная</div>
-                        <div class="intro__title-white-text">арматура</div>
-                        <div class="intro__title-grey-text">1-35 кВ</div>
+                      <div class="intro__title">
+                        <div class="intro__title-yellow-text"><span>кабельная</span>
+                        </div>
+                        <div class="intro__title-white-text"><span>арматура</span>
+                        </div>
+                        <div class="intro__title-grey-text"><span>1-35 кВ</span>
+                        </div>
                       </div>
                       <div class="intro__quality-mark quality-mark hide-on-mobile">
                         <svg class="icon icon-mark">
@@ -264,10 +279,13 @@
                   </div>
                   <div class="intro__site-container intro__info-container">
                     <div class="intro__slide-info">
-                      <div class="intro__title" data-swiper-parallax="-10%">
-                        <div class="intro__title-yellow-text">Арматура</div>
-                        <div class="intro__title-white-text">для СИП</div>
-                        <div class="intro__title-grey-text">0,4 кВ и 6-35 кВ</div>
+                      <div class="intro__title">
+                        <div class="intro__title-yellow-text"><span>Арматура</span>
+                        </div>
+                        <div class="intro__title-white-text"><span>для СИП</span>
+                        </div>
+                        <div class="intro__title-grey-text"><span>0,4 кВ и 6-35 кВ</span>
+                        </div>
                       </div>
                       <div class="intro__quality-mark quality-mark hide-on-mobile">
                         <svg class="icon icon-mark">
@@ -430,7 +448,7 @@
             </div>
           </div>
         </section>
-        <section class="section stats">
+        <section class="section stats js-stats-pin">
           <div class="stats__site-container">
             <div class="stats__body">
               <div class="stats__headings">
@@ -450,12 +468,12 @@
                       </div>
                       <p class="scrolling-item__text">Уникальная кабельная арматура</p>
                     </li>
-                    <li class="stats__scrolling-item scrolling-item">
+                    <li class="stats__scrolling-item scrolling-item js-scrolling-item">
                       <div class="scrolling-item__title"><span>2000+</span>
                       </div>
                       <p class="scrolling-item__text">Наименований в каталоге</p>
                     </li>
-                    <li class="stats__scrolling-item scrolling-item">
+                    <li class="stats__scrolling-item scrolling-item js-scrolling-item">
                       <div class="scrolling-item__title"><span>20 лет</span>
                       </div>
                       <p class="scrolling-item__text">Успешной работы на рынке</p>
@@ -663,7 +681,9 @@
                 </a>
               </div>
             </div>
-            <div class="projects__add"></div>
+            <div class="projects__add">
+              <a class="products__add-btn button button--big button--outlined-low" href="#">все проекты</a>
+            </div>
           </div>
         </section>
         <section class="section carousel js-carousel-swiper">
@@ -935,7 +955,7 @@
               <p class="footer__address show-on-mobile">420111,&nbsp;Республика&nbsp;Татарстан, город&nbsp;Казань, ул.&nbsp;Баумана,&nbsp;д.72</p>
               <a class="logo footer__logo hide-on-mobile" href="/">
                 <svg class="icon icon-logo">
-                  <use xlink:href="assets/images/sprites/sprite-mono.svg#logo"></use>
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
                 </svg>
               </a>
             </div>
@@ -1048,6 +1068,22 @@
                 </svg>
               </a>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="loader__inner-wrapper">
+        <div class="loader__icon" data-loader-ms="1500">
+          <div class="loader__icon-grey">
+            <svg class="icon icon-logo">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+            </svg>
+          </div>
+          <div class="loader__icon-yellow">
+            <svg class="icon icon-logo">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+            </svg>
           </div>
         </div>
       </div>

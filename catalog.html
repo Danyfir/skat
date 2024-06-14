@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="Описание сайта">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Каталог / Категории | Название сайта</title>
+    <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
+  </head>
+  <body class="page-secondary no-touch">
+    <div class="page-wrapper">
+
+      <header class="header header-is-animated">
+        <div class="header__site-container">
+          <div class="header__col">
+            <a class="logo header__logo" href="/">
+              <svg class="icon icon-logo">
+                <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+              </svg>
+            </a>
+            <div class="header__menu menu js-hover-opacity hide-on-mobile">
+              <a class="menu__link js-hover-link" href="./catalog.html">Продукция</a>
+              <a class="menu__link js-hover-link" href="#">Реализованные проекты</a>
+              <a class="menu__link js-hover-link" href="#">О компании</a>
+              <a class="menu__link js-hover-link" href="#">Контакты</a>
+            </div>
+          </div>
+          <div class="header__col header__col--controls">
+            <div class="header__desktop-nav hide-on-mobile">
+              <div class="header__search">
+                <button class="btn-search header__search-btn" type="button">
+                  <svg class="icon icon-search">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
+                  </svg>
+                </button>
+                <button class="button" data-path="modal">оставить заявку</button>
+              </div>
+              <button class="burger-menu header__burger-btn js-burger-menu" type="button"><span></span>
+              </button>
+            </div>
+            <div class="header__mobile-nav show-on-mobile">
+              <button class="small-button small-button--outlined" data-path="mobile-menu">заявкa</button>
+              <button class="menu-btn header__mobile-menu js-mobile-menu-open" type="button">
+                <svg class="icon icon-mob-burger">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#mob-burger"></use>
+                </svg>
+                <svg class="icon icon-mob-close">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#mob-close"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="header__desktop-menu hide-on-mobile">
+            <div class="desktop-menu">
+              <div class="desktop-menu__container">
+                <div class="desktop-menu__content">
+                  <div class="desktop-menu__head">
+                    <form class="desktop-menu__search" action="" autocomplete="off">
+                      <div class="desktop-menu__input input">
+                        <input class="input__field" id="search" type="text" name="search" required placeholder="Введите слово для поиска">
+                      </div>
+                      <button class="btn-search header__search-btn" type="submit">
+                        <svg class="icon icon-search">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
+                        </svg>
+                      </button>
+                    </form>
+                  </div>
+                  <div class="desktop-menu__body">
+                    <div class="desktop-menu__row">
+                      <div class="desktop-menu__menu js-hover-opacity">
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-1">Продукция</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-2">Реализованные проекты</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-3">О компании</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-4">КОМАНДА</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-5">ДОКУМЕНТАЦИЯ</label>
+                        </a>
+                        <a class="desktop-menu__link js-hover-link" href="#">
+                          <label class="desktop-menu__label" for="radio-input-image-6">Контакты</label>
+                        </a>
+                      </div>
+                      <ul class="desktop-menu__images">
+                        <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-all">
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-1">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/1.webp" alt="">
+                              <img src="./assets/images/menus/1.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-2">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/2.webp" alt="">
+                              <img src="./assets/images/menus/2.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-3">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/3.webp" alt="">
+                              <img src="./assets/images/menus/3.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-4">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/4.webp" alt="">
+                              <img src="./assets/images/menus/4.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-5">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/5.webp" alt="">
+                              <img src="./assets/images/menus/5.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                        <li>
+                          <input class="desktop-menu__input" type="radio" name="radio-images" hidden id="radio-input-image-6">
+                          <div class="desktop-menu__image">
+                            <picture>
+                              <source type="image/webp" srcset="./assets/images/menus/6.webp" alt="">
+                              <img src="./assets/images/menus/6.png" alt="">
+                            </picture>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="desktop-menu__footer">
+                    <div class="desktop-menu__column">
+                      <div class="footer__contacts desktop-menu__contacts">
+                        <div class="footer__links">
+                          <a class="phone-link" href="tel:88002505999">8 800 250 59 99</a>
+                          <a class="mail-link" href="mailto:info@scat.ru">info@scat.ru</a>
+                        </div>
+                        <div class="footer__socials socials socials--row">
+                          <a class="social" href="#">
+                            <svg class="icon icon-vk">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#vk"></use>
+                            </svg>
+                          </a>
+                          <a class="social" href="#">
+                            <svg class="icon icon-tg">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#tg"></use>
+                            </svg>
+                          </a>
+                          <a class="social" href="#">
+                            <svg class="icon icon-yt">
+                              <use xlink:href="assets/images/sprites/sprite-multi.svg#yt"></use>
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="desktop-menu__column">
+                      <p class="footer__address">420111,&nbsp;Республика&nbsp;Татарстан,<br>город&nbsp;Казань, ул.&nbsp;Баумана,&nbsp;д.72</p>
+                      <a class="footer__policy" href="#" target="_blank">Политика конфиденциальности</a>
+                    </div>
+                    <div class="desktop-menu__column desktop-menu__column--end">
+                      <button class="desktop-menu__button button button--big" type="button">оставить заявку</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="breadcrumbs header__breadcrumbs">
+          <div class="breadcrumbs__site-container">
+            <ul class="breadcrumbs__list">
+              <li>
+                <a class="breadcrumbs__link" href="/">Главная</a>
+              </li>
+              <li>
+                <a class="breadcrumbs__link" href="#">Продукция</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <main class="page-main main">
+        <section class="section categories js-categories-scroll">
+          <div class="categories__site-container">
+            <div class="categories__heading products__heading">
+              <h2 class="products__title">Продукция</h2>
+              <div class="products__stamp stamp">
+                <svg class="icon icon-stamp-bracket-1">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-1"></use>
+                </svg>
+                <div class="stamp__body"><span class="stamp__number">2 000+</span><span class="stamp__text">наименований</span>
+                </div>
+                <svg class="icon icon-stamp-bracket-2">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-2"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="categories__body">
+              <a class="categories__item category js-category category--big-name" href="./subcatalog.html" id="category-id-01">
+                <div class="category__image">
+                  <img src="./assets/images/category/1.png" alt="">
+                </div>
+                <div class="category__info">
+                  <div class="category__heading">
+                    <p class="category__name"><span class="category__name-white">Высоковольтная кабельная арматура</span><br><span class="category__name-grey">110 - 500 кВ</span>
+                    </p><span class="category__arrow show-on-mobile"></span>
+                  </div>
+                  <div class="category__desc">
+                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                  </div>
+                </div>
+              </a>
+              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-02">
+                <div class="category__image">
+                  <img src="./assets/images/category/2.png" alt="">
+                </div>
+                <div class="category__info">
+                  <div class="category__heading">
+                    <p class="category__name"><span class="category__name-white">Кабельная арматура</span><br><span class="category__name-grey">1-35 кВ</span>
+                    </p><span class="category__arrow show-on-mobile"></span>
+                  </div>
+                  <div class="category__desc">
+                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                  </div>
+                </div>
+              </a>
+              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-03">
+                <div class="category__image">
+                  <img src="./assets/images/category/3.png" alt="">
+                </div>
+                <div class="category__info">
+                  <div class="category__heading">
+                    <p class="category__name"><span class="category__name-white">Арматура для СИП</span><br><span class="category__name-grey">0,4 кВ и 6-35 кВ</span>
+                    </p><span class="category__arrow show-on-mobile"></span>
+                  </div>
+                  <div class="category__desc">
+                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <script type="text/javascript">
+          var mapData = [{
+            coords: [55.788858, 49.118076],
+            address: `420111, Республика Татарстан, город Казань, ул.Баумана, д.72`,
+          }];
+
+          var mapZoom = 18;
+
+          var mapCenter = [55.788858, 49.118076];
+        </script>
+        <div class="footer__map">
+          <div class="footer__site-container">
+            <div class="footer__map-wrapper">
+              <div class="js-footer-map" id="footer-map"></div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__main">
+          <div class="footer__site-container footer__grid">
+            <div class="footer__contacts">
+              <div class="footer__links">
+                <a class="phone-link" href="tel:88002505999">8 800 250 59 99</a>
+                <a class="mail-link" href="mailto:info@scat.ru">info@scat.ru</a>
+              </div>
+              <div class="footer__socials socials socials--row">
+                <a class="social" href="#">
+                  <svg class="icon icon-vk">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#vk"></use>
+                  </svg>
+                </a>
+                <a class="social" href="#">
+                  <svg class="icon icon-tg">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#tg"></use>
+                  </svg>
+                </a>
+                <a class="social" href="#">
+                  <svg class="icon icon-yt">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#yt"></use>
+                  </svg>
+                </a>
+              </div>
+              <p class="footer__address show-on-mobile">420111,&nbsp;Республика&nbsp;Татарстан, город&nbsp;Казань, ул.&nbsp;Баумана,&nbsp;д.72</p>
+              <a class="logo footer__logo hide-on-mobile" href="/">
+                <svg class="icon icon-logo">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="footer__menus hide-on-mobile">
+              <div class="footer__menu menu menu--column">
+                <a class="menu__link menu__link--opacity" href="#">Продукция</a>
+                <a class="menu__link menu__link--opacity" href="#">КОМАНДА</a>
+                <a class="menu__link menu__link--opacity" href="#">Реализованные проекты</a>
+                <a class="menu__link menu__link--opacity" href="#">О компании</a>
+                <a class="menu__link menu__link--opacity" href="#">ДОКУМЕНТАЦИЯ</a>
+                <a class="menu__link menu__link--opacity" href="#">Контакты</a>
+              </div>
+              <p class="footer__company">© АО «СКАТ» 2024</p>
+            </div>
+            <form class="footer__form form-footer" action="" method="method" data-need-validation>
+              <h6 class="form-footer__title">Оставьте&nbsp;заявку<br>на&nbsp;бесплатную&nbsp;консультацию</h6>
+              <div class="form-footer__row">
+                <div class="form-footer__inputs">
+                  <div class="form-footer__col form-footer__input input">
+                    <input class="input__field" type="text" name="consult-name" id="consult-name-id" placeholder="Имя" required autocomplete="off" minlength="2" data-parsley-reqtext data-parsley-trigger="input" data-parsley-validate-if-empty><i></i>
+                  </div>
+                  <div class="form-footer__col form-footer__input input">
+                    <input class="input__field js-phone-input" type="tel" name="consult-phone" id="consult-phone-id" placeholder="Телефон" required autocomplete="off" data-parsley-phone data-parsley-trigger="input" data-parsley-validate-if-empty><i></i>
+                  </div>
+                  <button class="form-footer__col form-footer__submit button button--big" type="submit">отправить</button>
+                </div>
+                <div class="form-footer__aggreement">
+                  <p>Нажимая&nbsp;«Отправить», вы&nbsp;соглашаетесь на&nbsp;обработку</p>
+                  <a href="#" target="_blank">&nbsp;персональных&nbsp;данных</a>
+                </div>
+              </div>
+            </form>
+            <div class="footer__basement">
+              <p class="footer__address hide-on-mobile">Казань, ул. Баумана, д.72</p>
+              <p class="footer__company show-on-mobile">© АО «СКАТ» 2024</p>
+              <a class="footer__policy" href="#" target="_blank">Политика конфиденциальности</a>
+              <a class="footer__dev dev" href="https://markweber.ru/"><span>Разработка сайта</span>
+                <svg class="icon icon-dev">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#dev"></use>
+                </svg>
+              </a>
+            </div>
+            <div class="footer__to-top">
+              <button class="to-top-btn" type="button"><span>Наверх</span>
+                <svg class="icon icon-top-arrow">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#top-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div class="modal">
+      <div class="modal__container" data-target="modal">
+        <div class="modal__content">
+          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
+          </button>
+          <div class="modal__legend">Поздравляем вы открыли модалку!</div>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu">
+      <div class="mobile-menu__inner-wrapper">
+        <div class="mobile-menu__body">
+          <div class="mobile-menu__list-wrapper">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links" href="#" id="">продукция</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links" href="#" id="">Реализованные проекты</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links" href="#" id="">О компании</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links" href="#" id="">КОМАНДА</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links" href="#" id="">ДОКУМЕНТАЦИЯ</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links" href="#" id="">контакты</a>
+              </li>
+              <li class="mobile-menu__list-item">
+                <a class="mobile-menu__link links mobile-menu__link--search" href="#" id="">поиск</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mobile-menu__contacts">
+            <div class="footer__links">
+              <a class="phone-link phone-link--small" href="tel:88002505999">8 800 250 59 99</a>
+              <a class="mail-link mail-link--small" href="mailto:info@scat.ru">info@scat.ru</a>
+            </div>
+            <div class="footer__socials socials socials--row">
+              <a class="social" href="#">
+                <svg class="icon icon-vk">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#vk"></use>
+                </svg>
+              </a>
+              <a class="social" href="#">
+                <svg class="icon icon-tg">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#tg"></use>
+                </svg>
+              </a>
+              <a class="social" href="#">
+                <svg class="icon icon-yt">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#yt"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="loader">
+      <div class="loader__inner-wrapper">
+        <div class="loader__icon" data-loader-ms="1500">
+          <div class="loader__icon-grey">
+            <svg class="icon icon-logo">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+            </svg>
+          </div>
+          <div class="loader__icon-yellow">
+            <svg class="icon icon-logo">
+              <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+  <script defer="defer" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script defer="defer" src="https://api-maps.yandex.ru/2.1/?apikey=1d46cd9a-2c9e-4500-b55b-ee2306bc1a9f&amp;lang=ru_RU"></script>
+  <script type="module" src="assets/js/main.js?v=0.0.0.0"></script>
+  <script src="assets/js/backend.js?v=0.0.0.0"></script>
+</html>
