@@ -200,6 +200,190 @@
     },
   ];
 
+-
+  const productCards = [
+    {
+      id: 'product-card-id-001',
+      class: '',
+      image: './assets/images/products/2.png',
+      name: 'Изолированный прессуемый наконечник серии CPTAR',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Изолированный прессуемый наконечник серии CPTAR'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-002',
+      class: '',
+      image: './assets/images/products/1.png',
+      name: 'Поддерживающий зажим для СИП-2 серии PS 16-95',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Поддерживающий зажим для СИП-2 серии PS 16-95'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-003',
+      class: '',
+      image: './assets/images/products/3.png',
+      name: 'Анкерный клиновый зажим для СИП-2 PA 1000',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Анкерный клиновый зажим для СИП-2 PA 1000'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-004',
+      class: '',
+      image: './assets/images/products/4.png',
+      name: 'Анкерный поддерживающий клиновый зажим для СИП-2 PAG 216/35',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Анкерный поддерживающий клиновый зажим для СИП-2 PAG 216/35'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-005',
+      class: '',
+      image: './assets/images/products/5.png',
+      name: 'Анкерный клиновый зажим для СИП-4 PA 4/25',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Анкерный клиновый зажим для СИП-4 PA 4/25'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-006',
+      class: '',
+      image: './assets/images/products/6.png',
+      name: 'Герметичный ответвительный прокалывающий зажим N 640',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Герметичный ответвительный прокалывающий зажим N 640'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-007',
+      class: '',
+      image: './assets/images/products/7.png',
+      name: 'Анкерный болтовой зажим для ввода в дом СИП-4 PA 2/35 M',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Анкерный болтовой зажим для ввода в дом СИП-4 PA 2/35 M'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-008',
+      class: '',
+      image: './assets/images/products/8.png',
+      name: 'Поддерживающий зажим для СИП-2 PS 1500',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Поддерживающий зажим для СИП-2 PS 1500'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+    {
+      id: 'product-card-id-009',
+      class: '',
+      image: './assets/images/products/9.png',
+      name: 'Поддерживающий зажим для СИП-2 PS 1500',
+      chars: [
+        {
+          key: 'Наименование',
+          value: 'Поддерживающий зажим для СИП-2 PS 1500'
+        },
+        {
+          key: 'Марка',
+          value: 'PAG 216/35'
+        },
+        {
+          key: 'Артикул',
+          value: '10800152'
+        }
+      ]
+    },
+  ];
+
 section.section.subcategories
   .subcategories__site-container
     .subcategories__heading
@@ -238,7 +422,7 @@ section.section.subcategories
 
       .subcategories__main
         form.subcategories__control-panel
-          button.subcategories__filters-open.filters-open.show-on-mobile(type="button")
+          button.subcategories__filters-open.filters-open.show-on-mobile(type="button", data-path="modal-filters")
             span Фильтр
             +icon-multi('filter-icon')
 
@@ -252,6 +436,9 @@ section.section.subcategories
             )
             button найти
 
+          button.subcategories__mobile-sorting.show-on-mobile(type="button", data-path="modal-sorting")
+            +icon-multi('sorting')
+
           .subcategories__view-switcher
             .view-switcher
               .view-switcher__row
@@ -262,3 +449,26 @@ section.section.subcategories
                 input#list-view-switcher-list(type="radio", hidden, name="list-view-switcher")
                 label.view-switcher__label.view-switcher__for-list(for="list-view-switcher-list")
                   +icon-multi('view-list')
+
+        ul.subcategories__list.subcategories__list--triple(data-toggle-list)
+          for product in productCards
+            li.subcategories__item
+              a.subcategories__product-card.product-card(id=product.id, class=product.class)
+                .product-card__image-wrapper
+                  .product-card__image
+                    img(src=product.image, alt="product image")
+
+                  p.product-card__name= product.name
+
+                ul.product-card__chars
+                  for chars in product.chars
+                    li.product-card__char
+                      span.product-card__key= chars.key
+                      p.product-card__value= chars.value
+
+                .product-card__arrow
+                  span
+                  +icon-multi('plus')
+
+        .subcategories__add
+          a.button.button--outlined.button--biggest(href="#") загрузить еще 12 из 765

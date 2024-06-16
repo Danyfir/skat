@@ -24,6 +24,7 @@ import teamSwiper from './modules/teamSwiper';
 
 import categoryMobileHover from './modules/categoryMobileHover';
 import catalogNavItemSwitch from './modules/catalogNavItemSwitch';
+import subcategoriesViewToggle from './modules/subcategoriesViewToggle';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -51,4 +52,5 @@ documenReady(() => {
 
   categoryMobileHover();
   catalogNavItemSwitch();
+  subcategoriesViewToggle();
 });

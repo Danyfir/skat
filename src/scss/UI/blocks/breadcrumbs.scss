@@ -3,7 +3,12 @@
     display: flex;
     align-items: center;
     column-gap: 0.8rem;
+
+    max-width: 100%;
     padding: 2rem 0 0;
+    overflow: auto;
+
+    @include noScrollbar();
 
     @include breakpointMF(tablet) {
       padding: 1rem 0 0;
@@ -47,6 +52,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+    white-space: nowrap;
     pointer-events: none;
   }
 }

@@ -1,0 +1,110 @@
+.other-card {
+    --pad: 2.4rem;
+
+    position: relative;
+
+    overflow: hidden;
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1.2 / 1;
+    padding: var(--pad);
+
+    background: var(--Achromatic-Grey, #1D1D1D);
+    border-radius: 1.6rem;
+    transition: var(--transition);
+    transition-property: background;
+
+    @include breakpointMF(tablet) {
+        --pad: 4rem;
+        aspect-ratio: 1.24 / 1;
+    }
+
+    &__name {
+        color: var(--White, #FFF);
+        font-size: 1.8rem;
+        font-family: var(--second-ff, "Ruda", sans-serif);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+
+
+        @include breakpointMF(tablet) {
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 125%;
+        }
+    }
+
+    &__name-white {
+        text-transform: uppercase;
+    }
+
+    &__name-grey {
+        opacity: 0.5;
+    }
+
+    &__icon {
+        position: absolute;
+        bottom: var(--pad);
+        left: var(--pad);
+        z-index: 200;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 4rem;
+        height: 4rem;
+
+        border-radius: 100%;
+        border: 1px solid var(--White-30, rgba(255, 255, 255, 0.30));
+        opacity: 0;
+
+        transition: var(--transition);
+        transition-property: transform;
+
+        .icon {
+          width: 1.6rem;
+          height: 1.6rem;
+          stroke: var(--White, #FFF);
+        }
+
+        @include breakpointMF(tablet) {
+            opacity: 1;
+        }
+    }
+
+    &__image {
+        display: contents;
+
+        img {
+            position: absolute;
+            top: 60%;
+            right: 0;
+
+            display: block;
+            width: 80%;
+            transform: translateY(-50%);
+
+            object-fit: contain;
+            object-position: right center;
+        }
+    }
+
+    &--small-image {
+        .other-card__image {
+            img {
+                width: 60%;
+            }
+        }
+    }
+
+    @include hoverActive() {
+        background-color: var(--Green, #003D32);
+
+        .other-card__icon {
+          transform: rotate(-45deg);
+        }
+    }
+}

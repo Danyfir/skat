@@ -1,0 +1,45 @@
+-
+	const selectVars = [
+		{
+			text: "Популярные",
+			id: "mobile-radio-sort-popular",
+			checked: true,
+		},
+		{
+			text: "Новые",
+			id: "mobile-radio-sort-new",
+			checked: false,
+		},
+		{
+			text: "По алфавиту (от А до Я)",
+			id: "mobile-radio-sort-alpbt-up",
+			checked: false,
+		},
+		{
+			text: "По алфавиту (от Я до А)",
+			id: "mobile-radio-sort-alpbt-down",
+			checked: false,
+		},
+	];
+
+
+.modal.modal-sorting
+	.modal__container.modal-sorting__container(data-target="modal-sorting")
+		form.modal-sorting__body(action="")
+			.modal-sorting__heading
+				p.modal-sorting__title Показать сначала
+				button.modal-sorting__close.modal-close(type="submit")
+					+icon-multi('close')
+
+			ul.modal-sorting__list
+				for item in selectVars
+					li.modal-sorting__item.select__item
+						label.select__label(for=item.id)
+							input(type="radio", hidden,
+								checked=item.checked,
+								name="mobile-sorting-radio",
+								id=item.id
+							)
+							span.select__text= item.text
+
+							span.select__icon

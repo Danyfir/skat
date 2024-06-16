@@ -1,0 +1,19 @@
+.product-section {
+    margin-bottom: 5.4rem;
+    @extend ._header-padding-top;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 10rem;
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: 100%;
+
+        width: 100%;
+
+        @include breakpointMF(tablet) {
+            grid-template-columns: repeat(2, 50%);
+        }
+    }
+}

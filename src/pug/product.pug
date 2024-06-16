@@ -1,0 +1,28 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch"
+  - const pageTitle = "Страница товара"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+      {
+        text: 'Продукция',
+        href: './catalog.html'
+      },
+      {
+        text: 'Арматура СИП 0,4 кВ и 6-35 кВ',
+        href: './subcatalog.html'
+      },
+      {
+        text: 'Анкерный зажим (PA 2000 Rpi)',
+        href: '#'
+      },
+    ];
+
+block content
+  include pages/product/main.pug

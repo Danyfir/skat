@@ -16,6 +16,8 @@ export default () => {
       })
     })
 
+    btns[0].classList.add('nav-item__button--active');
+
     nav.onreset = (event) => {
       setTimeout(() => {
         btns.forEach((btn) => {

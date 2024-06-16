@@ -411,7 +411,7 @@
               </div>
               <div class="subcategories__main">
                 <form class="subcategories__control-panel">
-                  <button class="subcategories__filters-open filters-open show-on-mobile" type="button"><span>Фильтр</span>
+                  <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-filters"><span>Фильтр</span>
                     <svg class="icon icon-filter-icon">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#filter-icon"></use>
                     </svg>
@@ -447,6 +447,11 @@
                     <input id="sorting-search" type="search" name="subcategories-search" placeholder="Введите слово для поиска">
                     <button>найти</button>
                   </div>
+                  <button class="subcategories__mobile-sorting show-on-mobile" type="button" data-path="modal-sorting">
+                    <svg class="icon icon-sorting">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#sorting"></use>
+                    </svg>
+                  </button>
                   <div class="subcategories__view-switcher">
                     <div class="view-switcher">
                       <div class="view-switcher__row">
@@ -466,10 +471,552 @@
                     </div>
                   </div>
                 </form>
+                <ul class="subcategories__list subcategories__list--triple" data-toggle-list>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-001">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/2.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Изолированный прессуемый наконечник серии CPTAR</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Изолированный прессуемый наконечник серии CPTAR</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-002">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/1.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Поддерживающий зажим для СИП-2 серии PS 16-95</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Поддерживающий зажим для СИП-2 серии PS 16-95</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-003">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/3.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Анкерный клиновый зажим для СИП-2 PA 1000</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Анкерный клиновый зажим для СИП-2 PA 1000</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-004">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/4.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Анкерный поддерживающий клиновый зажим для СИП-2 PAG 216/35</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Анкерный поддерживающий клиновый зажим для СИП-2 PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-005">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/5.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Анкерный клиновый зажим для СИП-4 PA 4/25</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Анкерный клиновый зажим для СИП-4 PA 4/25</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-006">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/6.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Герметичный ответвительный прокалывающий зажим N 640</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Герметичный ответвительный прокалывающий зажим N 640</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-007">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/7.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Анкерный болтовой зажим для ввода в дом СИП-4 PA 2/35 M</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Анкерный болтовой зажим для ввода в дом СИП-4 PA 2/35 M</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-008">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/8.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Поддерживающий зажим для СИП-2 PS 1500</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Поддерживающий зажим для СИП-2 PS 1500</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="subcategories__item">
+                    <a class="subcategories__product-card product-card" id="product-card-id-009">
+                      <div class="product-card__image-wrapper">
+                        <div class="product-card__image">
+                          <img src="./assets/images/products/9.png" alt="product image">
+                        </div>
+                        <p class="product-card__name">Поддерживающий зажим для СИП-2 PS 1500</p>
+                      </div>
+                      <ul class="product-card__chars">
+                        <li class="product-card__char"><span class="product-card__key">Наименование</span>
+                          <p class="product-card__value">Поддерживающий зажим для СИП-2 PS 1500</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Марка</span>
+                          <p class="product-card__value">PAG 216/35</p>
+                        </li>
+                        <li class="product-card__char"><span class="product-card__key">Артикул</span>
+                          <p class="product-card__value">10800152</p>
+                        </li>
+                      </ul>
+                      <div class="product-card__arrow"><span></span>
+                        <svg class="icon icon-plus">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#plus"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+                <div class="subcategories__add">
+                  <a class="button button--outlined button--biggest" href="#">загрузить еще 12 из 765</a>
+                </div>
               </div>
             </div>
           </div>
         </section>
+        <section class="section team others js-team-slider">
+          <div class="others__site-container">
+            <div class="team__heading section__heading">
+              <h2 class="section__title">Другие направления</h2>
+            </div>
+            <div class="team__body">
+              <div class="team__swiper swiper">
+                <ul class="team__swiper-wrapper swiper-wrapper">
+                  <li class="team__swiper-slide swiper-slide">
+                    <a class="team__item other-card other-card--small-image" href="#" id="others-id-001">
+                      <div class="other-card__name">
+                        <p class="other-card__name-white">Высоковольтная кабельная арматура</p><span class="other-card__name-grey">110 - 500 кВ</span>
+                      </div>
+                      <div class="other-card__icon">
+                        <svg class="icon icon-card-icon">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                        </svg>
+                      </div>
+                      <div class="other-card__image">
+                        <img src="./assets/images/others/1.png" alt="">
+                      </div>
+                    </a>
+                  </li>
+                  <li class="team__swiper-slide swiper-slide">
+                    <a class="team__item other-card" href="#" id="others-id-002">
+                      <div class="other-card__name">
+                        <p class="other-card__name-white">кабельная арматура</p><span class="other-card__name-grey">1-35 кВ</span>
+                      </div>
+                      <div class="other-card__icon">
+                        <svg class="icon icon-card-icon">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                        </svg>
+                      </div>
+                      <div class="other-card__image">
+                        <img src="./assets/images/others/2.png" alt="">
+                      </div>
+                    </a>
+                  </li>
+                  <li class="team__swiper-slide swiper-slide">
+                    <a class="team__item other-card" href="#" id="others-id-003">
+                      <div class="other-card__name">
+                        <p class="other-card__name-white">кАрматура для СИП</p><span class="other-card__name-grey">0,4 кВ и 6-35 кВ</span>
+                      </div>
+                      <div class="other-card__icon">
+                        <svg class="icon icon-card-icon">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#card-icon"></use>
+                        </svg>
+                      </div>
+                      <div class="other-card__image">
+                        <img src="./assets/images/others/3.png" alt="">
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal modal-sorting">
+          <div class="modal__container modal-sorting__container" data-target="modal-sorting">
+            <form class="modal-sorting__body" action="">
+              <div class="modal-sorting__heading">
+                <p class="modal-sorting__title">Показать сначала</p>
+                <button class="modal-sorting__close modal-close" type="submit">
+                  <svg class="icon icon-close">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <ul class="modal-sorting__list">
+                <li class="modal-sorting__item select__item">
+                  <label class="select__label" for="mobile-radio-sort-popular">
+                    <input type="radio" hidden checked="checked" name="mobile-sorting-radio" id="mobile-radio-sort-popular"><span class="select__text">Популярные</span><span class="select__icon"></span>
+                  </label>
+                </li>
+                <li class="modal-sorting__item select__item">
+                  <label class="select__label" for="mobile-radio-sort-new">
+                    <input type="radio" hidden name="mobile-sorting-radio" id="mobile-radio-sort-new"><span class="select__text">Новые</span><span class="select__icon"></span>
+                  </label>
+                </li>
+                <li class="modal-sorting__item select__item">
+                  <label class="select__label" for="mobile-radio-sort-alpbt-up">
+                    <input type="radio" hidden name="mobile-sorting-radio" id="mobile-radio-sort-alpbt-up"><span class="select__text">По алфавиту (от А до Я)</span><span class="select__icon"></span>
+                  </label>
+                </li>
+                <li class="modal-sorting__item select__item">
+                  <label class="select__label" for="mobile-radio-sort-alpbt-down">
+                    <input type="radio" hidden name="mobile-sorting-radio" id="mobile-radio-sort-alpbt-down"><span class="select__text">По алфавиту (от Я до А)</span><span class="select__icon"></span>
+                  </label>
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div class="modal modal-filters">
+          <div class="modal__container modal-sorting__container modal-filters__container" data-target="modal-filters">
+            <form class="modal-sorting__body modal-filters__body js-nav-wrapper" action="">
+              <div class="modal-sorting__heading modal-filters__heading">
+                <p class="modal-sorting__title">Фильтры</p>
+                <button class="modal-sorting__close modal-close" type="button">
+                  <svg class="icon icon-close">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-filters__filters">
+                <ul class="modal-filters__nav-list">
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Подвесная арматура</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m001">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m001"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m002">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m002"><i></i><span>Анкерные поддерживающие клиновые зажимы для СИП-2 серии PAG</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m003">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m003"><i></i><span>Анкерные клиновые зажимы для СИП-4 серий PA и PAK</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m004">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m004"><i></i><span>Анкерные болтовые зажимы для ввода в дом СИП-4 серии PA M</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m008">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m008"><i></i><span>Анкерные болтовые зажимы для магистрального СИП-4 серии RPA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m005">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m005"><i></i><span>Анкерные кронштейны для крепления СИП к стенам зданий CT 600, CB 600</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m006">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m006"><i></i><span>Крюки универсальные CS 16, CF 16, CF 20</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m007">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m007"><i></i><span>Поддерживающие зажимы для СИП-2 серии PS</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m009">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m009"><i></i><span>Поддерживающие зажимы для СИП-4 серии PSP</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m010">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m010"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Ответвительная арматура</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0101">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0101"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0102">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0102"><i></i><span>Анкерные поддерживающие клиновые зажимы для СИП-2 серии PAG</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0103">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0103"><i></i><span>Анкерные клиновые зажимы для СИП-4 серий PA и PAK</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0104">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0104"><i></i><span>Анкерные болтовые зажимы для ввода в дом СИП-4 серии PA M</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Вспомогательная арматура</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0201">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0201"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0202">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0202"><i></i><span>Анкерные поддерживающие клиновые зажимы для СИП-2 серии PAG</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0203">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0203"><i></i><span>Анкерные клиновые зажимы для СИП-4 серий PA и PAK</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0204">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0204"><i></i><span>Анкерные болтовые зажимы для ввода в дом СИП-4 серии PA M</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0205">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0205"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0206">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0206"><i></i><span>Анкерные поддерживающие клиновые зажимы для СИП-2 серии PAG</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0207">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0207"><i></i><span>Анкерные клиновые зажимы для СИП-4 серий PA и PAK</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0208">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0208"><i></i><span>Анкерные болтовые зажимы для ввода в дом СИП-4 серии PA M</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0209">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0209"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0210">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0210"><i></i><span>Анкерные поддерживающие клиновые зажимы для СИП-2 серии PAG</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0211">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0211"><i></i><span>Анкерные клиновые зажимы для СИП-4 серий PA и PAK</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-mm0212">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-mm0212"><i></i><span>Анкерные болтовые зажимы для ввода в дом СИП-4 серии PA M</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Устройства и приспособления для защиты ВЛИ</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0301">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0301"><i></i><span>Анкерные клиновые зажимы для СИП-2 серии PA</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0302">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0302"><i></i><span>Анкерные поддерживающие клиновые зажимы для СИП-2 серии PAG</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0303">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0303"><i></i><span>Анкерные клиновые зажимы для СИП-4 серий PA и PAK</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="cat-id-m0304">
+                            <input type="radio" hidden value="" name="cat-name" id="cat-id-m0304"><i></i><span>Анкерные болтовые зажимы для ввода в дом СИП-4 серии PA M</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-filters__footer">
+                <button class="button button--biggest modal-filters__submit" type="submit">Применить</button>
+                <label class="modal-filters__reset">
+                  <input type="reset" value="Сбросить фильтры">
+                  <svg class="icon icon-close">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+                  </svg>
+                </label>
+              </div>
+            </form>
+          </div>
+        </div>
       </main>
 
       <footer class="footer">
@@ -630,22 +1177,6 @@
                 </svg>
               </a>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="loader">
-      <div class="loader__inner-wrapper">
-        <div class="loader__icon" data-loader-ms="1500">
-          <div class="loader__icon-grey">
-            <svg class="icon icon-logo">
-              <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
-            </svg>
-          </div>
-          <div class="loader__icon-yellow">
-            <svg class="icon icon-logo">
-              <use xlink:href="assets/images/sprites/sprite-multi.svg#logo"></use>
-            </svg>
           </div>
         </div>
       </div>

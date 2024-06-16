@@ -1,0 +1,45 @@
+-
+	const otherslist = [
+		{
+			id: 'others-id-001',
+			class: 'other-card--small-image',
+			whiteText: 'Высоковольтная кабельная арматура',
+			greyText: '110 - 500 кВ',
+			image: './assets/images/others/1.png',
+		},
+		{
+			id: 'others-id-002',
+			class: '',
+			whiteText: 'кабельная арматура',
+			greyText: '1-35 кВ',
+			image: './assets/images/others/2.png',
+		},
+		{
+			id: 'others-id-003',
+			class: '',
+			whiteText: 'кАрматура для СИП',
+			greyText: '0,4 кВ и 6-35 кВ',
+			image: './assets/images/others/3.png',
+		},
+	];
+
+section.section.team.others.js-team-slider
+	.others__site-container
+		.team__heading.section__heading
+			h2.section__title Другие направления
+
+		.team__body
+			.team__swiper.swiper
+				ul.team__swiper-wrapper.swiper-wrapper
+					for item in otherslist
+						li.team__swiper-slide.swiper-slide
+							a.team__item.other-card(href="#", id=item.id, class=item.class)
+								.other-card__name
+									p.other-card__name-white= item.whiteText
+									span.other-card__name-grey= item.greyText
+
+								.other-card__icon
+									+icon-multi('card-icon')
+
+								.other-card__image
+									img(src=item.image, alt="")
