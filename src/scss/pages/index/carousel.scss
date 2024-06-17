@@ -5,6 +5,14 @@
     padding: 10rem 0 10rem;
   }
 
+  &.recommendation {
+    padding: 5rem 0 8.4rem;
+
+    @include breakpointMF(tablet) {
+      padding: 10rem 0 7rem;
+    }
+  }
+
   &__swiper.swiper {
     margin: 0 calc(var(--content-padding, 1.6rem) * -1);
     padding: 0 var(--content-padding, 1.6rem);
@@ -12,6 +20,14 @@
     @include breakpointMF(tablet) {
       margin: 0;
       padding: 0;
+    }
+  }
+
+  &__swiper-slide.swiper-slide {
+    .product-card--column {
+      .product-card__name {
+        @include maxSizeText(3);
+      }
     }
   }
 }

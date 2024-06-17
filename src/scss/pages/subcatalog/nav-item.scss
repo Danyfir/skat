@@ -45,7 +45,6 @@
     }
   }
 
-
   &__list {
     max-height: 53.8rem;
     overflow: auto;
@@ -113,6 +112,14 @@
         }
       }
     }
+  }
+
+  &__text {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    opacity: 0.7;
   }
 
   &.nav-item--expand {
@@ -209,6 +216,26 @@
           }
         }
       }
+    }
+  }
+
+  &.nav-item--bigger {
+    .nav-item__button--border {
+      padding: 2rem 0;
+
+      span {
+        font-family: var(--second-ff, "Ruda");
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+        text-transform: uppercase;
+      }
+    }
+
+    .nav-item__button--active + .nav-item__dropdown {
+      padding-top: 0;
+      padding-bottom: 2.4rem;
     }
   }
 }

@@ -4,6 +4,8 @@ export default () => {
   const carousels = document.querySelectorAll('.js-carousel-swiper');
 
   carousels.forEach((carousel) => {
+    const isRecommend = carousel.classList.contains('recommendation');
+
     const swiper = new Swiper(carousel.querySelector('.carousel__swiper.swiper'), {
       spaceBetween: 16,
       slidesPerView: 1.1,
@@ -15,7 +17,7 @@ export default () => {
 
       breakpoints: {
         769: {
-          slidesPerView: 4,
+          slidesPerView: isRecommend ? 5 : 4,
         }
       }
     })

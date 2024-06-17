@@ -86,4 +86,15 @@
       border-color: var(--White, #FFF);
     }
   }
+
+  &--white {
+    background: var(--White, #FFF);
+    color: var(--Black, #050403);
+
+    @include breakpointMF(tablet) {
+      max-height: 6rem;
+      padding: 2.1rem 5.2rem;
+      border-radius: 100rem;
+    }
+  }
 }

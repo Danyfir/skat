@@ -75,7 +75,8 @@ body {
   }
 
   &.desktop-menu-is-open {
-    @extend .no-scroll;
+    overflow: hidden;
+    height: auto;
   }
 
   &:has(.loader),
@@ -99,13 +100,15 @@ body {
 
 .page-main {
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
 }
 
 .page-home {
   .header__breadcrumbs {
     display: none;
+  }
+
+  .page-main {
+    overflow: hidden;
   }
 }
 

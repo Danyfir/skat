@@ -1,5 +1,5 @@
 .product-section {
-    margin-bottom: 5.4rem;
+    margin-bottom: 5rem;
     @extend ._header-padding-top;
 
     @include breakpointMF(tablet) {
@@ -7,13 +7,172 @@
     }
 
     &__body {
-        display: grid;
-        grid-template-columns: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
 
         width: 100%;
 
         @include breakpointMF(tablet) {
-            grid-template-columns: repeat(2, 50%);
+            flex-direction: row;
+            align-items: flex-start;
+        }
+    }
+
+    &__info {
+        flex: 1 1 50%;
+        margin-top: 1.6rem;
+
+        @include breakpointMF(tablet) {
+            margin-top: 1rem;
+            padding-left: 6.4rem;
+
+            border-color: var(--White-10, rgba(255, 255, 255, 0.10));
+            border-style: solid;
+            border-width: 0 0 0 1px;
+
+            transform: translateY(-3rem);
+        }
+    }
+}
+
+// image slide:
+.product-section {
+    &__carousel {
+        position: relative;
+
+        flex: 1 1 50%;
+        padding-bottom: 4.4rem;
+
+        @include breakpointMF(tablet) {
+            position: sticky;
+            top: 5rem;
+
+            aspect-ratio: 1.2 / 1;
+            padding: 10rem 6.3rem 0 0;
+        }
+
+        @include hoverActive() {
+            .product-section__scroll-icon {
+                .icon {
+                    fill-opacity: 1;
+                }
+            }
+        }
+    }
+
+    &__image-slider {
+        width: 100%;
+        aspect-ratio: 1.139 / 1;
+
+        @include breakpointMF(tablet) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 200;
+
+            aspect-ratio: unset;
+        }
+    }
+
+    &__image-swiper.swiper {
+        height: 100%;
+    }
+
+    &__image-swiper-slide.swiper-slide {
+        img {
+            @include centeredAbsolute();
+
+            display: block;
+            width: 80%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__thumbs-wrapper {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 500;
+
+        height: 15rem;
+
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__thumbs-swiper.swiper {
+        height: 100%;
+    }
+
+    &__thumbs-swiper-slide.swiper-slide {
+        width: 6.9rem;
+        height: 5.0rem;
+
+        opacity: 0.3;
+        transition: opacity 0.3s ease-out;
+        cursor: pointer;
+
+        &.swiper-slide-thumb-active {
+            opacity: 1;
+        }
+
+        img {
+            @include centeredAbsolute();
+
+            display: block;
+            width: 80%;
+            object-fit: contain;
+            object-position: center;
+        }
+    }
+
+    &__scroll-icon {
+        position: absolute;
+        bottom: 0;
+        right: 6.3rem;
+        z-index: 500;
+
+        transform: translateY(1rem);
+
+        .icon {
+            width: 4rem;
+            height: 4rem;
+            fill-opacity: 0.3;
+            transition: 0.3s ease-out
+        }
+
+
+        @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+        }
+    }
+
+    &__pagination {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        height: 4.4rem;
+
+        & > .swiper-pagination {
+            top: 50%;
+            bottom: unset;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transform: translateY(-50%);
+        }
+
+        @include breakpointMF(tablet) {
+            @include visuallyHidden();
         }
     }
 }

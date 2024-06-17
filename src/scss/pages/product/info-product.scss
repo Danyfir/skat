@@ -1,0 +1,159 @@
+.info-product {
+    &__top {
+        display: none;
+
+        @include breakpointMF(tablet) {
+            display: block;
+            margin-bottom: 7rem;
+        }
+    }
+
+    &__tag {
+        display: inline-flex;
+        align-items: center;
+        column-gap: 0.6rem;
+        color: var(--White-40, rgba(255, 255, 255, 0.40));
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 1.2rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%;
+        text-transform: uppercase;
+
+        &::before,
+        &::after {
+            color: var(--White, rgba(255, 255, 255));
+        }
+
+        &::before {
+            content: "[";
+        }
+
+        &::after {
+            content: "]";
+        }
+    }
+
+    &__main {
+        margin-bottom: 6rem;
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 7rem;
+        }
+    }
+
+    &__title {
+        & > * {
+            display: inline;
+            font-family: var(--second-ff, "Ruda");
+            font-size: 2.8rem;
+            font-style: normal;
+            line-height: 105%;
+            letter-spacing: -0.02em;
+            text-transform: uppercase;
+
+            @include breakpointMF(tablet) {
+                font-size: 5.4rem;
+                line-height: 100%;
+            }
+        }
+
+        @include breakpointMF(tablet) {
+            margin-bottom: 0.8rem;
+        }
+    }
+
+    &__name {
+        font-weight: 500;
+    }
+
+    &__art-name {
+        color: var(--White-50, rgba(255, 255, 255, 0.50));
+
+        &::before {
+            content: "[";
+        }
+
+        &::after {
+            content: "]";
+        }
+    }
+
+    &__code {
+        display: none;
+
+        @include breakpointMF(tablet) {
+            display: flex;
+            column-gap: 0.4rem;
+        }
+
+        & > span {
+            color: var(--White-40, rgba(255, 255, 255, 0.4));
+            font-feature-settings: 'clig' off, 'liga' off;
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+        }
+    }
+
+    &__col {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-start;
+
+        width: 100%;
+        margin-top: 2rem;
+
+        @include breakpointMF(tablet) {
+            flex-direction: column;
+            margin-top: 2.8rem;
+        }
+    }
+
+    &__text {
+        max-width: 43rem;
+        margin-top: 4rem;
+
+        font-feature-settings: 'clig' off, 'liga' off;
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 20.8px */
+        opacity: 0.8;
+
+        @include breakpointMF(tablet) {
+            margin-top: unset;
+            margin-bottom: 5rem;
+        }
+    }
+
+    &__link.button {
+        width: 100%;
+        min-height: 4.8rem;
+        padding: 1.6rem 5rem;
+
+        @include breakpointMF(tablet) {
+            max-width: 35rem;
+            padding: 2.35rem 5rem;
+        }
+    }
+
+    &__params {
+        margin-bottom: 4rem;
+
+        @include breakpointMF(tablet) {
+            max-width: 50rem;
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__acco {
+        @include breakpointMF(tablet) {
+            max-width: 50rem;
+        }
+    }
+}
+
+.info-product {
+}
