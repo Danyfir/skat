@@ -12,7 +12,7 @@
         @include breakpointMF(desktop) {
           display: block;
           transition-property: transform, opacity;
-          transition-duration: 0.4s;
+          transition-duration: 0.3s;
           transition-timing-function: ease-out;
         }
       }
@@ -22,7 +22,7 @@
     .intro__title-yellow-text {
       span {
         @include breakpointMF(desktop) {
-          transition-delay: 1.2s;
+          transition-delay: 1.5s;
         }
       }
     }
@@ -30,7 +30,7 @@
     .intro__title-white-text {
       span {
         @include breakpointMF(desktop) {
-          transition-delay: 1.6s;
+          transition-delay: 1.8s;
         }
       }
     }
@@ -38,7 +38,7 @@
     .intro__title-grey-text {
       span {
         @include breakpointMF(desktop) {
-          transition-delay: 2s;
+          transition-delay: 2.1s;
         }
       }
     }
@@ -78,7 +78,7 @@
       @include breakpointMF(desktop) {
         transition-property: opacity;
         transition-duration: 0.3s;
-        transition-timing-function: ease-out;
+        transition-timing-function: ease;
       }
 
       &:nth-child(1) {
@@ -89,37 +89,27 @@
 
       &:nth-child(2) {
         @include breakpointMF(desktop) {
-          transition-delay: 0.2s;
+          transition-delay: 0.3s;
         }
       }
 
       &:nth-child(3) {
         @include breakpointMF(desktop) {
-          transition-delay: 0.4s;
+          transition-delay: 0.6s;
         }
       }
 
       &:nth-child(4) {
         @include breakpointMF(desktop) {
-          transition-delay: 0.6s;
+          transition-delay: 0.9s;
         }
       }
-    }
-  }
-
-  .header__desktop-nav {
-    @include breakpointMF(desktop) {
-      transition-property: opacity;
-      transition-duration: 0.3s;
-      transition-timing-function: ease-in;
-      transition-delay: 0.8s;
     }
   }
 }
 
 .animation-trigger {
   .header-is-animated {
-
     .header__menu {
       .menu__link {
         @include breakpointMF(desktop) {
@@ -133,5 +123,14 @@
         opacity: 0;
       }
     }
+  }
+}
+
+.header__desktop-nav {
+  @include breakpointMF(desktop) {
+    transition-property: opacity;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 1.2s;
   }
 }

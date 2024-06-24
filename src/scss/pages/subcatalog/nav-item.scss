@@ -102,7 +102,7 @@
       opacity: 0.6;
     }
 
-    input[type="radio"] {
+    input[type="checkbox"] {
       &:checked {
         & ~ i {
           opacity: 1;
@@ -207,7 +207,7 @@
         opacity: 1;
       }
 
-      input[type="radio"] {
+      input[type="checkbox"] {
         &:checked {
           & ~ i {
             background-color: var(--Color-Yellow-2, #EF9930);

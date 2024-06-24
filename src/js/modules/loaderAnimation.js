@@ -56,7 +56,6 @@ export default () => {
         }, 400);
 
         setTimeout(() => {
-          loader.remove();
           body.classList.remove('animation-trigger');
         }, 2000);
 
@@ -67,6 +66,7 @@ export default () => {
 
         setTimeout(() => {
           cloneIcon.remove();
+          loader.remove();
         }, 4000);
       });
     }, 300);

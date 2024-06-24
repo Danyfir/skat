@@ -5,6 +5,12 @@
     padding: 11.4rem 0 10rem;
   }
 
+  &__site-container {
+    @include breakpointMF(tablet) {
+      position: relative;
+    }
+  }
+
   &__body {
     display: grid;
     grid-template-columns: 100%;
@@ -81,6 +87,14 @@
     }
   }
 
+  &__item {
+    @include breakpointMF(tablet) {
+      top: 0;
+      left: var(--content-padding);
+      z-index: 200;
+    }
+  }
+
   &__cell {
     &--big {
       @include breakpointMF(tablet) {
@@ -113,6 +127,23 @@
       @include breakpointMF(tablet) {
         width: 24rem;
       }
+    }
+  }
+}
+
+.projects__heading {
+  @include breakpointMF(desktop) {
+    transition-property: transform, opacity;
+    transition-duration: 0.8s;
+    transition-timing-function: ease-out;
+  }
+}
+
+.projects--animation-trigger {
+  .projects__heading {
+    @include breakpointMF(desktop) {
+      // opacity: 0;
+      // transform: translateY(100%);
     }
   }
 }

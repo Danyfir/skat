@@ -3,6 +3,7 @@ import 'focus-visible';
 import lazyIMages from './modules/lazyIMages';
 import documenReady from './helpers/documenReady';
 import initModal from './modules/initModal';
+import initMap from './modules/footerMap';
 import detectTouch from './modules/detectTouch';
 import masks from './modules/masks';
 import validation from './modules/validation';
@@ -16,14 +17,15 @@ import setHeaderPadding from './modules/setHeaderPadding';
 import menuLinksOpacity from './modules/menuLinksOpacity';
 import introSwiper from './modules/introSwiper';
 import openMobileMenu from './modules/openMobileMenu';
-import initMap from './modules/footerMap';
 import advantagesSwiper from './modules/advantagesSwiper';
 import statsAnimations from './modules/statsAnimations';
+import projectsAnimation from './modules/projectsAnimation';
 import carouselSwiper from './modules/carouselSwiper';
 import teamSwiper from './modules/teamSwiper';
 
 import categoryMobileHover from './modules/categoryMobileHover';
 import catalogNavItemSwitch from './modules/catalogNavItemSwitch';
+import selectSetValue from './modules/selectSetValue';
 import subcategoriesViewToggle from './modules/subcategoriesViewToggle';
 import productSlider from './modules/productSlider';
 
@@ -48,11 +50,13 @@ documenReady(() => {
   initMap();
   advantagesSwiper();
   statsAnimations();
+  projectsAnimation();
   carouselSwiper();
   teamSwiper();
 
   categoryMobileHover();
   catalogNavItemSwitch();
+  selectSetValue();
   subcategoriesViewToggle();
   productSlider();
 });

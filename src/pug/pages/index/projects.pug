@@ -34,7 +34,7 @@
     },
   ];
 
-section.section.projects
+section.section.projects.projects--animation-trigger
   .projects__site-container
     .projects__body
       .projects__cell
@@ -50,7 +50,7 @@ section.section.projects
 
       for item in projects
         .projects__cell(class=item.parentClass)
-          a.project(href="#" class=item.class)
+          a.projects__project.project(href="#" class=item.class)
             .project__image
               picture
                 source(type="image/webp" srcset=item.imgW alt="")

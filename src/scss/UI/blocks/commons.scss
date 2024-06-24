@@ -25,7 +25,6 @@
   overflow-y: scroll;
   position: fixed;
   width: 100%;
-  height: 100%;
   left: 0;
   top: 0;
 }
@@ -278,4 +277,8 @@
     @include font(10rem, 100%, 400);
     font-family: var(--second-ff, Arail);
   }
+}
+
+.abs {
+
 }

@@ -48,7 +48,8 @@ body {
   font: 400 1.4rem/1.4 var(--main-ff);
   letter-spacing: 0.03em;
 
-  background: var(--Black, #050403);
+  background-color: var(--Black, #050403);
+  scroll-behavior: smooth;
 
   @include breakpointMF(tablet) {
     font: 400 1.6rem/1.3 var(--main-ff);

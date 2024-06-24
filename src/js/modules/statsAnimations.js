@@ -27,8 +27,11 @@ export default () => {
       end: `bottom +=0`,
       scrub: 1.5,
       pin: statsSection,
-      anticipatePin: 0.5,
+      anticipatePin: 1,
       pinSpacing: true,
+      onEnter: () => {
+        statsSection.classList.remove('stats--animation-trigger');
+      }
     });
 
     scrollItems.forEach((scrollItem) => {
@@ -42,7 +45,7 @@ export default () => {
         scrollTrigger: {
           trigger: scrollItem,
           start: "top center+=20%",
-          end: "bottom center-=20%",
+          end: "bottom center-=10%",
           scrub: 1.5,
           // markers: true
         }
