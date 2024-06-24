@@ -11,7 +11,6 @@ export default () => {
     const imageSwiperBox = swiperContainer.querySelector('.intro__image-swiper.swiper');
 
     if(isMobile) {
-
       const imagesSwiper = new Swiper(imageSwiperBox, {
         pagination: {
           el: '.swiper-pagination',
@@ -33,13 +32,10 @@ export default () => {
             const thumbs = document.querySelectorAll('.intro__thumbs.card');
 
             thumbs.forEach((thumb) => {
-              thumb.addEventListener('mouseenter', (e) => {
-
-                if(isHoverableDevice) {
-                  console.log('no hover');
+              thumb.addEventListener('mouseenter', () => {
+                if(!isHoverableDevice) {
                   return;
                 } else {
-
                   const id = Array.from(thumbs).indexOf(thumb);
 
                   thumbs.forEach((thumb) => {
@@ -50,55 +46,29 @@ export default () => {
 
                   imagesSwiper.slideTo(id);
                 }
+              });
+
+              thumb.addEventListener('click', (e) => {
+                e.preventDefault();
+
+                const linkHref = thumb.href;
+                const id = Array.from(thumbs).indexOf(thumb);
+
+                if(thumb.classList.contains('card--hover')) {
+                  window.location.href = linkHref;
+                }
+
+                thumbs.forEach((thumb) => {
+                  thumb.classList.remove('card--hover');
+                })
+
+                thumb.classList.add('card--hover');
+                imagesSwiper.slideTo(id);
               })
             })
           },
         },
       })
     }
-
-    // const imagesSwiper = new Swiper(imageSwiperBox, {
-    //   effect: 'creative',
-    //   creativeEffect: {
-    //     prev: {
-    //       // will set `translateZ(-400px)` on previous slides
-    //       translate: [0, 0, -400],
-    //     },
-    //     next: {
-    //       // will set `translateX(100%)` on next slides
-    //       translate: ['100%', 0, 0],
-    //     },
-    //   },
-
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //   },
-
-    //   breakpoints: {
-    //     768: {
-    //       parallax: true,
-    //     }
-    //   },
-
-    //   on: {
-    //     init: function () {
-    //       const thumbs = document.querySelectorAll('.intro__thumbs.card');
-
-    //       thumbs.forEach((thumb) => {
-    //         thumb.addEventListener('mouseenter', (e) => {
-    //           const id = Array.from(thumbs).indexOf(thumb);
-
-    //           thumbs.forEach((thumb) => {
-    //             thumb.classList.remove('card--hover');
-    //           })
-
-    //           thumb.classList.add('card--hover');
-
-    //           imagesSwiper.slideTo(id, 1000);
-    //         })
-    //       })
-    //     },
-    //   },
-    // })
   })
 }

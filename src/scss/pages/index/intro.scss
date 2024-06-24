@@ -1,16 +1,18 @@
 .intro {
   position: relative;
-  height: 100vh;
-  height: 100dvh;
 
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-end;
 
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+
   @include breakpointMF(tablet) {
     display: block;
+    height: 100vh;
   }
 
   &__image-slider {

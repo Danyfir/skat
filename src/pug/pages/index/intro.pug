@@ -33,21 +33,21 @@
   const cardsInfo = [
     {
       id: 0,
-      href: '#',
+      href: './product.html',
       name: 'Высоковольтная кабельная арматура',
       chars: '110 - 500 кВ',
       image: './assets/images/cards/pic-1.png',
     },
     {
       id: 1,
-      href: '#',
+      href: './product.html',
       name: 'кабельная арматура',
       chars: '1-35 кВ',
       image: './assets/images/cards/pic-2.png',
     },
     {
       id: 2,
-      href: '#',
+      href: './product.html',
       name: 'Арматура для СИП',
       chars: '0,4 кВ и 6-35 кВ',
       image: './assets/images/cards/pic-3.png',
@@ -91,7 +91,7 @@ section.section.intro.js-intro-swiper-box
     ul.intro__thumbs-list
       for card in cardsInfo
         li.intro__thumb-item
-          a.intro__thumbs.card(href="#", id="product-card-" + card.id, class= card.id === 0 ? "card--hover" : "")
+          a.intro__thumbs.card(href=card.href id="product-card-" + card.id, class= card.id === 0 ? "card--hover" : "")
             .card__body
               .card__header
                 p.card__name= card.name
