@@ -220,7 +220,7 @@
             </div>
             <div class="subcategories__grid">
               <div class="subcategories__aside hide-on-mobile">
-                <form class="subcategories__nav js-nav-wrapper" action="">
+                <form class="subcategories__nav js-nav-wrapper" action="" data-from-reset>
                   <ul class="subcategories__nav-list">
                     <li class="subcategories__nav-item nav-item js-nav-item">
                       <button class="nav-item__button" type="button">Подвесная арматура</button>
@@ -402,7 +402,7 @@
                     </li>
                   </ul>
                   <label class="subcategories__reset">
-                    <input type="reset" value="Сбросить фильтры">
+                    <input class="js-forms-reset" type="reset" value="Сбросить фильтры">
                     <svg class="icon icon-reset-cross">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#reset-cross"></use>
                     </svg>
@@ -410,7 +410,7 @@
                 </form>
               </div>
               <div class="subcategories__main">
-                <form class="subcategories__control-panel">
+                <form class="subcategories__control-panel" data-for-reset>
                   <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-filters"><span>Фильтр</span>
                     <svg class="icon icon-filter-icon">
                       <use xlink:href="assets/images/sprites/sprite-multi.svg#filter-icon"></use>
