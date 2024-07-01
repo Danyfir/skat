@@ -28,6 +28,7 @@ import catalogNavItemSwitch from './modules/catalogNavItemSwitch';
 import selectSetValue from './modules/selectSetValue';
 import subcategoriesViewToggle from './modules/subcategoriesViewToggle';
 import productSlider from './modules/productSlider';
+import resetGroupForms from './modules/resetGroupForms';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -59,4 +60,5 @@ documenReady(() => {
   selectSetValue();
   subcategoriesViewToggle();
   productSlider();
+  resetGroupForms();
 });

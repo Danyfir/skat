@@ -23,7 +23,7 @@ export default () => {
         btns.forEach((btn) => {
           btn.classList.remove(ACTIVE_CLASS);
         })
-      }, 300);
+      }, 200);
     };
   })
 }
