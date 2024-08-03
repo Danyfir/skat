@@ -33,6 +33,12 @@
       padding-right: 8.5rem;
       padding-bottom: 4rem;
     }
+
+    &--stretch {
+      @include breakpointMF(tablet) {
+        align-items: stretch;
+      }
+    }
   }
 
   &__nav {
@@ -56,6 +62,19 @@
 
     @include breakpointMF(tablet) {
       max-width: 48ch;
+    }
+
+    &--stretch {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: space-between;
+      opacity: 1;
+    }
+
+    & > p {
+      @extend .text-18;
+      opacity: 0.7;
     }
   }
 
@@ -141,6 +160,12 @@
       column-gap: 1.6rem;
       margin-bottom: 2rem;
     }
+
+    &--end {
+      @include breakpointMF(tablet) {
+        align-items: flex-end;
+      }
+    }
   }
 
   &__filters-open {
@@ -177,12 +202,27 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: 100%;
-    row-gap: 3.2rem;
+    &:not(.subcategories__list--flex) {
+      display: grid;
+      grid-template-columns: 100%;
+      row-gap: 3.2rem;
 
-    @include breakpointMF(tablet) {
-      row-gap: 1.6rem;
+      @include breakpointMF(tablet) {
+        row-gap: 1.6rem;
+      }
+    }
+
+    &:is(.subcategories__list--flex) {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: stretch;
+      gap: 1.6rem;
+
+
+      @include breakpointMF(tablet) {
+        padding-top: 2rem;
+      }
     }
 
     &.subcategories__list--simple {
@@ -197,6 +237,18 @@
           @extend .product-card--row;
         }
       }
+
+      .subcategories__card {
+        width: 100%;
+
+        @include breakpointMF(tablet) {
+          width: 100%;
+        }
+
+        .certificates-card {
+          @extend .certificates-card--row;
+        }
+      }
     }
 
     &.subcategories__list--triple {
@@ -209,6 +261,14 @@
       .subcategories__item {
         .product-card {
           @extend .product-card--column;
+        }
+      }
+
+      .subcategories__card {
+        width: 100%;
+
+        @include breakpointMF(tablet) {
+          width: calc(100% / 4 - (1.6rem * 3 / 4));
         }
       }
     }
@@ -228,6 +288,14 @@
 
     .button {
       width: 100%;
+    }
+  }
+
+  &__link {
+    margin-top: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      margin-top: 3.2rem;
     }
   }
 }

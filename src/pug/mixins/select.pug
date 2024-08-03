@@ -1,6 +1,11 @@
-mixin select(name='name-1', inputs=[{text: 'text', id: 'id', checked: false}])
+mixin select(name='name-1', inputs=[{text: 'text', id: 'id', checked: false}], label=false)
   .select&attributes(attributes)
-    button.select__current(type="button") Популярные
+    if label == false
+      span.select__heading.select__heading--hidden заголовок
+    else
+      span.select__heading= label
+
+    button.select__current(type="button")= inputs[0].text
 
     .select__dropdown
       ul.select__list

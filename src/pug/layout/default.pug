@@ -5,26 +5,26 @@ block variables
 
 doctype html
 html(lang=siteLang)
-  head
-    include ../parts/head.pug
-  body(class=bodyClass)
-    .page-wrapper
-      block header
-        include ../parts/header.pug
+    head
+        include ../parts/head.pug
+    body(class=bodyClass)
+        .page-wrapper
+            block header
+                include ../parts/header.pug
 
-      block content
+            block content
 
-      block footer
-        include ../parts/footer.pug
+            block footer
+                include ../parts/footer.pug
 
-    .modal
-      include ../parts/modals/modal.pug
+        .modal
+            include ../parts/modals/modal.pug
 
-    include ../parts/mobile-menu.pug
-    include ../parts/loader.pug
+        include ../parts/mobile-menu.pug
+        //- include ../parts/loader.pug
 
-  block scripts
-    script(defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
-    script(defer src="https://api-maps.yandex.ru/2.1/?apikey=1d46cd9a-2c9e-4500-b55b-ee2306bc1a9f&lang=ru_RU")
-    script(type="module", src="assets/js/main.js?v=" + siteVersion)
-    script(src="assets/js/backend.js?v=" + siteVersion)
+    block scripts
+        script(defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+        script(defer src="https://api-maps.yandex.ru/2.1/?apikey=1d46cd9a-2c9e-4500-b55b-ee2306bc1a9f&lang=ru_RU")
+        script(type="module" src="assets/js/main.js?v=" + siteVersion)
+        script(src="assets/js/backend.js?v=" + siteVersion)

@@ -1,0 +1,41 @@
+.link {
+  display: flex;
+  align-items: center;
+  column-gap: 0.6rem;
+
+  .icon {
+    width: 1.6rem;
+    height: 1.6rem;
+    fill: var(--White, #fff);
+
+    transition-property: fill, stroke;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+  }
+
+  & > span {
+    color: var(--White, #fff);
+    @include font(1.2rem, 130%, 400);
+    font-family: var(--main-ff);
+    text-transform: uppercase;
+
+    transition-property: color;
+    transition-timing-function: ease-out;
+    transition-duration: 0.3s;
+
+    @include breakpointMF(tablet) {
+      @include font(1.3rem, 100%, 400);
+      font-family: var(--main-ff);
+    }
+  }
+
+  @include hoverActive() {
+    .icon {
+      fill: var(--Yellow, #EBAA5B);
+    }
+
+    & > span {
+      color: var(--Yellow, #EBAA5B);
+    }
+  }
+}

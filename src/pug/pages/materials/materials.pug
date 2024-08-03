@@ -1,0 +1,202 @@
+-
+  const materialsInputs = [
+    {
+      text: "Все материалы",
+      id: "radio-materials-popular",
+      checked: true,
+    },
+    {
+      text: "Сертификаты",
+      id: "radio-materials-serts",
+      checked: false,
+    },
+    {
+      text: "Каталоги",
+      id: "radio-materials-cat",
+      checked: false,
+    },
+    {
+      text: "Прайс-листы",
+      id: "radio-materials-prices",
+      checked: false,
+    },
+    {
+      text: "Спецификации",
+      id: "radio-materials-specs",
+      checked: false,
+    },
+    {
+      text: "Презентации",
+      id: "radio-materials-pres",
+      checked: false,
+    },
+    {
+      text: "Руководства по эксплуатации",
+      id: "radio-materials-expl",
+      checked: false,
+    },
+  ];
+
+-
+  const brandsInputs = [
+    {
+      text: "Все бренды",
+      id: "radio-brands-brandAll",
+      checked: true,
+    },
+    {
+      text: "Бренд 1",
+      id: "radio-brands-brand1",
+      checked: false,
+    },
+    {
+      text: "Бренд 2",
+      id: "radio-brands-brand2",
+      checked: false,
+    },
+    {
+      text: "Бренд 3",
+      id: "radio-brands-brand3",
+      checked: false,
+    },
+  ]
+
+-
+  const selectsInputs = [
+    {
+      text: "Популярные",
+      id: "radio-sort-popular",
+      checked: true,
+    },
+    {
+      text: "Новые",
+      id: "radio-sort-new",
+      checked: false,
+    },
+    {
+      text: "По алфавиту (от А до Я)",
+      id: "radio-sort-alpbt-up",
+      checked: false,
+    },
+    {
+      text: "По алфавиту (от Я до А)",
+      id: "radio-sort-alpbt-down",
+      checked: false,
+    },
+  ];
+
+-
+  const certificatesArray = [
+    {
+      id: "cert-01",
+      text: "Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013",
+      imgB: "./assets/images/certificates/1.png",
+      imgW: "./assets/images/certificates/1.webp",
+      iconType: 'pdf',
+    },
+    {
+      id: "cert-02",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+      iconType: 'txt',
+    },
+    {
+      id: "cert-03",
+      text: "Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013",
+      imgB: "./assets/images/certificates/3.png",
+      imgW: "./assets/images/certificates/3.webp",
+      iconType: 'doc',
+    },
+    {
+      id: "cert-04",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/4.png",
+      imgW: "./assets/images/certificates/4.webp",
+      iconType: 'xls',
+    },
+    {
+      id: "cert-05",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+      iconType: 'ppt',
+    },
+  ]
+
+section.section.materials.subcategories
+  .materials__site-container.subcategories__site-container
+    .subcategories__heading.subcategories__heading--stretch
+      h2.subcategories__title
+        | Материалы
+        br
+        | для&nbsp;скачивания
+
+      .subcategories__desc.subcategories__desc--stretch
+        p
+          | Здесь вы&nbsp;можете скачать полезные материалы, включая сертификаты,
+          | техническую документацию,  прайс-листы, каталоги и&nbsp;другие
+          | необходимые документы.
+
+        a.subcategories__link.link(href="#")
+          +icon-multi('download')
+          span
+            | Скачать все одним архивом
+
+    .subcategories__main
+      form.subcategories__control-panel.subcategories__control-panel--end(data-for-reset)
+        button.subcategories__filters-open.filters-open.show-on-mobile(type="button" data-path="modal-filters")
+          span Фильтр
+          +icon-multi('filter-icon')
+
+        +select('materials-select', materialsInputs, 'Вид материала')(class='subcategories__select select--smaller hide-on-mobile')
+
+        +select('brands-select', brandsInputs, 'Бренд')(class='subcategories__select select--smaller hide-on-mobile')
+
+        +select('sort-select', selectsInputs, 'Показать сначала')(class='subcategories__select select--smaller hide-on-mobile')
+
+        .subcategories__search.cat-search.hide-on-mobile
+          input#sorting-search(
+            type="search",
+            name="subcategories-search",
+            placeholder="Введите слово для поиска"
+          )
+          button найти
+
+        button.subcategories__mobile-sorting.show-on-mobile(type="button" data-path="modal-sorting")
+          +icon-multi('sorting')
+
+        .subcategories__view-switcher
+          .view-switcher
+            .view-switcher__row
+              input#list-view-switcher-grid(type="radio", hidden, name="list-view-switcher", checked)
+              label.view-switcher__label.view-switcher__for-grid(for="list-view-switcher-grid")
+                +icon-multi('view-grid')
+
+              input#list-view-switcher-list(type="radio", hidden, name="list-view-switcher")
+              label.view-switcher__label.view-switcher__for-list(for="list-view-switcher-list")
+                +icon-multi('view-list')
+
+    ul.subcategories__list.subcategories__list--flex.subcategories__list--triple(data-toggle-list)
+      for item in certificatesArray
+        .subcategories__card
+          a.certificates-card(href="#" target="_blank" download, id=item.id)
+            .certificates-card__image
+              picture
+                source(type="image/webp" srcset=item.imgW alt="")
+                img(src=item.imgB alt="")
+
+            .certificates-card__file-image(class='certificates-card__file-image--' + item.iconType)
+
+            p.certificates-card__text=item.text
+
+            .certificates-card__footer
+              .certificates-card__file
+                +icon-multi('pdf')
+
+                span.certificates-card__file-text pdf
+                span.certificates-card__file-size 5mb
+
+              +icon-multi('cert-ar')
+
+              .certificates-card__download

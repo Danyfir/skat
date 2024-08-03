@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Каталог / Категории | Название сайта</title>
+    <title>Материалы для скачивания | Название сайта</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-secondary no-touch">
@@ -201,7 +201,7 @@
                 <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
               <li>
-                <a class="breadcrumbs__link" href="#">Продукция</a>
+                <a class="breadcrumbs__link" href="./materials.html">Материалы для скачивания</a>
               </li>
             </ul>
           </div>
@@ -209,65 +209,268 @@
       </header>
 
       <main class="page-main main">
-        <section class="section categories js-categories-scroll">
-          <div class="categories__site-container">
-            <div class="categories__heading products__heading">
-              <h2 class="products__title">Продукция</h2>
-              <div class="products__stamp stamp">
-                <svg class="icon icon-stamp-bracket-1">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-1"></use>
-                </svg>
-                <div class="stamp__body"><span class="stamp__number">2 000+</span><span class="stamp__text">наименований</span>
-                </div>
-                <svg class="icon icon-stamp-bracket-2">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-2"></use>
-                </svg>
+        <section class="section materials subcategories">
+          <div class="materials__site-container subcategories__site-container">
+            <div class="subcategories__heading subcategories__heading--stretch">
+              <h2 class="subcategories__title">Материалы<br>для&nbsp;скачивания</h2>
+              <div class="subcategories__desc subcategories__desc--stretch">
+                <p>Здесь вы&nbsp;можете скачать полезные материалы, включая сертификаты, техническую документацию, прайс-листы, каталоги и&nbsp;другие необходимые документы.</p>
+                <a class="subcategories__link link" href="#">
+                  <svg class="icon icon-download">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#download"></use>
+                  </svg><span>Скачать все одним архивом</span>
+                </a>
               </div>
             </div>
-            <div class="categories__body">
-              <a class="categories__item category js-category category--big-name" href="./subcatalog.html" id="category-id-01">
-                <div class="category__image">
-                  <img src="./assets/images/category/1.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Высоковольтная кабельная арматура</span><br><span class="category__name-grey">110 - 500 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
+            <div class="subcategories__main">
+              <form class="subcategories__control-panel subcategories__control-panel--end" data-for-reset>
+                <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-filters"><span>Фильтр</span>
+                  <svg class="icon icon-filter-icon">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#filter-icon"></use>
+                  </svg>
+                </button>
+                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Вид материала</span>
+                  <button class="select__current" type="button">Все материалы</button>
+                  <div class="select__dropdown">
+                    <ul class="select__list">
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-popular">
+                          <input type="radio" hidden="hidden" checked="checked" name="materials-select" id="radio-materials-popular"><span class="select__text">Все материалы</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-serts">
+                          <input type="radio" hidden="hidden" name="materials-select" id="radio-materials-serts"><span class="select__text">Сертификаты</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-cat">
+                          <input type="radio" hidden="hidden" name="materials-select" id="radio-materials-cat"><span class="select__text">Каталоги</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-prices">
+                          <input type="radio" hidden="hidden" name="materials-select" id="radio-materials-prices"><span class="select__text">Прайс-листы</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-specs">
+                          <input type="radio" hidden="hidden" name="materials-select" id="radio-materials-specs"><span class="select__text">Спецификации</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-pres">
+                          <input type="radio" hidden="hidden" name="materials-select" id="radio-materials-pres"><span class="select__text">Презентации</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-materials-expl">
+                          <input type="radio" hidden="hidden" name="materials-select" id="radio-materials-expl"><span class="select__text">Руководства по эксплуатации</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                </div>
+                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Бренд</span>
+                  <button class="select__current" type="button">Все бренды</button>
+                  <div class="select__dropdown">
+                    <ul class="select__list">
+                      <li class="select__item">
+                        <label class="select__label" for="radio-brands-brandAll">
+                          <input type="radio" hidden="hidden" checked="checked" name="brands-select" id="radio-brands-brandAll"><span class="select__text">Все бренды</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-brands-brand1">
+                          <input type="radio" hidden="hidden" name="brands-select" id="radio-brands-brand1"><span class="select__text">Бренд 1</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-brands-brand2">
+                          <input type="radio" hidden="hidden" name="brands-select" id="radio-brands-brand2"><span class="select__text">Бренд 2</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-brands-brand3">
+                          <input type="radio" hidden="hidden" name="brands-select" id="radio-brands-brand3"><span class="select__text">Бренд 3</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-              </a>
-              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-02">
-                <div class="category__image">
-                  <img src="./assets/images/category/2.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Кабельная арматура</span><br><span class="category__name-grey">1-35 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
+                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Показать сначала</span>
+                  <button class="select__current" type="button">Популярные</button>
+                  <div class="select__dropdown">
+                    <ul class="select__list">
+                      <li class="select__item">
+                        <label class="select__label" for="radio-sort-popular">
+                          <input type="radio" hidden="hidden" checked="checked" name="sort-select" id="radio-sort-popular"><span class="select__text">Популярные</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-sort-new">
+                          <input type="radio" hidden="hidden" name="sort-select" id="radio-sort-new"><span class="select__text">Новые</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-sort-alpbt-up">
+                          <input type="radio" hidden="hidden" name="sort-select" id="radio-sort-alpbt-up"><span class="select__text">По алфавиту (от А до Я)</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                      <li class="select__item">
+                        <label class="select__label" for="radio-sort-alpbt-down">
+                          <input type="radio" hidden="hidden" name="sort-select" id="radio-sort-alpbt-down"><span class="select__text">По алфавиту (от Я до А)</span><span class="select__icon"></span>
+                        </label>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                </div>
+                <div class="subcategories__search cat-search hide-on-mobile">
+                  <input id="sorting-search" type="search" name="subcategories-search" placeholder="Введите слово для поиска">
+                  <button>найти</button>
+                </div>
+                <button class="subcategories__mobile-sorting show-on-mobile" type="button" data-path="modal-sorting">
+                  <svg class="icon icon-sorting">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#sorting"></use>
+                  </svg>
+                </button>
+                <div class="subcategories__view-switcher">
+                  <div class="view-switcher">
+                    <div class="view-switcher__row">
+                      <input id="list-view-switcher-grid" type="radio" hidden name="list-view-switcher" checked="checked">
+                      <label class="view-switcher__label view-switcher__for-grid" for="list-view-switcher-grid">
+                        <svg class="icon icon-view-grid">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#view-grid"></use>
+                        </svg>
+                      </label>
+                      <input id="list-view-switcher-list" type="radio" hidden name="list-view-switcher">
+                      <label class="view-switcher__label view-switcher__for-list" for="list-view-switcher-list">
+                        <svg class="icon icon-view-list">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#view-list"></use>
+                        </svg>
+                      </label>
+                    </div>
                   </div>
                 </div>
-              </a>
-              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-03">
-                <div class="category__image">
-                  <img src="./assets/images/category/3.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Арматура для СИП</span><br><span class="category__name-grey">0,4 кВ и 6-35 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
-                  </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
-                  </div>
-                </div>
-              </a>
+              </form>
             </div>
+            <ul class="subcategories__list subcategories__list--flex subcategories__list--triple" data-toggle-list>
+              <div class="subcategories__card">
+                <a class="certificates-card" href="#" target="_blank" download id="cert-01">
+                  <div class="certificates-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/certificates/1.webp" alt="">
+                      <img src="./assets/images/certificates/1.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="certificates-card__file-image certificates-card__file-image--pdf"></div>
+                  <p class="certificates-card__text">Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013</p>
+                  <div class="certificates-card__footer">
+                    <div class="certificates-card__file">
+                      <svg class="icon icon-pdf">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                      </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                    </div>
+                    <svg class="icon icon-cert-ar">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                    </svg>
+                    <div class="certificates-card__download"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="subcategories__card">
+                <a class="certificates-card" href="#" target="_blank" download id="cert-02">
+                  <div class="certificates-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/certificates/2.webp" alt="">
+                      <img src="./assets/images/certificates/2.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="certificates-card__file-image certificates-card__file-image--txt"></div>
+                  <p class="certificates-card__text">Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»</p>
+                  <div class="certificates-card__footer">
+                    <div class="certificates-card__file">
+                      <svg class="icon icon-pdf">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                      </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                    </div>
+                    <svg class="icon icon-cert-ar">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                    </svg>
+                    <div class="certificates-card__download"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="subcategories__card">
+                <a class="certificates-card" href="#" target="_blank" download id="cert-03">
+                  <div class="certificates-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/certificates/3.webp" alt="">
+                      <img src="./assets/images/certificates/3.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="certificates-card__file-image certificates-card__file-image--doc"></div>
+                  <p class="certificates-card__text">Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013</p>
+                  <div class="certificates-card__footer">
+                    <div class="certificates-card__file">
+                      <svg class="icon icon-pdf">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                      </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                    </div>
+                    <svg class="icon icon-cert-ar">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                    </svg>
+                    <div class="certificates-card__download"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="subcategories__card">
+                <a class="certificates-card" href="#" target="_blank" download id="cert-04">
+                  <div class="certificates-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/certificates/4.webp" alt="">
+                      <img src="./assets/images/certificates/4.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="certificates-card__file-image certificates-card__file-image--xls"></div>
+                  <p class="certificates-card__text">Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»</p>
+                  <div class="certificates-card__footer">
+                    <div class="certificates-card__file">
+                      <svg class="icon icon-pdf">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                      </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                    </div>
+                    <svg class="icon icon-cert-ar">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                    </svg>
+                    <div class="certificates-card__download"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="subcategories__card">
+                <a class="certificates-card" href="#" target="_blank" download id="cert-05">
+                  <div class="certificates-card__image">
+                    <picture>
+                      <source type="image/webp" srcset="./assets/images/certificates/2.webp" alt="">
+                      <img src="./assets/images/certificates/2.png" alt="">
+                    </picture>
+                  </div>
+                  <div class="certificates-card__file-image certificates-card__file-image--ppt"></div>
+                  <p class="certificates-card__text">Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»</p>
+                  <div class="certificates-card__footer">
+                    <div class="certificates-card__file">
+                      <svg class="icon icon-pdf">
+                        <use xlink:href="assets/images/sprites/sprite-multi.svg#pdf"></use>
+                      </svg><span class="certificates-card__file-text">pdf</span><span class="certificates-card__file-size">5mb</span>
+                    </div>
+                    <svg class="icon icon-cert-ar">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#cert-ar"></use>
+                    </svg>
+                    <div class="certificates-card__download"></div>
+                  </div>
+                </a>
+              </div>
+            </ul>
           </div>
         </section>
       </main>
