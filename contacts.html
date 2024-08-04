@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Каталог / Категории | Название сайта</title>
+    <title>Материалы для скачивания | Название сайта</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-secondary no-touch">
@@ -201,7 +201,7 @@
                 <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
               <li>
-                <a class="breadcrumbs__link" href="#">Продукция</a>
+                <a class="breadcrumbs__link" href="./contacts.html">Контакты</a>
               </li>
             </ul>
           </div>
@@ -209,64 +209,111 @@
       </header>
 
       <main class="page-main main">
-        <section class="section categories js-categories-scroll">
-          <div class="categories__site-container">
-            <div class="categories__heading products__heading">
-              <h2 class="products__title">Продукция</h2>
-              <div class="products__stamp stamp">
-                <svg class="icon icon-stamp-bracket-1">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-1"></use>
-                </svg>
-                <div class="stamp__body"><span class="stamp__number">2 000+</span><span class="stamp__text">наименований</span>
+        <section class="section contacts-section subcategories">
+          <div class="contacts-section__site-container subcategories__site-container">
+            <div class="contacts-section__heading subcategories__heading subcategories__heading--stretch">
+              <h2 class="subcategories__title">Контакты</h2>
+            </div>
+            <div class="contacts-section__grid-item">
+              <div class="contacts-section__grid-col">
+                <div class="contacts-section__image">
+                  <picture>
+                    <source srcset="./assets/images/contacts/image-m.jpg" media="(max-width: 769px)" alt="">
+                    <source type="image/webp" srcset="./assets/images/contacts/image-m.webp" media="(max-width: 769px)" alt="">
+                    <source type="image/webp" srcset="./assets/images/contacts/image.webp" media="(min-width: 769px)" alt="">
+                    <img src="./assets/images/contacts/image.jpg" alt="">
+                  </picture>
                 </div>
-                <svg class="icon icon-stamp-bracket-2">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-2"></use>
-                </svg>
+              </div>
+              <div class="contacts-section__grid-col">
+                <ul class="contacts-section__list">
+                  <li class="contacts-section__item">
+                    <a class="contacts-section__link contacts-link" href="mailto:info@scat.ru"><span class="contacts-link__label">[ E-mail ]</span>
+                      <p class="contacts-link__text">info@scat.ru</p>
+                      <div class="contacts-link__link contacts-link__link--pseudo"><span>Написать</span>
+                        <svg class="icon icon-c-download">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="contacts-section__item">
+                    <a class="contacts-section__link contacts-link" href="tel:+78002505999"><span class="contacts-link__label">[ Телефон ]</span>
+                      <p class="contacts-link__text">8 800 250 59 99</p>
+                      <div class="contacts-link__link contacts-link__link--pseudo"><span>Позвонить</span>
+                        <svg class="icon icon-c-download">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                        </svg>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="contacts-section__item">
+                    <div class="contacts-section__link contacts-link contacts-link--empty"><span class="contacts-link__label">[ Адрес ]</span>
+                      <p class="contacts-link__text hide-on-mobile">420111, Республика Татарстан, город&nbsp;Казань, ул.&nbsp;Баумана, д.72</p>
+                      <p class="contacts-link__text show-on-mobile">Республика Татарстан, г. Зеленодольск, Промышленный район, 17, Технопарк "ИСКРА-ВОЛГА"</p>
+                      <div class="contacts-link__link contacts-link__link--pseudo hide-on-mobile"><span>Маршрут</span>
+                        <svg class="icon icon-c-download">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="contacts-section__item">
+                    <div class="contacts-section__link contacts-link contacts-link--empty contacts-link--pseudo"><span class="contacts-link__label">[ Соц. сети ]</span>
+                      <div class="contacts-link__list">
+                        <a class="contacts-link__link" href="#"><span>ВКонтакте</span>
+                          <svg class="icon icon-c-download">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                          </svg>
+                        </a>
+                        <a class="contacts-link__link" href="#"><span>Telegram</span>
+                          <svg class="icon icon-c-download">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                          </svg>
+                        </a>
+                        <a class="contacts-link__link" href="#"><span>Youtube</span>
+                          <svg class="icon icon-c-download">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                          </svg>
+                        </a>
+                      </div>
+                      <div class="contacts-link__link contacts-link__link--pseudo hide-on-mobile"><span></span>
+                        <svg class="icon icon-c-download">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#c-download"></use>
+                        </svg>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div class="categories__body">
-              <a class="categories__item category js-category category--big-name" href="./subcatalog.html" id="category-id-01">
-                <div class="category__image">
-                  <img src="./assets/images/category/1.png" alt="">
+            <div class="contacts-section__grid-item contacts-section__grid-item--mt">
+              <div class="contacts-section__grid-col">
+                <div class="contacts-section__titles">
+                  <h5>Есть вопросы?<br>Напишите нам</h5>
+                  <p>Мы обязательно ответим на все ваши вопросы.</p>
                 </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Высоковольтная кабельная арматура</span><br><span class="category__name-grey">110 - 500 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
+              </div>
+              <form class="contacts-section__grid-col contacts-section__form" action="" method="method" data-need-validation>
+                <div class="contacts-section__inputs">
+                  <div class="contacts-section__input input">
+                    <input class="input__field" type="text" name="question-name" id="question-name-id" placeholder="Имя" required autocomplete="off" minlength="2" data-parsley-reqtext data-parsley-trigger="input" data-parsley-validate-if-empty><i></i>
                   </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                  <div class="contacts-section__input input">
+                    <input class="input__field js-phone-input" type="tel" name="question-phone" id="question-phone-id" placeholder="Телефон" required autocomplete="off" data-parsley-phone data-parsley-trigger="input" data-parsley-validate-if-empty><i></i>
                   </div>
-                </div>
-              </a>
-              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-02">
-                <div class="category__image">
-                  <img src="./assets/images/category/2.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Кабельная арматура</span><br><span class="category__name-grey">1-35 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
-                  </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                  <div class="contacts-section__input input">
+                    <textarea class="input__field input__field--textarea" type="text" name="question-comment" id="question-comment-id" placeholder="Сообщение (необязательно)" autocomplete="off"></textarea>
                   </div>
                 </div>
-              </a>
-              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-03">
-                <div class="category__image">
-                  <img src="./assets/images/category/3.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Арматура для СИП</span><br><span class="category__name-grey">0,4 кВ и 6-35 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
-                  </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
+                <div class="contacts-section__submit">
+                  <button class="contacts-section__button button button--big" type="submit">отправить</button>
+                  <div class="contacts-section__agreement">
+                    <p>Нажимая «Отправить», вы&nbsp;соглашаетесь на&nbsp;обработку&nbsp;</p>
+                    <a href="http://" target="_blank" rel="noopener noreferrer">персональных данных</a>
                   </div>
                 </div>
-              </a>
+              </form>
             </div>
           </div>
         </section>

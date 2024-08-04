@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Каталог / Категории | Название сайта</title>
+    <title>Материалы для скачивания | Название сайта</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-secondary no-touch">
@@ -201,7 +201,7 @@
                 <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
               <li>
-                <a class="breadcrumbs__link" href="#">Продукция</a>
+                <a class="breadcrumbs__link" href="./team.html">Команда</a>
               </li>
             </ul>
           </div>
@@ -209,64 +209,196 @@
       </header>
 
       <main class="page-main main">
-        <section class="section categories js-categories-scroll">
-          <div class="categories__site-container">
-            <div class="categories__heading products__heading">
-              <h2 class="products__title">Продукция</h2>
-              <div class="products__stamp stamp">
-                <svg class="icon icon-stamp-bracket-1">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-1"></use>
-                </svg>
-                <div class="stamp__body"><span class="stamp__number">2 000+</span><span class="stamp__text">наименований</span>
-                </div>
-                <svg class="icon icon-stamp-bracket-2">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#stamp-bracket-2"></use>
+        <section class="section subcategories team-section">
+          <div class="team-section__site-container subcategories__site-container">
+            <div class="team-section__heading subcategories__heading subcategories__heading--stretch">
+              <h2 class="subcategories__title">команда скат</h2>
+              <div class="subcategories__scroll hide-on-mobile">
+                <svg class="icon icon-mouse">
+                  <use xlink:href="assets/images/sprites/sprite-multi.svg#mouse"></use>
                 </svg>
               </div>
             </div>
-            <div class="categories__body">
-              <a class="categories__item category js-category category--big-name" href="./subcatalog.html" id="category-id-01">
-                <div class="category__image">
-                  <img src="./assets/images/category/1.png" alt="">
+            <div class="team-section__body team-section__body--column">
+              <div class="team-section__nav">
+                <a class="team-section__tab team-section__tab--active js-team-tab" href="#" data-team-tab="team-list-01">Вся команда</a>
+                <a class="team-section__tab js-team-tab" href="#" data-team-tab="team-list-02">Руководители</a>
+                <a class="team-section__tab js-team-tab" href="#" data-team-tab="team-list-02">Эксперты</a>
+              </div>
+              <ul class="team-section__list">
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-0">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
+                        <img src="./assets/images/team/1.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Олег Иванов</p>
+                      <p class="team-item__role">Генеральный директор</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-1">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
+                        <img src="./assets/images/team/2.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Сергей Петров</p>
+                      <p class="team-item__role">Зам. генерального директора</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-2">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
+                        <img src="./assets/images/team/3.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Василий Ильин</p>
+                      <p class="team-item__role">Главный проектировщик</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-3">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
+                        <img src="./assets/images/team/4.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Иван Сидоров</p>
+                      <p class="team-item__role">Главный инженер</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-012">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
+                        <img src="./assets/images/team/1.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Олег Иванов</p>
+                      <p class="team-item__role">Генеральный директор</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-112">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
+                        <img src="./assets/images/team/2.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Сергей Петров</p>
+                      <p class="team-item__role">Зам. генерального директора</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-212">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
+                        <img src="./assets/images/team/3.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Василий Ильин</p>
+                      <p class="team-item__role">Главный проектировщик</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-3112">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
+                        <img src="./assets/images/team/4.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Иван Сидоров</p>
+                      <p class="team-item__role">Главный инженер</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-01223">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
+                        <img src="./assets/images/team/1.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Олег Иванов</p>
+                      <p class="team-item__role">Генеральный директор</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-11232">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
+                        <img src="./assets/images/team/2.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Сергей Петров</p>
+                      <p class="team-item__role">Зам. генерального директора</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-21223">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
+                        <img src="./assets/images/team/3.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Василий Ильин</p>
+                      <p class="team-item__role">Главный проектировщик</p>
+                    </div>
+                  </a>
+                </li>
+                <li class="team-section__item">
+                  <a class="team__item team-item" href="#" id="team-item-311223">
+                    <div class="team-item__image">
+                      <picture>
+                        <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
+                        <img src="./assets/images/team/4.png" alt="">
+                      </picture>
+                    </div>
+                    <div class="team-item__info">
+                      <p class="team-item__name">Иван Сидоров</p>
+                      <p class="team-item__role">Главный инженер</p>
+                    </div>
+                  </a>
+                </li>
+                <div class="team-section__add subcategories__add">
+                  <a class="button button--outlined button--biggest" href="#">загрузить еще&nbsp;<span class="_count-left">12</span>&nbsp;из&nbsp;<span class="_total-count">765</span>
+                  </a>
                 </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Высоковольтная кабельная арматура</span><br><span class="category__name-grey">110 - 500 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
-                  </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
-                  </div>
-                </div>
-              </a>
-              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-02">
-                <div class="category__image">
-                  <img src="./assets/images/category/2.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Кабельная арматура</span><br><span class="category__name-grey">1-35 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
-                  </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
-                  </div>
-                </div>
-              </a>
-              <a class="categories__item category js-category" href="./subcatalog.html" id="category-id-03">
-                <div class="category__image">
-                  <img src="./assets/images/category/3.png" alt="">
-                </div>
-                <div class="category__info">
-                  <div class="category__heading">
-                    <p class="category__name"><span class="category__name-white">Арматура для СИП</span><br><span class="category__name-grey">0,4 кВ и 6-35 кВ</span>
-                    </p><span class="category__arrow show-on-mobile"></span>
-                  </div>
-                  <div class="category__desc">
-                    <p class="category__text">Арматура для самонесущих изолированных проводов (СИП) — это набор приспособлений, которые используются для монтажа, соединения и защиты проводов в электрических сетях.</p><span class="category__link button button--outlined hide-on-mobile">Подробнее</span>
-                  </div>
-                </div>
-              </a>
+              </ul>
             </div>
           </div>
         </section>
