@@ -1,0 +1,132 @@
+.contacts-link {
+  display: grid;
+  grid-template-areas:
+    "cl_label cl_link"
+    "cl_text cl_link";
+  grid-template-columns: 1fr max-content;
+
+  gap: 1rem 2rem;
+  padding: 2rem 0;
+
+  @include breakpointMF(tablet) {
+    grid-template-areas: "cl_label cl_text cl_link";
+    grid-template-columns: 12rem 1fr 12rem;
+
+    padding: 3.2rem 0;
+  }
+
+  &__label {
+    grid-area: cl_label;
+
+    @include font(1.4rem, 12 0%, 400);
+    color: var(--White-40, rgba(255, 255, 255, 0.40));
+  }
+
+  &__text {
+    grid-area: cl_text;
+    pointer-events: none;
+    @include font(1.6rem, 130%, 400);
+
+    @include breakpointMF(tablet) {
+      justify-self: center;
+      width: 31rem;
+    }
+  }
+
+  &__link {
+    grid-area:  cl_link;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-top: 0.2rem;
+      opacity: 0;
+
+      transition-property: opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+
+    span {
+      @include font(1.8rem, 130%, 400);
+
+      transition-property: color, opacity;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
+
+    &--pseudo {
+      pointer-events: none;
+
+      span {
+        opacity: 0;
+        color: var(--Achromatic-Medium-Grey, #777);
+
+        @include breakpointMF(tablet) {
+          color: var(--Yellow, #EBAA5B);
+        }
+      }
+    }
+
+    &:not(.contacts-link__link--pseudo) {
+      @include hoverActive() {
+        span {
+          color: var(--Yellow, #EBAA5B);
+        }
+
+        .icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__list {
+    grid-area: cl_text;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @include breakpointMF(tablet) {
+      grid-area: unset;
+
+      justify-self: center;
+      justify-content: flex-start;
+
+      width: 31rem;
+      gap: 3.2rem;
+    }
+  }
+
+  &:not(.contacts-link--pseudo) {
+    cursor: pointer;
+
+    @include hoverActive() {
+      .contacts-link__link {
+        span {
+          opacity: 1;
+          color: var(--Yellow, #EBAA5B);
+        }
+
+        .icon {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &.contacts-link--empty {
+    grid-template-areas:
+      "cl_label"
+      "cl_text";
+
+      @include breakpointMF(tablet) {
+        grid-template-areas: "cl_label cl_text cl_link";
+      }
+  }
+}

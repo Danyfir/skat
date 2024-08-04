@@ -30,6 +30,8 @@ import subcategoriesViewToggle from './modules/subcategoriesViewToggle';
 import productSlider from './modules/productSlider';
 import resetGroupForms from './modules/resetGroupForms';
 
+import teamTabsControls from './modules/teamTabsControls';
+
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
 
@@ -61,4 +63,6 @@ documenReady(() => {
   subcategoriesViewToggle();
   productSlider();
   resetGroupForms();
+
+  teamTabsControls();
 });

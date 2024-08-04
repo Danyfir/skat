@@ -39,6 +39,15 @@
         opacity: 1;
       }
     }
+
+    &--textarea {
+      height: 20rem;
+      max-height: unset;
+
+      @include breakpointMF(tablet) {
+
+      }
+    }
   }
 
   i {

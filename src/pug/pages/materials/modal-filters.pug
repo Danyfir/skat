@@ -1,0 +1,115 @@
+-
+  const mobilesNavs = [
+    {
+      button: 'Вид материала',
+      name: 'materials-select',
+      checboxes: [
+        {
+          text: 'Сертификаты',
+          id: 'materials-select-m001',
+          value: 'materials-select-001'
+        },
+        {
+          text: 'Прайс-листы',
+          id: 'materials-select-m002',
+          value: 'materials-select-002'
+        },
+        {
+          text: 'Спецификации',
+          id: 'materials-select-m003',
+          value: 'materials-select-003'
+        },
+        {
+          text: 'Презентации',
+          id: 'materials-select-m004',
+          value: 'materials-select-004'
+        },
+        {
+          text: 'Руководства по эксплуатации',
+          id: 'materials-select-m005',
+          value: 'materials-select-005'
+        }
+      ]
+    },
+    {
+      button: 'Бренд',
+      name: 'brands-select',
+      checboxes: [
+        {
+          text: 'Бренд-1',
+          id: 'brands-id-m0101',
+          value: 'brands-id-0101'
+        },
+        {
+          text: 'Бренд-2',
+          id: 'brands-id-m0102',
+          value: 'brands-id-0102'
+        },
+        {
+          text: 'Бренд-3',
+          id: 'brands-id-m0103',
+          value: 'brands-id-0103'
+        },
+      ]
+    },
+    {
+      button: 'Показать сначала',
+      name: 'sort-select',
+      checboxes: [
+        {
+          text: 'Популярные',
+          id: 'sort-id-mm0202',
+          value: 'sort-id-0202'
+        },
+        {
+          text: 'Новые',
+          id: 'sort-id-mm0203',
+          value: 'sort-id-0203'
+        },
+        {
+          text: 'По алфавиту (от А до Я)',
+          id: 'sort-id-mm0204',
+          value: 'sort-id-0204'
+        },
+        {
+          text: 'По алфавиту (от Я до А)',
+          id: 'sort-id-mm0205',
+          value: 'sort-id-0205'
+        },
+      ]
+    },
+  ];
+
+.modal.modal-filters
+  .modal__container.modal-sorting__container.modal-filters__container(data-target="modal-filters")
+    form.modal-sorting__body.modal-filters__body.js-nav-wrapper(action="")
+      .modal-sorting__heading.modal-filters__heading
+        p.modal-sorting__title Фильтры
+        button.modal-sorting__close.modal-close(type="button")
+          +icon-multi('close')
+
+      .modal-filters__filters
+        ul.modal-filters__nav-list
+          for item in mobilesNavs
+            li.nav-item.nav-item--expand.js-nav-item
+              button.nav-item__button.nav-item__button--border(type="button")
+                span= item.button
+
+              .nav-item__dropdown
+                ul.nav-item__list
+                  for label in item.checboxes
+                    li.nav-item__item
+                      label.nav-item__label(for=label.id)
+                        input(type="checkbox", hidden, value="",
+                          name=item.name,
+                          id=label.id
+                        )
+                        i
+                        span=label.text
+
+      .modal-filters__footer
+        button.button.button--biggest.modal-filters__submit(type="submit")
+          | Применить
+        label.modal-filters__reset
+          input(type="reset" value="Сбросить фильтры")
+          +icon-multi('close')

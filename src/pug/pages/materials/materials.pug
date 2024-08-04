@@ -122,6 +122,55 @@
       imgW: "./assets/images/certificates/2.webp",
       iconType: 'ppt',
     },
+    {
+      id: "cert-011",
+      text: "Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013",
+      imgB: "./assets/images/certificates/1.png",
+      imgW: "./assets/images/certificates/1.webp",
+      iconType: 'pdf',
+    },
+    {
+      id: "cert-022",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+      iconType: 'txt',
+    },
+    {
+      id: "cert-033",
+      text: "Сертификат соответствия требованиям ТУ 2296-006- 30372160-2013",
+      imgB: "./assets/images/certificates/3.png",
+      imgW: "./assets/images/certificates/3.webp",
+      iconType: 'doc',
+    },
+    {
+      id: "cert-044",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/4.png",
+      imgW: "./assets/images/certificates/4.webp",
+      iconType: 'xls',
+    },
+    {
+      id: "cert-055",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+      iconType: 'ppt',
+    },
+    {
+      id: "cert-045",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/4.png",
+      imgW: "./assets/images/certificates/4.webp",
+      iconType: 'xls',
+    },
+    {
+      id: "cert-056",
+      text: "Пожарный сертификат соответствия требованиям ГОСТ на профили стеклопластиковые строительные серии «PE» и «VE»",
+      imgB: "./assets/images/certificates/2.png",
+      imgW: "./assets/images/certificates/2.webp",
+      iconType: 'ppt',
+    },
   ]
 
 section.section.materials.subcategories
@@ -194,9 +243,16 @@ section.section.materials.subcategories
               .certificates-card__file
                 +icon-multi('pdf')
 
-                span.certificates-card__file-text pdf
+                span.certificates-card__file-text= item.iconType
                 span.certificates-card__file-size 5mb
 
               +icon-multi('cert-ar')
 
               .certificates-card__download
+
+    .materials__add.subcategories__add
+      a.button.button--outlined.button--biggest(href="#")
+        | загрузить еще&nbsp;
+        span._count-left 12
+        | &nbsp;из&nbsp;
+        span._total-count 765

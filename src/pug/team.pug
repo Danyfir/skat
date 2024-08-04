@@ -1,0 +1,20 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch"
+  - const pageTitle = "Материалы для скачивания"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+      {
+        text: 'Команда',
+        href: './team.html'
+      }
+    ];
+
+block content
+  include pages/team/main.pug

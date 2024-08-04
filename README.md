@@ -69,3 +69,6 @@ npm run build:prod
 ## Страница - [Каталог / Категории](https://eduardoalparov.github.io/ckat/catalog.html).
 ## Страница - [Каталог / Подкатегории](https://eduardoalparov.github.io/ckat/subcatalog.html).
 ## Страница - [Страница товара](https://eduardoalparov.github.io/ckat/product.html).
+## Страница - [Материалы для скачивания](https://eduardoalparov.github.io/ckat/materials.html).
+## Страница - [Контакты](https://eduardoalparov.github.io/ckat/contacts.html).
+## Страница - [Команда](https://eduardoalparov.github.io/ckat/team.html).

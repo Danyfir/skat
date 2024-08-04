@@ -1,0 +1,155 @@
+-
+  const linksArray = [
+    {
+      href: "mailto:info@scat.ru",
+      label: "[ E-mail ]",
+      text: "info@scat.ru",
+      linkText: "Написать",
+      list: false
+    },
+    {
+      href: "tel:+78002505999",
+      label: "[ Телефон ]",
+      text: "8 800 250 59 99",
+      linkText: "Позвонить",
+      list: false,
+    },
+    {
+      href: "",
+      label: "[ Адрес ]",
+      text: "420111, Республика Татарстан, город Казань, ул. Баумана, д.72",
+      linkText: "Маршрут",
+      list: false,
+      route: true
+    },
+    {
+      href: "",
+      label: "[ Соц. сети ]",
+      text: "",
+      linkText: "",
+      list: [
+        {
+          href: "#",
+          text: "ВКонтакте"
+        },
+        {
+          href: "#",
+          text: "Telegram"
+        },
+        {
+          href: "#",
+          text: "Youtube"
+        }
+      ]
+    }
+  ]
+
+section.section.contacts-section.subcategories
+  .contacts-section__site-container.subcategories__site-container
+    .contacts-section__heading.subcategories__heading.subcategories__heading--stretch
+      h2.subcategories__title
+        | Контакты
+
+    .contacts-section__grid-item
+      .contacts-section__grid-col
+        .contacts-section__image
+          picture
+            source(srcset="./assets/images/contacts/image-m.jpg" media="(max-width: 769px)" alt="")
+            source(type="image/webp" srcset="./assets/images/contacts/image-m.webp" media="(max-width: 769px)" alt="")
+            source(type="image/webp" srcset="./assets/images/contacts/image.webp" media="(min-width: 769px)" alt="")
+            img(src="./assets/images/contacts/image.jpg" alt="")
+
+      .contacts-section__grid-col
+        ul.contacts-section__list
+          li.contacts-section__item
+            a.contacts-section__link.contacts-link(href="mailto:info@scat.ru")
+              span.contacts-link__label
+                | [ E-mail ]
+
+              p.contacts-link__text info@scat.ru
+
+              .contacts-link__link.contacts-link__link--pseudo
+                span Написать
+                +icon-multi('c-download')
+
+          li.contacts-section__item
+            a.contacts-section__link.contacts-link(href="tel:+78002505999")
+              span.contacts-link__label
+                | [ Телефон ]
+
+              p.contacts-link__text 8 800 250 59 99
+
+              .contacts-link__link.contacts-link__link--pseudo
+                span Позвонить
+                +icon-multi('c-download')
+
+          li.contacts-section__item
+            .contacts-section__link.contacts-link.contacts-link--empty
+              span.contacts-link__label
+                | [ Адрес ]
+
+              p.contacts-link__text.hide-on-mobile
+                | 420111, Республика Татарстан, город&nbsp;Казань, ул.&nbsp;Баумана, д.72
+
+              p.contacts-link__text.show-on-mobile
+                | Республика Татарстан, г. Зеленодольск, Промышленный район, 17, Технопарк "ИСКРА-ВОЛГА"
+
+              .contacts-link__link.contacts-link__link--pseudo.hide-on-mobile
+                span Маршрут
+                +icon-multi('c-download')
+
+          li.contacts-section__item
+            .contacts-section__link.contacts-link.contacts-link--empty.contacts-link--pseudo
+              span.contacts-link__label
+                | [ Соц. сети ]
+
+              .contacts-link__list
+                a.contacts-link__link(href="#")
+                  span ВКонтакте
+                  +icon-multi('c-download')
+                a.contacts-link__link(href="#")
+                  span Telegram
+                  +icon-multi('c-download')
+                a.contacts-link__link(href="#")
+                  span Youtube
+                  +icon-multi('c-download')
+              .contacts-link__link.contacts-link__link--pseudo.hide-on-mobile
+                span
+                +icon-multi('c-download')
+
+    .contacts-section__grid-item.contacts-section__grid-item--mt
+      .contacts-section__grid-col
+        .contacts-section__titles
+          h5
+            | Есть вопросы?
+            br
+            | Напишите нам
+          p
+            | Мы обязательно ответим на все ваши вопросы.
+
+
+      form.contacts-section__grid-col.contacts-section__form(action="" method="method" data-need-validation)
+        .contacts-section__inputs
+          .contacts-section__input.input
+            input(type="text", name="question-name", id="question-name-id", placeholder="Имя",
+              class="input__field", required, autocomplete="off", minlength="2",
+              data-parsley-reqtext, data-parsley-trigger="input", data-parsley-validate-if-empty
+            )
+            i
+          .contacts-section__input.input
+            input(type="tel", name="question-phone", id="question-phone-id", placeholder="Телефон",
+              class="input__field js-phone-input", required, autocomplete="off", data-parsley-phone,
+              data-parsley-trigger="input", data-parsley-validate-if-empty
+            )
+            i
+          .contacts-section__input.input
+            textarea(type="text", name="question-comment", id="question-comment-id",
+              placeholder="Сообщение (необязательно)", class="input__field input__field--textarea", autocomplete="off"
+            )
+        .contacts-section__submit
+          button(type="submit" class="contacts-section__button button button--big") отправить
+
+          .contacts-section__agreement
+            p
+              | Нажимая «Отправить», вы&nbsp;соглашаетесь на&nbsp;обработку&nbsp;
+            a(href="http://" target="_blank" rel="noopener noreferrer") персональных данных

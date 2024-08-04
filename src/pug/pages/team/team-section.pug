@@ -1,0 +1,122 @@
+-
+  const teamBigList = [
+    {
+      id: "team-item-0",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+    {
+      id: "team-item-1",
+      imageP: "./assets/images/team/2.png",
+      imageW: "./assets/images/team/2.webp",
+      name: "Сергей Петров",
+      role: "Зам. генерального директора"
+    },
+    {
+      id: "team-item-2",
+      imageP: "./assets/images/team/3.png",
+      imageW: "./assets/images/team/3.webp",
+      name: "Василий Ильин",
+      role: "Главный проектировщик"
+    },
+    {
+      id: "team-item-3",
+      imageP: "./assets/images/team/4.png",
+      imageW: "./assets/images/team/4.webp",
+      name: "Иван Сидоров",
+      role: "Главный инженер"
+    },
+    {
+      id: "team-item-012",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+    {
+      id: "team-item-112",
+      imageP: "./assets/images/team/2.png",
+      imageW: "./assets/images/team/2.webp",
+      name: "Сергей Петров",
+      role: "Зам. генерального директора"
+    },
+    {
+      id: "team-item-212",
+      imageP: "./assets/images/team/3.png",
+      imageW: "./assets/images/team/3.webp",
+      name: "Василий Ильин",
+      role: "Главный проектировщик"
+    },
+    {
+      id: "team-item-3112",
+      imageP: "./assets/images/team/4.png",
+      imageW: "./assets/images/team/4.webp",
+      name: "Иван Сидоров",
+      role: "Главный инженер"
+    },
+    {
+      id: "team-item-01223",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+    {
+      id: "team-item-11232",
+      imageP: "./assets/images/team/2.png",
+      imageW: "./assets/images/team/2.webp",
+      name: "Сергей Петров",
+      role: "Зам. генерального директора"
+    },
+    {
+      id: "team-item-21223",
+      imageP: "./assets/images/team/3.png",
+      imageW: "./assets/images/team/3.webp",
+      name: "Василий Ильин",
+      role: "Главный проектировщик"
+    },
+    {
+      id: "team-item-311223",
+      imageP: "./assets/images/team/4.png",
+      imageW: "./assets/images/team/4.webp",
+      name: "Иван Сидоров",
+      role: "Главный инженер"
+    },
+  ];
+
+section.section.subcategories.team-section
+  .team-section__site-container.subcategories__site-container
+    .team-section__heading.subcategories__heading.subcategories__heading--stretch
+      h2.subcategories__title
+        | команда скат
+
+      .subcategories__scroll.hide-on-mobile
+        +icon-multi('mouse')
+
+    .team-section__body.team-section__body--column
+      .team-section__nav
+        a.team-section__tab.team-section__tab--active.js-team-tab(href="#" data-team-tab="team-list-01") Вся команда
+        a.team-section__tab.js-team-tab(href="#" data-team-tab="team-list-02") Руководители
+        a.team-section__tab.js-team-tab(href="#" data-team-tab="team-list-02") Эксперты
+
+      ul.team-section__list
+        for item in teamBigList
+          li.team-section__item
+            a.team__item.team-item(href="#", id=item.id)
+              .team-item__image
+                picture
+                  source(type="image/webp" srcset=item.imageW alt="")
+                  img(src=item.imageP alt="")
+
+              .team-item__info
+                p.team-item__name= item.name
+                p.team-item__role= item.role
+
+        .team-section__add.subcategories__add
+          a.button.button--outlined.button--biggest(href="#")
+            | загрузить еще&nbsp;
+            span._count-left 12
+            | &nbsp;из&nbsp;
+            span._total-count 765

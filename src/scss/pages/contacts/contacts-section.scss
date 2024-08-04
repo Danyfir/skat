@@ -1,0 +1,163 @@
+.contacts-section {
+  &__heading.subcategories__heading {
+    @include breakpoint(small-tablet) {
+      padding-bottom: 0;
+      border-width: 0;
+    }
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__grid-item {
+    display: grid;
+    grid-template-columns: 100%;
+    gap: 2.4rem;
+
+    @include breakpointMF(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: stretch;
+      gap: 1.6rem;
+    }
+
+    &--mt {
+      margin-top: 10.4rem;
+
+      @include breakpointMF(tablet) {
+        margin-top: 14rem;
+      }
+    }
+  }
+
+  &__grid-col {
+    &:has(.contacts-section__image) {
+      align-self: flex-end;
+    }
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+
+    width: 100%;
+    aspect-ratio: 1.5 / 1;
+    margin-bottom: 0.8rem;
+
+    background-color: lightgray;
+    border-radius: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      aspect-ratio: 1.75 / 1;
+      max-width: 50rem;
+      margin-bottom: 0;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__item {
+    border-bottom: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+    &:first-child {
+      border-top: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+      @include breakpoint(tablet) {
+
+      }
+    }
+  }
+
+  &__titles {
+    & > h5 {
+      margin-bottom: 1.6rem;
+      @include font(2.4rem, 120%, 600);
+      font-family: var(--second-ff);
+
+      @include breakpointMF(tablet) {
+        margin-bottom: 2.4rem;
+        @include font(3.2rem, 120%, 600);
+        font-family: var(--second-ff);
+      }
+    }
+
+    & > p {
+      max-width: 30ch;
+      color: var(--White-40, rgba(255, 255, 255, 0.40));
+      @include font(1.6rem, 130%, 400);
+
+      @include breakpointMF(tablet) {
+        max-width: 23ch;
+      }
+    }
+  }
+
+  &__inputs {
+    margin-bottom: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__input {
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+
+      @include breakpointMF(tablet) {
+        margin-bottom: 1.6rem;
+      }
+    }
+  }
+
+  &__button {
+    &.button--big {
+      width: 100%;
+      max-width: 44rem;
+
+      @include breakpoint(small-tablet) {
+        max-width: 100%;
+        height: 5.5rem;
+      }
+    }
+  }
+
+  &__agreement {
+    display: inline-block;
+    margin-top: 1.6rem;
+
+    & > P {
+      @include font(1.2rem, 145%, 400);
+      opacity: 0.5;
+
+      @include breakpointMF(tablet) {
+        display: inline;
+      }
+    }
+
+    & > a {
+      display: inline;
+      @include font(1.2rem, 145%, 400);
+      opacity: 0.5;
+
+      @include breakpointMF(tablet) {
+        opacity: 0.78;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+}
