@@ -1,0 +1,57 @@
+.about-intro {
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+    gap: 2.4rem;
+
+    @include breakpointMF(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  &__title {
+
+    & > span {
+      @include font(2.6rem, 110%, 500);
+      font-family: var(--second-ff);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+
+      @include breakpointMF(tablet) {
+        @include font(6rem, 110%, 500);
+        font-family: var(--second-ff);
+        letter-spacing: unset;
+      }
+    }
+  }
+
+  &__text-orange {
+    color: var(--Yellow,#EBAA5B);
+  }
+
+  &__text-grey {
+    color: var(--Medium-Grey, #777);
+  }
+
+  &__video-btn {
+    @include breakpointMF(tablet) {
+      flex: 0 0 32.2rem;
+    }
+  }
+
+  &__picture {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 2.1 / 1;
+    margin-top: 5rem;
+
+    img {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+}

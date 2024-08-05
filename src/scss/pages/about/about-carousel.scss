@@ -1,0 +1,253 @@
+.about-carousel {
+  padding: 5rem 0;
+
+  @include breakpointMF(tablet) {
+    padding: 8rem 0;
+  }
+
+  &__site-container {
+    @include breakpointMF(tablet) {
+      display: grid;
+      grid-template-areas:
+        "ac_tag ac_heading"
+        "ac_carousel ac_heading"
+        "ac_carousel ac_list";
+
+      grid-template-rows: max-content auto 1fr;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 4rem;
+    }
+  }
+
+  &__tag {
+    grid-area: ac_tag;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+
+    & > span {
+      @include font(1.4rem, 120%, 400);
+      letter-spacing: 0.02em;
+      opacity: 0.4;
+    }
+
+    & > i {
+      @include font(1.4rem, 120%, 400);
+      font-style: normal;
+    }
+
+    &--mb {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__heading {
+    grid-area: ac_heading;
+    margin-bottom: 3.2rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: unset;
+    }
+  }
+
+  &__title {
+    display: inline-block;
+    margin-bottom: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 2.4rem;
+    }
+
+    & > span,
+    & > p {
+      display: inline;
+      @include font(2rem, 120%, 500);
+      font-family: var(--second-ff);
+      text-transform: uppercase;
+
+      @include breakpointMF(tablet) {
+        @include font(4rem, 110%, 500);
+        font-family: var(--second-ff);
+        letter-spacing: -0.03em;
+      }
+    }
+  }
+
+  &__text {
+    opacity: 0.7;
+
+    @include breakpointMF(tablet) {
+      max-width: 45rem;
+    }
+  }
+
+  &__carousel {
+    position: relative;
+    grid-area: ac_carousel;
+
+    aspect-ratio: 0.8 / 1;
+    margin: 0 calc(var(--content-padding) * -1) 4.2rem;
+    padding: 0 var(--content-padding);
+
+    @include breakpointMF(tablet) {
+      width: 41.1rem;
+      overflow: hidden;
+      aspect-ratio: 0.82 / 1;
+
+      margin: 0;
+      padding: 0;
+
+      border-radius: 1.6rem;
+    }
+  }
+
+  &__swiper.swiper {
+    height: 100%;
+    padding-bottom: 5.2rem;
+
+    @include breakpointMF(tablet) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__swiper-slide.swiper-slide {
+    overflow: hidden;
+
+    background-color: lightgray;
+    border-radius: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      border-radius: unset;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 100%;
+      min-height: 101%;
+      object-position: center;
+      object-fit: cover;
+    }
+  }
+
+  &__list {
+    grid-area: ac_list;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6rem;
+
+    @include breakpointMF(tablet) {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 0;
+      min-height: 41rem;
+    }
+  }
+
+  &__item {
+    @include breakpointMF(tablet) {
+      display: grid;
+      place-items: center;
+
+      flex: 1;
+      aspect-ratio: 1;
+      border-radius: 100%;
+      border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+    }
+
+    &:nth-child(1) {
+
+      @include breakpointMF(tablet) {
+        order: 2;
+        min-width: 35rem;
+      }
+    }
+
+    &:nth-child(2) {
+
+      @include breakpointMF(tablet) {
+        order: 3;
+        min-width: 24rem;
+        margin-bottom: auto;
+      }
+    }
+
+    &:nth-child(3) {
+
+      @include breakpointMF(tablet) {
+        order: 1;
+        min-width: 20rem;
+        margin-top: 3.8rem;
+        margin-bottom: auto;
+      }
+    }
+  }
+
+  &__numbers {
+    display: grid;
+    grid-template-areas:
+      "aci_number aci_dim"
+      "aci_text aci_text";
+    grid-template-columns: 1fr max-content;
+    gap: 0.6rem;
+
+    @include breakpointMF(tablet) {
+      place-items: center;
+      gap: 0.8rem;
+    }
+
+    & > ._number {
+      grid-area: aci_number;
+
+      @include font(7.4rem, 110%, 400);
+      letter-spacing: -0.02em;
+      font-family: var(--second-ff);
+
+      @include breakpointMF(tablet) {
+        @include font(2.7rem, 115%, 400);
+        letter-spacing: unset;
+        font-family: var(--main-ff);
+      }
+    }
+
+    & > ._dim {
+      grid-area: aci_dim;
+      align-self: flex-end;
+      margin-bottom: 1.2rem;
+
+      @include font(2rem, 120%, 500);
+      font-family: var(--second-ff);
+
+      @include breakpointMF(tablet) {
+        margin-bottom: 0;
+
+        @include font(2.7rem, 115%, 400);
+        letter-spacing: unset;
+        font-family: var(--main-ff);
+      }
+    }
+
+    & > ._text {
+      grid-area: aci_text;
+
+      opacity: 0.8;
+      @include font(1.6rem, 130%, 400);
+
+      @include breakpointMF(tablet) {
+        @include font(1.38rem, 120%, 400);
+
+        width: min-content;
+        text-align: center;
+        color: var(--Light-Gray, #A0A0A0);
+        opacity: 1;
+      }
+    }
+  }
+}

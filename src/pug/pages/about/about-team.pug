@@ -1,0 +1,76 @@
+-
+  const teams = [
+    {
+      empty: false,
+      id: "team-item-0",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+    {
+      empty: false,
+      id: "team-item-1",
+      imageP: "./assets/images/team/2.png",
+      imageW: "./assets/images/team/2.webp",
+      name: "Сергей Петров",
+      role: "Зам. генерального директора"
+    },
+    {
+      empty: false,
+      id: "team-item-2",
+      imageP: "./assets/images/team/3.png",
+      imageW: "./assets/images/team/3.webp",
+      name: "Василий Ильин",
+      role: "Главный проектировщик"
+    },
+    {
+      empty: false,
+      id: "team-item-3",
+      imageP: "./assets/images/team/4.png",
+      imageW: "./assets/images/team/4.webp",
+      name: "Иван Сидоров",
+      role: "Главный инженер"
+    },
+    {
+      empty: false,
+      id: "team-item-0",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+    {
+      empty: true,
+      id: "team-item-0",
+      imageP: "./assets/images/team/1.png",
+      imageW: "./assets/images/team/1.webp",
+      name: "Олег Иванов",
+      role: "Генеральный директор"
+    },
+  ];
+
+section.section.about-team
+  .about-team__site-container
+    .about-team__heading
+      h2.text-h2
+        | наша команда
+
+    .about-team__body.js-about-team
+      ul.about-team__list
+        for item in teams
+          if item.empty == false
+            li.about-team__item
+              a.about-team__item.team-item(href="#", id=item.id)
+                .team-item__image
+                  picture
+                    source(type="image/webp" srcset=item.imageW alt="")
+                    img(src=item.imageP alt="")
+
+                .team-item__info
+                  p.team-item__name= item.name
+                  p.team-item__role= item.role
+          else
+            li.about-team__item.about-team__item--last
+              a.about-team__link(href="http://" target="_blank" rel="noopener noreferrer")
+                | Вся команда

@@ -1,0 +1,76 @@
+.about-team {
+  padding: 5rem 0;
+
+  @include breakpointMF(tablet) {
+    padding: 8rem 0;
+  }
+
+  &__heading {
+    margin-bottom: 3.2rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__list {
+    @include breakpointMF(tablet) {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8rem 1.6rem;
+    }
+
+    &.swiper-wrapper {
+      align-items: stretch;
+    }
+  }
+
+  &__item {
+    &:has(.about-team__link) {
+      @include breakpointMF(tablet) {
+        display: flex;
+        justify-content: flex-end;
+        padding-top: 10.6rem;
+        padding-right: 2.8rem;
+      }
+    }
+
+    &:nth-child(3) {
+      @include breakpointMF(tablet) {
+        grid-column: 4 / 5;
+      }
+    }
+
+    &:nth-child(5) {
+      @include breakpointMF(tablet) {
+        grid-column: 3 / 4;
+      }
+    }
+
+    &--last {
+      &.swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        height: auto;
+      }
+    }
+  }
+
+  &__link {
+    display: grid;
+    place-items: center;
+
+    flex-shrink: 0;
+    height: 24.8rem;
+    aspect-ratio: 1;
+
+    @include font(1.2rem, 150%, 500);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    border: 1px solid var(--White-20, rgba(255, 255, 255, 0.20));
+    border-radius: 100%;
+  }
+}

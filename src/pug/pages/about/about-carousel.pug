@@ -1,0 +1,94 @@
+-
+  const slidersArray = [
+    {
+      imgB: "./assets/images/about/slide-1.jpg",
+      imgW: "./assets/images/about/slide-1.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-2.jpg",
+      imgW: "./assets/images/about/slide-2.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-3.jpg",
+      imgW: "./assets/images/about/slide-3.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-4.jpg",
+      imgW: "./assets/images/about/slide-4.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-5.jpg",
+      imgW: "./assets/images/about/slide-5.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-6.jpg",
+      imgW: "./assets/images/about/slide-6.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-7.jpg",
+      imgW: "./assets/images/about/slide-7.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-8.jpg",
+      imgW: "./assets/images/about/slide-8.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-9.jpg",
+      imgW: "./assets/images/about/slide-9.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-10.jpg",
+      imgW: "./assets/images/about/slide-10.webp",
+    },
+    {
+      imgB: "./assets/images/about/slide-11.jpg",
+      imgW: "./assets/images/about/slide-11.webp",
+    },
+  ]
+
+section.section.about-carousel
+  .about-carousel__site-container
+    .about-carousel__tag.about-carousel__tag--mb
+      i [
+      span О КОМПАНИИ
+      i ]
+
+    .about-carousel__heading
+      h2.about-carousel__title
+        span.about-intro__text-orange СКАТ —&nbsp;
+        p
+          | ведущий производитель
+          br
+          | кабельной арматуры в Татарстане.
+      p.about-carousel__text.text-18
+        | Мы предлагаем широкий ассортимент продукции для электроэнергетической
+        | отрасли, включая кабельные муфты, концевые и соединительные гильзы,
+        | наконечники и другие комплектующие.
+
+    .about-carousel__carousel
+      .about-carousel__swiper.swiper.js-about-carousel-swiper
+        ul.about-carousel__swiper-wrapper.swiper-wrapper
+          for item in slidersArray
+            li.about-carousel__swiper-slide.swiper-slide(id="")
+              picture
+                source(type="image/webp" srcset=item.imgW alt="")
+                img(src=item.imgB alt="")
+
+        .about-carousel__swiper-pagination.swiper-pagination.show-on-mobile
+
+    .about-carousel__list
+      .about-carousel__item
+        .about-carousel__numbers
+          span._number 110 - 550
+          span._dim кВ
+          p._text Уникальная&nbsp;кабельная арматура
+      .about-carousel__item
+        .about-carousel__numbers
+          span._number 2000+
+          span._dim
+          p._text Наименований в&nbsp;каталоге
+      .about-carousel__item
+        .about-carousel__numbers
+          span._number 20 лет
+          span._dim
+          p._text Успешной&nbsp;работы на&nbsp;рынке

@@ -31,6 +31,8 @@ import productSlider from './modules/productSlider';
 import resetGroupForms from './modules/resetGroupForms';
 
 import teamTabsControls from './modules/teamTabsControls';
+import aboutCarouselSwiper from './modules/aboutCarouselSwiper';
+import aboutTeamMobileSwiper from './modules/aboutTeamMobileSwiper';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -65,4 +67,6 @@ documenReady(() => {
   resetGroupForms();
 
   teamTabsControls();
+  aboutCarouselSwiper();
+  aboutTeamMobileSwiper();
 });
