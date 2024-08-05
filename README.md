@@ -65,10 +65,10 @@ npm run build:prod
 
 # Ссылки на верстку
 
-## Страница - [Главная](https://eduardoalparov.github.io/ckat/).
-## Страница - [Каталог / Категории](https://eduardoalparov.github.io/ckat/catalog.html).
-## Страница - [Каталог / Подкатегории](https://eduardoalparov.github.io/ckat/subcatalog.html).
-## Страница - [Страница товара](https://eduardoalparov.github.io/ckat/product.html).
-## Страница - [Материалы для скачивания](https://eduardoalparov.github.io/ckat/materials.html).
-## Страница - [Контакты](https://eduardoalparov.github.io/ckat/contacts.html).
-## Страница - [Команда](https://eduardoalparov.github.io/ckat/team.html).
+## Страница - [Главная](https://danyfir.github.io/ckat/).
+## Страница - [Каталог / Категории](https://danyfir.github.io/skat/catalog.html).
+## Страница - [Каталог / Подкатегории](https://danyfir.github.io/skat/subcatalog.html).
+## Страница - [Страница товара](https://danyfir.github.io/skat/product.html).
+## Страница - [Материалы для скачивания](https://danyfir.github.io/skat/materials.html).
+## Страница - [Контакты](https://danyfir.github.io/skat/contacts.html).
+## Страница - [Команда](https://danyfir.github.io/skat/team.html).

@@ -45,7 +45,7 @@
       max-height: unset;
 
       @include breakpointMF(tablet) {
-
+        max-height: unset;
       }
     }
   }
