@@ -72,3 +72,4 @@ npm run build:prod
 ## Страница - [Материалы для скачивания](https://danyfir.github.io/skat/materials.html).
 ## Страница - [Контакты](https://danyfir.github.io/skat/contacts.html).
 ## Страница - [Команда](https://danyfir.github.io/skat/team.html).
+## Страница - [О компании](https://danyfir.github.io/skat/about.html).

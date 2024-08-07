@@ -1,0 +1,31 @@
+-
+  const partners = [
+    './assets/images/partners/png-1.png',
+    './assets/images/partners/png-2.png',
+    './assets/images/partners/png-3.png',
+    './assets/images/partners/png-4.png',
+    './assets/images/partners/png-5.png',
+    './assets/images/partners/png-1.png',
+    './assets/images/partners/png-2.png',
+    './assets/images/partners/png-3.png',
+    './assets/images/partners/png-4.png',
+    './assets/images/partners/png-5.png',
+  ];
+
+section.section.about-partners
+  .about-partners__line.hide-on-mobile
+    +icon-multi('partners')
+  .about-partners__line.show-on-mobile
+    +icon-multi('partners-m')
+
+  .about-partners__swiper.swiper.about-partners__swiper--mb.js-partner-swiper(data-direction='rtl')
+    ul.about-partners__swiper-wrapper.swiper-wrapper
+      for item in partners
+        li.about-partners__swiper-slide.swiper-slide
+          img(src=item, alt="")
+
+  .about-partners__swiper.swiper.js-partner-swiper
+    ul.about-partners__swiper-wrapper.swiper-wrapper
+      for item in partners
+        li.about-partners__swiper-slide.swiper-slide
+          img(src=item, alt="")

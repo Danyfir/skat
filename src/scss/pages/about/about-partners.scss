@@ -1,0 +1,84 @@
+.about-partners {
+  padding: 5rem 0;
+
+  @include breakpointMF(tablet) {
+    padding: 8rem 0;
+  }
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  overflow: hidden;
+
+  &__line {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 4rem;
+    }
+
+    .icon-partners {
+      aspect-ratio: 21 / 1;
+    }
+
+    .icon-partners-m {
+      aspect-ratio: 5.7 / 1;
+    }
+  }
+
+  &__swiper.swiper {
+    width: 100%;
+    padding: 1.6rem 0;
+
+    @include breakpointMF(tablet) {
+      padding: 0;
+    }
+
+    &.about-partners__swiper--mb {
+      margin-bottom: 2.4rem;
+
+      @include breakpointMF(tablet) {
+        margin-bottom: 4rem;
+      }
+    }
+  }
+
+  &__swiper-wrapper.swiper-wrapper {
+    height: 3.6rem;
+    transition-timing-function: linear !important;
+
+    @include breakpointMF(tablet) {
+      height: 18rem;
+    }
+  }
+
+  &__swiper-slide.swiper-slide {
+    height: 100%;
+    width: auto;
+    aspect-ratio: 2.8 / 1;
+
+    @include breakpointMF(tablet) {
+      aspect-ratio: 2 / 1;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: auto;
+      height: 90%;
+      max-width: 100%;
+      object-fit: contain;
+      object-position: center;
+
+      @include breakpointMF(tablet) {
+        height: 30%;
+      }
+    }
+  }
+}

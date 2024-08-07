@@ -78,6 +78,17 @@ body {
   &.desktop-menu-is-open {
     overflow: hidden;
     height: auto;
+
+    .page-wrapper {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        inset: 0;
+        background: var(--Black-50, rgba(2, 2, 2, 0.5));
+        content: "";
+      }
+    }
   }
 
   &:has(.loader),

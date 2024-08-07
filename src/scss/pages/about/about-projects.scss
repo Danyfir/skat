@@ -1,0 +1,49 @@
+.about-projects {
+  padding: 5rem 0;
+
+  @include breakpointMF(tablet) {
+    padding: 8rem 0;
+  }
+
+  &__body.stats__body {
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__scrolling-wrapper.stats__scrolling-wrapper {
+    @include breakpointMF(tablet) {
+      overflow: hidden;
+      flex: 0 0 84rem;
+    }
+
+    .stats__scrolling {
+      @include breakpointMF(tablet) {
+        height: 54.6rem;
+      }
+    }
+  }
+
+  &__scrolling.stats__scrolling {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 4rem;
+
+    @include breakpointMF(tablet) {
+      gap: 15rem;
+    }
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link {
+    margin-top: 4rem;
+
+    @include breakpointMF(tablet) {
+      margin-top: auto;
+    }
+  }
+}

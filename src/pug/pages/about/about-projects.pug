@@ -1,0 +1,65 @@
+-
+  const projectsList = [
+    {
+      parentClass: '',
+      class: 'project--big project--label',
+      imgJ: './assets/images/projects/5.webp',
+      imgW: './assets/images/projects/5.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Надёжные решения для электроэнергетики',
+    },
+    {
+      parentClass: '',
+      class: 'project--big project--label',
+      imgJ: './assets/images/projects/6.webp',
+      imgW: './assets/images/projects/6.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Надёжные решения для электроэнергетики',
+    },
+    {
+      parentClass: '',
+      class: 'project--big project--label',
+      imgJ: './assets/images/projects/7.webp',
+      imgW: './assets/images/projects/7.jpg',
+      date: '06.2022 - 08.2022',
+      text: 'Надёжные решения дляэлектроэнергетики',
+    },
+  ];
+
+section.section.about-projects.projects--animation-trigger
+  .about-projects__site-container
+    .about-projects__body.stats__body
+      .about-projects__left
+        .projects__heading
+          span.projects__heading-number 30
+          .projects__heading-plus
+            +icon-multi('proj-plus')
+          p.projects__heading-text
+            | реализованных
+            br
+            | проектов
+
+        a.about-projects__link.stats__link.button.button--outlined.hide-on-mobile(href="#") все проекты
+
+      .about-projects__scrolling-wrapper.stats__scrolling-wrapper
+        ul.about-projects__scrolling.stats__scrolling
+          for item in projectsList
+            li.about-projects__project
+              a.projects__project.project(href="#" class=item.class)
+                .project__image
+                  picture
+                    source(type="image/webp" srcset=item.imgW alt="")
+                    img(src=item.imgJ  alt="")
+
+                  .project__tag.tag
+                    +icon-multi('rosseti')
+
+                  span.project__label.hide-on-mobile
+                    | подробнее<br>о&nbsp;проекте
+
+                  .card__icon.project__icon.show-on-mobile
+                    +icon-multi('card-icon')
+
+                .project__info
+                  p.project__text= item.text
+                  p.project__date= item.date

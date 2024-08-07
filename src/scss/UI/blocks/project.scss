@@ -140,6 +140,12 @@
     }
   }
 
+  &.project--label {
+    .project__tag {
+      opacity: 1;
+    }
+  }
+
   @include hoverActive() {
     .project__tag {
       opacity: 1;
