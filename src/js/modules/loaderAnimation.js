@@ -2,11 +2,13 @@ import anime from 'animejs';
 
 export default () => {
   const loaders = document.querySelectorAll('.loader');
-  const header = document.querySelector('.header');
+  const header = document.querySelector('.header.header-is-animated');
   const body = document.body;
 
   loaders.forEach((loader) => {
     setTimeout(() => {
+      if(!header) return;
+
       const myObject = {
         prop: 0,
       };

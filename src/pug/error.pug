@@ -1,0 +1,17 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch page-error"
+  - const pageTitle = "404"
+  - const siteLang = "ru"
+  - const headerAnimimatable = true
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+    ];
+
+block content
+  include pages/error/main.pug
