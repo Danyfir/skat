@@ -29,7 +29,7 @@
     &:not(.team-section__body--column) {
       align-items: flex-start;
 
-      .team-section__list {
+      .team-section__list-wrapper {
         @include breakpointMF(tablet) {
           flex: 0 0 109rem;
         }
@@ -137,14 +137,14 @@
     }
 
     &.team-section__tab--active {
-      order: 1;
+      // order: 1;
       color: var(--Black, #050403);
       background-color: var(--White, #FFF);
       pointer-events: none;
     }
 
     &:not(.team-section__tab--active) {
-      order: 2;
+      // order: 2;
     }
   }
 }

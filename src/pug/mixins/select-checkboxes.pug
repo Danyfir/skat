@@ -1,5 +1,5 @@
-mixin select(name='name-1', inputs=[{text: 'text', id: 'id', checked: false}], label=false)
-  .select.js-select&attributes(attributes)
+mixin selectCheckboxes(name='name-1', inputs=[{text: 'text', id: 'id', checked: false}], label=false)
+  .select&attributes(attributes)
     if label == false
       span.select__heading.select__heading--hidden заголовок
     else
@@ -10,13 +10,13 @@ mixin select(name='name-1', inputs=[{text: 'text', id: 'id', checked: false}], l
     .select__dropdown
       ul.select__list
         for i in inputs
-          li.select__item
+          li.select__item.select__item--first-hidden
             label.select__label(for=i.id)
-              input(type="radio", hidden,
+              input(type="checkbox", hidden,
                 checked=i.checked,
                 name=name,
                 id=i.id
               )
               span.select__text #{i.text}
 
-              span.select__icon
+              span.select__tick

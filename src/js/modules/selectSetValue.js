@@ -1,5 +1,5 @@
 export default () => {
-    const selects = document.querySelectorAll('.select');
+    const selects = document.querySelectorAll('.js-select');
 
     selects.forEach((select) => {
         const inputs = select.querySelectorAll('input[type="radio"]');

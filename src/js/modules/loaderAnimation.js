@@ -73,8 +73,4 @@ export default () => {
       });
     }, 300);
   })
-
-  if(loaders.length < 1) {
-    header.classList.remove('header-is-animated');
-  }
 }

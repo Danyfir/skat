@@ -21,7 +21,9 @@ html(lang=siteLang)
       include ../parts/modals/modal.pug
 
     include ../parts/mobile-menu.pug
-    include ../parts/loader.pug
+
+    if isMainPage
+      include ../parts/loader.pug
 
   block scripts
     script(defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")

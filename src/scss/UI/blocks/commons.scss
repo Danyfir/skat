@@ -45,7 +45,7 @@
   border-radius: 0.4rem;
 
   @include breakpointMF(tablet) {
-      border-radius: 1.2rem;
+    border-radius: 1.2rem;
   }
 }
 
@@ -61,7 +61,7 @@
   border-radius: 1.2rem;
 
   @include breakpointMF(tablet) {
-      border-radius: 2rem;
+    border-radius: 2rem;
   }
 }
 
@@ -69,7 +69,7 @@
   border-radius: 1.2rem;
 
   @include breakpointMF(tablet) {
-      border-radius: 2.4rem;
+    border-radius: 2.4rem;
   }
 }
 
@@ -277,8 +277,4 @@
     @include font(10rem, 100%, 400);
     font-family: var(--second-ff, Arail);
   }
-}
-
-.abs {
-
 }

@@ -3,7 +3,7 @@
     {
       text: "Все материалы",
       id: "radio-materials-popular",
-      checked: true,
+      checked: false ,
     },
     {
       text: "Сертификаты",
@@ -42,7 +42,7 @@
     {
       text: "Все бренды",
       id: "radio-brands-brandAll",
-      checked: true,
+      checked: false,
     },
     {
       text: "Бренд 1",
@@ -198,9 +198,9 @@ section.section.materials.subcategories
           span Фильтр
           +icon-multi('filter-icon')
 
-        +select('materials-select', materialsInputs, 'Вид материала')(class='subcategories__select select--smaller hide-on-mobile')
+        +selectCheckboxes('materials-select', materialsInputs, 'Вид материала')(class='subcategories__select select--smaller hide-on-mobile')
 
-        +select('brands-select', brandsInputs, 'Бренд')(class='subcategories__select select--smaller hide-on-mobile')
+        +selectCheckboxes('brands-select', brandsInputs, 'Бренд')(class='subcategories__select select--smaller hide-on-mobile')
 
         +select('sort-select', selectsInputs, 'Показать сначала')(class='subcategories__select select--smaller hide-on-mobile')
 

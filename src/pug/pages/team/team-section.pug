@@ -99,24 +99,65 @@ section.section.subcategories.team-section
       .team-section__nav
         a.team-section__tab.team-section__tab--active.js-team-tab(href="#" data-team-tab="team-list-01") Вся команда
         a.team-section__tab.js-team-tab(href="#" data-team-tab="team-list-02") Руководители
-        a.team-section__tab.js-team-tab(href="#" data-team-tab="team-list-02") Эксперты
+        a.team-section__tab.js-team-tab(href="#" data-team-tab="team-list-03") Эксперты
 
-      ul.team-section__list
-        for item in teamBigList
-          li.team-section__item
-            a.team__item.team-item(href="#", id=item.id)
-              .team-item__image
-                picture
-                  source(type="image/webp" srcset=item.imageW alt="")
-                  img(src=item.imageP alt="")
+      .team-section__list-wrapper
+        ul.team-section__list(data-team-list="team-list-01")
+          for item in teamBigList
+            li.team-section__item
+              a.team__item.team-item(href="#", id=item.id)
+                .team-item__image
+                  picture
+                    source(type="image/webp" srcset=item.imageW alt="")
+                    img(src=item.imageP alt="")
 
-              .team-item__info
-                p.team-item__name= item.name
-                p.team-item__role= item.role
+                .team-item__info
+                  p.team-item__name= item.name
+                  p.team-item__role= item.role
 
-        .team-section__add.subcategories__add
-          a.button.button--outlined.button--biggest(href="#")
-            | загрузить еще&nbsp;
-            span._count-left 12
-            | &nbsp;из&nbsp;
-            span._total-count 765
+          .team-section__add.subcategories__add
+            a.button.button--outlined.button--biggest(href="#")
+              | загрузить еще&nbsp;
+              span._count-left 12
+              | &nbsp;из&nbsp;
+              span._total-count 765
+
+        ul.team-section__list.display-none(data-team-list="team-list-02")
+          for item in teamBigList
+            li.team-section__item
+              a.team__item.team-item(href="#", id=item.id)
+                .team-item__image
+                  picture
+                    source(type="image/webp" srcset=item.imageW alt="")
+                    img(src=item.imageP alt="")
+
+                .team-item__info
+                  p.team-item__name= item.name
+                  p.team-item__role= item.role
+
+          .team-section__add.subcategories__add
+            a.button.button--outlined.button--biggest(href="#")
+              | загрузить еще&nbsp;
+              span._count-left 22
+              | &nbsp;из&nbsp;
+              span._total-count 765
+
+        ul.team-section__list.display-none(data-team-list="team-list-03")
+          for item in teamBigList
+            li.team-section__item
+              a.team__item.team-item(href="#", id=item.id)
+                .team-item__image
+                  picture
+                    source(type="image/webp" srcset=item.imageW alt="")
+                    img(src=item.imageP alt="")
+
+                .team-item__info
+                  p.team-item__name= item.name
+                  p.team-item__role= item.role
+
+          .team-section__add.subcategories__add
+            a.button.button--outlined.button--biggest(href="#")
+              | загрузить еще&nbsp;
+              span._count-left 32
+              | &nbsp;из&nbsp;
+              span._total-count 765
