@@ -49,13 +49,13 @@ export default () => {
           cloneIcon.style.height = rectTarget.height;
           cloneIcon.style.top = rectTarget.top;
           cloneIcon.style.left = rectTarget.left;
-        }, 800);
+        }, 400);
 
         document.body.append(cloneIcon);
 
         setTimeout(() => {
           loader.classList.add('loader--closed');
-        }, 400);
+        }, 800);
 
         setTimeout(() => {
           body.classList.remove('animation-trigger');
