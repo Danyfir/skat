@@ -41,13 +41,13 @@
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
                   </svg>
                 </button>
-                <button class="button" data-path="modal">оставить заявку</button>
+                <button class="button js-callback-modal-open" type="button">оставить заявку</button>
               </div>
               <button class="burger-menu header__burger-btn js-burger-menu" type="button"><span></span>
               </button>
             </div>
             <div class="header__mobile-nav show-on-mobile">
-              <button class="small-button small-button--outlined" data-path="mobile-menu">заявкa</button>
+              <button class="small-button small-button--outlined js-callback-modal-open" type="button">заявкa</button>
               <button class="menu-btn header__mobile-menu js-mobile-menu-open" type="button">
                 <svg class="icon icon-mob-burger">
                   <use xlink:href="assets/images/sprites/sprite-multi.svg#mob-burger"></use>
@@ -186,8 +186,45 @@
                       <a class="footer__policy" href="#" target="_blank">Политика конфиденциальности</a>
                     </div>
                     <div class="desktop-menu__column desktop-menu__column--end">
-                      <button class="desktop-menu__button button button--big" type="button">оставить заявку</button>
+                      <button class="desktop-menu__button button button--big js-callback-modal-open" type="button">оставить заявку</button>
                     </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__callback-modal">
+            <div class="desktop-menu desktop-menu--callback">
+              <div class="desktop-menu__container">
+                <div class="desktop-menu__content desktop-menu__content--tight">
+                  <div class="desktop-menu__head">
+                    <a class="desktop-menu__phone" href="tel:+78002505999">8 800 250 59 99</a>
+                  </div>
+                  <div class="desktop-menu__body">
+                    <form class="desktop-menu__callback callback-form" action="">
+                      <p class="callback-form__title">Оставьте&nbsp;заявку<br>на&nbsp;бесплатную консультацию</p>
+                      <div class="callback-form__inputs">
+                        <div class="callback-form__input input">
+                          <input class="input__field" type="text" name="callback-name" id="callback-name-id" placeholder="Имя" required autocomplete="off" minlength="2" data-parsley-reqtext data-parsley-trigger="input" data-parsley-validate-if-empty><i></i>
+                        </div>
+                        <div class="callback-form__input input">
+                          <input class="input__field js-phone-input" type="tel" name="callback-phone" id="callback-phone-id" placeholder="Телефон" required autocomplete="off" data-parsley-phone data-parsley-trigger="input" data-parsley-validate-if-empty><i></i>
+                        </div>
+                        <div class="callback-form__input input">
+                          <textarea class="input__field" name="callback-comment" id="callback-comment-id" placeholder="Сообщение (необязательно)" autocomplete="off"></textarea>
+                        </div>
+                      </div>
+                      <div class="callback-form__submit">
+                        <button class="button button--big callback-form__button" type="submit">отправить</button>
+                        <div class="callback-form__agreement">
+                          <p>Нажимая «Отправить», вы соглашаетесь на&nbsp;обработку&nbsp;</p>
+                          <a href="#">персональных данных</a>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="desktop-menu__footer">
+                    <p class="desktop-menu__copyright">© АО «СКАТ»</p>
                   </div>
                 </div>
               </div>
@@ -323,15 +360,6 @@
           </div>
         </div>
       </footer>
-    </div>
-    <div class="modal">
-      <div class="modal__container" data-target="modal">
-        <div class="modal__content">
-          <button class="button-reset modal__close-btn modal-close" type="button"><span></span><span></span>
-          </button>
-          <div class="modal__legend">Поздравляем вы открыли модалку!</div>
-        </div>
-      </div>
     </div>
     <div class="mobile-menu">
       <div class="mobile-menu__inner-wrapper">
