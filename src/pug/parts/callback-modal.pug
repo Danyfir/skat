@@ -1,0 +1,44 @@
+.desktop-menu.desktop-menu--callback
+  .desktop-menu__container
+    .desktop-menu__content.desktop-menu__content--tight
+      .desktop-menu__head
+        a.desktop-menu__phone(href="tel:+78002505999")
+          | 8 800 250 59 99
+
+      .desktop-menu__body
+        form.desktop-menu__callback.callback-form(action="")
+          p.callback-form__title
+            | Оставьте&nbsp;заявку
+            br
+            | на&nbsp;бесплатную консультацию
+
+          .callback-form__inputs
+            .callback-form__input.input
+              input(type="text", name="callback-name", id="callback-name-id", placeholder="Имя",
+                class="input__field", required, autocomplete="off", minlength="2",
+                data-parsley-reqtext, data-parsley-trigger="input", data-parsley-validate-if-empty
+              )
+              i
+            .callback-form__input.input
+              input(type="tel", name="callback-phone", id="callback-phone-id", placeholder="Телефон",
+                class="input__field js-phone-input", required, autocomplete="off", data-parsley-phone,
+                data-parsley-trigger="input", data-parsley-validate-if-empty
+              )
+              i
+            .callback-form__input.input
+              textarea(name="callback-comment" id="callback-comment-id" placeholder="Сообщение (необязательно)" 
+                class="input__field", autocomplete="off"
+              )
+
+          .callback-form__submit
+            button.button.button--big.callback-form__button(type="submit") отправить
+            .callback-form__agreement
+              p
+                | Нажимая «Отправить», вы соглашаетесь на&nbsp;обработку&nbsp;
+              a(href="#")
+                | персональных данных
+
+
+      .desktop-menu__footer
+        p.desktop-menu__copyright
+          | © АО «СКАТ»

@@ -3,15 +3,12 @@
   max-width: calc(var(--max-container-width) + 2 * var(--content-padding));
   margin: 0 auto;
   padding-inline: var(--content-padding);
+
   @supports (width: max(20vw, 100px)) {
-    padding-left: max(
-      env(safe-area-inset-left, 1.4rem),
-      var(--content-padding)
-    );
-    padding-right: max(
-      env(safe-area-inset-right, 1.4rem),
-      var(--content-padding)
-    );
+    padding-left: max(env(safe-area-inset-left, 1.4rem),
+        var(--content-padding));
+    padding-right: max(env(safe-area-inset-right, 1.4rem),
+        var(--content-padding));
   }
 }
 
@@ -75,6 +72,7 @@ body {
     }
   }
 
+  &.callback-modal-is-open,
   &.desktop-menu-is-open {
     overflow: hidden;
     height: auto;
@@ -103,6 +101,7 @@ body {
   }
 
   &.page-error {
+
     .loader,
     .breadcrumbs,
     .footer {

@@ -22,12 +22,13 @@
   }
 }
 
+.callback-modal-is-open,
 .mobile-menu-open {
   .menu-btn {
     &.header__mobile-menu {
       .icon-mob-burger {
         opacity: 0;
-        transform: translate(-50%,-120%);
+        transform: translate(-50%, -120%);
       }
 
       .icon-mob-close {

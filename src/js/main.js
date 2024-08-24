@@ -35,6 +35,8 @@ import aboutCarouselSwiper from './modules/aboutCarouselSwiper';
 import aboutTeamMobileSwiper from './modules/aboutTeamMobileSwiper';
 import partnersSwiper from './modules/partnersSwiper';
 
+import callbackModalOpen from './modules/callbackModalOpen';
+
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
 
@@ -71,4 +73,6 @@ documenReady(() => {
   aboutCarouselSwiper();
   aboutTeamMobileSwiper();
   partnersSwiper();
+
+  callbackModalOpen();
 });

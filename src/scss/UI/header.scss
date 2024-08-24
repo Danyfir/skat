@@ -72,6 +72,7 @@
     }
   }
 
+  &__callback-modal,
   &__desktop-menu {
     display: none;
   }
@@ -96,22 +97,50 @@
   }
 }
 
-@keyframes transAnim {
+.callback-modal-is-open {
+  .header__callback-modal {
+    display: block;
+  }
+
+  .header__col--controls {
+    position: relative;
+    z-index: 2000;
+  }
+
+  .header__search {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+@keyframes slideFromRight2 {
   0% {
-      transform: translateY(-100%);
+    transform: translateX(100%);
   }
 
   100% {
-      transform: translateY(0%);
+    transform: translate(0%);
+  }
+}
+
+
+@keyframes transAnim {
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0%);
   }
 }
 
 @keyframes transAnimReverse {
   0% {
-      transform: translateY(0%);
+    transform: translateY(0%);
   }
 
   100% {
-      transform: translateY(-100%);
+    transform: translateY(-100%);
   }
 }

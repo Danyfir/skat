@@ -42,7 +42,7 @@
   .desktop-menu__container
     .desktop-menu__content
       .desktop-menu__head
-        form.desktop-menu__search(action="", autocomplete="off")
+        form.desktop-menu__search(action="" autocomplete="off")
           .desktop-menu__input.input
             input#search(
               class="input__field",
@@ -61,11 +61,11 @@
                 label.desktop-menu__label(for=item.id)= item.text
 
           ul.desktop-menu__images
-            input.desktop-menu__input(type="radio", name="radio-images", hidden, id="radio-input-image-all")
+            input.desktop-menu__input(type="radio" name="radio-images", hidden, id="radio-input-image-all")
 
             for obj in menuAr
               li
-                input.desktop-menu__input(type="radio", name="radio-images", hidden, id=obj.id)
+                input.desktop-menu__input(type="radio" name="radio-images", hidden, id=obj.id)
                 .desktop-menu__image
                   picture
                     source(type="image/webp" srcset=obj.imgW alt="")
@@ -92,5 +92,5 @@
             | Политика конфиденциальности
 
         .desktop-menu__column.desktop-menu__column--end
-          button.desktop-menu__button.button.button--big(type='button')
+          button.desktop-menu__button.button.button--big.js-callback-modal-open(type='button')
             | оставить заявку

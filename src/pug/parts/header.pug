@@ -24,16 +24,19 @@ header.header(class=headerAnimimatable ? "header-is-animated" : '')
         .header__search
           +btn-search(class="header__search-btn")
 
-          button.button(data-path="modal") оставить заявку
+          button.button.js-callback-modal-open(type="button") оставить заявку
 
         +burger-menu(class="header__burger-btn js-burger-menu")
 
       .header__mobile-nav.show-on-mobile
-        button.small-button.small-button--outlined(data-path="mobile-menu") заявкa
+        button.small-button.small-button--outlined.js-callback-modal-open(type="button") заявкa
 
         +menu-btn(class="header__mobile-menu js-mobile-menu-open")
 
     .header__desktop-menu.hide-on-mobile
       include desktop-menu.pug
+
+    .header__callback-modal
+      include callback-modal.pug
 
   include breadcrumbs.pug

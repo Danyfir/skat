@@ -112,6 +112,8 @@
   &__legend {
     text-align: center;
   }
+
+  &.modal--callback {}
 }
 
 .modal-sorting {
@@ -128,7 +130,7 @@
     gap: 1.6rem;
     margin-bottom: 2rem;
 
-    & > p {
+    &>p {
       @extend .text-32;
       text-transform: uppercase;
     }

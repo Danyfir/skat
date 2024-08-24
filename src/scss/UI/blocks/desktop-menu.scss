@@ -39,6 +39,10 @@
     background: var(--Black, #050403);
 
     @include noScrollbar();
+
+    &.desktop-menu__content--tight {
+      max-width: 70.4rem;
+    }
   }
 
   &__search {
@@ -91,7 +95,7 @@
 
       aspect-ratio: 1;
       height: 100%;
-      transform: translate(-50%,-50%);
+      transform: translate(-50%, -50%);
     }
   }
 
@@ -114,7 +118,7 @@
 
   &__input {
     &:checked {
-      & ~ .desktop-menu__image {
+      &~.desktop-menu__image {
         opacity: 1;
         visibility: visible;
       }
@@ -135,7 +139,8 @@
 
     color: var(--White-20, rgba(255, 255, 255, 0.20));
     color: var(--White, #FFF);
-    font-feature-settings: 'clig' off, 'liga' off;
+    font-feature-settings: 'clig' off,
+    'liga' off;
     font-family: var(--second-ff, Arail);
     font-size: 4rem;
     font-style: normal;
@@ -194,8 +199,70 @@
     width: 20rem;
     padding: 2.1rem 2.4rem;
   }
+
+  &__phone {
+    display: block;
+    width: max-content;
+    padding: 0.85rem 0;
+    color: var(--Medium-Grey, #777);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 115%;
+    text-transform: uppercase;
+  }
+
+  &__copyright {
+    padding-bottom: 4rem;
+
+    color: var(--White-30, rgba(255, 255, 255, 0.30));
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    letter-spacing: -0.02em;
+  }
+
+  &.desktop-menu--callback {
+    .desktop-menu__content {
+      @include breakpoint(small-tablet) {
+        padding: 10.5rem 1.6rem 1.6rem;
+      }
+    }
+
+    .desktop-menu__head {
+      @include breakpoint(small-tablet) {
+        display: none;
+      }
+    }
+
+    .desktop-menu__body {
+      @include breakpoint(small-tablet) {
+        justify-content: flex-start;
+        padding: 0;
+      }
+    }
+
+    .desktop-menu__footer {
+      @include breakpoint(small-tablet) {
+        display: none;
+      }
+    }
+
+    .callback-form__button {
+      position: fixed;
+      right: 1.6rem;
+      bottom: 1.6rem;
+      left: 1.6rem;
+      z-index: 100;
+
+      width: auto;
+    }
+  }
 }
 
+
+.callback-modal-is-open,
 .desktop-menu-is-open {
   .desktop-menu__content {
     animation: slideFromRight 0.4s ease 0s 1 forwards;
@@ -206,6 +273,7 @@
   0% {
     transform: translateX(100%);
   }
+
   100% {
     transform: translate(0%);
   }
