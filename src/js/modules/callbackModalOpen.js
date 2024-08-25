@@ -1,6 +1,6 @@
 export default () => {
   const modalButtons = document.querySelectorAll('.js-callback-modal-open');
-  const burgers = document.querySelectorAll('.js-burger-menu');
+  const burgers = document.querySelectorAll('.js-burger-menu, .js-mobile-menu-open');
 
   modalButtons.forEach((modalButton) => {
     modalButton.addEventListener('click', () => {

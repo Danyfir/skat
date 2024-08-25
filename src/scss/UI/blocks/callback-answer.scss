@@ -1,0 +1,98 @@
+.callback-answer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include breakpointMF(tablet) {
+    align-items: flex-start;
+  }
+
+  &__icon {
+    flex-shrink: 0;
+    width: 9rem;
+    height: 9rem;
+    margin-bottom: 4rem;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &--success {
+      background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2290%22%20height%3D%2290%22%20viewBox%3D%220%200%2090%2090%22%20fill%3D%22none%22%3E%0A%20%20%3Cg%20clip-path%3D%22url(%23clip0_272_4671)%22%3E%0A%20%20%20%20%3Cmask%20id%3D%22mask0_272_4671%22%20style%3D%22mask-type%3Aluminance%22%20maskUnits%3D%22userSpaceOnUse%22%20x%3D%220%22%20y%3D%22-1%22%20width%3D%2290%22%20height%3D%2291%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M0.25%2089.5V0H89.75V89.5H0.25Z%22%20fill%3D%22white%22%20stroke%3D%22white%22%20stroke-width%3D%220.5%22%2F%3E%0A%20%20%20%20%3C%2Fmask%3E%0A%20%20%20%20%3Cg%20mask%3D%22url(%23mask0_272_4671)%22%3E%0A%20%20%20%20%20%20%3Cpath%20d%3D%22M70.2127%2014.1852L70.2095%2014.1825C63.3786%208.5215%2054.585%205.125%2045%205.125C23.1119%205.125%205.375%2022.8619%205.375%2044.75C5.375%2066.6384%2023.1122%2084.3375%2045%2084.3375C66.8881%2084.3375%2084.625%2066.6006%2084.625%2044.7125C84.625%2040.9774%2084.097%2037.3554%2083.1162%2033.9219C82.8894%2033.0409%2083.3759%2032.166%2084.2545%2031.9034C85.1358%2031.6772%2086.0108%2032.1647%2086.2723%2033.0445C87.3159%2036.7723%2087.875%2040.6864%2087.875%2044.75C87.875%2068.4244%2068.6744%2087.625%2045%2087.625C21.3256%2087.625%202.125%2068.4244%202.125%2044.75C2.125%2021.0754%2021.3257%201.875%2044.9625%201.875C55.3271%201.875%2064.8339%205.56576%2072.2535%2011.6804L72.2534%2011.6805L72.2596%2011.6853C72.9698%2012.234%2073.0685%2013.2693%2072.4852%2013.9498L72.4849%2013.9496L72.4772%2013.9596C71.9285%2014.6698%2070.8932%2014.7685%2070.2127%2014.1852ZM42.7393%2055.9518L42.7394%2055.9517L81.3268%2017.3268C81.3268%2017.3267%2081.3268%2017.3267%2081.3269%2017.3267C81.9792%2016.6744%2082.9834%2016.6744%2083.6357%2017.3268C84.2881%2017.9791%2084.2881%2018.9834%2083.6357%2019.6357L45.0107%2058.2607L45.0092%2058.2622C42.933%2060.3742%2039.53%2060.3764%2037.4143%2058.2607L21.3268%2042.1732C20.6744%2041.5209%2020.6744%2040.5166%2021.3268%2039.8643C21.9791%2039.2119%2022.9834%2039.2119%2023.6357%2039.8643L39.7232%2055.9518C40.5709%2056.7994%2041.8916%2056.7994%2042.7393%2055.9518Z%22%20fill%3D%22%23EBAA5B%22%20stroke%3D%22%23050403%22%20stroke-width%3D%220.5%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%20%20%3C%2Fg%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CclipPath%20id%3D%22clip0_272_4671%22%3E%0A%20%20%20%20%20%20%3Crect%20width%3D%2290%22%20height%3D%2290%22%20fill%3D%22white%22%2F%3E%0A%20%20%20%20%3C%2FclipPath%3E%0A%20%20%3C%2Fdefs%3E%0A%3C%2Fsvg%3E');
+    }
+
+    &--error {
+      background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2290%22%20height%3D%2290%22%20viewBox%3D%220%200%2090%2090%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20fill-rule%3D%22evenodd%22%20clip-rule%3D%22evenodd%22%20d%3D%22M84%2044.5C84%2066.3152%2066.3152%2084%2044.5%2084C34.2484%2084%2024.909%2080.0946%2017.8883%2073.6905L73.6905%2017.8883C80.0946%2024.909%2084%2034.2484%2084%2044.5ZM15.0724%2070.8495L70.8495%2015.0724C63.8593%208.80911%2054.6245%205%2044.5%205C22.6848%205%205%2022.6848%205%2044.5C5%2054.6245%208.80911%2063.8593%2015.0724%2070.8495ZM88%2044.5C88%2068.5244%2068.5244%2088%2044.5%2088C20.4756%2088%201%2068.5244%201%2044.5C1%2020.4756%2020.4756%201%2044.5%201C68.5244%201%2088%2020.4756%2088%2044.5Z%22%20fill%3D%22%23EB1E3D%22%2F%3E%0A%3C%2Fsvg%3E');
+    }
+  }
+
+  &__titles {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpointMF(tablet) {
+      align-items: flex-start;
+      margin-bottom: 3.2rem;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.4rem;
+
+    @include font(2.8rem, 105%, 500);
+    font-family: var(--second-ff, Arail);
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -0.02em;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 1.6rem;
+      @include font(3.2rem, 120%, 600);
+      font-family: var(--second-ff, Arail);
+      letter-spacing: unset;
+      text-align: left;
+    }
+  }
+
+  &__text {
+    color: var(--White-40, rgba(255, 255, 255, 0.40));
+
+    @include font(1.6rem, 130%, 400);
+    text-align: center;
+
+    @include breakpointMF(tablet) {
+      max-width: 40ch;
+
+      @include font(1.8rem, 130%, 400);
+      letter-spacing: unset;
+      text-align: left;
+    }
+  }
+
+  &__buttons {
+    position: fixed;
+    right: 1.6rem;
+    bottom: 1.6rem;
+    left: 1.6rem;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.8rem;
+
+    @include breakpointMF(tablet) {
+      position: static;
+      gap: 1.6rem;
+    }
+
+    .button {
+      width: 100%;
+
+      @include breakpointMF(tablet) {
+        min-width: 36.5rem;
+      }
+    }
+  }
+}

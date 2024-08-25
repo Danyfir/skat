@@ -201,7 +201,7 @@
                     <a class="desktop-menu__phone" href="tel:+78002505999">8 800 250 59 99</a>
                   </div>
                   <div class="desktop-menu__body">
-                    <form class="desktop-menu__callback callback-form" action="">
+                    <form class="desktop-menu__col desktop-menu__callback-form callback-form js-callback-form" action="" method="method" data-need-validation>
                       <p class="callback-form__title">Оставьте&nbsp;заявку<br>на&nbsp;бесплатную консультацию</p>
                       <div class="callback-form__inputs">
                         <div class="callback-form__input input">
@@ -222,6 +222,27 @@
                         </div>
                       </div>
                     </form>
+                    <div class="desktop-menu__col desktop-menu__success callback-answer display-none">
+                      <div class="callback-answer__icon callback-answer__icon--success"></div>
+                      <div class="callback-answer__titles">
+                        <p class="callback-answer__title">Ваша&nbsp;заявка<br>успешно&nbsp;отправлена</p>
+                        <p class="callback-answer__text">Мы обработаем&nbsp;ее и свяжемся с&nbsp;вами в&nbsp;ближайшее время.</p>
+                      </div>
+                      <div class="callback-answer__buttons">
+                        <button class="button button--big callback-answer__close js-close-callback" type="button">Закрыть</button>
+                      </div>
+                    </div>
+                    <div class="desktop-menu__col desktop-menu__error callback-answer display-none">
+                      <div class="callback-answer__icon callback-answer__icon--error"></div>
+                      <div class="callback-answer__titles">
+                        <p class="callback-answer__title">Не&nbsp;удалось<br>отправить&nbsp;заявку</p>
+                        <p class="callback-answer__text">Во время отправки произошла ошибка. Попробуйте снова через несколько минут или обновите страницу.</p>
+                      </div>
+                      <div class="callback-answer__buttons">
+                        <button class="button button--big callback-answer__close js-back-callback" type="button">Повторить попытку</button>
+                        <button class="button button--big button--outlined callback-answer__close js-close-callback" type="button">Отменить</button>
+                      </div>
+                    </div>
                   </div>
                   <div class="desktop-menu__footer">
                     <p class="desktop-menu__copyright">© АО «СКАТ»</p>

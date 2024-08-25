@@ -36,6 +36,7 @@ import aboutTeamMobileSwiper from './modules/aboutTeamMobileSwiper';
 import partnersSwiper from './modules/partnersSwiper';
 
 import callbackModalOpen from './modules/callbackModalOpen';
+import { callbackForm, closeCallbackAnswer, reloadCallbackForm } from './modules/callbackForm';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -75,4 +76,7 @@ documenReady(() => {
   partnersSwiper();
 
   callbackModalOpen();
+  callbackForm();
+  closeCallbackAnswer();
+  reloadCallbackForm();
 });

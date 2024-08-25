@@ -6,7 +6,7 @@
           | 8 800 250 59 99
 
       .desktop-menu__body
-        form.desktop-menu__callback.callback-form(action="")
+        form.desktop-menu__col.desktop-menu__callback-form.callback-form.js-callback-form(action="" method="method" data-need-validation)
           p.callback-form__title
             | Оставьте&nbsp;заявку
             br
@@ -38,6 +38,36 @@
               a(href="#")
                 | персональных данных
 
+        .desktop-menu__col.desktop-menu__success.callback-answer.display-none
+          .callback-answer__icon.callback-answer__icon--success
+
+          .callback-answer__titles
+            p.callback-answer__title
+              | Ваша&nbsp;заявка
+              br
+              | успешно&nbsp;отправлена
+
+            p.callback-answer__text
+              | Мы обработаем&nbsp;ее и свяжемся с&nbsp;вами в&nbsp;ближайшее время.
+
+          .callback-answer__buttons
+            button.button.button--big.callback-answer__close.js-close-callback(type="button") Закрыть
+
+        .desktop-menu__col.desktop-menu__error.callback-answer.display-none
+          .callback-answer__icon.callback-answer__icon--error
+
+          .callback-answer__titles
+            p.callback-answer__title
+              | Не&nbsp;удалось
+              br
+              | отправить&nbsp;заявку
+
+            p.callback-answer__text
+              | Во время отправки произошла ошибка. Попробуйте снова через несколько минут или обновите страницу.
+
+          .callback-answer__buttons
+            button.button.button--big.callback-answer__close.js-back-callback(type="button") Повторить попытку
+            button.button.button--big.button--outlined.callback-answer__close.js-close-callback(type="button") Отменить
 
       .desktop-menu__footer
         p.desktop-menu__copyright

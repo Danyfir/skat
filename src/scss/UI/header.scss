@@ -112,6 +112,13 @@
     visibility: hidden;
     pointer-events: none;
   }
+
+  .header__col {
+    @include breakpoint(small-tablet) {
+      position: relative;
+      z-index: 2000;
+    }
+  }
 }
 
 @keyframes slideFromRight2 {
@@ -123,7 +130,6 @@
     transform: translate(0%);
   }
 }
-
 
 @keyframes transAnim {
   0% {

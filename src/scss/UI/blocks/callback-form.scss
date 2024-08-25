@@ -10,6 +10,7 @@
     @include breakpointMF(tablet) {
       margin-bottom: 3.2rem;
       @include font(3.2rem, 120%, 600);
+      font-family: var(--second-ff, Arail);
       letter-spacing: unset;
     }
   }
