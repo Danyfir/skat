@@ -1,0 +1,18 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-home no-touch"
+  - const pageTitle = "Главная"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      }
+    ]
+  - const isSearchIsOpen = true
+
+
+block content
+  include pages/index/main.pug

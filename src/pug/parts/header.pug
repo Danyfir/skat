@@ -1,7 +1,7 @@
 -
   const menus = [
     {text: "Продукция", link: "./catalog.html", class: ""},
-    {text: "Реализованные проекты", link: "#", class: ""},
+    {text: "Реализованные проекты", link: "./projects.html", class: ""},
     {text: "О компании", link: "./about.html", class: ""},
     {text: "Контакты", link: "./contacts.html", class: ""},
   ];
@@ -22,21 +22,37 @@ header.header(class=headerAnimimatable ? "header-is-animated" : '')
     .header__col.header__col--controls
       .header__desktop-nav.hide-on-mobile
         .header__search
-          +btn-search(class="header__search-btn")
+          a.btn-search(href="./search.html")
+            +icon-multi('search')
 
           button.button.js-callback-modal-open(type="button") оставить заявку
 
-        +burger-menu(class="header__burger-btn js-burger-menu")
+        if isSearchIsOpen
+          a.header__burger-btn.burger-menu(href="javascript:history.back()")
+            span
+        else
+          button.header__burger-btn.header__burger-btn.burger-menu.js-burger-menu(type="button")
+            span
 
       .header__mobile-nav.show-on-mobile
         button.small-button.small-button--outlined.js-callback-modal-open(type="button") заявкa
 
-        +menu-btn(class="header__mobile-menu js-mobile-menu-open")
+        if isSearchIsOpen
+          a.menu-btn.header__mobile-menu(href="javascript:history.back()")
+            +icon-multi('mob-burger')
+            +icon-multi('mob-close')
+        else
+          button.menu-btn.header__mobile-menu.js-mobile-menu-open(type="button")
+            +icon-multi('mob-burger')
+            +icon-multi('mob-close')
 
     .header__desktop-menu.hide-on-mobile
       include desktop-menu.pug
 
     .header__callback-modal
       include callback-modal.pug
+
+    .header__search-modal
+      include search-modal.pug
 
   include breadcrumbs.pug

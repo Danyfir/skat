@@ -1,0 +1,20 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch"
+  - const pageTitle = "Реализованные проекты"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+      {
+        text: 'Реализованные проекты',
+        href: './projects.html'
+      },
+    ];
+
+block content
+  include pages/projects/main.pug

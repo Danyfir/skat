@@ -1,0 +1,189 @@
+.desktop-menu.desktop-menu--search
+  .desktop-menu__container
+    .desktop-menu__content
+      .desktop-menu__head
+        form.desktop-menu__search(action="" autocomplete="off")
+          .desktop-menu__input.desktop-menu__input--site-search.input
+            input#search(
+              class="input__field js-search-tag-target",
+              type="text",
+              name="search",
+              required,
+              placeholder="Введите слово для поиска"
+            )
+            button(type="submit")
+              +icon-multi('search')
+            button.js-clear-search-input(type="button")
+              +icon-multi('clear')
+
+      .desktop-menu__body
+        .desktop-menu__search-section.search-section
+          .search-section__popular
+            p.search-section__popular-title.search-section__title Популярные запросы
+            ul.search-section__popular-list
+              li
+                button.search-section__tag.js-search-tag(type="button") арматура 110-500 кВ
+              li
+                button.search-section__tag.js-search-tag(type="button") арматура 1-35 кВ
+              li
+                button.search-section__tag.js-search-tag(type="button") арматура для СИП
+              li
+                button.search-section__tag.js-search-tag(type="button") защита ВЛИ
+
+          .search-section__result-window
+            .search-section__result-nav
+              button.search-section__result-btn.search-section__title._active(type="button" data-searched-btn='grid') Продукция
+              button.search-section__result-btn.search-section__title(type="button" data-searched-btn='list') проекты
+
+            .search-section__result-item.search-section__result-grid
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+              a.search-section__product#search-p-001(href="#" target="_blank")
+                .search-section__product-image
+                  picture
+                    source(type="image/webp" srcset='./assets/images/products/11.png' media="(max-width: 769px)" alt="")
+                    source(type="image/webp" srcset='./assets/images/products/10.png' media="(min-width: 769px)" alt="")
+                    img(src='./assets/images/products/10.png' alt="")
+                p.search-section__product-desc
+                  | Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95
+
+
+            ol.search-section__result-item.search-section__result-list.display-none
+              li
+                a.search-section__project#search-pr-001(href="#" target="_blank")
+                  h6.search-section__project-title
+                    | Надёжные решения для электроэнергетики
+                  p.search-section__project-text
+                    | Наша компания предлагает широкий ассортимент <span>зажимов</span>, которые
+                    | соответствуют мировым стандартам качества и безопасности. Мы уверены,
+                    | что надежные решения для электроэнергетики, включая высококачественные
+                    | <span>зажимы</span>, являются залогом стабильной и эффективной работы электросетей,
+                    |  обеспечивая надежное электроснабжение для всех пользователей.
+              li
+                a.search-section__project#search-pr-001(href="#" target="_blank")
+                  h6.search-section__project-title
+                    | Современные технологии монтажа СИП: реализованные проекты и перспективы развития
+                  p.search-section__project-text
+                    | Современные технологии монтажа СИП активно развиваются, и внедрение инновационных
+                    | <span>зажимов</span> в реализованные проекты позволяет значительно улучшить надежность и срок
+                    | службы линий электропередачи, открывая новые перспективы для их дальнейшего совершенствования.
+              li
+                a.search-section__project#search-pr-001(href="#" target="_blank")
+                  h6.search-section__project-title
+                    | Модернизация инфраструктуры СИП: новые проекты и перспективы
+                  p.search-section__project-text
+                    | Модернизация инфраструктуры СИП включает в себя внедрение новых проектов, в которых
+                    | использование современных <span>зажимов</span>  играет ключевую роль в повышении надежности и
+                    | эффективности электросетей.
+              li
+                a.search-section__project#search-pr-001(href="#" target="_blank")
+                  h6.search-section__project-title
+                    | Модернизация инфраструктуры СИП: новые проекты и перспективы
+                  p.search-section__project-text
+                    | Модернизация инфраструктуры СИП включает в себя внедрение новых проектов, в которых
+                    | использование современных <span>зажимов</span>  играет ключевую роль в повышении надежности и
+                    | эффективности электросетей.
+              li
+                a.search-section__project#search-pr-001(href="#" target="_blank")
+                  h6.search-section__project-title
+                    | Модернизация инфраструктуры СИП: новые проекты и перспективы
+                  p.search-section__project-text
+                    | Модернизация инфраструктуры СИП включает в себя внедрение новых проектов, в которых
+                    | использование современных <span>зажимов</span>  играет ключевую роль в повышении надежности и
+                    | эффективности электросетей.
+
+          .search-section__previously-searched.previously-searched
+            .previously-searched__top
+              p.previously-searched__title.search-section__title
+                | Вы ранее искали
+
+              button.previously-searched__clear.js-clear-search-results.hide-on-mobile(type="button") Очистить
+
+            .previously-searched
+              ul.previously-searched__list
+                li
+                  a.previously-searched__link(href="#")
+                    | зажим
+                li
+                  a.previously-searched__link(href="#")
+                    | арматура 1-35 кВ
+                li
+                  a.previously-searched__link(href="#")
+                    | для СИП
+
+              button.previously-searched__mobile-clear.js-clear-search-results.show-on-mobile(type="button")
+                | Очистить
+                i
+
+          .search-section__empty.search-section__title
+            | По&nbsp;вашему&nbsp;запросу ничего&nbsp;не&nbsp;найдено

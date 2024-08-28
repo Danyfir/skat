@@ -1,0 +1,237 @@
+-
+  const typeInputs = [
+    {
+      text: "Все типы",
+      id: "radio-type-popular",
+      checked: false ,
+    },
+    {
+      text: "Тип 1",
+      id: "radio-type-serts",
+      checked: false,
+    },
+    {
+      text: "Тип 2",
+      id: "radio-type-cat",
+      checked: false,
+    },
+    {
+      text: "Тип 3",
+      id: "radio-type-prices",
+      checked: false,
+    },
+    {
+      text: "Тип 4",
+      id: "radio-type-specs",
+      checked: false,
+    },
+    {
+      text: "Тип 5",
+      id: "radio-type-pres",
+      checked: false,
+    }
+  ];
+
+-
+  const locInputs = [
+    {
+      text: "Все города",
+      id: "radio-location-brandAll",
+      checked: false,
+    },
+    {
+      text: "Город 1",
+      id: "radio-location-brand1",
+      checked: false,
+    },
+    {
+      text: "Город 2",
+      id: "radio-location-brand2",
+      checked: false,
+    },
+    {
+      text: "Город 3",
+      id: "radio-location-brand3",
+      checked: false,
+    },
+  ]
+
+-
+  const yearInputs = [
+    {
+      text: "Все годы",
+      id: "radio-year-brandAll",
+      checked: false,
+    },
+    {
+      text: "2021",
+      id: "radio-year-brand1",
+      checked: false,
+    },
+    {
+      text: "2022",
+      id: "radio-year-brand2",
+      checked: false,
+    },
+    {
+      text: "2023",
+      id: "radio-year-brand3",
+      checked: false,
+    },
+  ]
+
+section.section.materials.subcategories
+  .materials__site-container.subcategories__site-container
+    .subcategories__heading.subcategories__heading--column
+      h2.subcategories__title
+        | Реализованные проекты
+
+
+      form.subcategories__control-panel.subcategories__control-panel--end.subcategories__projects-filter
+        button.subcategories__filters-open.filters-open.show-on-mobile(type="button" data-path="modal-filters")
+          span Фильтр
+          +icon-multi('filter-icon')
+
+        +selectCheckboxes('materials-select', typeInputs, 'Тип проекта')(class='subcategories__select select--smaller hide-on-mobile')
+
+        +selectCheckboxes('brands-select', locInputs, 'Все города')(class='subcategories__select select--smaller hide-on-mobile')
+
+        +selectCheckboxes('brands-select', yearInputs, 'Год реализации')(class='subcategories__select select--smaller hide-on-mobile')
+
+        button.subcategories__mobile-sorting.show-on-mobile(type="button" data-path="modal-sorting")
+          +icon-multi('sorting')
+
+        .subcategories__view-switcher
+          .view-switcher
+            .view-switcher__row
+              input#list-map-switcher-list(type="radio", hidden, name="list-map-switcher", checked)
+              label.view-switcher__label.view-switcher__for-grid(for="list-map-switcher-list")
+                +icon-multi('view-grid')
+
+              input#list-map-switcher-map(type="radio", hidden, name="list-map-switcher")
+              label.view-switcher__label.view-switcher__for-list(for="list-map-switcher-map")
+                +icon-multi('view-loc')
+
+    .subcategories__main
+      .projects-map.display-none(data-projects-window="list-map-switcher-map")
+        .projects-map__wrapper
+          .projects-map__cover
+            +icon-multi('map')
+          span.projects-map__counter 30
+          .projects-map__dots-wrapper
+
+            .projects-map__dots-group
+              .projects-map__dot.js-project-desk-dot(style="top:30%; left:30%")
+
+
+      .projects-list(data-projects-window="list-map-switcher-list")
+        ul.projects-list__projects
+          li.projects-list__item
+            a.projects-list__link.projects-link(href="#" id="")
+              .projects-link__image
+                picture
+                  source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                  img(src="./assets/images/projects/8.png" alt="")
+
+              .projects-link__info
+                p.projects-link__name
+                  | Комплексные услуги
+                  br
+                  | для&nbsp;систем кабельной арматуры
+
+                .projects-link__footer
+                  .projects-link__location Москва
+
+                  span.projects-link__link
+          li.projects-list__item
+            a.projects-list__link.projects-link(href="#" id="")
+              .projects-link__image
+                picture
+                  source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                  img(src="./assets/images/projects/8.png" alt="")
+
+              .projects-link__info
+                p.projects-link__name
+                  | Комплексные услуги
+                  br
+                  | для&nbsp;систем кабельной арматуры
+
+                .projects-link__footer
+                  .projects-link__location Москва
+
+                  span.projects-link__link
+          li.projects-list__item
+            a.projects-list__link.projects-link(href="#" id="")
+              .projects-link__image
+                picture
+                  source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                  img(src="./assets/images/projects/8.png" alt="")
+
+              .projects-link__info
+                p.projects-link__name
+                  | Комплексные услуги
+                  br
+                  | для&nbsp;систем кабельной арматуры
+
+                .projects-link__footer
+                  .projects-link__location Москва
+
+                  span.projects-link__link
+          li.projects-list__item
+            a.projects-list__link.projects-link(href="#" id="")
+              .projects-link__image
+                picture
+                  source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                  img(src="./assets/images/projects/8.png" alt="")
+
+              .projects-link__info
+                p.projects-link__name
+                  | Комплексные услуги
+                  br
+                  | для&nbsp;систем кабельной арматуры
+
+                .projects-link__footer
+                  .projects-link__location Москва
+
+                  span.projects-link__link
+          li.projects-list__item
+            a.projects-list__link.projects-link(href="#" id="")
+              .projects-link__image
+                picture
+                  source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                  img(src="./assets/images/projects/8.png" alt="")
+
+              .projects-link__info
+                p.projects-link__name
+                  | Комплексные услуги
+                  br
+                  | для&nbsp;систем кабельной арматуры
+
+                .projects-link__footer
+                  .projects-link__location Москва
+
+                  span.projects-link__link
+          li.projects-list__item
+            a.projects-list__link.projects-link(href="#" id="")
+              .projects-link__image
+                picture
+                  source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                  img(src="./assets/images/projects/8.png" alt="")
+
+              .projects-link__info
+                p.projects-link__name
+                  | Комплексные услуги
+                  br
+                  | для&nbsp;систем кабельной арматуры
+
+                .projects-link__footer
+                  .projects-link__location Москва
+
+                  span.projects-link__link
+
+        .projects-list__add.subcategories__add
+          a.button.button--outlined.button--biggest(href="#")
+            | загрузить еще&nbsp;
+            span._count-left 12
+            | &nbsp;из&nbsp;
+            span._total-count 765

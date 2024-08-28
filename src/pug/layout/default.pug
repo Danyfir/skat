@@ -7,7 +7,7 @@ doctype html
 html(lang=siteLang)
   head
     include ../parts/head.pug
-  body(class=bodyClass)
+  body(class=bodyClass, class=isSearchIsOpen ? "search-is-open" : '')
     .page-wrapper
       block header
         include ../parts/header.pug

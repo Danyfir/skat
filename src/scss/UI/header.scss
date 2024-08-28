@@ -72,6 +72,7 @@
     }
   }
 
+  &__search-modal,
   &__callback-modal,
   &__desktop-menu {
     display: none;
@@ -118,6 +119,31 @@
       position: relative;
       z-index: 2000;
     }
+  }
+}
+
+.search-is-open {
+  .header__search-modal {
+    display: block;
+  }
+
+  .header__mobile-menu,
+  .header__burger-btn {
+    position: relative;
+    z-index: 2000;
+  }
+
+  .header__search {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .small-button {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
 }
 

@@ -37,6 +37,8 @@ import partnersSwiper from './modules/partnersSwiper';
 
 import callbackModalOpen from './modules/callbackModalOpen';
 import { callbackForm, closeCallbackAnswer, reloadCallbackForm } from './modules/callbackForm';
+import { toggleSearchedLists, clearResenteSearched, addTagToInput, clearResenteInput } from './modules/searchSectionControl';
+import projectsMapToogle from './modules/projectsMapToogle';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -79,4 +81,10 @@ documenReady(() => {
   callbackForm();
   closeCallbackAnswer();
   reloadCallbackForm();
+
+  toggleSearchedLists();
+  clearResenteSearched();
+  addTagToInput();
+  clearResenteInput();
+  projectsMapToogle();
 });

@@ -55,7 +55,7 @@
     width: 42.8rem;
 
     .input__field {
-      max-height: 40px;
+      max-height: 4rem;
       padding: 1rem 2.4rem;
       border-radius: 6rem;
       border: 1px solid var(--White-20, rgba(255, 255, 255, 0.20));
@@ -123,6 +123,68 @@
         visibility: visible;
       }
     }
+
+    &--site-search {
+      position: relative;
+      overflow: hidden;
+
+      &.input {
+        width: calc(100% - 5.6rem);
+
+        .input__field {
+          max-height: 4.8rem;
+        }
+
+        @include breakpointMF(tablet) {
+          width: 100%;
+          max-width: 57rem;
+        }
+
+        button {
+          &:has(.icon-clear) {
+            opacity: 0;
+            pointer-events: none;
+          }
+        }
+
+        &>input {
+          height: 4.8rem;
+          max-height: 4.8rem;
+
+          &:valid {
+            &~button {
+              &:has(.icon-search) {
+                opacity: 0;
+                pointer-events: none;
+              }
+
+              &:has(.icon-clear) {
+                opacity: 1;
+                pointer-events: all;
+              }
+            }
+          }
+
+          @include breakpointMF(tablet) {
+            max-height: 4rem;
+          }
+        }
+      }
+
+      &>button {
+        position: absolute;
+        top: 50%;
+        right: 0;
+
+        padding: 1.2rem 2.4rem;
+        transform: translateY(-50%);
+
+        .icon {
+          width: 1.6rem;
+          height: 1.6rem;
+        }
+      }
+    }
   }
 
   &__link {
@@ -139,8 +201,6 @@
 
     color: var(--White-20, rgba(255, 255, 255, 0.20));
     color: var(--White, #FFF);
-    font-feature-settings: 'clig' off,
-    'liga' off;
     font-family: var(--second-ff, Arail);
     font-size: 4rem;
     font-style: normal;
@@ -231,6 +291,11 @@
     }
   }
 
+  &__search-section {
+    height: 100%;
+    max-height: 100%;
+  }
+
   &.desktop-menu--callback {
     .desktop-menu__content {
       @include breakpoint(small-tablet) {
@@ -269,8 +334,36 @@
       }
     }
   }
-}
 
+  &.desktop-menu--search {
+    .desktop-menu__content {
+      max-width: 102.4rem;
+      overflow: unset;
+      overflow: hidden;
+
+      @include breakpoint(small-tablet) {
+        padding: 0 1.6rem 1.6rem;
+      }
+    }
+
+    .desktop-menu__head {
+      flex: 0 0 auto;
+      padding-bottom: 3rem;
+
+      @include breakpoint(small-tablet) {
+        padding-top: 1.6rem;
+      }
+    }
+
+    .desktop-menu__body {
+      flex: 1 1 100%;
+
+      justify-content: flex-start;
+      overflow: hidden;
+      padding: 0;
+    }
+  }
+}
 
 .callback-modal-is-open,
 .desktop-menu-is-open {

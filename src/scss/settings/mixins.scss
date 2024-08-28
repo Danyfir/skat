@@ -78,66 +78,90 @@
 
 
 @mixin breakpoint($class) {
-  @if $class == large-desktop {
-      @media only screen and (max-width: (1600px)) {
-          @content;
-      }
-  } @else if $class == desktop {
-      @media only screen and (max-width: (1400px)) {
-          @content;
-      }
-  } @else if $class == laptop {
-      @media only screen and (max-width: (1200px)) {
-          @content;
-      }
-  } @else if $class == tablet {
-      @media only screen and (max-width: (1024px)) {
-          @content;
-      }
-  } @else if $class == small-tablet {
-      @media only screen and (max-width: (769px)) {
-          @content;
-      }
-  } @else if $class == mobile {
-      @media only screen and (max-width: (640px)) {
-          @content;
-      }
-  } @else if $class == small-mobile {
-      @media only screen and (max-width: (576px)) {
-          @content;
-      }
-  } @else if $class == supersmall-mobile {
-      @media only screen and (max-width: (370px)) {
-          @content;
-      }
+  @if $class ==large-desktop {
+    @media only screen and (max-width: (1600px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==desktop {
+    @media only screen and (max-width: (1400px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==laptop {
+    @media only screen and (max-width: (1200px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==tablet {
+    @media only screen and (max-width: (1024px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==small-tablet {
+    @media only screen and (max-width: (769px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==mobile {
+    @media only screen and (max-width: (640px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==small-mobile {
+    @media only screen and (max-width: (576px)) {
+      @content;
+    }
+  }
+
+  @else if $class ==supersmall-mobile {
+    @media only screen and (max-width: (370px)) {
+      @content;
+    }
   }
 }
 
 @mixin breakpointMF($class) {
-  @if $class == large-desktop {
-      @media only screen and (min-width: 1401px) {
-          @content;
-      }
-  } @else if $class == desktop {
-      @media only screen and (min-width: 1201px) {
-          @content;
-      }
-  } @else if $class == laptop {
-      @media only screen and (min-width: 1025px) {
-          @content;
-      }
-  } @else if $class == tablet {
-      @media only screen and (min-width: 769px) {
-          @content;
-      }
-  } @else if $class == small-tablet {
-      @media only screen and (min-width: 641px) {
-          @content;
-      }
-  } @else if $class == mobile {
-      @media only screen and (min-width: 577px) {
-          @content;
-      }
+  @if $class ==large-desktop {
+    @media only screen and (min-width: 1401px) {
+      @content;
+    }
+  }
+
+  @else if $class ==desktop {
+    @media only screen and (min-width: 1201px) {
+      @content;
+    }
+  }
+
+  @else if $class ==laptop {
+    @media only screen and (min-width: 1025px) {
+      @content;
+    }
+  }
+
+  @else if $class ==tablet {
+    @media only screen and (min-width: 769px) {
+      @content;
+    }
+  }
+
+  @else if $class ==small-tablet {
+    @media only screen and (min-width: 641px) {
+      @content;
+    }
+  }
+
+  @else if $class ==mobile {
+    @media only screen and (min-width: 577px) {
+      @content;
+    }
   }
 }
 
@@ -159,32 +183,35 @@
 
 @mixin hoverActive {
   &:hover {
-      .no-touch & {
-          @content;
-      }
+    .no-touch & {
+      @content;
+    }
   }
+
   &:active {
-      .touch & {
-          @content;
-      }
+    .touch & {
+      @content;
+    }
   }
 }
 
 @mixin aspectRatio($class) {
-  @if $class == desktop {
-      @media only screen and (max-aspect-ratio: 16/8) {
-          @content;
-      }
-  } @else if $class == portrait {
-      @media only screen and (max-aspect-ratio: 4/3) {
-          @content;
-      }
+  @if $class ==desktop {
+    @media only screen and (max-aspect-ratio: 16/8) {
+      @content;
+    }
+  }
+
+  @else if $class ==portrait {
+    @media only screen and (max-aspect-ratio: 4/3) {
+      @content;
+    }
   }
 }
 
 @mixin onlyChromiumSupport() {
   @media all and (-webkit-min-device-pixel-ratio:0) and (min-resolution: .001dpcm) {
-      @content;
+    @content;
   }
 }
 
@@ -208,21 +235,27 @@
 }
 
 @mixin aspectRatio($class) {
-  @if $class == desktop {
-      @media only screen and (max-aspect-ratio: 16/8) {
-          @content;
-      }
-  } @else if $class == widthDesktop {
-      @media only screen and (min-aspect-ratio: 21/9) {
-          @content;
-      }
-  } @else if $class == portrait {
-      @media only screen and (max-aspect-ratio: 4/3) {
-          @content;
-      }
-  } @else if $class == square {
-      @media only screen and (max-aspect-ratio: 4/3) {
-          @content;
-      }
+  @if $class ==desktop {
+    @media only screen and (max-aspect-ratio: 16/8) {
+      @content;
+    }
+  }
+
+  @else if $class ==widthDesktop {
+    @media only screen and (min-aspect-ratio: 21/9) {
+      @content;
+    }
+  }
+
+  @else if $class ==portrait {
+    @media only screen and (max-aspect-ratio: 4/3) {
+      @content;
+    }
+  }
+
+  @else if $class ==square {
+    @media only screen and (max-aspect-ratio: 4/3) {
+      @content;
+    }
   }
 }

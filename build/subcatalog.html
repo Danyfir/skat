@@ -28,7 +28,7 @@
             </a>
             <div class="header__menu menu js-hover-opacity hide-on-mobile">
               <a class="menu__link js-hover-link" href="./catalog.html">Продукция</a>
-              <a class="menu__link js-hover-link" href="#">Реализованные проекты</a>
+              <a class="menu__link js-hover-link" href="./projects.html">Реализованные проекты</a>
               <a class="menu__link js-hover-link" href="./about.html">О компании</a>
               <a class="menu__link js-hover-link" href="./contacts.html">Контакты</a>
             </div>
@@ -36,14 +36,14 @@
           <div class="header__col header__col--controls">
             <div class="header__desktop-nav hide-on-mobile">
               <div class="header__search">
-                <button class="btn-search header__search-btn" type="button">
+                <a class="btn-search" href="./search.html">
                   <svg class="icon icon-search">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
                   </svg>
-                </button>
+                </a>
                 <button class="button js-callback-modal-open" type="button">оставить заявку</button>
               </div>
-              <button class="burger-menu header__burger-btn js-burger-menu" type="button"><span></span>
+              <button class="header__burger-btn header__burger-btn burger-menu js-burger-menu" type="button"><span></span>
               </button>
             </div>
             <div class="header__mobile-nav show-on-mobile">
@@ -246,6 +246,214 @@
                   </div>
                   <div class="desktop-menu__footer">
                     <p class="desktop-menu__copyright">© АО «СКАТ»</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="header__search-modal">
+            <div class="desktop-menu desktop-menu--search">
+              <div class="desktop-menu__container">
+                <div class="desktop-menu__content">
+                  <div class="desktop-menu__head">
+                    <form class="desktop-menu__search" action="" autocomplete="off">
+                      <div class="desktop-menu__input desktop-menu__input--site-search input">
+                        <input class="input__field js-search-tag-target" id="search" type="text" name="search" required placeholder="Введите слово для поиска">
+                        <button type="submit">
+                          <svg class="icon icon-search">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#search"></use>
+                          </svg>
+                        </button>
+                        <button class="js-clear-search-input" type="button">
+                          <svg class="icon icon-clear">
+                            <use xlink:href="assets/images/sprites/sprite-multi.svg#clear"></use>
+                          </svg>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="desktop-menu__body">
+                    <div class="desktop-menu__search-section search-section">
+                      <div class="search-section__popular">
+                        <p class="search-section__popular-title search-section__title">Популярные запросы</p>
+                        <ul class="search-section__popular-list">
+                          <li>
+                            <button class="search-section__tag js-search-tag" type="button">арматура 110-500 кВ</button>
+                          </li>
+                          <li>
+                            <button class="search-section__tag js-search-tag" type="button">арматура 1-35 кВ</button>
+                          </li>
+                          <li>
+                            <button class="search-section__tag js-search-tag" type="button">арматура для СИП</button>
+                          </li>
+                          <li>
+                            <button class="search-section__tag js-search-tag" type="button">защита ВЛИ</button>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="search-section__result-window">
+                        <div class="search-section__result-nav">
+                          <button class="search-section__result-btn search-section__title _active" type="button" data-searched-btn="grid">Продукция</button>
+                          <button class="search-section__result-btn search-section__title" type="button" data-searched-btn="list">проекты</button>
+                        </div>
+                        <div class="search-section__result-item search-section__result-grid">
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                          <a class="search-section__product" id="search-p-001" href="#" target="_blank">
+                            <div class="search-section__product-image">
+                              <picture>
+                                <source type="image/webp" srcset="./assets/images/products/11.png" media="(max-width: 769px)" alt="">
+                                <source type="image/webp" srcset="./assets/images/products/10.png" media="(min-width: 769px)" alt="">
+                                <img src="./assets/images/products/10.png" alt="">
+                              </picture>
+                            </div>
+                            <p class="search-section__product-desc">Поддерживающий зажим для&nbsp;СИП-2 серии PS 16-95</p>
+                          </a>
+                        </div>
+                        <ol class="search-section__result-item search-section__result-list display-none">
+                          <li>
+                            <a class="search-section__project" id="search-pr-001" href="#" target="_blank">
+                              <h6 class="search-section__project-title">Надёжные решения для электроэнергетики</h6>
+                              <p class="search-section__project-text">Наша компания предлагает широкий ассортимент<span>зажимов</span>, которые соответствуют мировым стандартам качества и безопасности. Мы уверены, что надежные решения для электроэнергетики, включая высококачественные<span>зажимы</span>, являются залогом стабильной и эффективной работы электросетей, обеспечивая надежное электроснабжение для всех пользователей.</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="search-section__project" id="search-pr-001" href="#" target="_blank">
+                              <h6 class="search-section__project-title">Современные технологии монтажа СИП: реализованные проекты и перспективы развития</h6>
+                              <p class="search-section__project-text">Современные технологии монтажа СИП активно развиваются, и внедрение инновационных<span>зажимов</span>в реализованные проекты позволяет значительно улучшить надежность и срок службы линий электропередачи, открывая новые перспективы для их дальнейшего совершенствования.</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="search-section__project" id="search-pr-001" href="#" target="_blank">
+                              <h6 class="search-section__project-title">Модернизация инфраструктуры СИП: новые проекты и перспективы</h6>
+                              <p class="search-section__project-text">Модернизация инфраструктуры СИП включает в себя внедрение новых проектов, в которых использование современных<span>зажимов</span>играет ключевую роль в повышении надежности и эффективности электросетей.</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="search-section__project" id="search-pr-001" href="#" target="_blank">
+                              <h6 class="search-section__project-title">Модернизация инфраструктуры СИП: новые проекты и перспективы</h6>
+                              <p class="search-section__project-text">Модернизация инфраструктуры СИП включает в себя внедрение новых проектов, в которых использование современных<span>зажимов</span>играет ключевую роль в повышении надежности и эффективности электросетей.</p>
+                            </a>
+                          </li>
+                          <li>
+                            <a class="search-section__project" id="search-pr-001" href="#" target="_blank">
+                              <h6 class="search-section__project-title">Модернизация инфраструктуры СИП: новые проекты и перспективы</h6>
+                              <p class="search-section__project-text">Модернизация инфраструктуры СИП включает в себя внедрение новых проектов, в которых использование современных<span>зажимов</span>играет ключевую роль в повышении надежности и эффективности электросетей.</p>
+                            </a>
+                          </li>
+                        </ol>
+                      </div>
+                      <div class="search-section__previously-searched previously-searched">
+                        <div class="previously-searched__top">
+                          <p class="previously-searched__title search-section__title">Вы ранее искали</p>
+                          <button class="previously-searched__clear js-clear-search-results hide-on-mobile" type="button">Очистить</button>
+                        </div>
+                        <div class="previously-searched">
+                          <ul class="previously-searched__list">
+                            <li>
+                              <a class="previously-searched__link" href="#">зажим</a>
+                            </li>
+                            <li>
+                              <a class="previously-searched__link" href="#">арматура 1-35 кВ</a>
+                            </li>
+                            <li>
+                              <a class="previously-searched__link" href="#">для СИП</a>
+                            </li>
+                          </ul>
+                          <button class="previously-searched__mobile-clear js-clear-search-results show-on-mobile" type="button">Очистить<i></i>
+                          </button>
+                        </div>
+                      </div>
+                      <div class="search-section__empty search-section__title">По&nbsp;вашему&nbsp;запросу ничего&nbsp;не&nbsp;найдено</div>
+                    </div>
                   </div>
                 </div>
               </div>

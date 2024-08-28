@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Команда | Название сайта</title>
+    <title>Реализованные проекты | Название сайта</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-secondary no-touch">
@@ -467,7 +467,7 @@
                 <a class="breadcrumbs__link" href="/">Главная</a>
               </li>
               <li>
-                <a class="breadcrumbs__link" href="./team.html">Команда</a>
+                <a class="breadcrumbs__link" href="./projects.html">Реализованные проекты</a>
               </li>
             </ul>
           </div>
@@ -475,545 +475,250 @@
       </header>
 
       <main class="page-main main">
-        <section class="section subcategories team-section">
-          <div class="team-section__site-container subcategories__site-container">
-            <div class="team-section__heading subcategories__heading subcategories__heading--stretch">
-              <h2 class="subcategories__title">команда скат</h2>
-              <div class="subcategories__scroll hide-on-mobile">
-                <svg class="icon icon-mouse">
-                  <use xlink:href="assets/images/sprites/sprite-multi.svg#mouse"></use>
-                </svg>
-              </div>
+        <section class="section materials subcategories">
+          <div class="materials__site-container subcategories__site-container">
+            <div class="subcategories__heading subcategories__heading--column">
+              <h2 class="subcategories__title">Реализованные проекты</h2>
+              <form class="subcategories__control-panel subcategories__control-panel--end subcategories__projects-filter">
+                <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-filters"><span>Фильтр</span>
+                  <svg class="icon icon-filter-icon">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#filter-icon"></use>
+                  </svg>
+                </button>
+                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Тип проекта</span>
+                  <button class="select__current" type="button">Все типы</button>
+                  <div class="select__dropdown">
+                    <ul class="select__list">
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-type-popular">
+                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-popular"><span class="select__text">Все типы</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-type-serts">
+                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-serts"><span class="select__text">Тип 1</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-type-cat">
+                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-cat"><span class="select__text">Тип 2</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-type-prices">
+                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-prices"><span class="select__text">Тип 3</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-type-specs">
+                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-specs"><span class="select__text">Тип 4</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-type-pres">
+                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-pres"><span class="select__text">Тип 5</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Все города</span>
+                  <button class="select__current" type="button">Все города</button>
+                  <div class="select__dropdown">
+                    <ul class="select__list">
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-location-brandAll">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brandAll"><span class="select__text">Все города</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-location-brand1">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand1"><span class="select__text">Город 1</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-location-brand2">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand2"><span class="select__text">Город 2</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-location-brand3">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand3"><span class="select__text">Город 3</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Год реализации</span>
+                  <button class="select__current" type="button">Все годы</button>
+                  <div class="select__dropdown">
+                    <ul class="select__list">
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-year-brandAll">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brandAll"><span class="select__text">Все годы</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-year-brand1">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand1"><span class="select__text">2021</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-year-brand2">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand2"><span class="select__text">2022</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                      <li class="select__item select__item--first-hidden">
+                        <label class="select__label" for="radio-year-brand3">
+                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand3"><span class="select__text">2023</span><span class="select__tick"></span>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <button class="subcategories__mobile-sorting show-on-mobile" type="button" data-path="modal-sorting">
+                  <svg class="icon icon-sorting">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#sorting"></use>
+                  </svg>
+                </button>
+                <div class="subcategories__view-switcher">
+                  <div class="view-switcher">
+                    <div class="view-switcher__row">
+                      <input id="list-map-switcher-list" type="radio" hidden name="list-map-switcher" checked="checked">
+                      <label class="view-switcher__label view-switcher__for-grid" for="list-map-switcher-list">
+                        <svg class="icon icon-view-grid">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#view-grid"></use>
+                        </svg>
+                      </label>
+                      <input id="list-map-switcher-map" type="radio" hidden name="list-map-switcher">
+                      <label class="view-switcher__label view-switcher__for-list" for="list-map-switcher-map">
+                        <svg class="icon icon-view-loc">
+                          <use xlink:href="assets/images/sprites/sprite-multi.svg#view-loc"></use>
+                        </svg>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div class="team-section__body team-section__body--column">
-              <div class="team-section__nav">
-                <a class="team-section__tab team-section__tab--active js-team-tab" href="#" data-team-tab="team-list-01">Вся команда</a>
-                <a class="team-section__tab js-team-tab" href="#" data-team-tab="team-list-02">Руководители</a>
-                <a class="team-section__tab js-team-tab" href="#" data-team-tab="team-list-03">Эксперты</a>
+            <div class="subcategories__main">
+              <div class="projects-map display-none" data-projects-window="list-map-switcher-map">
+                <div class="projects-map__wrapper">
+                  <div class="projects-map__cover">
+                    <svg class="icon icon-map">
+                      <use xlink:href="assets/images/sprites/sprite-multi.svg#map"></use>
+                    </svg>
+                  </div><span class="projects-map__counter">30</span>
+                  <div class="projects-map__dots-wrapper">
+                    <div class="projects-map__dots-group">
+                      <div class="projects-map__dot js-project-desk-dot" style="top:30%; left:30%"></div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div class="team-section__list-wrapper">
-                <ul class="team-section__list" data-team-list="team-list-01">
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-0">
-                      <div class="team-item__image">
+              <div class="projects-list" data-projects-window="list-map-switcher-list">
+                <ul class="projects-list__projects">
+                  <li class="projects-list__item">
+                    <a class="projects-list__link projects-link" href="#" id="">
+                      <div class="projects-link__image">
                         <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
+                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
+                          <img src="./assets/images/projects/8.png" alt="">
                         </picture>
                       </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
+                      <div class="projects-link__info">
+                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
+                        <div class="projects-link__footer">
+                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
+                        </div>
                       </div>
                     </a>
                   </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-1">
-                      <div class="team-item__image">
+                  <li class="projects-list__item">
+                    <a class="projects-list__link projects-link" href="#" id="">
+                      <div class="projects-link__image">
                         <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
+                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
+                          <img src="./assets/images/projects/8.png" alt="">
                         </picture>
                       </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
+                      <div class="projects-link__info">
+                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
+                        <div class="projects-link__footer">
+                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
+                        </div>
                       </div>
                     </a>
                   </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-2">
-                      <div class="team-item__image">
+                  <li class="projects-list__item">
+                    <a class="projects-list__link projects-link" href="#" id="">
+                      <div class="projects-link__image">
                         <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
+                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
+                          <img src="./assets/images/projects/8.png" alt="">
                         </picture>
                       </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
+                      <div class="projects-link__info">
+                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
+                        <div class="projects-link__footer">
+                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
+                        </div>
                       </div>
                     </a>
                   </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-3">
-                      <div class="team-item__image">
+                  <li class="projects-list__item">
+                    <a class="projects-list__link projects-link" href="#" id="">
+                      <div class="projects-link__image">
                         <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
+                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
+                          <img src="./assets/images/projects/8.png" alt="">
                         </picture>
                       </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
+                      <div class="projects-link__info">
+                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
+                        <div class="projects-link__footer">
+                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
+                        </div>
                       </div>
                     </a>
                   </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-012">
-                      <div class="team-item__image">
+                  <li class="projects-list__item">
+                    <a class="projects-list__link projects-link" href="#" id="">
+                      <div class="projects-link__image">
                         <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
+                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
+                          <img src="./assets/images/projects/8.png" alt="">
                         </picture>
                       </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
+                      <div class="projects-link__info">
+                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
+                        <div class="projects-link__footer">
+                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
+                        </div>
                       </div>
                     </a>
                   </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-112">
-                      <div class="team-item__image">
+                  <li class="projects-list__item">
+                    <a class="projects-list__link projects-link" href="#" id="">
+                      <div class="projects-link__image">
                         <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
+                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
+                          <img src="./assets/images/projects/8.png" alt="">
                         </picture>
                       </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
+                      <div class="projects-link__info">
+                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
+                        <div class="projects-link__footer">
+                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
+                        </div>
                       </div>
                     </a>
                   </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-212">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-3112">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-01223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-11232">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-21223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-311223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <div class="team-section__add subcategories__add">
-                    <a class="button button--outlined button--biggest" href="#">загрузить еще&nbsp;<span class="_count-left">12</span>&nbsp;из&nbsp;<span class="_total-count">765</span>
-                    </a>
-                  </div>
                 </ul>
-                <ul class="team-section__list display-none" data-team-list="team-list-02">
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-0">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-1">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-2">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-3">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-012">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-112">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-212">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-3112">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-01223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-11232">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-21223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-311223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <div class="team-section__add subcategories__add">
-                    <a class="button button--outlined button--biggest" href="#">загрузить еще&nbsp;<span class="_count-left">22</span>&nbsp;из&nbsp;<span class="_total-count">765</span>
-                    </a>
-                  </div>
-                </ul>
-                <ul class="team-section__list display-none" data-team-list="team-list-03">
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-0">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-1">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-2">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-3">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-012">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-112">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-212">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-3112">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-01223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/1.webp" alt="">
-                          <img src="./assets/images/team/1.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Олег Иванов</p>
-                        <p class="team-item__role">Генеральный директор</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-11232">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/2.webp" alt="">
-                          <img src="./assets/images/team/2.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Сергей Петров</p>
-                        <p class="team-item__role">Зам. генерального директора</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-21223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/3.webp" alt="">
-                          <img src="./assets/images/team/3.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Василий Ильин</p>
-                        <p class="team-item__role">Главный проектировщик</p>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="team-section__item">
-                    <a class="team__item team-item" href="#" id="team-item-311223">
-                      <div class="team-item__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/team/4.webp" alt="">
-                          <img src="./assets/images/team/4.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="team-item__info">
-                        <p class="team-item__name">Иван Сидоров</p>
-                        <p class="team-item__role">Главный инженер</p>
-                      </div>
-                    </a>
-                  </li>
-                  <div class="team-section__add subcategories__add">
-                    <a class="button button--outlined button--biggest" href="#">загрузить еще&nbsp;<span class="_count-left">32</span>&nbsp;из&nbsp;<span class="_total-count">765</span>
-                    </a>
-                  </div>
-                </ul>
+                <div class="projects-list__add subcategories__add">
+                  <a class="button button--outlined button--biggest" href="#">загрузить еще&nbsp;<span class="_count-left">12</span>&nbsp;из&nbsp;<span class="_total-count">765</span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
