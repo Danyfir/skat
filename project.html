@@ -12,7 +12,7 @@
     <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#5bbad5">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
-    <title>Реализованные проекты | Название сайта</title>
+    <title>Детальная проекта | Название сайта</title>
     <link rel="stylesheet" href="assets/css/style.min.css?v=0.0.0.0">
   </head>
   <body class="page-secondary no-touch">
@@ -469,6 +469,9 @@
               <li>
                 <a class="breadcrumbs__link" href="./projects.html">Реализованные проекты</a>
               </li>
+              <li>
+                <a class="breadcrumbs__link" href="./project.html">Проект модернизации и реконструкции электрических сетей в городе N с использованием арматуры СИП</a>
+              </li>
             </ul>
           </div>
         </div>
@@ -478,359 +481,136 @@
         <section class="section materials subcategories">
           <div class="materials__site-container subcategories__site-container">
             <div class="subcategories__heading subcategories__heading--column">
-              <h2 class="subcategories__title">Реализованные проекты</h2>
-              <form class="subcategories__control-panel subcategories__control-panel--end subcategories__projects-filter">
-                <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-filters"><span>Фильтр</span>
-                  <svg class="icon icon-filter-icon">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#filter-icon"></use>
-                  </svg>
-                </button>
-                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Тип проекта</span>
-                  <button class="select__current" type="button">Все типы</button>
-                  <div class="select__dropdown">
-                    <ul class="select__list">
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-type-popular">
-                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-popular"><span class="select__text">Все типы</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-type-serts">
-                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-serts"><span class="select__text">Тип 1</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-type-cat">
-                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-cat"><span class="select__text">Тип 2</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-type-prices">
-                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-prices"><span class="select__text">Тип 3</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-type-specs">
-                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-specs"><span class="select__text">Тип 4</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-type-pres">
-                          <input type="checkbox" hidden="hidden" name="materials-select" id="radio-type-pres"><span class="select__text">Тип 5</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Все города</span>
-                  <button class="select__current" type="button">Все города</button>
-                  <div class="select__dropdown">
-                    <ul class="select__list">
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-location-brandAll">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brandAll"><span class="select__text">Все города</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-location-brand1">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand1"><span class="select__text">Город 1</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-location-brand2">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand2"><span class="select__text">Город 2</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-location-brand3">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand3"><span class="select__text">Город 3</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="select subcategories__select select--smaller hide-on-mobile"><span class="select__heading">Год реализации</span>
-                  <button class="select__current" type="button">Все годы</button>
-                  <div class="select__dropdown">
-                    <ul class="select__list">
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-year-brandAll">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brandAll"><span class="select__text">Все годы</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-year-brand1">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand1"><span class="select__text">2021</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-year-brand2">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand2"><span class="select__text">2022</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                      <li class="select__item select__item--first-hidden">
-                        <label class="select__label" for="radio-year-brand3">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand3"><span class="select__text">2023</span><span class="select__tick"></span>
-                        </label>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <button class="subcategories__map-btn show-on-mobile" type="button" data-path="modal-map">
-                  <svg class="icon icon-view-loc">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#view-loc"></use>
-                  </svg>
-                </button>
-                <div class="subcategories__view-switcher hide-on-mobile">
-                  <div class="view-switcher">
-                    <div class="view-switcher__row">
-                      <input id="list-map-switcher-list" type="radio" hidden name="list-map-switcher" checked="checked">
-                      <label class="view-switcher__label view-switcher__for-grid" for="list-map-switcher-list">
-                        <svg class="icon icon-view-grid">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#view-grid"></use>
-                        </svg>
-                      </label>
-                      <input id="list-map-switcher-map" type="radio" hidden name="list-map-switcher">
-                      <label class="view-switcher__label view-switcher__for-list" for="list-map-switcher-map">
-                        <svg class="icon icon-view-loc">
-                          <use xlink:href="assets/images/sprites/sprite-multi.svg#view-loc"></use>
-                        </svg>
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="subcategories__main js-categories-scroll">
-              <div class="projects-map display-none" data-projects-window="list-map-switcher-map">
-                <div class="projects-map__wrapper">
-                  <div class="projects-map__cover">
-                    <svg class="icon icon-map">
-                      <use xlink:href="assets/images/sprites/sprite-multi.svg#map"></use>
-                    </svg>
-                  </div><span class="projects-map__counter hide-on-mobile">30</span>
-                  <div class="projects-map__dots-wrapper">
-                    <div class="projects-map__dots-group">
-                      <div class="projects-map__dot js-project-desk-dot" style="top:50%; left:30%">
-                        <div class="projects-map__dot-popup-wrapper">
-                          <a class="projects-map__dot-popup dot-popup" href="#">
-                            <div class="dot-popup__image">
-                              <picture>
-                                <source type="image/webp" srcset="./assets/images/projects/3.webp" alt="">
-                                <img src="./assets/images/projects/3.png" alt="">
-                              </picture>
-                            </div>
-                            <div class="dot-popup__info">
-                              <p class="dot-popup__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p><span class="dot-popup__location">Москва</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="projects-map__dot js-project-desk-dot" style="top:60%; left:35%">
-                        <div class="projects-map__dot-popup-wrapper">
-                          <a class="projects-map__dot-popup dot-popup" href="#">
-                            <div class="dot-popup__image">
-                              <picture>
-                                <source type="image/webp" srcset="./assets/images/projects/3.webp" alt="">
-                                <img src="./assets/images/projects/3.png" alt="">
-                              </picture>
-                            </div>
-                            <div class="dot-popup__info">
-                              <p class="dot-popup__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p><span class="dot-popup__location">Москва</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                      <div class="projects-map__dot js-project-desk-dot" style="top:65%; left:30%">
-                        <div class="projects-map__dot-popup-wrapper">
-                          <a class="projects-map__dot-popup dot-popup" href="#">
-                            <div class="dot-popup__image">
-                              <picture>
-                                <source type="image/webp" srcset="./assets/images/projects/3.webp" alt="">
-                                <img src="./assets/images/projects/3.png" alt="">
-                              </picture>
-                            </div>
-                            <div class="dot-popup__info">
-                              <p class="dot-popup__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p><span class="dot-popup__location">Москва</span>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <h2 class="subcategories__title subcategories__title--smaller">модернизация и реконструкция электрических сетей в городе N с&nbsp;использованием СИП</h2>
+              <div class="subcategories__big-image">
+                <picture>
+                  <source type="image/webp" srcset="./assets/images/projects/cover.webp" alt="">
+                  <img src="./assets/images/projects/cover.jpg" alt="">
+                </picture>
               </div>
-              <div class="projects-list" data-projects-window="list-map-switcher-list">
-                <ul class="projects-list__projects">
-                  <li class="projects-list__item">
-                    <a class="projects-list__link projects-link" href="#" id="">
-                      <div class="projects-link__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                          <img src="./assets/images/projects/8.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="projects-link__info">
-                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                        <div class="projects-link__footer">
-                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
-                        </div>
-                      </div>
-                    </a>
+            </div>
+            <div class="subcategories__project-article project-article">
+              <nav>
+                <ul>
+                  <li>
+                    <a class="_active" href="#project-article-1">О проекте</a>
                   </li>
-                  <li class="projects-list__item">
-                    <a class="projects-list__link projects-link" href="#" id="">
-                      <div class="projects-link__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                          <img src="./assets/images/projects/8.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="projects-link__info">
-                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                        <div class="projects-link__footer">
-                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
-                        </div>
-                      </div>
-                    </a>
+                  <li>
+                    <a href="#project-article-2">Цели проекта</a>
                   </li>
-                  <li class="projects-list__item">
-                    <a class="projects-list__link projects-link" href="#" id="">
-                      <div class="projects-link__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                          <img src="./assets/images/projects/8.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="projects-link__info">
-                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                        <div class="projects-link__footer">
-                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
-                        </div>
-                      </div>
-                    </a>
+                  <li>
+                    <a href="#project-article-3">Реализация</a>
                   </li>
-                  <li class="projects-list__item">
-                    <a class="projects-list__link projects-link" href="#" id="">
-                      <div class="projects-link__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                          <img src="./assets/images/projects/8.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="projects-link__info">
-                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                        <div class="projects-link__footer">
-                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
-                        </div>
-                      </div>
-                    </a>
+                  <li>
+                    <a href="#project-article-4">Результат</a>
                   </li>
-                  <li class="projects-list__item">
-                    <a class="projects-list__link projects-link" href="#" id="">
-                      <div class="projects-link__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                          <img src="./assets/images/projects/8.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="projects-link__info">
-                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                        <div class="projects-link__footer">
-                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="projects-list__item">
-                    <a class="projects-list__link projects-link" href="#" id="">
-                      <div class="projects-link__image">
-                        <picture>
-                          <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                          <img src="./assets/images/projects/8.png" alt="">
-                        </picture>
-                      </div>
-                      <div class="projects-link__info">
-                        <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                        <div class="projects-link__footer">
-                          <div class="projects-link__location">Москва</div><span class="projects-link__link"></span>
-                        </div>
-                      </div>
-                    </a>
+                  <li>
+                    <a href="#project-article-5">Галерея</a>
                   </li>
                 </ul>
-                <div class="projects-list__add subcategories__add">
-                  <a class="button button--outlined button--biggest" href="#">загрузить еще&nbsp;<span class="_count-left">12</span>&nbsp;из&nbsp;<span class="_total-count">765</span>
-                  </a>
+              </nav>
+              <section>
+                <div id="project-article-1">
+                  <h3>О проекте</h3>
+                  <ul>
+                    <li>
+                      <label>Локация</label>
+                      <h6>г. Нижнекамск</h6>
+                    </li>
+                    <li>
+                      <label>Год реализации</label>
+                      <h6>2023</h6>
+                    </li>
+                    <li>
+                      <label>Заказчик</label>
+                      <h6>ПАО «Россети Московский регион»</h6>
+                    </li>
+                  </ul>
+                  <article>
+                    <h4>В городе N назрела необходимость модернизации и реконструкции электрических сетей. Устаревшее оборудование и инфраструктура не могли обеспечить надёжное и безопасное электроснабжение растущего города.</h4>
+                    <p>Для решения этой проблемы был разработан проект модернизации и реконструкции электрических сетей с использованием арматуры СИП (самонесущий изолированный провод). Проект предусматривал замену устаревшего оборудования, строительство новых линий электропередачи и установку современной арматуры СИП.</p>
+                  </article>
                 </div>
-              </div>
+                <div id="project-article-2">
+                  <h3>Цели проекта</h3>
+                  <ul>
+                    <li><i></i>
+                      <p>Оценка состояния электрических сетей</p>
+                    </li>
+                    <li><i></i>
+                      <p>Определение потребностей города в электроэнергии</p>
+                    </li>
+                    <li><i></i>
+                      <p>Разработка плана модернизации и реконструкции</p>
+                    </li>
+                  </ul>
+                  <img src="./assets/images/projects/article.png" alt="">
+                </div>
+                <div id="project-article-3">
+                  <h3>Реализация</h3>
+                  <p>Этапы реализации проекта включают тщательный анализ текущей инфраструктуры и разработку проектной документации. Затем осуществляется монтаж новых элементов системы, таких как СИП и современные зажимы, что обеспечивает улучшение надежности электроснабжения.</p>
+                  <ol>
+                    <li>
+                      <input id="realize-1" type="checkbox" name="realize" hidden>
+                      <label for="realize-1">Анализ существующей инфраструктуры<i></i>
+                      </label>
+                      <ul>
+                        <li>Оценка состояния электрических сетей</li>
+                        <li>Определение потребностей города в электроэнергии</li>
+                        <li>Разработка плана модернизации и реконструкции</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="realize-2" type="checkbox" name="realize" hidden>
+                      <label for="realize-2">Замена устаревшего оборудования<i></i>
+                      </label>
+                      <ul>
+                        <li>Оценка состояния электрических сетей</li>
+                        <li>Определение потребностей города в электроэнергии</li>
+                        <li>Разработка плана модернизации и реконструкции</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="realize-3" type="checkbox" name="realize" hidden>
+                      <label for="realize-3">Строительство новых линий электропередач<i></i>
+                      </label>
+                      <ul>
+                        <li>Оценка состояния электрических сетей</li>
+                        <li>Определение потребностей города в электроэнергии</li>
+                        <li>Разработка плана модернизации и реконструкции</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <input id="realize-4" type="checkbox" name="realize" hidden>
+                      <label for="realize-4">Установка арматуры СИП<i></i>
+                      </label>
+                      <ul>
+                        <li>Оценка состояния электрических сетей</li>
+                        <li>Определение потребностей города в электроэнергии</li>
+                        <li>Разработка плана модернизации и реконструкции</li>
+                      </ul>
+                    </li>
+                  </ol>
+                  <article>
+                    <h5>Проект модернизации и реконструкции электрических сетей в городе N позволил повысить надёжность и безопасность электроснабжения, снизить потери электроэнергии и улучшить качество электроснабжения. Благодаря этому проекту город N получил возможность дальнейшего развития и подключения новых потребителей.</h5>
+                    <div>
+                      <img src="./assets/images/projects/av.png" alt="">
+                      <p><span>Рустем Хайруллин</span><i>генеральный директор</i>
+                      </p>
+                    </div>
+                  </article>
+                </div>
+                <div id="project-article-4">
+                  <h3>Результат</h3>
+                  <h4>В результате проект позволил повысить надёжность и безопасность электроснабжения, снизить потери электроэнергии и улучшить качество электроснабжения. Благодаря этому проекту город N получил возможность дальнейшего развития и подключения новых потребителей.</h4>
+                </div>
+                <div id="project-article-5">
+                  <h3>Галерея проекта</h3>
+                </div>
+              </section>
             </div>
           </div>
         </section>
-        <div class="modal modal-map">
-          <div class="modal__container modal-map__container" data-target="modal-map">
-            <button class="modal-map__close modal-close" type="button"></button>
-            <div class="modal-popup__tooltip js-modal-popup-tooltip">
-              <svg class="icon icon-tp">
-                <use xlink:href="assets/images/sprites/sprite-multi.svg#tp"></use>
-              </svg>
-              <p>Для&nbsp;перемещения карты<br>листайте&nbsp;вбок</p>
-            </div>
-            <div class="modal-map__wrapper">
-              <div class="modal-map__map-box">
-                <div class="modal-map__map">
-                  <svg class="icon icon-map">
-                    <use xlink:href="assets/images/sprites/sprite-multi.svg#map"></use>
-                  </svg>
-                  <div class="modal-map__dot-wrapper" id="mobile-dot-1">
-                    <div class="modal-map__dot js-project-mob-dot" data-dot-counter="1" style="top:50%; left:30%"></div>
-                    <div class="modal-map__popup modal-popup">
-                      <button class="modal-map__close js-close-dot" type="button"></button>
-                      <div class="modal-popup__body">
-                        <ul class="modal-popup__list">
-                          <li class="modal-popup__item">
-                            <div class="modal-popup__link projects-link">
-                              <div class="projects-link__image">
-                                <picture>
-                                  <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                                  <img src="./assets/images/projects/8.png" alt="">
-                                </picture>
-                              </div>
-                              <div class="projects-link__info">
-                                <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                                <div class="projects-link__footer">
-                                  <div class="projects-link__location">Москва</div>
-                                </div>
-                                <a class="projects-link__btn previously-searched__mobile-clear" href="#">Подробнее</a>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="modal-popup__item">
-                            <div class="modal-popup__link projects-link">
-                              <div class="projects-link__image">
-                                <picture>
-                                  <source type="image/webp" srcset="./assets/images/projects/8.webp" alt="">
-                                  <img src="./assets/images/projects/8.png" alt="">
-                                </picture>
-                              </div>
-                              <div class="projects-link__info">
-                                <p class="projects-link__name">Комплексные услуги<br>для&nbsp;систем кабельной арматуры</p>
-                                <div class="projects-link__footer">
-                                  <div class="projects-link__location">Москва</div>
-                                </div>
-                                <a class="projects-link__btn previously-searched__mobile-clear" href="#">Подробнее</a>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </main>
 
       <footer class="footer">
