@@ -39,6 +39,7 @@ import callbackModalOpen from './modules/callbackModalOpen';
 import { callbackForm, closeCallbackAnswer, reloadCallbackForm } from './modules/callbackForm';
 import { toggleSearchedLists, clearResenteSearched, addTagToInput, clearResenteInput } from './modules/searchSectionControl';
 import projectsMapToogle from './modules/projectsMapToogle';
+import dotsPopupOpen from './modules/dotsPopupOpen';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -87,4 +88,5 @@ documenReady(() => {
   addTagToInput();
   clearResenteInput();
   projectsMapToogle();
+  dotsPopupOpen();
 });

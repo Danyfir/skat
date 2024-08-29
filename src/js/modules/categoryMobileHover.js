@@ -1,7 +1,7 @@
 export default () => {
   const isMobile = window.matchMedia('(max-width: 769px)').matches;
   const trigger = document.querySelector('.js-categories-scroll');
-  const categories = document.querySelectorAll('.category');
+  const categories = document.querySelectorAll('.category, .projects-link');
 
   if(!trigger) return;
 

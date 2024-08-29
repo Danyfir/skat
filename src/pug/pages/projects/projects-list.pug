@@ -86,7 +86,6 @@ section.section.materials.subcategories
       h2.subcategories__title
         | Реализованные проекты
 
-
       form.subcategories__control-panel.subcategories__control-panel--end.subcategories__projects-filter
         button.subcategories__filters-open.filters-open.show-on-mobile(type="button" data-path="modal-filters")
           span Фильтр
@@ -98,13 +97,13 @@ section.section.materials.subcategories
 
         +selectCheckboxes('brands-select', yearInputs, 'Год реализации')(class='subcategories__select select--smaller hide-on-mobile')
 
-        button.subcategories__mobile-sorting.show-on-mobile(type="button" data-path="modal-sorting")
-          +icon-multi('sorting')
+        button.subcategories__map-btn.show-on-mobile(type="button" data-path="modal-map")
+          +icon-multi('view-loc')
 
-        .subcategories__view-switcher
+        .subcategories__view-switcher.hide-on-mobile
           .view-switcher
             .view-switcher__row
-              input#list-map-switcher-list(type="radio", hidden, name="list-map-switcher", checked)
+              input#list-map-switcher-list(type="radio", hidden, name="list-map-switcher", checked  )
               label.view-switcher__label.view-switcher__for-grid(for="list-map-switcher-list")
                 +icon-multi('view-grid')
 
@@ -112,17 +111,59 @@ section.section.materials.subcategories
               label.view-switcher__label.view-switcher__for-list(for="list-map-switcher-map")
                 +icon-multi('view-loc')
 
-    .subcategories__main
+    .subcategories__main.js-categories-scroll
       .projects-map.display-none(data-projects-window="list-map-switcher-map")
         .projects-map__wrapper
           .projects-map__cover
             +icon-multi('map')
-          span.projects-map__counter 30
+          span.projects-map__counter.hide-on-mobile 30
           .projects-map__dots-wrapper
 
             .projects-map__dots-group
-              .projects-map__dot.js-project-desk-dot(style="top:30%; left:30%")
+              .projects-map__dot.js-project-desk-dot(style="top:50%; left:30%")
+                .projects-map__dot-popup-wrapper
+                  a.projects-map__dot-popup.dot-popup(href="#")
+                    .dot-popup__image
+                      picture
+                        source(type="image/webp" srcset="./assets/images/projects/3.webp" alt="")
+                        img(src="./assets/images/projects/3.png" alt="")
+                    .dot-popup__info
+                      p.dot-popup__name
+                        | Комплексные услуги
+                        br
+                        | для&nbsp;систем кабельной арматуры
 
+                      span.dot-popup__location Москва
+
+              .projects-map__dot.js-project-desk-dot(style="top:60%; left:35%")
+                .projects-map__dot-popup-wrapper
+                  a.projects-map__dot-popup.dot-popup(href="#")
+                    .dot-popup__image
+                      picture
+                        source(type="image/webp" srcset="./assets/images/projects/3.webp" alt="")
+                        img(src="./assets/images/projects/3.png" alt="")
+                    .dot-popup__info
+                      p.dot-popup__name
+                        | Комплексные услуги
+                        br
+                        | для&nbsp;систем кабельной арматуры
+
+                      span.dot-popup__location Москва
+
+              .projects-map__dot.js-project-desk-dot(style="top:65%; left:30%")
+                .projects-map__dot-popup-wrapper
+                  a.projects-map__dot-popup.dot-popup(href="#")
+                    .dot-popup__image
+                      picture
+                        source(type="image/webp" srcset="./assets/images/projects/3.webp" alt="")
+                        img(src="./assets/images/projects/3.png" alt="")
+                    .dot-popup__info
+                      p.dot-popup__name
+                        | Комплексные услуги
+                        br
+                        | для&nbsp;систем кабельной арматуры
+
+                      span.dot-popup__location Москва
 
       .projects-list(data-projects-window="list-map-switcher-list")
         ul.projects-list__projects

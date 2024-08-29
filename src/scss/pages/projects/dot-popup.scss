@@ -1,0 +1,56 @@
+.dot-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  overflow: hidden;
+  color: var(--white, #FFF);
+  background: var(--Dark-Grey, #0E0E0E);
+  border-radius: 1.2rem;
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+    height: 13.6rem;
+    aspect-ratio: 2.1 / 1;
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 100%;
+      max-width: unset;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+
+    padding: 2rem;
+  }
+
+  &__name {
+    font-family: var(--second-ff);
+    font-size: 1.4rem;
+    font-weight: 600;
+    line-height: 130%;
+    text-transform: uppercase;
+  }
+
+  &__location {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 125%;
+    opacity: 0.5;
+  }
+}

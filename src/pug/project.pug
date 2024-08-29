@@ -1,0 +1,24 @@
+extends layout/default.pug
+
+block variables
+  - const bodyClass = "page-secondary no-touch"
+  - const pageTitle = "Детальная проекта"
+  - const siteLang = "ru"
+  -
+    const breadcrumbsList = [
+      {
+        text: 'Главная',
+        href: '/'
+      },
+      {
+        text: 'Реализованные проекты',
+        href: './projects.html'
+      },
+      {
+        text: 'Проект модернизации и реконструкции электрических сетей в городе N с использованием арматуры СИП',
+        href: './project.html'
+      },
+    ];
+
+block content
+  include pages/project/main.pug

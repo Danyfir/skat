@@ -81,6 +81,11 @@
       margin-right: 10rem;
       margin-bottom: unset;
     }
+
+    &.subcategories__title--smaller {
+      @extend .text-60;
+      margin-right: 0;
+    }
   }
 
   &__desc {
@@ -210,6 +215,25 @@
     flex: 0 1 auto;
   }
 
+  &__map-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    width: 4.4rem;
+    height: 4.4rem;
+    flex-shrink: 0;
+
+    border: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+    border-radius: 0.8rem;
+
+    .icon {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
+  }
+
   &__mobile-sorting {
     display: flex;
     align-items: center;
@@ -332,6 +356,40 @@
     .icon {
       width: 4rem;
       height: 4rem;
+    }
+  }
+
+  &__big-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1.64 / 1;
+    overflow: hidden;
+    border-radius: 1.6rem;
+
+    @include breakpointMF(tablet) {
+      aspect-ratio: 1.9 / 1;
+    }
+
+    img {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      display: block;
+      width: 100%;
+      max-width: unset;
+      min-height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+  }
+
+  &__project-article {
+    margin-top: 3.2rem;
+
+    @include breakpointMF(tablet) {
+      margin-top: 12rem;
     }
   }
 }

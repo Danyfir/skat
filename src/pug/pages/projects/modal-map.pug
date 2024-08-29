@@ -1,0 +1,54 @@
+.modal.modal-map
+  .modal__container.modal-map__container(data-target="modal-map")
+    button.modal-map__close.modal-close(type="button")
+    .modal-popup__tooltip.js-modal-popup-tooltip
+      +icon-multi('tp')
+      p
+        | Для&nbsp;перемещения карты
+        br
+        | листайте&nbsp;вбок
+    .modal-map__wrapper
+      .modal-map__map-box
+        .modal-map__map
+          +icon-multi('map')
+
+          .modal-map__dot-wrapper(id="mobile-dot-1")
+            .modal-map__dot.js-project-mob-dot(data-dot-counter="1" style="top:50%; left:30%")
+            .modal-map__popup.modal-popup
+              button.modal-map__close.js-close-dot(type="button")
+              .modal-popup__body
+                ul.modal-popup__list
+                  li.modal-popup__item
+                    .modal-popup__link.projects-link
+                      .projects-link__image
+                        picture
+                          source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                          img(src="./assets/images/projects/8.png" alt="")
+
+                      .projects-link__info
+                        p.projects-link__name
+                          | Комплексные услуги
+                          br
+                          | для&nbsp;систем кабельной арматуры
+
+                        .projects-link__footer
+                          .projects-link__location Москва
+
+                        a.projects-link__btn.previously-searched__mobile-clear(href="#") Подробнее
+                  li.modal-popup__item
+                    .modal-popup__link.projects-link
+                      .projects-link__image
+                        picture
+                          source(type="image/webp" srcset="./assets/images/projects/8.webp" alt="")
+                          img(src="./assets/images/projects/8.png" alt="")
+
+                      .projects-link__info
+                        p.projects-link__name
+                          | Комплексные услуги
+                          br
+                          | для&nbsp;систем кабельной арматуры
+
+                        .projects-link__footer
+                          .projects-link__location Москва
+
+                        a.projects-link__btn.previously-searched__mobile-clear(href="#") Подробнее

@@ -202,11 +202,10 @@
 }
 
 .text-60 {
-  font-feature-settings: 'clig' off, 'liga' off;
-  text-transform: uppercase;
   @include font(2.8rem, 105%, 500);
   font-family: var(--second-ff, Arail);
   letter-spacing: -0.02em;
+  text-transform: uppercase;
 
   @include breakpointMF(tablet) {
     @include font(6rem, 100%, 600);

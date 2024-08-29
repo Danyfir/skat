@@ -49,8 +49,13 @@
       min-height: 100%;
       object-fit: cover;
       object-position: center;
-    }
 
+      filter: grayscale(100%);
+
+      transition-property: filter;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out;
+    }
 
     @include breakpointMF(tablet) {
       flex: 0 0 58.3rem;
@@ -152,11 +157,35 @@
     }
   }
 
+  &__btn {
+    margin-top: 0;
+  }
+
   &:hover {
     border-color: var(--Color-Yellow, #EBAA5B);
 
     .projects-link__link {
       opacity: 1;
+    }
+
+    .projects-link__image {
+      img {
+        filter: grayscale(0%);
+      }
+    }
+  }
+
+  &._hover {
+    border-color: var(--Color-Yellow, #EBAA5B);
+
+    .projects-link__link {
+      opacity: 1;
+    }
+
+    .projects-link__image {
+      img {
+        filter: grayscale(0%);
+      }
     }
   }
 }

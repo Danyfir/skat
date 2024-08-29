@@ -1,0 +1,497 @@
+.project-article {
+  display: flex;
+  align-items: stretch;
+
+  @include breakpointMF(tablet) {
+    gap: 15.5rem;
+  }
+
+  &>nav {
+    display: none;
+    flex: 0 1 27rem;
+
+    @include breakpointMF(tablet) {
+      display: block;
+    }
+
+    &>ul {
+      position: sticky;
+      top: 18rem;
+
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.2rem;
+
+      a {
+        position: relative;
+        padding-left: 2.6rem;
+
+        color: var(--White-50, rgba(255, 255, 255, 0.50));
+        font-size: 1.6rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%;
+
+        transition-property: color;
+        transition-duration: 0.3s;
+        transition-timing-function: ease-out;
+
+        &::before {
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+
+          width: 1rem;
+          height: 1px;
+
+          background-color: transparent;
+          content: "";
+
+          transition-property: background;
+          transition-duration: 0.3s;
+          transition-timing-function: ease-out;
+        }
+
+        &._active {
+          color: var(--White, rgba(255, 255, 255, 1));
+
+          &::before {
+            background-color: var(--white, #FFF);
+          }
+        }
+      }
+    }
+  }
+
+  &>section {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10rem;
+
+    @include breakpointMF(tablet) {
+      gap: 16rem;
+    }
+
+    // #project-article-1:
+    &>div {
+      max-width: 85rem;
+
+      ul:has(label) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        margin-bottom: 8.4rem;
+
+        @include breakpointMF(tablet) {
+          flex-direction: row;
+          align-items: center;
+          gap: 1.6rem;
+          margin-bottom: 7.2rem;
+        }
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+
+          flex-grow: 1;
+          padding: 1.2rem 0;
+          border-bottom: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+          @include breakpointMF(tablet) {
+            padding: 0 0 0 2.4rem;
+            border-left: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+            border-bottom: unset;
+          }
+
+          &>label {
+            display: block;
+            color: var(--Achromatic-Medium-Grey, #777);
+            font-size: 1.4rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+
+            @include breakpointMF(tablet) {
+              line-height: 125%;
+            }
+          }
+
+          &>h6 {
+            color: var(--white, #FFF);
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+
+            @include breakpointMF(tablet) {
+              line-height: 125%;
+            }
+          }
+        }
+      }
+
+      &>article {
+        &>h4 {
+          margin-bottom: 1.6rem;
+
+          @include breakpointMF(tablet) {
+            margin-bottom: 2.4rem;
+          }
+        }
+
+        &>p {
+          max-width: 58.5rem;
+        }
+      }
+
+      h3 {
+        margin-bottom: 1.6rem;
+        color: var(--white, #FFF);
+        font-family: var(--second-ff);
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: 120%;
+        text-transform: uppercase;
+
+        @include breakpointMF(tablet) {
+          margin-bottom: 3.2rem;
+          font-size: 3.6rem;
+          line-height: 110%;
+        }
+      }
+
+      &:first-child {
+        &>h3 {
+          @include breakpointMF(tablet) {
+            display: none;
+          }
+        }
+      }
+
+      h4 {
+        color: var(--White, #FFF);
+        font-size: 1.8rem;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%;
+
+        @include breakpointMF(tablet) {
+          font-size: 2.4rem;
+          line-height: 120%;
+        }
+      }
+
+      p {
+        color: var(--White, #FFF);
+        font-size: 1.6rem;
+        line-height: 130%;
+        opacity: 0.7;
+      }
+    }
+
+    // #project-article-2:
+    &>div {
+      ul:has(i) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.6rem;
+
+        li {
+          display: flex;
+          align-items: flex-start;
+          gap: 1.6rem;
+
+          @include breakpointMF(tablet) {
+            align-items: center;
+          }
+
+          &>i {
+            display: block;
+            width: 1.6rem;
+            height: 1.6rem;
+            margin-top: 0.4rem;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2217%22%20viewBox%3D%220%200%2016%2017%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3.28906%208.50012H12.7172%22%20stroke%3D%22%23EBAA5B%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M8.00311%203.78608L12.7172%208.50012L8.00311%2013.2142%22%20stroke%3D%22%23EBAA5B%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            @include breakpointMF(tablet) {
+              margin-top: unset;
+            }
+          }
+
+          &>p {
+            color: var(--White, #FFF);
+            font-size: 1.6rem;
+            line-height: 130%;
+            opacity: 1;
+
+            @include breakpointMF(tablet) {
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 130%;
+            }
+          }
+        }
+      }
+
+      &>img {
+        width: 100%;
+        aspect-ratio: 1.75 / 1;
+        margin-top: 4rem;
+        border-radius: 1.6rem;
+
+        @include breakpointMF(tablet) {
+          margin-top: 6rem;
+        }
+      }
+
+      &:has(img) {
+        max-width: 66.7rem;
+      }
+    }
+
+    // #project-article-3:
+    &>div {
+      &>p {
+        margin-bottom: 4rem;
+      }
+
+      &>ol {
+        &:has(input[type="checkbox"]) {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+
+          counter-reset: olitem;
+
+          &>li {
+            list-style: none;
+
+            counter-increment: olitem;
+
+            &::before {
+              content: none;
+            }
+
+            &>label {
+              position: relative;
+
+              display: flex;
+              align-items: flex-start;
+              justify-content: space-between;
+              column-gap: 1.2rem;
+
+              padding: 2rem 0;
+              padding-left: 3.8rem;
+
+              color: var(--White, #FFF);
+              font-family: var(--second-ff);
+              font-size: 1.6rem;
+              line-height: 130%;
+              text-transform: uppercase;
+
+              border-top: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+              cursor: pointer;
+
+              &::before {
+                position: absolute;
+                top: 2rem;
+                left: 0;
+                content: '[ 0' counter(olitem)' ]';
+
+                color: var(--Achromatic-White, var(--white, #FFF));
+                font-family: var(--main-ff);
+                font-size: 1.2rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 145%;
+
+                @include breakpointMF(tablet) {
+                  top: 2.4rem;
+                  font-size: 1.4rem;
+                  line-height: 125%;
+                }
+              }
+
+              @include breakpointMF(tablet) {
+                align-items: center;
+                column-gap: 1.6rem;
+                padding: 2.4rem 0;
+                padding-left: 5.2rem;
+              }
+
+              i {
+                display: block;
+                width: 1.6rem;
+                height: 1.6rem;
+                background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M8%203.33337V12.6667%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M3.33594%208H12.6693%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+              }
+            }
+
+            &>ul {
+              display: none;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 1.2rem;
+
+              padding-left: 1.6rem;
+              padding-bottom: 2.8rem;
+
+              @include breakpointMF(tablet) {
+                gap: 0.8rem;
+                padding-left: 5rem;
+              }
+
+              li {
+                position: relative;
+                padding-left: 1.8rem;
+
+                &::before {
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+
+                  display: block;
+
+                  width: 6px;
+                  height: 2.1rem;
+                  flex-shrink: 0;
+
+                  background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%226%22%20height%3D%227%22%20viewBox%3D%220%200%206%207%22%20fill%3D%22none%22%3E%0A%20%20%3Ccircle%20cx%3D%223%22%20cy%3D%223.5%22%20r%3D%223%22%20fill%3D%22%23EBAA5B%22%2F%3E%0A%3C%2Fsvg%3E');
+                  background-size: 6px 6px;
+                  background-repeat: no-repeat;
+                  background-position: center;
+                  content: "";
+                }
+              }
+            }
+
+            input[type="checkbox"] {
+              &:checked {
+                &+label {
+                  i {
+                    background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M3.33594%208H12.6693%22%20stroke%3D%22white%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E');
+                  }
+                }
+
+                &~ul {
+                  display: flex;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &>article {
+        &:has(img) {
+          position: relative;
+          margin-top: 5.4rem;
+          padding: 2.4rem;
+
+          background-color: var(--Grey, #1D1D1D);
+          border-radius: 2rem;
+
+          &::before {
+            position: absolute;
+            top: 2.4rem;
+            left: 2.4rem;
+
+            display: block;
+            width: 1.8rem;
+            height: 1.8rem;
+
+            background-image: url('data:image/svg+xml, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%20fill%3D%22none%22%3E%0A%20%20%3Cpath%20d%3D%22M13.3024%209.44404C13.9323%209.44236%2014.5511%209.28432%2015.0989%208.9852C14.3274%2010.907%2013.0478%2012.6016%2011.3867%2013.9013C11.2916%2013.9766%2011.2129%2014.0692%2011.1551%2014.1738C11.0972%2014.2784%2011.0613%2014.3929%2011.0495%2014.5109C11.0376%2014.6288%2011.05%2014.7478%2011.086%2014.8611C11.1219%2014.9745%2011.1807%2015.0799%2011.2589%2015.1713C11.3372%2015.2628%2011.4334%2015.3385%2011.5421%2015.3942C11.6508%2015.4499%2011.7698%2015.4844%2011.8924%2015.4958C12.0149%2015.5072%2012.1386%2015.4953%2012.2564%2015.4607C12.3741%2015.4261%2012.4836%2015.3695%2012.5787%2015.2942C15.9844%2012.6313%2017.5%208.94423%2017.5%206.65823C17.4941%205.84994%2017.2438%205.06079%2016.7796%204.38712C16.3155%203.71345%2015.6575%203.18442%2014.8861%202.86461C14.3868%202.63188%2013.8401%202.50874%2013.2854%202.5041C12.7971%202.48126%2012.3091%202.55408%2011.851%202.71816C11.3928%202.88223%2010.9741%203.13414%2010.6201%203.45861C10.2662%203.78307%209.98436%204.17333%209.79182%204.60573C9.59928%205.03812%209.5%205.50364%209.5%205.97407C9.5%206.44449%209.59928%206.91001%209.79182%207.34241C9.98436%207.7748%2010.2662%208.16506%2010.6201%208.48953C10.9741%208.81399%2011.3928%209.0659%2011.851%209.22997C12.3091%209.39405%2012.7971%209.46687%2013.2854%209.44404L13.3024%209.44404Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.3%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M4.05636%209.4184C4.64814%209.41672%205.22949%209.25889%205.74421%208.96017C5.01964%2010.8774%203.82058%2012.5692%202.26452%2013.8697C2.16712%2013.9416%202.08513%2014.033%202.02357%2014.1384C1.96202%2014.2439%201.92221%2014.3611%201.90659%2014.4829C1.89098%2014.6046%201.89989%2014.7284%201.93278%2014.8465C1.96567%2014.9646%202.02185%2015.0746%202.09784%2015.1697C2.17384%2015.2647%202.26805%2015.3429%202.37469%2015.3993C2.48132%2015.4558%202.59811%2015.4893%202.71788%2015.4978C2.83765%2015.5064%202.95786%2015.4897%203.07112%2015.449C3.18437%2015.4082%203.28827%2015.3442%203.37642%2015.2608C6.57613%2012.6014%208%208.91926%208%206.63631C7.99621%205.83824%207.76791%205.05817%207.34236%204.38926C6.91682%203.72035%206.31202%203.19089%205.60022%202.86413C5.11901%202.62572%204.59103%202.50259%204.05636%202.50409C3.59763%202.48128%203.13915%202.55401%202.70873%202.71787C2.2783%202.88172%201.88489%203.13329%201.55235%203.45732C1.2198%203.78136%200.95506%204.1711%200.774167%204.60292C0.593274%205.03473%200.499999%205.49963%200.499999%205.96943C0.499999%206.43922%200.593273%206.90412%200.774167%207.33594C0.95506%207.76776%201.2198%208.1575%201.55235%208.48153C1.88489%208.80556%202.2783%209.05713%202.70873%209.22099C3.13915%209.38484%203.59763%209.45757%204.05636%209.43476L4.05636%209.4184Z%22%20fill%3D%22white%22%20fill-opacity%3D%220.3%22%2F%3E%0A%3C%2Fsvg%3E');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+
+            content: "";
+
+            @include breakpointMF(tablet) {
+              top: 3.2rem;
+              left: 3.2rem;
+            }
+          }
+
+          @include breakpointMF(tablet) {
+            margin-top: 10rem;
+            padding: 3.2rem;
+            padding-left: 7rem;
+          }
+
+          &>h5 {
+            margin-bottom: 2.4rem;
+            padding-top: 3rem;
+
+            color: var(--White, #FFF);
+            font-size: 1.6rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 130%;
+
+            @include breakpointMF(tablet) {
+              padding-top: 0;
+
+              font-size: 1.8rem;
+              line-height: 140%;
+            }
+          }
+
+          &>div {
+            display: flex;
+            align-items: center;
+            gap: 1.6rem;
+
+            &>img {
+              width: 3.8rem;
+              height: 3.8rem;
+              overflow: hidden;
+              border-radius: 100%;
+            }
+
+            &>p {
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 0.2rem;
+
+              &>span {
+                color: var(--White, #FFF);
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+              }
+
+              &>i {
+                color: var(--White-40, rgba(255, 255, 255, 0.40));
+                font-size: 1.4rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 120%;
+              }
+            }
+          }
+        }
+      }
+
+      &:has(ol) {
+        max-width: 66.7rem;
+      }
+    }
+  }
+}
