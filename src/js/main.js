@@ -40,6 +40,9 @@ import { callbackForm, closeCallbackAnswer, reloadCallbackForm } from './modules
 import { toggleSearchedLists, clearResenteSearched, addTagToInput, clearResenteInput } from './modules/searchSectionControl';
 import projectsMapToogle from './modules/projectsMapToogle';
 import dotsPopupOpen from './modules/dotsPopupOpen';
+import projectCarousel from './modules/projectCarousel';
+import tripleCarousel from './modules/tripleCarousel';
+import articleLinksControl from './modules/articleLinksControl';
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -89,4 +92,7 @@ documenReady(() => {
   clearResenteInput();
   projectsMapToogle();
   dotsPopupOpen();
+  projectCarousel();
+  tripleCarousel();
+  articleLinksControl();
 });

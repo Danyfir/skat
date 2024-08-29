@@ -66,7 +66,6 @@
   }
 
   &>section {
-    flex: 1 1 100%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -74,11 +73,17 @@
 
     @include breakpointMF(tablet) {
       gap: 16rem;
+      flex: 1 1 100%;
     }
 
     // #project-article-1:
     &>div {
-      max-width: 85rem;
+      width: 100%;
+      max-width: 100%;
+
+      @include breakpointMF(tablet) {
+        max-width: 85rem;
+      }
 
       ul:has(label) {
         display: flex;
@@ -491,6 +496,126 @@
 
       &:has(ol) {
         max-width: 66.7rem;
+      }
+    }
+
+    // #project-article-5:
+    &>div {
+      &:has(.js-project-carousel) {
+        overflow: hidden;
+      }
+
+      .js-project-carousel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1.6rem;
+
+        .swiper-slide {
+          border-radius: 0.8rem;
+          overflow: hidden;
+
+          img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+
+            display: block;
+            width: 101%;
+            max-width: unset;
+            min-height: 101%;
+            object-fit: cover;
+            object-position: center;
+          }
+        }
+
+        .swiper-navigation {
+          position: absolute;
+          bottom: 1.6rem;
+          right: 1.6rem;
+          z-index: 200;
+
+          display: flex;
+          align-items: center;
+          column-gap: 0.8rem;
+
+          @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+          }
+        }
+
+        .js-main-project-swiper {
+          height: 20rem;
+          width: 100%;
+          aspect-ratio: 1.5 / 1;
+
+          @include breakpointMF(tablet) {
+            height: 100%;
+            aspect-ratio: 1.75 / 1;
+            overflow: hidden;
+
+            border-radius: 1.6rem;
+          }
+
+          // &.swiper {
+          //   max-width: unset;
+          //   margin: 0 calc(var(--content-padding, 1.6rem) * -1);
+          //   padding: 0 var(--content-padding, 1.6rem);
+
+          //   @include breakpointMF(tablet) {
+          //     margin: 0;
+          //     padding: 0;
+          //   }
+          // }
+
+          .swiper-wrapper {
+            height: auto;
+
+            @include breakpointMF(tablet) {
+              height: 100%;
+            }
+          }
+
+          .swiper-slide {
+            aspect-ratio: 1.5 / 1;
+            height: auto;
+
+            @include breakpointMF(tablet) {
+              aspect-ratio: unset;
+            }
+          }
+        }
+
+        .js-thumbs-project-swiper {
+          width: 100%;
+          height: 6.4rem;
+
+          @include breakpoint(small-tablet) {
+            @include visuallyHidden();
+          }
+
+          .swiper-wrapper {
+            height: 100%;
+
+            .swiper-slide {
+              overflow: hidden;
+              height: 100%;
+              aspect-ratio: 1.56 / 1;
+              filter: grayscale(100%);
+
+              transition-property: filter, border;
+              transition-timing-function: ease-out;
+              transition-duration: 0.4s;
+
+              &.swiper-slide-thumb-active {
+                filter: grayscale(0%);
+                border: 1px solid var(--Color-Yellow, #EBAA5B);
+              }
+            }
+          }
+        }
       }
     }
   }
