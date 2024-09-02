@@ -8,7 +8,6 @@ export default () => {
     const thumbs =carousel.querySelector('.js-thumbs-project-swiper');
 
     const swiper = new Swiper(thumbs, {
-      loop: true,
       spaceBetween: 16,
       slidesPerView: 6,
       freeMode: true,
@@ -16,7 +15,6 @@ export default () => {
     });
 
     new Swiper(main, {
-      loop: true,
       slidesPerView: 1.15,
       spaceBetween: 10,
       watchSlidesProgress: true,
@@ -35,8 +33,19 @@ export default () => {
           slidesPerView: 1,
           spaceBetween: 10,
         }
-      }
-    });
+      },
 
+      on: {
+        init: function () {
+          const slides = carousel.querySelectorAll('.swiper.js-thumbs-project-swiper .swiper-slide');
+
+          slides.forEach((slide, index) => {
+            slide.addEventListener('mouseover', () => {
+              this.slideTo(index);
+            })
+          })
+        },
+      },
+    });
   })
 }

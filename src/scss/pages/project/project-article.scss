@@ -272,7 +272,7 @@
       }
 
       &>ol {
-        &:has(input[type="checkbox"]) {
+        &:has(input[type="radio"]) {
           display: flex;
           flex-direction: column;
           align-items: stretch;
@@ -384,7 +384,7 @@
               }
             }
 
-            input[type="checkbox"] {
+            input[type="radio"] {
               &:checked {
                 &+label {
                   i {
@@ -614,6 +614,10 @@
                 border: 1px solid var(--Color-Yellow, #EBAA5B);
               }
             }
+          }
+
+          .swiper-slide {
+            cursor: pointer;
           }
         }
       }

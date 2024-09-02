@@ -47,7 +47,10 @@
 
   &__link {
     display: block;
-    font-feature-settings: 'clig' off, 'liga' off;
+    overflow: hidden;
+    max-width: 60ch;
+    text-overflow: ellipsis;
+
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 400;
