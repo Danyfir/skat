@@ -1,6 +1,6 @@
 -
   const menus = [
-    {text: "Продукция", link: "./catalog.html", class: ""},
+    {text: "Продукция", link: "./catalog.html", class: "menu__link--active"},
     {text: "Реализованные проекты", link: "./projects.html", class: ""},
     {text: "О компании", link: "./about.html", class: ""},
     {text: "Контакты", link: "./contacts.html", class: ""},
@@ -15,9 +15,9 @@ header.header(class=headerAnimimatable ? "header-is-animated" : '')
     .header__col
       +logo(class="header__logo")
 
-      .header__menu.menu.js-hover-opacity.hide-on-mobile
+      .header__menu.menu.hide-on-mobile(class=isMainPage ? "js-hover-opacity" : '')
         for item in menus
-          a.menu__link.js-hover-link(href= item.link, class= item.class)= item.text
+          a.menu__link.js-hover-link(href= item.link, class= item.class, class=!isMainPage ? "menu__link--hover" : '')= item.text
 
     .header__col.header__col--controls
       .header__desktop-nav.hide-on-mobile
@@ -29,10 +29,12 @@ header.header(class=headerAnimimatable ? "header-is-animated" : '')
 
         if isSearchIsOpen
           a.header__burger-btn.burger-menu(href="javascript:history.back()")
-            span
+            +icon-multi('burger-lines')
+            +icon-multi('burger-cross')
         else
           button.header__burger-btn.header__burger-btn.burger-menu.js-burger-menu(type="button")
-            span
+            +icon-multi('burger-lines')
+            +icon-multi('burger-cross')
 
       .header__mobile-nav.show-on-mobile
         button.small-button.small-button--outlined.js-callback-modal-open(type="button") заявкa

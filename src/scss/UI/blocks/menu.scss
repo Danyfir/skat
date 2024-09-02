@@ -19,6 +19,18 @@
         opacity: 1;
       }
     }
+
+    &.menu__link--hover {
+      opacity: 0.4;
+
+      @include hoverActive() {
+        opacity: 1;
+      }
+
+      &.menu__link--active {
+        opacity: 1;
+      }
+    }
   }
 
   &.menu--column {

@@ -69,6 +69,11 @@
     align-items: stretch;
     justify-content: center;
     padding: 13rem 0;
+
+    &.desktop-menu__body--fg {
+      margin-top: 4rem;
+      padding: 0;
+    }
   }
 
   &__row {
