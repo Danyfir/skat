@@ -191,6 +191,8 @@
   }
 
   @include hoverActive() {
+    z-index: 1000;
+
     .select__current {
       &::after {
         transform: translateY(-50%) rotate(0deg);

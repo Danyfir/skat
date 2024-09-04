@@ -586,7 +586,7 @@
             <div class="about-intro__header">
               <p class="about-intro__title"><span class="about-intro__text-orange">CКАТ —&nbsp;</span><span class="about-intro__text-white">современная компания по&nbsp;разработке и&nbsp;производству</span><br><span class="about-intro__text-grey">кабельной&nbsp;арматуры</span>
               </p>
-              <a class="about-intro__video-btn video-btn" href="#" data-fancybox>
+              <a class="about-intro__video-btn video-btn js-video-button" href="#" data-fancybox data-src="#dialog-content">
                 <div class="video-btn__body">
                   <div class="video-btn__poster">
                     <img src="./assets/images/about/poster.png" alt="">
@@ -1115,6 +1115,11 @@
             </div>
           </div>
         </section>
+        <div id="dialog-content" data-video-modal style="display:none;">
+          <video controls="true" muted autoplay>
+            <source src="./assets/images/video.mp4" type="video/mp4">
+          </video>
+        </div>
       </main>
 
       <footer class="footer">

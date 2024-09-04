@@ -277,3 +277,52 @@
     font-family: var(--second-ff, Arail);
   }
 }
+
+.fancybox__content {
+  &[data-video-modal] {
+    z-index: 5000;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+
+    background-color: var(--back, #101010);
+    border-radius: 1rem;
+  }
+
+  &>.f-button.is-close-btn {
+    --f-button-width: 6rem;
+    --f-button-height: 6rem;
+    --f-button-bg: var(--White-30, rgba(255, 255, 255, 0.3));
+    --f-button-hover-bg: var(--White-20, rgba(255, 255, 255, 0.2));
+    --f-button-border-radius: 50%;
+
+    top: 2rem;
+    right: 2rem;
+
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+}
+
+.fancybox__container {
+  --fancybox-zIndex: 5000;
+
+  #dialog-content {
+    display: grid;
+    place-items: center;
+
+    video {
+      width: 95%;
+
+      @include breakpointMF(tablet) {
+        width: 70%;
+      }
+    }
+  }
+
+  .fancybox__slide {
+    padding-top: 0 !important;
+  }
+}

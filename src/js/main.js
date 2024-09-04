@@ -7,6 +7,7 @@ import initMap from './modules/footerMap';
 import detectTouch from './modules/detectTouch';
 import masks from './modules/masks';
 import validation from './modules/validation';
+import fancybox from './modules/fancybox';
 
 import loaderAnimation from './modules/loaderAnimation';
 import scrollToTop from './modules/scrollToTop';
@@ -50,6 +51,7 @@ documenReady(() => {
   detectTouch();
   masks();
   validation();
+  fancybox();
 
   setHeaderPadding();
   loaderAnimation();
