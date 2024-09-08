@@ -192,6 +192,17 @@
     }
   }
 
+  &__label {
+    display: block;
+    width: 17ch;
+    cursor: pointer;
+
+    &.desktop-menu__label--clicked {
+      pointer-events: none;
+    }
+
+  }
+
   &__link {
     display: block;
     margin-bottom: 2rem;
@@ -203,6 +214,8 @@
     &._low-opacity {
       color: var(--White-20, rgba(255, 255, 255, 0.20));
     }
+
+    &:not(._low-opacity) {}
 
     color: var(--White-20, rgba(255, 255, 255, 0.20));
     color: var(--White, #FFF);
@@ -218,12 +231,6 @@
     @include hoverActive() {
       color: var(--White, #FFF);
     }
-  }
-
-  &__label {
-    display: block;
-    width: 17ch;
-    cursor: pointer;
   }
 
   &__footer {

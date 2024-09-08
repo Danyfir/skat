@@ -1,36 +1,42 @@
 -
   const menuAr = [
     {
+      href: './catalog.html',
       text: "Продукция",
       id: "radio-input-image-1",
       img: "./assets/images/menus/1.png",
       imgW: "./assets/images/menus/1.webp"
     },
     {
+      href: './projects.html',
       text: "Реализованные проекты",
       id: "radio-input-image-2",
       img: "./assets/images/menus/2.png",
       imgW: "./assets/images/menus/2.webp"
     },
     {
+      href: './about.html',
       text: "О компании",
       id: "radio-input-image-3",
       img: "./assets/images/menus/3.png",
       imgW: "./assets/images/menus/3.webp"
     },
     {
+      href: './team.html',
       text: "КОМАНДА",
       id: "radio-input-image-4",
       img: "./assets/images/menus/4.png",
       imgW: "./assets/images/menus/4.webp"
     },
     {
+      href: './materials.html',
       text: "ДОКУМЕНТАЦИЯ",
       id: "radio-input-image-5",
       img: "./assets/images/menus/5.png",
       imgW: "./assets/images/menus/5.webp"
     },
     {
+      href: './contacts.html',
       text: "Контакты",
       id: "radio-input-image-6",
       img: "./assets/images/menus/6.png",
@@ -57,7 +63,7 @@
         .desktop-menu__row
           .desktop-menu__menu.js-hover-opacity
             for item in menuAr
-              a.desktop-menu__link.js-hover-link(href="#")
+              a.desktop-menu__link.js-hover-link(href=item.href)
                 label.desktop-menu__label(for=item.id)= item.text
 
           ul.desktop-menu__images

@@ -1,68 +1,71 @@
 .product-params {
-    &__title  {
-        margin-bottom: 2.8rem;
-        font-feature-settings: 'clig' off, 'liga' off;
-        font-family: var(--second-ff, "Ruda");
-        font-size: 1.6rem;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 130%;
-        text-transform: uppercase;
+  &__title {
+    margin-bottom: 2.8rem;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: var(--second-ff, "Ruda");
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    text-transform: uppercase;
+
+    @include breakpointMF(tablet) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  &__item {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    column-gap: 0.8rem;
+
+    padding: 1.2rem 0;
+    border-bottom: 1px solid var(--Opacity-White-10, rgba(255, 255, 255, 0.10));
+
+    &:last-child {
+      border-bottom: 0 solid transparent;
+    }
+
+    &>span {
+      flex: 1 1 50%;
+      font-feature-settings: 'clig' off, 'liga' off;
+
+      &:last-child {
+        opacity: 0.4;
+      }
+
+      &:first-child {
+        flex-shrink: 0;
 
         @include breakpointMF(tablet) {
-            margin-bottom: 2rem;
+          flex: 0 0 auto;
+          width: 16rem;
         }
+      }
+
+      @include breakpointMF(tablet) {
+        flex: 1 1 auto;
+      }
     }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
+    @include breakpointMF(tablet) {
+      margin-bottom: 0.8rem;
+      padding: unset;
+      column-gap: 1.6rem;
+      border-width: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
+  }
 
-    &__item {
-        width: 100%;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        column-gap: 0.8rem;
-
-        padding: 1.2rem 0;
-        border-bottom: 1px solid var(--Opacity-White-10, rgba(255, 255, 255, 0.10));
-
-        &:last-child {
-            border-bottom: 0 solid transparent;
-        }
-
-        & > span {
-            flex: 1 1 50%;
-            font-feature-settings: 'clig' off, 'liga' off;
-
-            &:last-child {
-                opacity: 0.4;
-            }
-
-            &:first-child {
-                @include breakpointMF(tablet) {
-                    flex: unset;
-                    min-width: 15.4rem;
-                }
-            }
-
-            @include breakpointMF(tablet) {
-                flex: 1 1 auto;
-            }
-        }
-
-        @include breakpointMF(tablet) {
-            margin-bottom: 0.8rem;
-            padding: unset;
-            column-gap: 1.6rem;
-            border-width: 0;
-
-            &:last-child {
-                margin-bottom: 0;
-            }
-        }
-    }
 }

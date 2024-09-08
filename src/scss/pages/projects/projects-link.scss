@@ -86,7 +86,7 @@
     text-transform: uppercase;
 
     @include breakpointMF(tablet) {
-      max-width: 29ch;
+      max-width: 40ch;
 
       font-size: 2.4rem;
       font-weight: 600;

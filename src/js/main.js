@@ -13,6 +13,7 @@ import loaderAnimation from './modules/loaderAnimation';
 import scrollToTop from './modules/scrollToTop';
 import menuOpen from './modules/menuOpen';
 import menuHoverImages from './modules/menuHoverImages';
+import menuLinkTransit from './modules/menuLinkTransit';
 import setFixedHeader from './modules/setFixedHeader';
 import setHeaderPadding from './modules/setHeaderPadding';
 import menuLinksOpacity from './modules/menuLinksOpacity';
@@ -57,6 +58,7 @@ documenReady(() => {
   loaderAnimation();
   menuOpen();
   menuHoverImages();
+  menuLinkTransit();
   scrollToTop();
   setFixedHeader();
   menuLinksOpacity();
