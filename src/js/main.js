@@ -13,10 +13,11 @@ import loaderAnimation from './modules/loaderAnimation';
 import scrollToTop from './modules/scrollToTop';
 import menuOpen from './modules/menuOpen';
 import menuHoverImages from './modules/menuHoverImages';
-import menuLinkTransit from './modules/menuLinkTransit';
 import setFixedHeader from './modules/setFixedHeader';
 import setHeaderPadding from './modules/setHeaderPadding';
 import menuLinksOpacity from './modules/menuLinksOpacity';
+import breadcrumbsScroll from './modules/breadcrumbsScroll';
+
 import introSwiper from './modules/introSwiper';
 import openMobileMenu from './modules/openMobileMenu';
 import advantagesSwiper from './modules/advantagesSwiper';
@@ -58,10 +59,11 @@ documenReady(() => {
   loaderAnimation();
   menuOpen();
   menuHoverImages();
-  menuLinkTransit();
   scrollToTop();
   setFixedHeader();
   menuLinksOpacity();
+  breadcrumbsScroll();
+
   introSwiper();
   openMobileMenu();
   lazyIMages();

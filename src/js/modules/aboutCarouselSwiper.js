@@ -1,7 +1,8 @@
-import Swiper from 'swiper/swiper-bundle';
-import { IS_MOBILE as isMobile } from '../helpers/utils';
 import gsap from 'gsap';
+import Swiper from 'swiper/swiper-bundle';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+import { IS_MOBILE as isMobile } from '../helpers/utils';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,6 +10,8 @@ export default () => {
   const containers = document.querySelectorAll('.js-about-carousel-swiper');
 
   containers.forEach((container) => {
+    const carouselSection = container.closest('.js-about-carousel-trigger');
+
     const optionsMobile = {
       init: false,
       spaceBetween: 16,
@@ -20,11 +23,11 @@ export default () => {
     };
 
     const optionsDesktop = {
-      init: false,
       spaceBetween: 0,
       slidesPerView: 1,
-      speed: 1,
+      // loop: true,
       effect: 'fade',
+
       fadeEffect: {
         crossFade: true
       },
@@ -35,13 +38,35 @@ export default () => {
     if(isMobile) {
       swiper = new Swiper(container, {
         ...optionsMobile,
-      })
+      });
+
+      swiper.init();
     } else {
       swiper = new Swiper(container, {
         ...optionsDesktop,
-      })
+      });
     }
 
-    swiper.init();
+    if(carouselSection && !isMobile) {
+      ScrollTrigger.observe({
+        target: window,
+        type: "wheel,touch",
+        tolerance: 10,
+        onUp: () => {
+          swiper.slidePrev(500);
+
+          if(swiper.isBeginning) {
+            swiper.slideReset(1);
+          }
+        },
+        onDown: () => {
+          swiper.slideNext(500);
+
+          if(swiper.isEnd) {
+            swiper.slideReset();
+          }
+        },
+      });
+    }
   })
 }

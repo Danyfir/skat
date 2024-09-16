@@ -1,9 +1,9 @@
 -
   const menus = [
-    {text: "Продукция", link: "./catalog.html", class: "menu__link--active"},
-    {text: "Реализованные проекты", link: "./projects.html", class: ""},
-    {text: "О компании", link: "./about.html", class: ""},
-    {text: "Контакты", link: "./contacts.html", class: ""},
+    {text: "Продукция", link: "./catalog.html", isActiveClass: catalogActive},
+    {text: "Реализованные проекты", link: "./projects.html", isActiveClass: projectsActive},
+    {text: "О компании", link: "./about.html", isActiveClass: aboutActive},
+    {text: "Контакты", link: "./contacts.html", isActiveClass: contactsActive},
   ];
 
 - const svgs = ['vk', 'tg', 'yt'];
@@ -17,7 +17,7 @@ header.header(class=headerAnimimatable ? "header-is-animated" : '')
 
       .header__menu.menu.hide-on-mobile(class=isMainPage ? "js-hover-opacity" : '')
         for item in menus
-          a.menu__link.js-hover-link(href= item.link, class= item.class, class=!isMainPage ? "menu__link--hover" : '')= item.text
+          a.menu__link.js-hover-link(href= item.link, class=item.isActiveClass ? 'menu__link--active' : '', class=!isMainPage ? "menu__link--hover" : '')= item.text
 
     .header__col.header__col--controls
       .header__desktop-nav.hide-on-mobile

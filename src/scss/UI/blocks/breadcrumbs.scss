@@ -10,6 +10,12 @@
 
     @include noScrollbar();
 
+    @include breakpoint(small-tablet) {
+      max-width: unset;
+      margin-inline: calc(var(--content-padding, 1.6rem) * -1);
+      padding-inline: var(--content-padding, 1.6rem);
+    }
+
     @include breakpointMF(tablet) {
       padding: 1rem 0 0;
     }

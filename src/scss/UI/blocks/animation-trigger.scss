@@ -136,3 +136,45 @@
     transition-delay: 0.8s;
   }
 }
+
+.projects--animation-trigger {
+  .about-projects__left {
+
+    .projects__heading-plus,
+    .projects__heading-number {
+
+      @include breakpointMF(desktop) {
+        opacity: 0;
+        transform: translateY(10rem);
+      }
+    }
+
+    .projects__heading-text {
+      @include breakpointMF(desktop) {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.js-projects-scroll-animation {
+  .about-projects__left {
+
+    .projects__heading-plus,
+    .projects__heading-number {
+
+      @include breakpointMF(desktop) {
+        transition-property: transform, opacity;
+        transition-duration: 0.7s;
+        transition-timing-function: ease;
+      }
+    }
+
+    .projects__heading-text {
+      transition-property: opacity;
+      transition-duration: 0.7s;
+      transition-timing-function: ease;
+      transition-delay: 0.7s;
+    }
+  }
+}

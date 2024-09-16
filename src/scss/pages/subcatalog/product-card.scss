@@ -148,16 +148,23 @@
       aspect-ratio: 1.7 / 1;
       border-radius: 1.2rem;
     }
+
+    img {
+      max-height: 100%;
+    }
   }
 
   .product-card__chars {
     flex-direction: row;
     column-gap: 2rem;
 
+    min-height: 4.4rem;
     padding-right: 7.2rem;
 
     @include breakpointMF(tablet) {
       column-gap: 5rem;
+
+      min-height: unset;
       padding-top: 0.4rem;
       margin-bottom: auto;
       padding-right: unset;

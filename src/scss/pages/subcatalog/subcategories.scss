@@ -116,6 +116,10 @@
 
     @include breakpointMF(tablet) {
       grid-template-columns: 34.2rem 1fr;
+      gap: 6rem;
+    }
+
+    @include breakpointMF(large-desktop) {
       gap: 17rem;
     }
   }

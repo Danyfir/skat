@@ -112,8 +112,6 @@
   &__legend {
     text-align: center;
   }
-
-  &.modal--callback {}
 }
 
 .modal-sorting {
@@ -219,6 +217,10 @@
 
     &::-webkit-scrollbar-thumb {
       background-color: var(--White-10, rgba(255, 255, 255, 0.10));
+    }
+
+    @include breakpoint(small-tablet) {
+      @include noScrollbar();
     }
   }
 

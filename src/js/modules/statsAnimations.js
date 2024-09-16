@@ -21,6 +21,14 @@ export default () => {
     tl.to(".stats__scrolling-list", {y: -scrollHeight, duration: 1.5})
 
     ScrollTrigger.create({
+      trigger: '.js-stats-scroll-animation',
+      start: "top center+=0%",
+      onEnter: () => {
+        statsSection.classList.remove('stats--animation-trigger');
+      }
+    })
+
+    ScrollTrigger.create({
       animation: tl,
       trigger: '.js-stats-scroll-animation',
       start: 'top top',
@@ -29,9 +37,6 @@ export default () => {
       pin: statsSection,
       anticipatePin: 1,
       pinSpacing: true,
-      onEnter: () => {
-        statsSection.classList.remove('stats--animation-trigger');
-      }
     });
 
     scrollItems.forEach((scrollItem) => {

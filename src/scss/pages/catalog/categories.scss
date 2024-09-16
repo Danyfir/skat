@@ -35,6 +35,16 @@
 
     &:last-child {
       margin-bottom: 0;
+
+      &.category {
+        padding-bottom: 2.8rem;
+
+        border-bottom: 1px solid var(--White-10, rgba(255, 255, 255, 0.10));
+
+        @include breakpointMF(tablet) {
+          padding-bottom: 3.2rem;
+        }
+      }
     }
   }
 }

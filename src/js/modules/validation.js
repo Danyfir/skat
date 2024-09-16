@@ -51,7 +51,7 @@ window.Parsley.addValidator('reqtext', {
     requirementType: 'string',
     validateString: function (value) {
       if (value.trim() === '') return true;
-      return /^[А-Яа-яЁёA-Za-z]+$/.test(value);
+      return /^([A-Za-z]{3,50}|([A-Za-z]+\s[A-Za-z]+))$/.test(value.trim());
     },
     messages: {
       en: 'Error',

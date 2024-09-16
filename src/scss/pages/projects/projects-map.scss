@@ -45,7 +45,6 @@
   }
 
   &__dot {
-    // display: none;
     width: 3.2rem;
     height: 3.2rem;
 
@@ -80,6 +79,10 @@
         visibility: visible;
         pointer-events: all;
       }
+    }
+
+    &:hover {
+      border-color: var(--Color-Yellow-2, #EF9930);
     }
   }
 
