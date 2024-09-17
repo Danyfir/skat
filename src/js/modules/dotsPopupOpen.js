@@ -5,15 +5,22 @@ export default () => {
   const tooltips = document.querySelectorAll('.js-modal-popup-tooltip');
 
   dots.forEach((dot) => {
-    dot.addEventListener('click', () => {
-      const ELEMENT_CLASS = 'projects-map__dot';
+    dot.addEventListener('mouseenter', () => {
       const ACTIVE_CLASS = 'projects-map__dot--active';
 
-      const activeItem = document.querySelector(`.${ELEMENT_CLASS}.${ACTIVE_CLASS}`);
+      dots.forEach((dot) => {
+        dot.classList.remove(ACTIVE_CLASS);
+      })
 
-      if (activeItem !== dot) activeItem?.classList.remove(ACTIVE_CLASS);
+      dot.classList.add(ACTIVE_CLASS);
 
-      dot.classList.toggle(ACTIVE_CLASS);
+      window.addEventListener('click', (e) => {
+        if(!e.target.closest('.projects-map__dot') || e.target.closest('.projects-map__dot-popup-close')) {
+          dots.forEach((dot) => {
+            dot.classList.remove(ACTIVE_CLASS);
+          })
+        }
+      })
     })
   })
 

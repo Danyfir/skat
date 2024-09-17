@@ -47,17 +47,17 @@ window.Parsley.addValidator('email', {
     },
 });
 
-window.Parsley.addValidator('reqtext', {
-    requirementType: 'string',
-    validateString: function (value) {
-      if (value.trim() === '') return true;
-      return /^([A-Za-z]{3,50}|([A-Za-z]+\s[A-Za-z]+))$/.test(value.trim());
-    },
-    messages: {
-      en: 'Error',
-      ru: 'Ошибка',
-    },
-});
+// window.Parsley.addValidator('reqtext', {
+//     requirementType: 'string',
+//     validateString: function (value) {
+//       if (value.trim() === '') return true;
+//       return /^([A-Za-z]{3,50}|([A-Za-z]+\s[A-Za-z]+))$/.test(value.trim());
+//     },
+//     messages: {
+//       en: 'Error',
+//       ru: 'Ошибка',
+//     },
+// });
 
 
 Parsley.addMessages('ru', {
