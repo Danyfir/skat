@@ -87,15 +87,15 @@ section.section.materials.subcategories
         | Реализованные проекты
 
       form.subcategories__control-panel.subcategories__control-panel--end.subcategories__projects-filter
-        button.subcategories__filters-open.filters-open.show-on-mobile(type="button" data-path="modal-filters")
+        button.subcategories__filters-open.filters-open.show-on-mobile(type="button" data-path="modal-projects")
           span Фильтр
           +icon-multi('filter-icon')
 
         +selectCheckboxes('materials-select', typeInputs, 'Тип проекта')(class='subcategories__select select--smaller hide-on-mobile')
 
-        +selectCheckboxes('brands-select', locInputs, 'Все города')(class='subcategories__select select--smaller hide-on-mobile')
+        +selectCheckboxes('city-select', locInputs, 'Все города')(class='subcategories__select select--smaller hide-on-mobile')
 
-        +selectCheckboxes('brands-select', yearInputs, 'Год реализации')(class='subcategories__select select--smaller hide-on-mobile')
+        +selectCheckboxes('year-select', yearInputs, 'Год реализации')(class='subcategories__select select--smaller hide-on-mobile')
 
         button.subcategories__map-btn.show-on-mobile(type="button" data-path="modal-map")
           +icon-multi('view-loc')
@@ -225,6 +225,9 @@ section.section.materials.subcategories
                               | для систем кабельной арматуры
 
                             span.dot-popup__location Москва
+
+                    button.projects-map__dot-popup-close(type="button")
+                      +icon-multi('p-close')
 
 
               .projects-map__dot.projects-map__dot--multiple.js-project-desk-dot(data-dot-counter="5" style="top:65%; left:80%")

@@ -94,7 +94,6 @@
       width: 2.4rem;
       height: 2.4rem;
 
-      background-color: var(--Color-Yellow, #EBAA5B);
       border-radius: 100%;
 
       @include breakpointMF(tablet) {
@@ -103,6 +102,26 @@
 
         display: grid;
         place-items: center;
+      }
+
+      &::before {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 2.4rem;
+        height: 2.4rem;
+
+        background-color: var(--Color-Yellow, #EBAA5B);
+        border-radius: 100%;
+
+        transition-property: all;
+        transition-duration: 0.4s;
+        transition-timing-function: ease;
+        cursor: pointer;
+
+        content: "";
       }
 
       &::after {
@@ -120,10 +139,14 @@
       &.projects-map__dot--active {
         z-index: 1000;
 
-        width: 3.2rem;
-        height: 3.2rem;
-
         background: var(--Color-Yellow-2, #EF9930);
+
+        &::before {
+          width: 3.2rem;
+          height: 3.2rem;
+
+          background: var(--Color-Yellow-2, #EF9930);
+        }
 
         .projects-map__dot-popup {
           opacity: 1;

@@ -1,0 +1,125 @@
+-
+  const mobileNavs = [
+    {
+      button: 'Тип проекта',
+      name: 'projects-name',
+      checboxes: [
+        {
+          text: "Все типы",
+          id: "projects-type-00",
+          checked: false ,
+        },
+        {
+          text: "Тип 1",
+          id: "projects-type-01",
+          checked: false ,
+        },
+        {
+          text: "Тип 2",
+          id: "projects-type-02",
+          checked: false ,
+        },
+        {
+          text: "Тип 3",
+          id: "projects-type-03",
+          checked: false ,
+        },
+        {
+          text: "Тип 4",
+          id: "projects-type-04",
+          checked: false ,
+        },
+        {
+          text: "Тип 5",
+          id: "projects-type-05",
+          checked: false ,
+        },
+      ]
+    },
+    {
+      button: 'Все города',
+      name: 'city-name',
+      checboxes: [
+        {
+          text: "Все города",
+          id: "projects-location-00",
+          checked: false,
+        },
+        {
+          text: "Город 1",
+          id: "projects-location-01",
+          checked: false,
+        },
+        {
+          text: "Город 2",
+          id: "projects-location-02",
+          checked: false,
+        },
+        {
+          text: "Город 3",
+          id: "projects-location-03",
+          checked: false,
+        },
+      ]
+    },
+    {
+      button: 'Год реализации',
+      name: 'year-name',
+      checboxes: [
+        {
+          text: 'Все годы',
+          id: 'projects-year-00',
+          checked: false,
+        },
+        {
+          text: '2021',
+          id: 'projects-year-01',
+          checked: false,
+        },
+        {
+          text: '2022',
+          id: 'projects-year-02',
+          checked: false,
+        },
+        {
+          text: '2023',
+          id: 'projects-year-03',
+          checked: false,
+        },
+      ]
+    },
+  ];
+
+.modal.modal-filters
+  .modal__container.modal-sorting__container.modal-filters__container(data-target="modal-projects")
+    form.modal-sorting__body.modal-filters__body.js-nav-wrapper(action="")
+      .modal-sorting__heading.modal-filters__heading
+        p.modal-sorting__title Фильтры
+        button.modal-sorting__close.modal-close(type="button")
+          +icon-multi('close')
+
+      .modal-filters__filters
+        ul.modal-filters__nav-list
+          for item in mobileNavs
+            li.nav-item.nav-item--expand.js-nav-item
+              button.nav-item__button.nav-item__button--border(type="button")
+                span= item.button
+
+              .nav-item__dropdown
+                ul.nav-item__list
+                  for label in item.checboxes
+                    li.nav-item__item
+                      label.nav-item__label(for=label.id)
+                        input(type="checkbox", hidden, value="",
+                          name=item.name,
+                          id=label.id
+                        )
+                        i
+                        span=label.text
+
+      .modal-filters__footer
+        button.button.button--biggest.modal-filters__submit(type="submit")
+          | Применить
+        label.modal-filters__reset
+          input(type="reset" value="Сбросить фильтры")
+          +icon-multi('close')
