@@ -586,7 +586,7 @@
             <div class="subcategories__heading subcategories__heading--column">
               <h2 class="subcategories__title">Реализованные проекты</h2>
               <form class="subcategories__control-panel subcategories__control-panel--end subcategories__projects-filter">
-                <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-filters"><span>Фильтр</span>
+                <button class="subcategories__filters-open filters-open show-on-mobile" type="button" data-path="modal-projects"><span>Фильтр</span>
                   <svg class="icon icon-filter-icon">
                     <use xlink:href="assets/images/sprites/sprite-multi.svg#filter-icon"></use>
                   </svg>
@@ -634,22 +634,22 @@
                     <ul class="select__list">
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-location-brandAll">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brandAll"><span class="select__text">Все города</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="city-select" id="radio-location-brandAll"><span class="select__text">Все города</span><span class="select__tick"></span>
                         </label>
                       </li>
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-location-brand1">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand1"><span class="select__text">Город 1</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="city-select" id="radio-location-brand1"><span class="select__text">Город 1</span><span class="select__tick"></span>
                         </label>
                       </li>
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-location-brand2">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand2"><span class="select__text">Город 2</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="city-select" id="radio-location-brand2"><span class="select__text">Город 2</span><span class="select__tick"></span>
                         </label>
                       </li>
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-location-brand3">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-location-brand3"><span class="select__text">Город 3</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="city-select" id="radio-location-brand3"><span class="select__text">Город 3</span><span class="select__tick"></span>
                         </label>
                       </li>
                     </ul>
@@ -661,22 +661,22 @@
                     <ul class="select__list">
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-year-brandAll">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brandAll"><span class="select__text">Все годы</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="year-select" id="radio-year-brandAll"><span class="select__text">Все годы</span><span class="select__tick"></span>
                         </label>
                       </li>
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-year-brand1">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand1"><span class="select__text">2021</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="year-select" id="radio-year-brand1"><span class="select__text">2021</span><span class="select__tick"></span>
                         </label>
                       </li>
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-year-brand2">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand2"><span class="select__text">2022</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="year-select" id="radio-year-brand2"><span class="select__text">2022</span><span class="select__tick"></span>
                         </label>
                       </li>
                       <li class="select__item select__item--first-hidden">
                         <label class="select__label" for="radio-year-brand3">
-                          <input type="checkbox" hidden="hidden" name="brands-select" id="radio-year-brand3"><span class="select__text">2023</span><span class="select__tick"></span>
+                          <input type="checkbox" hidden="hidden" name="year-select" id="radio-year-brand3"><span class="select__text">2023</span><span class="select__tick"></span>
                         </label>
                       </li>
                     </ul>
@@ -831,6 +831,11 @@
                                 </a>
                               </div>
                             </div>
+                            <button class="projects-map__dot-popup-close" type="button">
+                              <svg class="icon icon-p-close">
+                                <use xlink:href="assets/images/sprites/sprite-multi.svg#p-close"></use>
+                              </svg>
+                            </button>
                           </div>
                         </div>
                       </div>
@@ -1077,6 +1082,127 @@
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div class="modal modal-filters">
+          <div class="modal__container modal-sorting__container modal-filters__container" data-target="modal-projects">
+            <form class="modal-sorting__body modal-filters__body js-nav-wrapper" action="">
+              <div class="modal-sorting__heading modal-filters__heading">
+                <p class="modal-sorting__title">Фильтры</p>
+                <button class="modal-sorting__close modal-close" type="button">
+                  <svg class="icon icon-close">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+                  </svg>
+                </button>
+              </div>
+              <div class="modal-filters__filters">
+                <ul class="modal-filters__nav-list">
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Тип проекта</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-type-00">
+                            <input type="checkbox" hidden value="" name="projects-name" id="projects-type-00"><i></i><span>Все типы</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-type-01">
+                            <input type="checkbox" hidden value="" name="projects-name" id="projects-type-01"><i></i><span>Тип 1</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-type-02">
+                            <input type="checkbox" hidden value="" name="projects-name" id="projects-type-02"><i></i><span>Тип 2</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-type-03">
+                            <input type="checkbox" hidden value="" name="projects-name" id="projects-type-03"><i></i><span>Тип 3</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-type-04">
+                            <input type="checkbox" hidden value="" name="projects-name" id="projects-type-04"><i></i><span>Тип 4</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-type-05">
+                            <input type="checkbox" hidden value="" name="projects-name" id="projects-type-05"><i></i><span>Тип 5</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Все города</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-location-00">
+                            <input type="checkbox" hidden value="" name="city-name" id="projects-location-00"><i></i><span>Все города</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-location-01">
+                            <input type="checkbox" hidden value="" name="city-name" id="projects-location-01"><i></i><span>Город 1</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-location-02">
+                            <input type="checkbox" hidden value="" name="city-name" id="projects-location-02"><i></i><span>Город 2</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-location-03">
+                            <input type="checkbox" hidden value="" name="city-name" id="projects-location-03"><i></i><span>Город 3</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item nav-item--expand js-nav-item">
+                    <button class="nav-item__button nav-item__button--border" type="button"><span>Год реализации</span>
+                    </button>
+                    <div class="nav-item__dropdown">
+                      <ul class="nav-item__list">
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-year-00">
+                            <input type="checkbox" hidden value="" name="year-name" id="projects-year-00"><i></i><span>Все годы</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-year-01">
+                            <input type="checkbox" hidden value="" name="year-name" id="projects-year-01"><i></i><span>2021</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-year-02">
+                            <input type="checkbox" hidden value="" name="year-name" id="projects-year-02"><i></i><span>2022</span>
+                          </label>
+                        </li>
+                        <li class="nav-item__item">
+                          <label class="nav-item__label" for="projects-year-03">
+                            <input type="checkbox" hidden value="" name="year-name" id="projects-year-03"><i></i><span>2023</span>
+                          </label>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="modal-filters__footer">
+                <button class="button button--biggest modal-filters__submit" type="submit">Применить</button>
+                <label class="modal-filters__reset">
+                  <input type="reset" value="Сбросить фильтры">
+                  <svg class="icon icon-close">
+                    <use xlink:href="assets/images/sprites/sprite-multi.svg#close"></use>
+                  </svg>
+                </label>
+              </div>
+            </form>
           </div>
         </div>
       </main>
