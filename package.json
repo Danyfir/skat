@@ -98,6 +98,7 @@
 		"jquery": "3.7.1",
 		"parsleyjs": "2.9.2",
 		"reset-css": "^5.0.1",
+		"simple-parallax-js": "6.0.1",
 		"swiper": "8.4.7",
 		"vanilla-lazyload": "^17.6.1"
 	}

@@ -37,6 +37,7 @@ import teamTabsControls from './modules/teamTabsControls';
 import aboutCarouselSwiper from './modules/aboutCarouselSwiper';
 import aboutTeamMobileSwiper from './modules/aboutTeamMobileSwiper';
 import partnersSwiper from './modules/partnersSwiper';
+import imageParallax from './modules/imageParallax';
 
 import callbackModalOpen from './modules/callbackModalOpen';
 import { callbackForm, closeCallbackAnswer, reloadCallbackForm } from './modules/callbackForm';
@@ -86,6 +87,7 @@ documenReady(() => {
   aboutCarouselSwiper();
   aboutTeamMobileSwiper();
   partnersSwiper();
+  imageParallax();
 
   callbackModalOpen();
   callbackForm();

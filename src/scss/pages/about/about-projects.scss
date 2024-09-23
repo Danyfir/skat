@@ -1,4 +1,5 @@
 .about-projects {
+  overflow: hidden;
   padding: 5rem 0;
 
   @include breakpointMF(tablet) {
@@ -10,10 +11,14 @@
     align-items: stretch;
   }
 
-  &__scrolling-wrapper.stats__scrolling-wrapper {
-    @include breakpointMF(tablet) {
-      overflow: hidden;
-      flex: 0 0 84rem;
+  &__scrolling-wrapper {
+    &.stats__scrolling-wrapper {
+      @include breakpointMF(tablet) {
+        overflow: auto;
+        flex: 0 0 84rem;
+
+        @include noScrollbar();
+      }
     }
 
     .stats__scrolling {
