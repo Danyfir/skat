@@ -5,7 +5,19 @@ export function callbackForm() {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      callbackAnswer('success');
+      fetch(location.href, {
+        method: 'POST',
+        body: new FormData(form)
+      })
+        .then(response => {
+          callbackAnswer('success');
+          form.reset();
+        })
+        .catch(error => {
+          callbackAnswer('error');
+          console.log(error)
+        })
+
     })
   })
 }
