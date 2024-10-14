@@ -47,6 +47,7 @@ import dotsPopupOpen from './modules/dotsPopupOpen';
 import projectCarousel from './modules/projectCarousel';
 import tripleCarousel from './modules/tripleCarousel';
 import articleLinksControl from './modules/articleLinksControl';
+import renderYandexMapApi from "./modules/renderYandexMapApi";
 
 documenReady(() => {
   window.___YOUR_PROJECT___API = { };
@@ -69,7 +70,7 @@ documenReady(() => {
   openMobileMenu();
   lazyIMages();
   initModal();
-  initMap();
+  renderYandexMapApi('.js-footer-map', initMap);
   advantagesSwiper();
   statsAnimations();
   projectsAnimation();
